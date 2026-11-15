@@ -1,0 +1,2528 @@
+[
+ {
+  "row_id": "R001",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "LUCI: SIBAL fabric Linear Fit for SIBAL Flame Spread \\[r^2 = 9.92e^{-01}\\] Adjusted \\( r^2 = 9.92e^{-01} \\) • Flame base spread rate = .92 mm/s.",
+   "Left: Edge view of SIBAL fabric (cotton-fiberglass blend) burning downward in Lunar-g 30 s after ignition.",
+   "Two samples: Fabric 5 cm wide x 30 cm long and 4-mm-DIA acrylic, (PMMA)"
+  ]
+ },
+ {
+  "row_id": "R003",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK",
+    "note": "From the LUCI sample description (schematic slide); the 1-g burns are of the same LUCI SIBAL samples."
+   },
+   "direction": {
+    "v": "OK",
+    "note": "Direction not stated for the 1-g SIBAL burn."
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK",
+    "note": "\"Air at normal pressure\" is stated only for the flight; not stated for the 1-g burns."
+   },
+   "oxygen": {
+    "v": "MISSED",
+    "correct": "~20% O2 (roughly constant during the 1-g SIBAL burn)",
+    "note": "The 1-G SIBAL O2% slide in the same results section says O2 is roughly constant at 20%."
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK",
+    "note": "The table gives 1.5 with no ~. The 1-g SIBAL fit slide warns the fit is \"only an approximate relationship\"."
+   }
+  },
+  "quotes": [
+   "Flame Spread Rates (from linear fits):   \nPartial-G(mm/s) \n1-G(mm/s) \nRatio \nFlameBase \n.9 \n1.5 \n.6 \nFlameTip \n1.1 \n2.8 \n.39",
+   "1-G Results: SIBAL Flame Length and Flame Width vs. O2% for LUCI SIBAL   Flame Length/Width (cm) Time (s)   • O2% varies slightly but is roughly constant at 20%.",
+   "Two samples: Fabric 5 cm wide x 30 cm long and 4-mm-DIA acrylic, (PMMA); ignited with slight pause between them."
+  ]
+ },
+ {
+  "row_id": "R004",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK",
+    "note": "Size given in LUCI experiment schematic; 1-g burns are the LUCI comparison burns of the same samples."
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "MISSED",
+    "correct": "~20% O2 (roughly constant during the 1-g SIBAL burn)",
+    "note": "1-G Results SIBAL slide: 'O2% varies slightly but is roughly constant at 20%'."
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK",
+    "note": "Combined table gives 2.8 with no ~ (the 1-g fit slide does call the fit 'only an approximate relationship')."
+   }
+  },
+  "quotes": [
+   "Flame Spread Rates (from linear fits):   \nPartial-G(mm/s) \n1-G(mm/s) \nRatio \nFlameBase \n.9 \n1.5 \n.6 \nFlameTip \n1.1 \n2.8 \n.39",
+   "1-G Results: SIBAL Flame Length and Flame Width vs. O2% for LUCI SIBAL   Flame Length/Width (cm) Time (s)   • O2% varies slightly but is roughly constant at 20%.",
+   "Two samples: Fabric 5 cm wide x 30 cm long and 4-mm-DIA acrylic, (PMMA)"
+  ]
+ },
+ {
+  "row_id": "R005",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK",
+    "note": "Combined-results slide gives no direction; 'downward' appears only in an earlier photo caption for the lunar-g burn and the 1-g direction is never stated, so 'not stated' is acceptable."
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK",
+    "note": "Table reads Partial-G .9, 1-G 1.5, Ratio .6 (=0.9/1.5, i.e. lunar/1-g)."
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Combined Results: SIBAL SIBAL Flame Spread Fit Comparison Flame Spread Fit Comparison for LUCI Partial-G and 1-G Tests Location (cm) Flame Spread Rates (from linear fits): Partial-G(mm/s) 1-G(mm/s) Ratio FlameBase .9 1.5 .6 FlameTip 1.1 2.8 .39",
+   "Two samples: Fabric 5 cm wide x 30 cm long and 4-mm-DIA acrylic, (PMMA)",
+   "Left: Edge view of SIBAL fabric (cotton-fiberglass blend) burning downward in Lunar-g 30 s after ignition."
+  ]
+ },
+ {
+  "row_id": "R006",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK",
+    "note": "Not stated at the locator or for the 1-g burn. An early slide says the lunar-g SIBAL burned downward."
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK",
+    "note": "\"Air at normal pressure\" appears only in the overview, for the flight. Not stated for the 1-g burn."
+   },
+   "oxygen": {
+    "v": "MISSED",
+    "correct": "air, ~20% O2 (1-g burn roughly constant at 20%; lunar burn fell from ~20% to ~18%)",
+    "note": "O2 is stated for both burns on nearby 1-g and lunar SIBAL O2 slides."
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK",
+    "note": "Table writes .39 (=1.1/2.8)."
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Flame Spread Rates (from linear fits):   \nPartial-G(mm/s) \n1-G(mm/s) \nRatio \nFlameBase \n.9 \n1.5 \n.6 \nFlameTip \n1.1 \n2.8 \n.39",
+   "1-G Results: SIBAL Flame Length and Flame Width vs. O2% for LUCI SIBAL   Flame Length/Width (cm) Time (s)   • O2% varies slightly but is roughly constant at 20%.",
+   "LUCI: SIBAL fabric Flame Length and Flame Width vs. O2% for LUCI SIBAL • O2 concentration decreases from ~20% to ~18%."
+  ]
+ },
+ {
+  "row_id": "R007",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Flame Tip Spread (from linear fits): Partial-G(cm/s) \n1-G(cm/s) \nRatio \n.15 \n.40 \n.38",
+   "Right:4-mm-diameter PMMA rod burning upward in air in Lunar-g, 30 s after ignition.",
+   "Two samples are burned simultaneously in air at normal pressure: Cotton-fiberglass composite fabric sheet and a 4-mm diameter rod of acrylic plastic (polymethyl methacrylate)."
+  ]
+ },
+ {
+  "row_id": "R010",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "LUCI: PMMA Flame Tip Spread Linear Fit • Flame tip spread is approximately linear. • Flame spread rate = 1.5 mm/s.",
+   "Right:4-mm-diameter PMMA rod burning upward in air in Lunar-g, 30 s after ignition.",
+   "Flame Tip Spread (from linear fits): Partial-G(cm/s) 1-G(cm/s) Ratio .15 .40 .38"
+  ]
+ },
+ {
+  "row_id": "R011",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK",
+    "note": "From the LUCI sample description (4-mm-DIA acrylic); 1-g burns use the LUCI PMMA rod."
+   },
+   "direction": {
+    "v": "OK",
+    "note": "Not stated for the 1-g PMMA burn. Only the lunar-g rod is described as burning upward."
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "MISSED",
+    "correct": "~21% O2 at start, decreasing ~linearly to 14.5% during the 1-g PMMA burn",
+    "note": "Stated 2 slides later on the PMMA O2% slide in the 1-g section. The title lacks \"1-G\", but the slide sits in the 1-g section and its values differ from the flight slide (20% to 14.3%)."
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "1-G Results: PMMA Flame Tip Spread Linear Fit     • Flame tip grows at a rate of ~ 3.95 mm/s at the beginning of the burn.",
+   "Results: PMMA Flame Spread vs. O2% for LUCI PMMA     • O2% rises quickly in the beginning, then decreases ~linearly from 21% to 14.5%.",
+   "Two samples: Fabric 5 cm wide x 30 cm long and 4-mm-DIA acrylic, (PMMA); ignited with slight pause between them."
+  ]
+ },
+ {
+  "row_id": "R013",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "LUCI: PMMA Flame Base Spread and Flame Length vs. O2% for LUCI PMMA   • O2% decreases from 20% to 14.3%. • O2% rises back to 15.8% likely due to the decrease in gravity (and thus buoyant flow) which occurred at 125s.",
+   "Right:4-mm-diameter PMMA rod burning upward in air in Lunar-g, 30 s after ignition.",
+   "Two samples are burned simultaneously in air at normal pressure: Cotton-fiberglass composite fabric sheet and a 4-mm diameter rod of acrylic plastic (polymethyl methacrylate)."
+  ]
+ },
+ {
+  "row_id": "R015",
+  "verdicts": {
+   "locator": {
+    "v": "OK",
+    "note": "Slide title in text lacks the '1-G' prefix but sits in the 1-G results sequence; partial-g PMMA O2 slide reports 20% to 14.3% instead."
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "MISSED",
+    "correct": "about 21% at start, falling ~linearly to 14.5% during the 1-g burn",
+    "note": "The same bullet states the chamber O2 history (21% down to 14.5%), so the test oxygen is stated at the locator."
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "1-G Results: PMMA Flame Spread vs. Gravity for LUCI PMMA Flame Location (cm) • Gravity remains constant at Earth’s gravity for duration of burn. Results: PMMA Flame Spread vs. O2% for LUCI PMMA • O2% rises quickly in the beginning, then decreases ~linearly from 21% to 14.5%.",
+   "LUCI: PMMA Flame Base Spread and Flame Length vs. O2% for LUCI PMMA • O2% decreases from 20% to 14.3%."
+  ]
+ },
+ {
+  "row_id": "R016",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK",
+    "note": "Source says \"spinning Blue Origin New Shepard vehicle\" and \"NS-29\". \"Capsule\" is a harmless paraphrase."
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK",
+    "note": "The SIBAL fabric is described as burning downward in Lunar-g (sample-photo slide)."
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK",
+    "note": "Overview: \"burned simultaneously in air at normal pressure\"."
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "LUCI: SIBAL fabric Flame Length and Flame Width vs. O2% for LUCI SIBAL • O2 concentration decreases from ~20% to ~18%.",
+   "Two samples are burned simultaneously in air at normal pressure: Cotton-fiberglass composite fabric sheet and a 4-mm diameter rod of acrylic plastic (polymethyl methacrylate).",
+   "Left: Edge view of SIBAL fabric (cotton-fiberglass blend) burning downward in Lunar-g 30 s after ignition."
+  ]
+ },
+ {
+  "row_id": "R020",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Semi-steady spread is achieved, during which the constant flame width and length are observed (~3.2 cm and ~1.5 cm respectively).",
+   "Left: Edge view of SIBAL fabric (cotton-fiberglass blend) burning downward in Lunar-g 30 s after ignition.",
+   "Two samples: Fabric 5 cm wide x 30 cm long and 4-mm-DIA acrylic, (PMMA)"
+  ]
+ },
+ {
+  "row_id": "R024",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "MISSED",
+    "correct": "fabric sheet and 4-mm diameter acrylic (PMMA) rod (fabric is 5 cm x 30 cm per schematic slide)",
+    "note": "The same summary bullet list specifies 'a 4-mm diameter rod of acrylic plastic'."
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "• A steady vehicle rotation of 11 RPM is established, with an effective radius of rotation of 1.22 m at the experiment location.",
+   "• Two samples are burned simultaneously in air at normal pressure: Cotton-fiberglass composite fabric sheet and a 4-mm diameter rod of acrylic plastic (polymethyl methacrylate).",
+   "Page 10 Xect = wddv wcnv parallel with Floor Yect = Rocket sense of rotation • Blue Origin New Shepard sounding rocket yields Lunar gravity by using centrifugal acceleration."
+  ]
+ },
+ {
+  "row_id": "R027",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "IV-1 \nSIBAL \n130 \n  \n  \n3,150 \n409 \n45 \n25 \n1390 \n1.03 \n80",
+   "Burn duration (s) \nPeak Heat Release (W) \nTotal Heat Release (kJ) \nAverage Heat Release (W) \nTotal Heat Release (kJ) \nMax Tempat SFU outlet (°C) \nMax Temp at FFD or nearest location (°C) \nFFD inlet CO2 increase (ppm) \nCO2 partial pressure increase (mmHg) \nFFD inlet CO increase (ppm)",
+   "Length (cm) \n50 \n50 \n50 \n18 \n18 \nAir Flow Rate (cm/s) \n20 \n20 \n20 \n20 \n20 \nFlow Direction \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nAmbient Pressure (kPa) \n100.0 \n70.7 \n54.1 \n54.6 \n55.2 \nOxygen Concentration (mol %) \n22.0 \n26.2 \n31.0 \n30.3 \n28.8"
+  ]
+ },
+ {
+  "row_id": "R028",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Saffire Flight/ Sample \nMaterial \nBurn duration (s) \nPeak Heat Release (W) \nTotal Heat Release (kJ) \nAverage Heat Release (W) \nTotal Heat Release (kJ) \nMax Tempat SFU outlet (°C)",
+   "V-2 \nCotton Jersey \n200 \n  \n  \n2,800 \n560 \n46 \n23 \n2360 \n1.26 \n83",
+   "Ambient Pressure (kPa) \n100.0 \n70.7 \n54.1 \n54.6 \n55.2 \nOxygen Concentration (mol %) \n22.0 \n26.2 \n31.0 \n30.3 \n28.8"
+  ]
+ },
+ {
+  "row_id": "R031",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK",
+    "note": "Table 1 length 18 cm; text adds samples 41 cm wide, one-sided PMMA 5 mm thick (not wrong, just partial)."
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Material Burn duration (s) Peak Heat Release (W) Total Heat Release (kJ) Average Heat Release (W) Total Heat Release (kJ) Max Tempat SFU outlet (°C) Max Temp at FFD or nearest location (°C) FFD inlet CO2 increase (ppm) CO2 partial pressure increase (mmHg) FFD inlet CO increase (ppm)",
+   "VI-4 1-sided PMMA 1200 1507 830 57 21 8117 3.37 320",
+   "Length (cm) 50 50 50 18 18 Air Flow Rate (cm/s) 20 20 20 20 20 Flow Direction Concurrent Concurrent Concurrent Concurrent Concurrent Ambient Pressure (kPa) 100.0 70.7 54.1 54.6 55.2 Oxygen Concentration (mol %) 22.0 26.2 31.0 30.3 28.8"
+  ]
+ },
+ {
+  "row_id": "R033",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "VI-3 \n2-sided PMMA \n780 \n3080 \n1280 \n  \n  \n77 \n21 \n8539 \n3.51 \n308",
+   "Burn duration (s) \nPeak Heat Release (W) \nTotal Heat Release (kJ) \nAverage Heat Release (W) \nTotal Heat Release (kJ) \nMax Tempat SFU outlet (°C) \nMax Temp at FFD or nearest location (°C) \nFFD inlet CO2 increase (ppm) \nCO2 partial pressure increase (mmHg) \nFFD inlet CO increase (ppm)",
+   "Length (cm) \n50 \n50 \n50 \n18 \n18 \nAir Flow Rate (cm/s) \n20 \n20 \n20 \n20 \n20 \nFlow Direction \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nAmbient Pressure (kPa) \n100.0 \n70.7 \n54.1 \n54.6 \n55.2 \nOxygen Concentration (mol %) \n22.0 \n26.2 \n31.0 \n30.3 \n28.8"
+  ]
+ },
+ {
+  "row_id": "R036",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Oxygen Consumption Calorimetry \nFuel Consumption Calorimetry \n  \nSaffire Flight/ Sample \nMaterial \nBurn duration (s) \nPeak Heat Release (W) \nTotal Heat Release (kJ) \nAverage Heat Release (W) \nTotal Heat Release (kJ)",
+   "V-2 \nCotton Jersey \n200 \n  \n  \n2,800 \n560 \n46 \n23 \n2360 \n1.26 \n83",
+   "The table also includes the heat release calculated using the fuel consumption rate for the thin materials."
+  ]
+ },
+ {
+  "row_id": "R038",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Material Burn duration (s) Peak Heat Release (W) Total Heat Release (kJ) Average Heat Release (W) Total Heat Release (kJ) Max Tempat SFU outlet (°C) Max Temp at FFD or nearest location (°C) FFD inlet CO2 increase (ppm) CO2 partial pressure increase (mmHg) FFD inlet CO increase (ppm)",
+   "IV-1 SIBAL 130 3,150 409 45 25 1390 1.03 80",
+   "Length (cm) 50 50 50 18 18 Air Flow Rate (cm/s) 20 20 20 20 20 Flow Direction Concurrent Concurrent Concurrent Concurrent Concurrent Ambient Pressure (kPa) 100.0 70.7 54.1 54.6 55.2 Oxygen Concentration (mol %) 22.0 26.2 31.0 30.3 28.8"
+  ]
+ },
+ {
+  "row_id": "R040",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "VI-2 \nSIBAL \n112 \n3217 \n580 \n3,650 \n409 \n48 \n20 \n2800 \n1.15 \n120",
+   "Burn duration (s) \nPeak Heat Release (W) \nTotal Heat Release (kJ) \nAverage Heat Release (W) \nTotal Heat Release (kJ) \nMax Tempat SFU outlet (°C) \nMax Temp at FFD or nearest location (°C) \nFFD inlet CO2 increase (ppm) \nCO2 partial pressure increase (mmHg) \nFFD inlet CO increase (ppm)",
+   "Length (cm) \n50 \n50 \n50 \n18 \n18 \nAir Flow Rate (cm/s) \n20 \n20 \n20 \n20 \n20 \nFlow Direction \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nAmbient Pressure (kPa) \n100.0 \n70.7 \n54.1 \n54.6 \n55.2 \nOxygen Concentration (mol %) \n22.0 \n26.2 \n31.0 \n30.3 \n28.8"
+  ]
+ },
+ {
+  "row_id": "R041",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Saffire Flight/ Sample \nMaterial \nBurn duration (s) \nPeak Heat Release (W) \nTotal Heat Release (kJ) \nAverage Heat Release (W) \nTotal Heat Release (kJ) \nMax Tempat SFU outlet (°C)",
+   "VI-3 \n2-sided PMMA \n780 \n3080 \n1280 \n  \n  \n77 \n21 \n8539 \n3.51 \n308",
+   "Ambient Pressure (kPa) \n100.0 \n70.7 \n54.1 \n54.6 \n55.2 \nOxygen Concentration (mol %) \n22.0 \n26.2 \n31.0 \n30.3 \n28.8"
+  ]
+ },
+ {
+  "row_id": "R045",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Material Burn duration (s) Peak Heat Release (W) Total Heat Release (kJ) Average Heat Release (W) Total Heat Release (kJ) Max Tempat SFU outlet (°C) Max Temp at FFD or nearest location (°C) FFD inlet CO2 increase (ppm) CO2 partial pressure increase (mmHg) FFD inlet CO increase (ppm)",
+   "VI-2 SIBAL 112 3217 580 3,650 409 48 20 2800 1.15 120",
+   "Length (cm) 50 50 50 18 18 Air Flow Rate (cm/s) 20 20 20 20 20 Flow Direction Concurrent Concurrent Concurrent Concurrent Concurrent Ambient Pressure (kPa) 100.0 70.7 54.1 54.6 55.2 Oxygen Concentration (mol %) 22.0 26.2 31.0 30.3 28.8"
+  ]
+ },
+ {
+  "row_id": "R047",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "VI-4 \n1-sided PMMA \n1200 \n1507 \n830 \n  \n  \n57 \n21 \n8117 \n3.37 \n320",
+   "Burn duration (s) \nPeak Heat Release (W) \nTotal Heat Release (kJ) \nAverage Heat Release (W) \nTotal Heat Release (kJ) \nMax Tempat SFU outlet (°C) \nMax Temp at FFD or nearest location (°C) \nFFD inlet CO2 increase (ppm) \nCO2 partial pressure increase (mmHg) \nFFD inlet CO increase (ppm)",
+   "Length (cm) \n50 \n50 \n50 \n18 \n18 \nAir Flow Rate (cm/s) \n20 \n20 \n20 \n20 \n20 \nFlow Direction \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nAmbient Pressure (kPa) \n100.0 \n70.7 \n54.1 \n54.6 \n55.2 \nOxygen Concentration (mol %) \n22.0 \n26.2 \n31.0 \n30.3 \n28.8"
+  ]
+ },
+ {
+  "row_id": "R048",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "FFD inlet CO2 increase (ppm) \nCO2 partial pressure increase (mmHg) \nFFD inlet CO increase (ppm) \nIV-1 \nSIBAL \n130 \n  \n  \n3,150 \n409 \n45 \n25 \n1390 \n1.03 \n80",
+   "Ambient Pressure (kPa) \n100.0 \n70.7 \n54.1 \n54.6 \n55.2 \nOxygen Concentration (mol %) \n22.0 \n26.2 \n31.0 \n30.3 \n28.8",
+   "Flight/Sample \nIV-1 \nV-2 \nVI-2 \nVI-3 \nVI-4 \nMaterial \nSIBAL Cloth \nCotton Jersey \nSIBAL Cloth \nTwo-Sided PMMA \nOne-Sided PMMA \nLength (cm) \n50 \n50 \n50 \n18 \n18 \nAir Flow Rate (cm/s) \n20 \n20 \n20 \n20 \n20 \nFlow Direction \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nConcurrent"
+  ]
+ },
+ {
+  "row_id": "R049",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Material Burn duration (s) Peak Heat Release (W) Total Heat Release (kJ) Average Heat Release (W) Total Heat Release (kJ) Max Tempat SFU outlet (°C) Max Temp at FFD or nearest location (°C) FFD inlet CO2 increase (ppm) CO2 partial pressure increase (mmHg) FFD inlet CO increase (ppm)",
+   "V-2 Cotton Jersey 200 2,800 560 46 23 2360 1.26 83",
+   "Length (cm) 50 50 50 18 18 Air Flow Rate (cm/s) 20 20 20 20 20 Flow Direction Concurrent Concurrent Concurrent Concurrent Concurrent Ambient Pressure (kPa) 100.0 70.7 54.1 54.6 55.2 Oxygen Concentration (mol %) 22.0 26.2 31.0 30.3 28.8"
+  ]
+ },
+ {
+  "row_id": "R052",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "VI-4 \n1-sided PMMA \n1200 \n1507 \n830 \n  \n  \n57 \n21 \n8117 \n3.37 \n320",
+   "Burn duration (s) \nPeak Heat Release (W) \nTotal Heat Release (kJ) \nAverage Heat Release (W) \nTotal Heat Release (kJ) \nMax Tempat SFU outlet (°C) \nMax Temp at FFD or nearest location (°C) \nFFD inlet CO2 increase (ppm) \nCO2 partial pressure increase (mmHg) \nFFD inlet CO increase (ppm)",
+   "Length (cm) \n50 \n50 \n50 \n18 \n18 \nAir Flow Rate (cm/s) \n20 \n20 \n20 \n20 \n20 \nFlow Direction \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nAmbient Pressure (kPa) \n100.0 \n70.7 \n54.1 \n54.6 \n55.2 \nOxygen Concentration (mol %) \n22.0 \n26.2 \n31.0 \n30.3 \n28.8"
+  ]
+ },
+ {
+  "row_id": "R054",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Temperature results for Saffire VI-3 (two-sided PMMA). 90 80 70 60 50 40 30 20 10 0 0 1000 0.6 0.7 Ignition at 637 s 0.5 Flow reduced at 1120 s",
+   "Flow reduced from 1500 20 cm/s to 5 cm/s 1000 at 1120 seconds.",
+   "Ambient Pressure (kPa) \n100.0 \n70.7 \n54.1 \n54.6 \n55.2 \nOxygen Concentration (mol %) \n22.0 \n26.2 \n31.0 \n30.3 \n28.8"
+  ]
+ },
+ {
+  "row_id": "R055",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Temperature results for Saffire VI-3 (two-sided PMMA). 90 80 70 60 50 40 30 20 10 0 0 1000 0.6 0.7 Ignition at 637 s 0.5 Flow reduced at 1120 s 0.4 Duct flow terminated at 0.2 0.3 1420 seconds",
+   "Flow reduced from 1500 20 cm/s to 5 cm/s 1000 at 1120 seconds. 500 Flow terminated at 1420 seconds",
+   "Length (cm) 50 50 50 18 18 Air Flow Rate (cm/s) 20 20 20 20 20 Flow Direction Concurrent Concurrent Concurrent Concurrent Concurrent Ambient Pressure (kPa) 100.0 70.7 54.1 54.6 55.2 Oxygen Concentration (mol %) 22.0 26.2 31.0 30.3 28.8"
+  ]
+ },
+ {
+  "row_id": "R057",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "NOT_IN_SOURCE",
+    "correct": "orbiting spacecraft, Saffire I flight (vehicle not named in this source)",
+    "note": "Source puts Saffire I-V in space (\"spacecraft experiments\", Fig. 10 \"in microgravity\"), but it names the Cygnus vehicle only for Saffire IV-V (NG-13/NG-14). The vehicle for the earlier flights is not stated."
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK",
+    "note": "Table 2 gives no direction. The text conflicts: it says \"steady opposed spread rate\" for all Saffire I-V thin samples, but its summary calls them concurrent flames, and Fig. 10 shows both. Not clearly stated for this test."
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "flame size for thin samples Flight-Sample \nI-1 \nII-5 \nII-6 \nIII-1 \nIV-1 \nV-2 \nAir flow (cm/s) \n20 \n20 \n25 \n25 \n20 \n20 \nOxygen concentration (%)   \n21 \n21 \n21 \n21 \n22 \n26.2 \nPressure (kPa) \n100 \n100 \n100 \n100 \n100 \n70.7 \nMaterial \nSIBAL \nSIBAL \nSIBAL \nSIBAL \nSIBAL \nCotton jersey",
+   "Steady state size (cm) \n4 \n4 \n5 \n5 \n8.5 \n10.0 \nMaximum size (cm) \n6.2 \n4 \n5 \n8.2 \n11.0 \n14.0 \nDuct Height (cm) \n46 \n46 \n46 \n46 \n30 \n30 \nSample Width (cm) \n41 \n5 \n5 \n41 \n41 \n41 \nSample length (cm) \n94 \n30 \n30 \n94 \n50 \n50",
+   "The first three flights have been discussed previously.1,2 the most recent experiments were conducted in May of 2020 and January of 2021 on the NG-13 and NG-14 flights of the Northrup Grumman Cygnus vehicle."
+  ]
+ },
+ {
+  "row_id": "R058",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "NOT_IN_SOURCE",
+    "correct": "orbiting spacecraft, Saffire II-5 (vehicle not named in this source)",
+    "note": "Source ties Cygnus only to Saffire IV and V (NG-13/NG-14); Saffire I-III are described only as spacecraft flights in microgravity. Orbit category itself is right."
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK",
+    "note": "No direction in Table 2; text is contradictory ('steady opposed spread rate' for all Table 2 tests vs. 'concurrent flames ... will achieve a limiting size')."
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Flight-Sample \nI-1 \nII-5 \nII-6 \nIII-1 \nIV-1 \nV-2 \nAir flow (cm/s) \n20 \n20 \n25 \n25 \n20 \n20 \nOxygen concentration (%)   \n21 \n21 \n21 \n21 \n22 \n26.2 \nPressure (kPa) \n100 \n100 \n100 \n100 \n100 \n70.7 \nMaterial \nSIBAL \nSIBAL \nSIBAL \nSIBAL \nSIBAL \nCotton jersey \nSteady state size (cm) \n4 \n4 \n5 \n5 \n8.5 \n10.0",
+   "Duct Height (cm) \n46 \n46 \n46 \n46 \n30 \n30 \nSample Width (cm) \n41 \n5 \n5 \n41 \n41 \n41 \nSample length (cm) \n94 \n30 \n30 \n94 \n50 \n50",
+   "the most recent experiments were conducted in May of 2020 and January of 2021 on the NG-13 and NG-14 flights of the Northrup Grumman Cygnus vehicle."
+  ]
+ },
+ {
+  "row_id": "R060",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "NOT_IN_SOURCE",
+    "correct": "Saffire II spacecraft flight in orbit (microgravity); this source does not name the vehicle for Saffire I-III",
+    "note": "Cygnus is tied only to Saffire IV/V (NG-13, NG-14 flights); Saffire I-III are described only as prior spacecraft flights burning in microgravity, so 'Cygnus' for II-6 is inferred."
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK",
+    "note": "Text near Table 2 is self-contradictory ('steady opposed spread rate' vs. 'concurrent flames spreading over thin fuels'), so 'not stated' is defensible."
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Flight-Sample I-1 II-5 II-6 III-1 IV-1 V-2 Air flow (cm/s) 20 20 25 25 20 20 Oxygen concentration (%) 21 21 21 21 22 26.2 Pressure (kPa) 100 100 100 100 100 70.7 Material SIBAL SIBAL SIBAL SIBAL SIBAL Cotton jersey Steady state size (cm) 4 4 5 5 8.5 10.0",
+   "Maximum size (cm) 6.2 4 5 8.2 11.0 14.0 Duct Height (cm) 46 46 46 46 30 30 Sample Width (cm) 41 5 5 41 41 41 Sample length (cm) 94 30 30 94 50 50",
+   "the most recent experiments were conducted in May of 2020 and January of 2021 on the NG-13 and NG-14 flights of the Northrup Grumman Cygnus vehicle."
+  ]
+ },
+ {
+  "row_id": "R061",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "NOT_IN_SOURCE",
+    "correct": "orbiting spacecraft, Saffire II flight (vehicle not named in this source)",
+    "note": "Source puts Saffire I-V in space (\"spacecraft experiments\", Fig. 10 \"in microgravity\"), but it names the Cygnus vehicle only for Saffire IV-V (NG-13/NG-14). The vehicle for the earlier flights is not stated."
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK",
+    "note": "Table 2 gives no direction. The text conflicts: it says \"steady opposed spread rate\" for all Saffire I-V thin samples, but its summary calls them concurrent flames, and Fig. 10 shows both. Not clearly stated for this test."
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "flame size for thin samples Flight-Sample \nI-1 \nII-5 \nII-6 \nIII-1 \nIV-1 \nV-2 \nAir flow (cm/s) \n20 \n20 \n25 \n25 \n20 \n20 \nOxygen concentration (%)   \n21 \n21 \n21 \n21 \n22 \n26.2 \nPressure (kPa) \n100 \n100 \n100 \n100 \n100 \n70.7 \nMaterial \nSIBAL \nSIBAL \nSIBAL \nSIBAL \nSIBAL \nCotton jersey",
+   "Steady state size (cm) \n4 \n4 \n5 \n5 \n8.5 \n10.0 \nMaximum size (cm) \n6.2 \n4 \n5 \n8.2 \n11.0 \n14.0 \nDuct Height (cm) \n46 \n46 \n46 \n46 \n30 \n30 \nSample Width (cm) \n41 \n5 \n5 \n41 \n41 \n41 \nSample length (cm) \n94 \n30 \n30 \n94 \n50 \n50",
+   "The first three flights have been discussed previously.1,2 the most recent experiments were conducted in May of 2020 and January of 2021 on the NG-13 and NG-14 flights of the Northrup Grumman Cygnus vehicle."
+  ]
+ },
+ {
+  "row_id": "R064",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Flight-Sample \nI-1 \nII-5 \nII-6 \nIII-1 \nIV-1 \nV-2 \nAir flow (cm/s) \n20 \n20 \n25 \n25 \n20 \n20 \nOxygen concentration (%)   \n21 \n21 \n21 \n21 \n22 \n26.2 \nPressure (kPa) \n100 \n100 \n100 \n100 \n100 \n70.7 \nMaterial \nSIBAL \nSIBAL \nSIBAL \nSIBAL \nSIBAL \nCotton jersey \nSteady state size (cm) \n4 \n4 \n5 \n5 \n8.5 \n10.0",
+   "Duct Height (cm) \n46 \n46 \n46 \n46 \n30 \n30 \nSample Width (cm) \n41 \n5 \n5 \n41 \n41 \n41 \nSample length (cm) \n94 \n30 \n30 \n94 \n50 \n50",
+   "Flow Direction \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nOpposed"
+  ]
+ },
+ {
+  "row_id": "R065",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Maximum size (cm) 6.2 4 5 8.2 11.0 14.0 Duct Height (cm) 46 46 46 46 30 30 Sample Width (cm) 41 5 5 41 41 41 Sample length (cm) 94 30 30 94 50 50",
+   "Flight-Sample I-1 II-5 II-6 III-1 IV-1 V-2 Air flow (cm/s) 20 20 25 25 20 20 Oxygen concentration (%) 21 21 21 21 22 26.2 Pressure (kPa) 100 100 100 100 100 70.7 Material SIBAL SIBAL SIBAL SIBAL SIBAL Cotton jersey Steady state size (cm) 4 4 5 5 8.5 10.0",
+   "Table 1: Saffire IV-V Sample Test Conditions Flight/Sample IV-1 IV-2 V-2 V-3 V-4 Material/configuration SIBAL Cloth 2-sided PMMA Cotton Jersey 1 sided PMMA Structured PMMA Length (cm) 50 18 50 18 20 Air Flow Rate (cm/s) 20 20 20 20 20 Flow Direction Concurrent"
+  ]
+ },
+ {
+  "row_id": "R067",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK",
+    "note": "Saffire V flew on Cygnus (NG-14). \"Cargo\" is a descriptor only."
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK",
+    "note": "Table 1 lists V-2 flow direction as Concurrent."
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "flame size for thin samples Flight-Sample \nI-1 \nII-5 \nII-6 \nIII-1 \nIV-1 \nV-2 \nAir flow (cm/s) \n20 \n20 \n25 \n25 \n20 \n20 \nOxygen concentration (%)   \n21 \n21 \n21 \n21 \n22 \n26.2 \nPressure (kPa) \n100 \n100 \n100 \n100 \n100 \n70.7 \nMaterial \nSIBAL \nSIBAL \nSIBAL \nSIBAL \nSIBAL \nCotton jersey",
+   "Steady state size (cm) \n4 \n4 \n5 \n5 \n8.5 \n10.0 \nMaximum size (cm) \n6.2 \n4 \n5 \n8.2 \n11.0 \n14.0 \nDuct Height (cm) \n46 \n46 \n46 \n46 \n30 \n30 \nSample Width (cm) \n41 \n5 \n5 \n41 \n41 \n41 \nSample length (cm) \n94 \n30 \n30 \n94 \n50 \n50",
+   "Flight/Sample \nIV-1 \nIV-2 \nV-2 \nV-3 \nV-4 \nMaterial/configuration \nSIBAL Cloth 2-sided PMMA Cotton Jersey \n1 sided PMMA Structured PMMA Length (cm) \n50   \n18 \n50 \n18 \n20 \nAir Flow Rate (cm/s) \n20 \n20 \n20 \n20 \n20 \nFlow Direction \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nOpposed"
+  ]
+ },
+ {
+  "row_id": "R070",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "WRONG",
+    "correct": "20 cm/s, reduced to 5 cm/s and held 300 s, then fan off",
+    "note": "Flow was cut to 5 cm/s for 300 s before the fan was turned off; source credits this step for the immediate extinction."
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "the air flow for Saffire V samples 3 and 4 was reduced from the starting condition of 20 cm/s to 5 cm/s and held at 5 cm/s for 300 seconds.",
+   "Consequently, when the fan was turned off in Saffire V-3 and V-4, the sample extinguished immediately (Figures 5 and 6).",
+   "Flow Direction \nConcurrent \nConcurrent \nConcurrent \nConcurrent \nOpposed \nAmbient Pressure (kPa) \n100.0 \n100.0 \n70.7 \n71.3 \n72.6 \nOxygen Concentration (mol %) \n22.0 \n22.0 \n26.2 \n25.4 \n25.7"
+  ]
+ },
+ {
+  "row_id": "R072",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK",
+    "note": "Poster says one of each fuel will be burned upward and one downward; this row is the upward SIBAL burn."
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Flammability of Materials on the Moon (FM2) is a robotic, self-contained, combustion chamber which will be sent to the surface of the Moon on a Commercial Lunar Payload Services (CLPS) lander mission CP-21.",
+   "The environmental control system can replicate and conduct fire experiments automatically in the expected atmospheres, specifically 21% oxygen at 14.7 psia, and 34% oxygen at 8.2 psia",
+   "There are four samples currently planned; two SIBAL fabrics (cotton/fiberglass blend) which will be burned in air and two acrylic rods which will be burned in Normoxic Space Exploration Atmospheres (SEA). One of each fuel will be burned upward and downward."
+  ]
+ },
+ {
+  "row_id": "R073",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK",
+    "note": "Poster figure label: \"Fuel Rod 4 mm PMMA Rod\"."
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK",
+    "note": "Rods burn in \"Normoxic SEA\". The intro lists 34% O2 at 8.2 psia as the elevated-O2 (SEA) atmosphere and 21%/14.7 psia as air."
+   },
+   "oxygen": {
+    "v": "OK",
+    "note": "Same pairing as for pressure: SEA = 34% oxygen at 8.2 psia."
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK",
+    "note": "A planned burn with no results reported; the source shows only planned samples and 1-g lab tests."
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "There are four samples currently planned; two SIBAL fabrics (cotton/fiberglass blend) which will be burned in air and two acrylic rods which will be burned in Normoxic Space Exploration Atmospheres (SEA). One of each fuel will be burned upward and downward.",
+   "which will be sent to the surface of the Moon on a Commercial Lunar Payload Services (CLPS) lander mission CP-21. The environmental control system can replicate and conduct fire experiments automatically in the expected atmospheres, specifically 21% oxygen at 14.7 psia, and 34% oxygen at 8.2 psia",
+   "Fuel Rod 4 mm PMMA Rod Flammability of Materials on the Moon (FM2) Laboratory Prototype"
+  ]
+ },
+ {
+  "row_id": "R075",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Flammability of Materials on the Moon (FM2) is a robotic, self-contained, combustion chamber which will be sent to the surface of the Moon on a Commercial Lunar Payload Services (CLPS) lander mission CP-21.",
+   "The environmental control system can replicate and conduct fire experiments automatically in the expected atmospheres, specifically 21% oxygen at 14.7 psia, and 34% oxygen at 8.2 psia",
+   "There are four samples currently planned; two SIBAL fabrics (cotton/fiberglass blend) which will be burned in air and two acrylic rods which will be burned in Normoxic Space Exploration Atmospheres (SEA). One of each fuel will be burned upward and downward."
+  ]
+ },
+ {
+  "row_id": "R079",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK",
+    "note": "O2 was the varied parameter (mapping to find minimum O2); the datum's own O2 is the value 13.6%."
+   },
+   "measurement": {
+    "v": "OK",
+    "note": "'Lowest' is implied: 13.6% is the steady-spreading level used to derive the 2.4% O2 margin ('at least')."
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "The 1g blowoff for the 1⁄4” rod is at 16% oxygen, whereas we obtained steady spreading at 13.6% oxygen in BASS-II. Thus the material has a negative Oxygen Margin of Safety of 2.4% O2, and the normal gravity flammability limits should be de-rated by at least that much.",
+   "Status ― 24 plastic rods (PMMA, polymethyl methacrylate) were burned in concurrent (stagnation point) flow obtaining blowoff and quenching extinction limits.",
+   "Sandra Olson, NASA Glenn Research Center Objective Obtain microgravity flammability map for two materials to find the minimum oxygen concentration over the range of interest for spacecraft exploration atmospheres."
+  ]
+ },
+ {
+  "row_id": "R081",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "MISSED",
+    "correct": "1/4-inch diameter rod",
+    "note": "Olson status refers to \"the 1/4” rod\" when comparing the 1-g blowoff with BASS-II steady spreading. It does not say whether all 24 rods were this size."
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK",
+    "note": "O2 varied across the flammability map. Only 13.6% is given, as a result (steady spreading), not as a test condition."
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "24 plastic rods (PMMA, polymethyl methacrylate) were burned in concurrent (stagnation point) flow obtaining blowoff and quenching extinction limits. ― The 1g blowoff for the 1⁄4” rod is at 16% oxygen, whereas we obtained steady spreading at 13.6% oxygen in BASS-II.",
+   "Microgravity combustion tests were performed aboard the International Space Station. Active crew support for real-time “lab partner” operations. ― The wind tunnel was installed in the Microgravity Science Glovebox which supplied power, imaging, and a level of containment."
+  ]
+ },
+ {
+  "row_id": "R083",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK",
+    "note": "Source: 'nearing blow off extinction as the flow velocity crosses 40 cm/s' (no explicit ~); approximate is a fair reading, lower bound also defensible."
+   }
+  },
+  "quotes": [
+   "Samples were 1-cm and 2-cm wide sheets of plastic (PMMA; polymethyl methacrylate). ― Thicknesses were between 0.1 and 0.4 mm. Comparison of flame extinction at low opposing flow velocity (radiative quenching ) vs. at high flow velocities (blow off extinction) for 0.1 mm thick sample.",
+   "Sequence of top views showing radiative quenching when flow velocity goes below 2 cm/s. Flame nearing blow off extinction as the flow velocity crosses 40 cm/s.",
+   "Microgravity combustion tests were performed aboard the International Space Station. Active crew support for real-time “lab partner” operations. ― The wind tunnel was installed in the Microgravity Science Glovebox"
+  ]
+ },
+ {
+  "row_id": "R084",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "MISSED",
+    "correct": "opposed flow (opposing flow)",
+    "note": "Same panel's figure caption describes flame extinction at low opposing flow velocity for these PMMA sheet tests."
+   },
+   "flow": {
+    "v": "OK",
+    "note": "Panel gives only extinction-event velocities for one 0.1 mm sample (below 2 cm/s quenching, ~40 cm/s blow-off), not a flow condition for the 22 test points."
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Subrata Bhattacharjee, San Diego State University Objective Examine how thermal and species fields can diverge and lead to microgravity flame extinguishment by varying fuel thickness. Status ― 22 test points obtained with BASS-II experiments.",
+   "Samples were 1-cm and 2-cm wide sheets of plastic (PMMA; polymethyl methacrylate). ― Thicknesses were between 0.1 and 0.4 mm. Comparison of flame extinction at low opposing flow velocity (radiative quenching ) vs. at high flow velocities (blow off extinction) for 0.1 mm thick sample.",
+   "Sequence of top views showing radiative quenching when flow velocity goes below 2 cm/s. Flame nearing blow off extinction as the flow velocity crosses 40 cm/s."
+  ]
+ },
+ {
+  "row_id": "R086",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Three different diameters (0.25”, 0.375”, 0.5”) of black and clear PMMA rods were tested. ― Oxygen concentrations between 16% to 21% and flow velocity between 0.4 cm/sec to 4 cm/sec were tested. The total set of experiments yielded 54 unique flame spread rates.",
+   "Microgravity combustion tests were performed aboard the International Space Station. Active crew support for real-time “lab partner” operations. ― The wind tunnel was installed in the Microgravity Science Glovebox which supplied power, imaging, and a level of containment."
+  ]
+ },
+ {
+  "row_id": "R089",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Top view of a typical quenching time sequence. 2.2-cm wide SIBAL fabric sample in 1 atm. and 18.7% O2. Ignited at 5 cm/s flow at right end, then reduced to 2.2 cm/s gradually. Flow is from right to left.",
+   "Flame spread and extinction were studied in purely forced concurrent flow in zero-gravity under various oxygen percentages for narrow SIBAL fabric samples.",
+   "Microgravity combustion tests were performed aboard the International Space Station. Active crew support for real-time “lab partner” operations. ― The wind tunnel was installed in the Microgravity Science Glovebox"
+  ]
+ },
+ {
+  "row_id": "R091",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK",
+    "note": "Hardware list gives no geometry; samples are of various types, consistent with the generic material entry."
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK",
+    "note": "Matches the Hardware 'Main variables' list; note the Approach panel separately says the tunnel 'could impose airflow speeds up to 40 cm/s' (source inconsistency)."
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Main variables Airflow speed (0 to 55 cm/s) Oxygen concentration (21% and below)",
+   "Fuel samples were mounted inside a small wind tunnel which could impose airflow speeds up to 40 cm/s.",
+   "Microgravity combustion tests were performed aboard the International Space Station. Active crew support for real-time “lab partner” operations. ― The wind tunnel was installed in the Microgravity Science Glovebox which supplied power, imaging, and a level of containment."
+  ]
+ },
+ {
+  "row_id": "R093",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK",
+    "note": "The KC-135 partial-g levels are 0.1, 0.16 and 0.38 g. Fig. 1 also spans higher gravity (normal-g tests), but the peak lies at a partial-g level."
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "OK"
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK",
+    "note": "\"peaks near ... 0.38 g/gEarth\"."
+   }
+  },
+  "quotes": [
+   "Figure 1. Upward and downward flame spread rates for The downward spread rate is non- 2 cm wide samples burned in 27.6 kPa (4.0 psia) air at monotonic and peaks near the Martian gravity various gravity levels. Upward pointing symbols levels of 0.38 g/gEarth.",
+   "Flight tests were performed onboard the NASA KC-135 aircraft providing partial-gravity environments of 0.1, 0.16, and 0.38 g/gEarth.",
+   "Figure 1 shows an example of flame spread rates versus the local gravity level for 2 cm wide Kimwipes burning in air at a reduced pressure of 27.6 kPa."
+  ]
+ },
+ {
+  "row_id": "R094",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "WRONG",
+    "correct": "cotton/fiberglass composite fuel (simulated)",
+    "note": "Source names the simulated fuel: 'A cotton fiberglass composite fuel was simulated'; Fig. 3 caption 'cotton/ fiberglass fuel'. 'Thin solid fuel' is not stated for the model."
+   },
+   "geometry": {
+    "v": "MISSED",
+    "correct": "5 cm wide x 15 cm long sample (6 mm inert side stripes) in a 10 cm x 10 cm x 50 cm vertical flow tunnel",
+    "note": "Stated in the Figure 3 caption."
+   },
+   "direction": {
+    "v": "MISSED",
+    "correct": "downward (opposed-flow) spread",
+    "note": "Section is '3-D modeling of downward spreading flames' (opposed flow in mixed convection)."
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK",
+    "note": "Oxygen is the computed output (LOI); the minimum LOI value appears only in the garbled figure axes."
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Fig. 3 shows a computed LOI as a function of forced flow velocity at normal and zero gravity. The normal gravity boundary is monotonic with respect to the forced velocity while the LOI at zero gravity is non-monotonic and has a minimum around 5 cm/s.",
+   "THREE-DIMENSIONAL MODELING OF DOWNWARD SPREADING FLAMES In additional to the 3-D model of steady upward spreading flames, 3-D downward spread in a mixed forced and buoyant flow was recently simulated numerically",
+   "prediction for cotton/ fiberglass fuel in a mixed-convection environ-ment, computed using a three dimensional model with as-yet uncalibrated kinetic constants. Fuel samples are 5 cm wide by 15 cm long burning in a vertical flow tunnel with a 10cm by 10cm cross section and 50 cm length."
+  ]
+ },
+ {
+  "row_id": "R097",
+  "verdicts": {
+   "locator": {
+    "v": "WRONG",
+    "correct": "Experimental Results section, 'Acceleration Environment' subsection (Figure 2 discussion)",
+    "note": "The value is not in the Experiments section's aircraft paragraph (which gives a 20-45 s reduced-gravity period) but in the following Experimental Results / Acceleration Environment subsection."
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "MISSED",
+    "correct": "1-cm, 2-cm or 4-cm wide samples",
+    "note": "Experiments section states the sample holders exposed 1-, 2- or 4-cm widths for these tests."
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK"
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK"
+   }
+  },
+  "quotes": [
+   "Experimental Results Acceleration Environment Figure 2 shows the measured vertical accelerations beginning in each case with the manual initiation of the experiment. The dashed lines indicate the target acceleration levels of 0.10, 0.16, and 0.38 G.",
+   "Times of 5-20 seconds were observed during which acceleration levels remained within 15% of the nominal value.",
+   "Sample holders were fashioned to expose 1-cm, 2-cm or 4-cm widths (on both faces of the sample) of the fuel to the chamber atmosphere."
+  ]
+ },
+ {
+  "row_id": "R098",
+  "verdicts": {
+   "locator": {
+    "v": "OK"
+   },
+   "platform": {
+    "v": "OK"
+   },
+   "gravity": {
+    "v": "OK"
+   },
+   "material": {
+    "v": "OK"
+   },
+   "geometry": {
+    "v": "MISSED",
+    "correct": "1-cm, 2-cm or 4-cm wide samples",
+    "note": "Same Experiments section: sample holders exposed 1-, 2- or 4-cm widths. The abstract repeats this for the KC-135 tests."
+   },
+   "direction": {
+    "v": "OK"
+   },
+   "flow": {
+    "v": "OK"
+   },
+   "pressure": {
+    "v": "OK"
+   },
+   "oxygen": {
+    "v": "OK"
+   },
+   "measurement": {
+    "v": "OK"
+   },
+   "value": {
+    "v": "OK",
+    "note": "Source writes \"ten\"."
+   },
+   "unit": {
+    "v": "OK"
+   },
+   "qualifier": {
+    "v": "OK",
+    "note": "\"Up to ten\" means upper bound."
+   }
+  },
+  "quotes": [
+   "NASA KC-135 Reduced Gravity Aircraft12. Parabolic flight trajectories provided a simulated reduced-gravity environment between 20-45 sec. depending on pilot skill and weather. Up to ten partial gravity parabolas were obtained per flight at nominal accelerations levels of 0.1, 0.16, and 0.38 G.",
+   "Sample holders were fashioned to expose 1-cm, 2-cm or 4-cm widths (on both faces of the sample) of the fuel to the chamber atmosphere.",
+   "filled with air at pressures between 0.2-0.4 atmospheres. The test atmospheres were established using primary standard, precision mixtures of 21% O2, balance N2"
+  ]
+ }
+]

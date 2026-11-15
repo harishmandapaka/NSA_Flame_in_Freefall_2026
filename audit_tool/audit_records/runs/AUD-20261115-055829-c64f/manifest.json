@@ -1,0 +1,177 @@
+{
+ "run_id": "AUD-20261115-055829-c64f",
+ "created_utc": "2026-11-15T05:58:30Z",
+ "tool": "nextburn-audit",
+ "version": "1.0.0",
+ "operator": "Copilot (AI assistant)",
+ "label": "Ledger v2: fresh rows",
+ "note": "Measures the corrected ledger (v2) on the 48 rows that Experiment 1 did not select. Give each packet to one checker, then run the score command.",
+ "ledger": {
+  "given_path": "../experiment1/ledger_v2.csv",
+  "file": "runs/AUD-20261115-055829-c64f/inputs/ledger.csv",
+  "format": "csv",
+  "sha256": "1194f550829dc12ecee22731d7f6030ece23cd604ab44d341adec6ec640e4a9d",
+  "rows": 98
+ },
+ "sources": {
+  "given_dir": "sources",
+  "missing": [],
+  "files": {
+   "bass2_poster_2014": {
+    "sha256": "a8df3ab92a1bc189a12caa1e13cc24113ffdae1c988498e40afea031c7873067",
+    "characters": 12488
+   },
+   "feier_2001": {
+    "sha256": "b4caa8a2d0f96b52660423f86634419691864f02a64d4c6f79ee84b9858e15a8",
+    "characters": 38317
+   },
+   "fm2_poster_2024": {
+    "sha256": "8500edc438b0b477e8edc261746563da25b1a79095ddbf0b6f60f2b058aee008",
+    "characters": 5283
+   },
+   "luci_2025": {
+    "sha256": "d580bb0a1c29df247e3f81de260cc470c9e7415b98c79c6bbf2929d35340eef8",
+    "characters": 14001
+   },
+   "sacksteder_2003": {
+    "sha256": "93a86fa2e62008cc76bf9776997d416016a39e232cd1f25ec9719e364b1f1198",
+    "characters": 12382
+   },
+   "saffire45_paper_2021": {
+    "sha256": "cd8404c0e1ee04dcc655fdade4bf7cc4fa82927c7d5aaa1be7d0861605c25af3",
+    "characters": 37601
+   },
+   "saffire6_paper_2024": {
+    "sha256": "167ead6cd6f829071db5475eb55805f44d7ea3399aba6b81b3d05145db9bdf34",
+    "characters": 22749
+   },
+   "saffire6_pres_2024": {
+    "sha256": "d30cc6c8019f54ff4fee4573a64d3b4afed27b0c1cc43f4a2ec1d5f71a551abc",
+    "characters": 6911
+   }
+  }
+ },
+ "settings": {
+  "n": 50,
+  "seed": 2026,
+  "checkers": 3,
+  "field_limit": 0.98,
+  "provenance_limit": 1.0,
+  "bootstrap": 10000,
+  "hint_window": 3000,
+  "hint_context": 0,
+  "exclude_audited": true,
+  "audited_fields": [
+   "locator",
+   "platform",
+   "gravity",
+   "material",
+   "geometry",
+   "direction",
+   "flow",
+   "pressure",
+   "oxygen",
+   "measurement",
+   "value",
+   "unit",
+   "qualifier"
+  ],
+  "number_fields": [
+   "measurement",
+   "value",
+   "unit",
+   "qualifier"
+  ]
+ },
+ "sample": {
+  "row_ids": [
+   "R002",
+   "R008",
+   "R009",
+   "R012",
+   "R014",
+   "R017",
+   "R018",
+   "R019",
+   "R021",
+   "R022",
+   "R023",
+   "R025",
+   "R026",
+   "R029",
+   "R030",
+   "R032",
+   "R034",
+   "R035",
+   "R037",
+   "R039",
+   "R042",
+   "R043",
+   "R044",
+   "R046",
+   "R050",
+   "R051",
+   "R053",
+   "R056",
+   "R059",
+   "R062",
+   "R063",
+   "R066",
+   "R068",
+   "R069",
+   "R071",
+   "R074",
+   "R076",
+   "R077",
+   "R078",
+   "R080",
+   "R082",
+   "R085",
+   "R087",
+   "R088",
+   "R090",
+   "R092",
+   "R095",
+   "R096"
+  ],
+  "allocation": {
+   "bass2_poster_2014": 7,
+   "feier_2001": 2,
+   "fm2_poster_2024": 3,
+   "luci_2025": 13,
+   "sacksteder_2003": 1,
+   "saffire45_paper_2021": 8,
+   "saffire6_paper_2024": 13,
+   "saffire6_pres_2024": 1
+  },
+  "method": "all eligible rows",
+  "seed": 2026,
+  "n_requested": 50,
+  "n_drawn": 48
+ },
+ "level1": {
+  "rows": 98,
+  "rows_with_source_and_locator": 98,
+  "rows_with_quote_in_source": 98,
+  "provenance_rate": 1.0,
+  "quote_rate": 1.0,
+  "quote_match_levels": {
+   "exact": 98
+  },
+  "fail": 0,
+  "warn": 15,
+  "hint": 55,
+  "by_check": {
+   "L1-HINT HINT": 55,
+   "L1-VALUE WARN": 15
+  },
+  "hints_by_field": {
+   "direction": 18,
+   "flow": 8,
+   "geometry": 8,
+   "oxygen": 5,
+   "pressure": 16
+  },
+  "result": "SATISFACTORY"
+ }
+}

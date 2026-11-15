@@ -1,0 +1,103 @@
+{
+ "R003.oxygen": {
+  "decision": "upheld",
+  "cause": "condition stated on another slide of the same source",
+  "reason": "1-G SIBAL slide: O2 roughly constant at 20%"
+ },
+ "R004.oxygen": {
+  "decision": "upheld",
+  "cause": "condition stated on another slide of the same source",
+  "reason": "1-G SIBAL slide: O2 roughly constant at 20%"
+ },
+ "R006.oxygen": {
+  "decision": "upheld",
+  "cause": "condition stated on another slide of the same source",
+  "reason": "both burns in air (lunar burn 'in air at normal pressure'; 1-g burn ~20%)"
+ },
+ "R011.oxygen": {
+  "decision": "upheld",
+  "cause": "condition stated on another slide of the same source",
+  "reason": "1-G PMMA slide: O2 from 21% falling to 14.5%"
+ },
+ "R015.oxygen": {
+  "decision": "upheld",
+  "cause": "condition stated on another slide of the same source",
+  "reason": "same bullet gives starting O2 of 21%"
+ },
+ "R024.geometry": {
+  "decision": "upheld",
+  "cause": "condition stated elsewhere in the same source",
+  "reason": "summary bullets name a fabric sheet and a 4-mm diameter rod"
+ },
+ "R057.platform": {
+  "decision": "upheld",
+  "cause": "fact inferred from outside the cited source",
+  "reason": "this paper names Cygnus only for Saffire IV and V"
+ },
+ "R058.platform": {
+  "decision": "upheld",
+  "cause": "fact inferred from outside the cited source",
+  "reason": "this paper names Cygnus only for Saffire IV and V"
+ },
+ "R060.platform": {
+  "decision": "upheld",
+  "cause": "fact inferred from outside the cited source",
+  "reason": "this paper names Cygnus only for Saffire IV and V"
+ },
+ "R061.platform": {
+  "decision": "upheld",
+  "cause": "fact inferred from outside the cited source",
+  "reason": "this paper names Cygnus only for Saffire IV and V"
+ },
+ "R070.flow": {
+  "decision": "upheld",
+  "cause": "incomplete transcription",
+  "reason": "flow was reduced from 20 to 5 cm/s and held 300 s before the fan was turned off"
+ },
+ "R081.geometry": {
+  "decision": "overturned",
+  "cause": "checker over-reach",
+  "reason": "the poster gives 1/4 inch only for the rod in the 1-g comparison, not for all 24 rods; 'not stated' is correct"
+ },
+ "R084.direction": {
+  "decision": "upheld",
+  "cause": "condition stated elsewhere in the same panel",
+  "reason": "panel compares extinction at low opposing flow velocity"
+ },
+ "R094.material": {
+  "decision": "upheld",
+  "cause": "imprecise transcription",
+  "reason": "source: 'A cotton fiberglass composite fuel was simulated'"
+ },
+ "R094.geometry": {
+  "decision": "upheld",
+  "cause": "condition stated in a figure caption",
+  "reason": "Figure 3 caption: samples 5 cm wide by 15 cm long in a vertical flow tunnel"
+ },
+ "R094.direction": {
+  "decision": "upheld",
+  "cause": "condition stated elsewhere in the same section",
+  "reason": "model of downward spreading used to evaluate the LOI device"
+ },
+ "R097.locator": {
+  "decision": "upheld",
+  "cause": "imprecise locator",
+  "reason": "value sits under 'Experimental Results: Acceleration Environment', not the aircraft paragraph"
+ },
+ "R097.geometry": {
+  "decision": "upheld",
+  "cause": "condition stated elsewhere in the same source",
+  "reason": "samples were 1, 2 and 4 cm wide"
+ },
+ "R098.geometry": {
+  "decision": "upheld",
+  "cause": "condition stated elsewhere in the same source",
+  "reason": "samples were 1, 2 and 4 cm wide"
+ },
+ "R005.oxygen": {
+  "decision": "added",
+  "verdict": "MISSED",
+  "cause": "condition stated on another slide of the same source",
+  "reason": "Found when the fix rule was applied to the full ledger. The checker gave OK. The equivalent cell R006.oxygen was MISSED and upheld."
+ }
+}
