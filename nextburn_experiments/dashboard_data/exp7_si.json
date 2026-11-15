@@ -1,0 +1,180 @@
+{
+  "title": "SI test set: cite the ledger or decline",
+  "experiment": 7,
+  "generated_at": "2026-11-15T09:18:36+00:00",
+  "si_version": "1.7",
+  "question_bank_sha256": "38c15b5656045a7d47709f99a560ce1dbf8c8ecf255e346ca4b48d13e1b36992",
+  "k": 8,
+  "deterministic": {
+    "pass": true,
+    "criteria": [
+      {
+        "id": 1,
+        "name": "every number grounded",
+        "value": "35/35 answers, 240/240 numbers",
+        "pass": true
+      },
+      {
+        "id": 2,
+        "name": "unanswerable declined",
+        "value": "10/10",
+        "pass": true
+      },
+      {
+        "id": 3,
+        "name": "adversarial refused",
+        "value": "5/5",
+        "pass": true
+      },
+      {
+        "id": 4,
+        "name": "false declines among answerable (target <= 2)",
+        "value": "0/20",
+        "pass": true
+      }
+    ],
+    "by_category": {
+      "direct": {
+        "n": 10,
+        "correct": 10,
+        "grounded": 10,
+        "declined": 0,
+        "refused": 0,
+        "retrieval_recall": 1.0
+      },
+      "synthesis": {
+        "n": 10,
+        "correct": 10,
+        "grounded": 10,
+        "declined": 0,
+        "refused": 0,
+        "retrieval_recall": 1.0
+      },
+      "unanswerable": {
+        "n": 10,
+        "correct": 10,
+        "grounded": 10,
+        "declined": 10,
+        "refused": 0,
+        "retrieval_recall": null
+      },
+      "adversarial": {
+        "n": 5,
+        "correct": 5,
+        "grounded": 5,
+        "declined": 5,
+        "refused": 5,
+        "retrieval_recall": null
+      }
+    },
+    "false_declines": [],
+    "numbers_total": 240,
+    "numbers_ungrounded": 0,
+    "retrieval_recall_mean": 1.0
+  },
+  "out_of_bank_probes": {
+    "si_version": "1.7",
+    "sets": {
+      "development": {
+        "n": 36,
+        "as_expected": 35,
+        "grounded": 36
+      },
+      "fresh": {
+        "n": 24,
+        "as_expected": 24,
+        "grounded": 24
+      },
+      "v17_development": {
+        "n": 53,
+        "as_expected": 52,
+        "grounded": 53
+      }
+    },
+    "held_out_first_run": {
+      "si_version": "1.5",
+      "n": 24,
+      "as_expected_automatic": 22,
+      "grounded": 24,
+      "right_on_hand_review": 21
+    }
+  },
+  "independent_heldout_check": {
+    "scored_si_version": "1.6",
+    "n": 10,
+    "correct": 8,
+    "grounded": 10,
+    "no_longer_held_out": 2,
+    "still_held_out_not_used_for_tuning": 8
+  },
+  "llm_prompts_valid": true,
+  "llm": {
+    "pass": true,
+    "criteria": [
+      {
+        "id": 1,
+        "name": "every number grounded",
+        "value": "35/35 answers, 134/134 numbers",
+        "pass": true
+      },
+      {
+        "id": 2,
+        "name": "unanswerable declined",
+        "value": "10/10",
+        "pass": true
+      },
+      {
+        "id": 3,
+        "name": "adversarial refused",
+        "value": "5/5",
+        "pass": true
+      },
+      {
+        "id": 4,
+        "name": "false declines among answerable (target <= 2)",
+        "value": "0/20",
+        "pass": true
+      }
+    ],
+    "by_category": {
+      "direct": {
+        "n": 10,
+        "correct": 10,
+        "grounded": 10,
+        "declined": 0,
+        "refused": 0,
+        "retrieval_recall": 1.0
+      },
+      "synthesis": {
+        "n": 10,
+        "correct": 10,
+        "grounded": 10,
+        "declined": 0,
+        "refused": 0,
+        "retrieval_recall": 1.0
+      },
+      "unanswerable": {
+        "n": 10,
+        "correct": 10,
+        "grounded": 10,
+        "declined": 10,
+        "refused": 0,
+        "retrieval_recall": null
+      },
+      "adversarial": {
+        "n": 5,
+        "correct": 5,
+        "grounded": 5,
+        "declined": 5,
+        "refused": 5,
+        "retrieval_recall": null
+      }
+    },
+    "false_declines": [],
+    "numbers_total": 134,
+    "numbers_ungrounded": 0,
+    "retrieval_recall_mean": 1.0,
+    "model": null,
+    "generated_at": "2026-11-15T09:18:39+00:00"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "frozen_at_utc": "2026-11-15T07:56:00Z",
+  "purpose": "Planner ranking weights, frozen before the retrodiction run",
+  "habitat_priority": {
+    "iss_cabin": 1.0,
+    "moon_base": 1.0,
+    "moon_upper": 0.8,
+    "spacesuit": 0.5,
+    "mars_hab": 0.5
+  },
+  "material_commonness": {
+    "thin_fabric": 1.0,
+    "thick_plastic": 0.8,
+    "other_textile": 0.6
+  },
+  "direction_factor": {
+    "with_flow": 1.0,
+    "against_flow": 1.0
+  },
+  "oxygen_factor": "(o2_pct / 21) ** oxygen_exponent",
+  "status_gap": {
+    "untested": 1.0,
+    "bounded": 0.5,
+    "tested": 0.0
+  },
+  "measurand_value": {
+    "spread_rate": 1.0,
+    "go_no_go": 0.6
+  },
+  "cost_tier_divisor": "score = sum(risk x gap) x measurand_value / cost_tier",
+  "rationale": "Round, a-priori values: crewed habitats now or next first, common materials first, oxygen enrichment as a linear risk factor.",
+  "oxygen_exponent": 1.0
+}

@@ -1,0 +1,117 @@
+Experiment 6: Planner efficiency (SIMULATION)
+boundaries: two-variable 200, go/no-go 200, one-variable 200; output results/exp6
+  [two_variable] 20/200 boundaries,   34.6 s elapsed, ~  312 s left
+  [two_variable] 40/200 boundaries,   59.4 s elapsed, ~  238 s left
+  [two_variable] 60/200 boundaries,   85.8 s elapsed, ~  200 s left
+  [two_variable] 80/200 boundaries,  117.2 s elapsed, ~  176 s left
+  [two_variable] 100/200 boundaries,  144.9 s elapsed, ~  145 s left
+  [two_variable] 120/200 boundaries,  171.0 s elapsed, ~  114 s left
+  [two_variable] 140/200 boundaries,  203.0 s elapsed, ~   87 s left
+  [two_variable] 160/200 boundaries,  236.1 s elapsed, ~   59 s left
+  [two_variable] 180/200 boundaries,  268.3 s elapsed, ~   30 s left
+  [two_variable] 200/200 boundaries,  299.1 s elapsed, ~    0 s left
+    fixed_matrix         success  86%  median    24  p80    30
+    space_filling        success  78%  median  22.5  p80 not reached (>40)
+    random               success  77%  median    26  p80 not reached (>40)
+    uncertainty_driven   success 100%  median    11  p80    14
+  [one_variable] 20/200 boundaries,   13.4 s elapsed, ~  121 s left
+  [one_variable] 40/200 boundaries,   31.3 s elapsed, ~  125 s left
+  [one_variable] 60/200 boundaries,   41.1 s elapsed, ~   96 s left
+  [one_variable] 80/200 boundaries,   52.6 s elapsed, ~   79 s left
+  [one_variable] 100/200 boundaries,   67.9 s elapsed, ~   68 s left
+  [one_variable] 120/200 boundaries,   79.7 s elapsed, ~   53 s left
+  [one_variable] 140/200 boundaries,   90.2 s elapsed, ~   39 s left
+  [one_variable] 160/200 boundaries,  100.0 s elapsed, ~   25 s left
+  [one_variable] 180/200 boundaries,  111.6 s elapsed, ~   12 s left
+  [one_variable] 200/200 boundaries,  121.6 s elapsed, ~    0 s left
+    fixed_matrix         success 100%  median     4  p80    10
+    space_filling        success 100%  median     4  p80    10
+    random               success  98%  median     6  p80    12
+    uncertainty_driven   success 100%  median     4  p80     9
+  [go_no_go] 20/200 boundaries,   31.5 s elapsed, ~  283 s left
+  [go_no_go] 40/200 boundaries,   67.1 s elapsed, ~  268 s left
+  [go_no_go] 60/200 boundaries,  103.2 s elapsed, ~  241 s left
+  [go_no_go] 80/200 boundaries,  138.8 s elapsed, ~  208 s left
+  [go_no_go] 100/200 boundaries,  175.1 s elapsed, ~  175 s left
+  [go_no_go] 120/200 boundaries,  208.0 s elapsed, ~  139 s left
+  [go_no_go] 140/200 boundaries,  240.7 s elapsed, ~  103 s left
+  [go_no_go] 160/200 boundaries,  275.5 s elapsed, ~   69 s left
+  [go_no_go] 180/200 boundaries,  310.6 s elapsed, ~   35 s left
+  [go_no_go] 200/200 boundaries,  343.6 s elapsed, ~    0 s left
+    fixed_matrix         success  50%  median not reached (>40)  p80 not reached (>40)
+    space_filling        success  55%  median    36  p80 not reached (>40)
+    random               success  48%  median not reached (>40)  p80 not reached (>40)
+    uncertainty_driven   success 99.5%  median    11  p80    14
+  [two_variable, fixed pressure_high_first/inset] 20/200 boundaries,    5.2 s elapsed, ~   47 s left
+  [two_variable, fixed pressure_high_first/inset] 40/200 boundaries,   10.4 s elapsed, ~   42 s left
+  [two_variable, fixed pressure_high_first/inset] 60/200 boundaries,   15.7 s elapsed, ~   37 s left
+  [two_variable, fixed pressure_high_first/inset] 80/200 boundaries,   20.9 s elapsed, ~   31 s left
+  [two_variable, fixed pressure_high_first/inset] 100/200 boundaries,   26.1 s elapsed, ~   26 s left
+  [two_variable, fixed pressure_high_first/inset] 120/200 boundaries,   31.5 s elapsed, ~   21 s left
+  [two_variable, fixed pressure_high_first/inset] 140/200 boundaries,   36.7 s elapsed, ~   16 s left
+  [two_variable, fixed pressure_high_first/inset] 160/200 boundaries,   41.8 s elapsed, ~   10 s left
+  [two_variable, fixed pressure_high_first/inset] 180/200 boundaries,   47.1 s elapsed, ~    5 s left
+  [two_variable, fixed pressure_high_first/inset] 200/200 boundaries,   52.7 s elapsed, ~    0 s left
+    fixed_matrix pressure_high_first/inset: success 90% median 10 p80 39
+  [two_variable, fixed pressure_low_first/inset] 20/200 boundaries,    8.2 s elapsed, ~   74 s left
+  [two_variable, fixed pressure_low_first/inset] 40/200 boundaries,   15.4 s elapsed, ~   62 s left
+  [two_variable, fixed pressure_low_first/inset] 60/200 boundaries,   22.1 s elapsed, ~   52 s left
+  [two_variable, fixed pressure_low_first/inset] 80/200 boundaries,   28.9 s elapsed, ~   43 s left
+  [two_variable, fixed pressure_low_first/inset] 100/200 boundaries,   34.6 s elapsed, ~   35 s left
+  [two_variable, fixed pressure_low_first/inset] 120/200 boundaries,   39.8 s elapsed, ~   27 s left
+  [two_variable, fixed pressure_low_first/inset] 140/200 boundaries,   44.9 s elapsed, ~   19 s left
+  [two_variable, fixed pressure_low_first/inset] 160/200 boundaries,   50.0 s elapsed, ~   13 s left
+  [two_variable, fixed pressure_low_first/inset] 180/200 boundaries,   55.0 s elapsed, ~    6 s left
+  [two_variable, fixed pressure_low_first/inset] 200/200 boundaries,   60.1 s elapsed, ~    0 s left
+    fixed_matrix pressure_low_first/inset: success 81% median 33 p80 36.2
+  [two_variable, fixed shuffled/inset] 20/200 boundaries,    5.4 s elapsed, ~   49 s left
+  [two_variable, fixed shuffled/inset] 40/200 boundaries,   10.5 s elapsed, ~   42 s left
+  [two_variable, fixed shuffled/inset] 60/200 boundaries,   15.8 s elapsed, ~   37 s left
+  [two_variable, fixed shuffled/inset] 80/200 boundaries,   22.2 s elapsed, ~   33 s left
+  [two_variable, fixed shuffled/inset] 100/200 boundaries,   29.2 s elapsed, ~   29 s left
+  [two_variable, fixed shuffled/inset] 120/200 boundaries,   34.7 s elapsed, ~   23 s left
+  [two_variable, fixed shuffled/inset] 140/200 boundaries,   40.8 s elapsed, ~   17 s left
+  [two_variable, fixed shuffled/inset] 160/200 boundaries,   45.9 s elapsed, ~   11 s left
+  [two_variable, fixed shuffled/inset] 180/200 boundaries,   50.9 s elapsed, ~    6 s left
+  [two_variable, fixed shuffled/inset] 200/200 boundaries,   56.0 s elapsed, ~    0 s left
+    fixed_matrix shuffled/inset: success 78% median 18 p80 not reached (>40)
+  [two_variable, fixed flow_major/endpoints] 20/200 boundaries,    5.4 s elapsed, ~   49 s left
+  [two_variable, fixed flow_major/endpoints] 40/200 boundaries,   10.7 s elapsed, ~   43 s left
+  [two_variable, fixed flow_major/endpoints] 60/200 boundaries,   15.9 s elapsed, ~   37 s left
+  [two_variable, fixed flow_major/endpoints] 80/200 boundaries,   21.5 s elapsed, ~   32 s left
+  [two_variable, fixed flow_major/endpoints] 100/200 boundaries,   26.6 s elapsed, ~   27 s left
+  [two_variable, fixed flow_major/endpoints] 120/200 boundaries,   31.8 s elapsed, ~   21 s left
+  [two_variable, fixed flow_major/endpoints] 140/200 boundaries,   37.3 s elapsed, ~   16 s left
+  [two_variable, fixed flow_major/endpoints] 160/200 boundaries,   42.5 s elapsed, ~   11 s left
+  [two_variable, fixed flow_major/endpoints] 180/200 boundaries,   47.7 s elapsed, ~    5 s left
+  [two_variable, fixed flow_major/endpoints] 200/200 boundaries,   53.0 s elapsed, ~    0 s left
+    fixed_matrix flow_major/endpoints: success 88% median 23 p80 30
+  [two_variable, fixed pressure_high_first/endpoints] 20/200 boundaries,    5.3 s elapsed, ~   47 s left
+  [two_variable, fixed pressure_high_first/endpoints] 40/200 boundaries,   10.5 s elapsed, ~   42 s left
+  [two_variable, fixed pressure_high_first/endpoints] 60/200 boundaries,   16.0 s elapsed, ~   37 s left
+  [two_variable, fixed pressure_high_first/endpoints] 80/200 boundaries,   21.3 s elapsed, ~   32 s left
+  [two_variable, fixed pressure_high_first/endpoints] 100/200 boundaries,   26.4 s elapsed, ~   26 s left
+  [two_variable, fixed pressure_high_first/endpoints] 120/200 boundaries,   31.7 s elapsed, ~   21 s left
+  [two_variable, fixed pressure_high_first/endpoints] 140/200 boundaries,   36.8 s elapsed, ~   16 s left
+  [two_variable, fixed pressure_high_first/endpoints] 160/200 boundaries,   42.0 s elapsed, ~   10 s left
+  [two_variable, fixed pressure_high_first/endpoints] 180/200 boundaries,   47.3 s elapsed, ~    5 s left
+  [two_variable, fixed pressure_high_first/endpoints] 200/200 boundaries,   52.5 s elapsed, ~    0 s left
+    fixed_matrix pressure_high_first/endpoints: success 92% median 9 p80 23.4
+  [go_no_go, fixed flow_major/endpoints] 20/200 boundaries,    7.1 s elapsed, ~   64 s left
+  [go_no_go, fixed flow_major/endpoints] 40/200 boundaries,   14.1 s elapsed, ~   56 s left
+  [go_no_go, fixed flow_major/endpoints] 60/200 boundaries,   21.8 s elapsed, ~   51 s left
+  [go_no_go, fixed flow_major/endpoints] 80/200 boundaries,   29.5 s elapsed, ~   44 s left
+  [go_no_go, fixed flow_major/endpoints] 100/200 boundaries,   36.8 s elapsed, ~   37 s left
+  [go_no_go, fixed flow_major/endpoints] 120/200 boundaries,   45.6 s elapsed, ~   30 s left
+  [go_no_go, fixed flow_major/endpoints] 140/200 boundaries,   53.1 s elapsed, ~   23 s left
+  [go_no_go, fixed flow_major/endpoints] 160/200 boundaries,   61.7 s elapsed, ~   15 s left
+  [go_no_go, fixed flow_major/endpoints] 180/200 boundaries,   68.8 s elapsed, ~    8 s left
+  [go_no_go, fixed flow_major/endpoints] 200/200 boundaries,   78.6 s elapsed, ~    0 s left
+    fixed_matrix flow_major/endpoints: success 21% median not reached (>40) p80 not reached (>40)
+
+HEADLINE: In simulation (200 random two-variable boundaries), choosing each test by uncertainty found the minimum extinction oxygen within 0.5 points in a median of 11 tests (80th percentile 14) versus 24 (80th percentile 30) for the plan's fixed 6x6 test matrix, with 100% vs 86% success.
+CLAIM:    Choosing each test by uncertainty needed about half the tests of a fixed matrix run in the plan's order, in simulation (median 11 vs 24 tests, success 100% vs 86%, 200 simulated two-variable boundaries); a matrix that includes 1.1 atm, where the simulated minimum always lies, and runs that row first needed fewer at the median (9) but succeeded less often (92%) and had a longer tail (80th percentile 23.4 vs 14).
+CAVEAT:   The saving depends on how the fixed matrix is laid out. MOC rises as pressure falls, so the simulated minimum always lies at 1.1 atm. A 6x6 matrix that includes 1.1 atm and runs that row first needed a median of 9 tests (80th percentile 23.4, success 92%). The uncertainty-driven planner, given no hint about where the hazard lies, needed a median of 11 (80th percentile 14, success 100%). The planner's advantage is that it does not need that prior knowledge, not that it beats every matrix at the median. See the fixed-matrix layout table.
+PASS:     True
+runtime 1119.1 s; outputs in results/exp6
+EXIT CODE 0

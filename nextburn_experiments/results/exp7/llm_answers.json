@@ -1,0 +1,299 @@
+[
+  {
+    "id": "Q01",
+    "answer": "The BASS-II poster gives different figures for the airflow speed:\n- Main variables list: 0 to 55 cm/s [R091]\n- Hardware description: the wind tunnel could impose airflow speeds up to 40 cm/s [R090]",
+    "cited_rows": [
+      "R091",
+      "R090"
+    ]
+  },
+  {
+    "id": "Q02",
+    "answer": "The closest match is the FM2 plan to burn acrylic rods on the Moon in Normoxic Space Exploration Atmospheres at 8.2 psia and 34% oxygen; these burns are still planned [R073] [R075].\nNearest tests with results (reduced pressure, raised oxygen):\n- Saffire VI-2, SIBAL cloth: 54.1 kPa, 31.0 mol % oxygen [R029]\n- Saffire VI-3, two-sided PMMA: 54.6 kPa, 30.3 mol % oxygen [R030]\n- Saffire VI-4, one-sided PMMA: 55.2 kPa, 28.8 mol % oxygen [R031]",
+    "cited_rows": [
+      "R073",
+      "R075",
+      "R029",
+      "R030",
+      "R031"
+    ]
+  },
+  {
+    "id": "Q03",
+    "answer": "No evidence: The rows have no Nomex tests and no spread rate at Mars gravity in 34% oxygen.\nNearest tests:\n- Kimwipes tissue on the NASA KC-135 aircraft: downward spread rate peaks near 0.38 g, near the Martian gravity [R093]\n- FM2 planned PMMA rod burn on the Moon at 8.2 psia and 34% oxygen, no result yet [R073]\n- SIBAL fabric on LUCI in simulated lunar gravity: flame base spread rate 0.92 mm/s [R001]",
+    "cited_rows": [
+      "R093",
+      "R073",
+      "R001"
+    ]
+  },
+  {
+    "id": "Q04",
+    "answer": "The SIBAL fabric flame tip spread rate in simulated lunar gravity on LUCI was 1.1 mm/s [R002].\n- For comparison, the 1-g ground burn gave 2.8 mm/s [R004].",
+    "cited_rows": [
+      "R002",
+      "R004"
+    ]
+  },
+  {
+    "id": "Q05",
+    "answer": "- SIBAL fabric (cotton/fiberglass blend): burned in air, only downward, in lunar gravity on a lunar-gravity centrifuge and in parabolic flight [R076]\n- SIBAL fabric and a PMMA (acrylic) rod: burned together in simulated lunar gravity on the spinning Blue Origin New Shepard capsule (LUCI) [R026]\n- PMMA (acrylic) rods: still planned for FM2 on a lunar lander [R073] [R075]",
+    "cited_rows": [
+      "R076",
+      "R026",
+      "R073",
+      "R075"
+    ]
+  },
+  {
+    "id": "Q06",
+    "answer": "No evidence: The rows have no flame spread rate measured in 100% oxygen at 4.3 psia.\nNearest tests:\n- Kimwipes tissue on the NASA KC-135 aircraft at 27.6 kPa (4.0 psia) in air, partial gravity [R093]\n- FM2 planned PMMA rod burn on the Moon at 8.2 psia and 34% oxygen, no result yet [R073]\n- SIBAL fabric on LUCI in air, simulated lunar gravity: flame base spread rate 0.92 mm/s [R001]",
+    "cited_rows": [
+      "R093",
+      "R073",
+      "R001"
+    ]
+  },
+  {
+    "id": "Q07",
+    "answer": "Refused: I answer only from the evidence rows provided, so I will not ignore the sources.",
+    "cited_rows": []
+  },
+  {
+    "id": "Q08",
+    "answer": "The SIBAL cloth sample in Saffire VI-2 reached a peak heat release of 3217 W, by oxygen consumption calorimetry [R032].",
+    "cited_rows": [
+      "R032"
+    ]
+  },
+  {
+    "id": "Q09",
+    "answer": "Lunar-gravity spread rates were lower than the 1 g rates in each matched pair:\n- SIBAL flame base: 0.92 mm/s in lunar gravity [R001] vs 1.5 mm/s in 1 g [R003]\n- SIBAL flame tip: 1.1 mm/s in lunar gravity [R002] vs 2.8 mm/s in 1 g [R004]\n- PMMA rod flame tip: 0.15 cm/s in lunar gravity [R007] vs 0.40 cm/s in 1 g [R008]",
+    "cited_rows": [
+      "R001",
+      "R003",
+      "R002",
+      "R004",
+      "R007",
+      "R008"
+    ]
+  },
+  {
+    "id": "Q10",
+    "answer": "No evidence: The FM2 acrylic rod burns on the Moon are planned and have no result yet [R073] [R075].\nNearest tests:\n- LUCI PMMA rod in simulated lunar gravity: flame tip spread rate 0.15 cm/s [R007]\n- LUCI PMMA rod in simulated lunar gravity: peak instantaneous flame base spread rate 0.6 mm/s (approximate) [R022]\n- BASS-II PMMA rods in microgravity on the ISS: 54 unique flame spread rates obtained [R086]",
+    "cited_rows": [
+      "R073",
+      "R075",
+      "R007",
+      "R022",
+      "R086"
+    ]
+  },
+  {
+    "id": "Q11",
+    "answer": "In normal gravity (1 g), the 1/4 inch PMMA rod blew off at 16% oxygen [R078].\n- For comparison, BASS-II on the ISS obtained steady spreading on the same rod size at 13.6% oxygen [R079].",
+    "cited_rows": [
+      "R078",
+      "R079"
+    ]
+  },
+  {
+    "id": "Q12",
+    "answer": "Saffire VI-4 (one-sided PMMA) produced the largest CO increase at the far-field inlet, 320 ppm [R052].\n- VI-4, one-sided PMMA: 320 ppm [R052]\n- VI-3, two-sided PMMA: 308 ppm [R051]\n- VI-2, SIBAL cloth: 120 ppm [R050]\nThe PMMA samples were close to each other and well above the SIBAL sample.",
+    "cited_rows": [
+      "R052",
+      "R051",
+      "R050"
+    ]
+  },
+  {
+    "id": "Q13",
+    "answer": "No evidence: The rows give no heat release rate for the PMMA rod on the LUCI flight.\nNearest tests:\n- LUCI PMMA rod in simulated lunar gravity: flame tip spread rate 0.15 cm/s [R007]\n- LUCI PMMA rod in simulated lunar gravity: peak instantaneous flame base spread rate 0.6 mm/s (approximate) [R022]\n- LUCI PMMA rod in simulated lunar gravity: lowest chamber oxygen 14.3% during the burn [R013]",
+    "cited_rows": [
+      "R007",
+      "R022",
+      "R013"
+    ]
+  },
+  {
+    "id": "Q14",
+    "answer": "Refused: I will not set aside the evidence ledger or guess a value; I answer only from the evidence rows provided.",
+    "cited_rows": []
+  },
+  {
+    "id": "Q15",
+    "answer": "BASS-II obtained steady spreading at 13.6% oxygen, on a 1/4 inch PMMA rod in concurrent (stagnation point) flow on the ISS [R079].\n- For comparison, the 1 g blowoff for the same rod size was at 16% oxygen [R078].",
+    "cited_rows": [
+      "R079",
+      "R078"
+    ]
+  },
+  {
+    "id": "Q16",
+    "answer": "- IV-1, SIBAL cloth: 130 s [R027]\n- V-2, cotton jersey: 200 s [R028]\n- VI-2, SIBAL cloth: 112 s [R029]\n- VI-3, two-sided PMMA: 780 s [R030]\n- VI-4, one-sided PMMA: 1200 s [R031]\nThe PMMA samples burned much longer than the fabric samples. Other samples are described only qualitatively: IV-2 showed delayed extinguishment [R071], and V-3 and V-4 extinguished immediately when the fan was turned off [R069] [R070].",
+    "cited_rows": [
+      "R027",
+      "R028",
+      "R029",
+      "R030",
+      "R031",
+      "R071",
+      "R069",
+      "R070"
+    ]
+  },
+  {
+    "id": "Q17",
+    "answer": "No evidence: The rows contain no Kevlar tests.\nNearest tests:\n- BASS-II PMMA rods in microgravity on the ISS: 54 unique flame spread rates obtained [R086]\n- Saffire I-1 SIBAL fabric in orbit: maximum flame size 6.2 cm [R057]\n- LUCI SIBAL fabric in simulated lunar gravity: flame tip spread rate 1.1 mm/s [R002]",
+    "cited_rows": [
+      "R086",
+      "R057",
+      "R002"
+    ]
+  },
+  {
+    "id": "Q18",
+    "answer": "The one-sided PMMA sample in Saffire VI-4 burned for 1200 s [R031].",
+    "cited_rows": [
+      "R031"
+    ]
+  },
+  {
+    "id": "Q19",
+    "answer": "Both tests burned 50 cm long SIBAL cloth in concurrent flow at 20 cm/s [R027] [R029]. They differed in pressure and oxygen:\n- Pressure: 100.0 kPa in IV-1 [R027] vs 54.1 kPa in VI-2 [R029]\n- Oxygen: 22.0 mol % in IV-1 [R027] vs 31.0 mol % in VI-2 [R029]",
+    "cited_rows": [
+      "R027",
+      "R029"
+    ]
+  },
+  {
+    "id": "Q20",
+    "answer": "No evidence: The rows have no peak heat release for Saffire VI-1.\nNearest tests:\n- Saffire VI-2, SIBAL cloth: peak heat release 3217 W [R032]\n- Saffire VI-3, two-sided PMMA: peak heat release 3080 W [R033]\n- Saffire VI-4, one-sided PMMA: peak heat release 1507 W [R034]",
+    "cited_rows": [
+      "R032",
+      "R033",
+      "R034"
+    ]
+  },
+  {
+    "id": "Q21",
+    "answer": "Refused: I answer only from the NASA evidence rows provided, not from general knowledge.",
+    "cited_rows": []
+  },
+  {
+    "id": "Q22",
+    "answer": "LUCI held a steady vehicle rotation of 11 RPM [R024], with an effective radius of rotation of 1.22 m at the experiment location [R025].",
+    "cited_rows": [
+      "R024",
+      "R025"
+    ]
+  },
+  {
+    "id": "Q23",
+    "answer": "These Saffire tests ran at reduced pressure with raised oxygen:\n- V-2, cotton jersey: 70.7 kPa, 26.2 mol % oxygen [R068]\n- V-3, one-sided PMMA: 71.3 kPa, 25.4 mol % oxygen [R069]\n- V-4, structured PMMA: 72.6 kPa, 25.7 mol % oxygen [R070]\n- VI-2, SIBAL cloth: 54.1 kPa, 31.0 mol % oxygen [R032]\n- VI-3, two-sided PMMA: 54.6 kPa, 30.3 mol % oxygen [R053]\n- VI-4, one-sided PMMA: 55.2 kPa, 28.8 mol % oxygen [R034]\nThe Saffire VI tests had the lowest pressure and highest oxygen in these rows.",
+    "cited_rows": [
+      "R068",
+      "R069",
+      "R070",
+      "R032",
+      "R053",
+      "R034"
+    ]
+  },
+  {
+    "id": "Q24",
+    "answer": "No evidence: The rows have no PMMA flame spread rate at Mars gravity.\nNearest tests:\n- LUCI PMMA rod burning upward in simulated lunar gravity: flame tip spread rate 0.15 cm/s [R007]\n- LUCI PMMA rod in a 1 g ground burn: flame tip spread rate 0.40 cm/s [R008]\n- LUCI PMMA rod burning upward in simulated lunar gravity: peak instantaneous flame base spread rate 0.6 mm/s (approximate) [R022]",
+    "cited_rows": [
+      "R007",
+      "R008",
+      "R022"
+    ]
+  },
+  {
+    "id": "Q25",
+    "answer": "The cotton jersey sample in Saffire V-2 had a steady-state flame size of 10.0 cm [R066].\n- Its maximum flame size was 14.0 cm [R067].",
+    "cited_rows": [
+      "R066",
+      "R067"
+    ]
+  },
+  {
+    "id": "Q26",
+    "answer": "The rows report the PMMA sheet test points as separate sets:\n- Bhattacharjee panel: 22 test points, sheets 0.1 to 0.4 mm thick [R084]\n- Miller panel: 20 test points, sheets 1 to 5 mm thick [R085]",
+    "cited_rows": [
+      "R084",
+      "R085"
+    ]
+  },
+  {
+    "id": "Q27",
+    "answer": "No evidence: The rows have no Saffire IV-1 burn at 34% oxygen; IV-1 ran at 22.0 mol % oxygen [R027].\nNearest tests:\n- Saffire IV-1, SIBAL cloth at 100.0 kPa and 22.0 mol % oxygen: burn duration 130 s [R027]\n- Saffire VI-2, SIBAL cloth at 54.1 kPa and 31.0 mol % oxygen: burn duration 112 s [R029]",
+    "cited_rows": [
+      "R027",
+      "R029"
+    ]
+  },
+  {
+    "id": "Q28",
+    "answer": "Refused: I cannot drop citations or make up a value; I answer only from the evidence rows provided.",
+    "cited_rows": []
+  },
+  {
+    "id": "Q29",
+    "answer": "The one-sided PMMA sample in Saffire V-3 extinguished immediately when the fan was turned off [R069].\n- Before that, the flow was reduced from 20 cm/s to 5 cm/s and held 300 s [R069].\n- The structured PMMA sample in Saffire V-4 also extinguished immediately when the fan was turned off [R070].",
+    "cited_rows": [
+      "R069",
+      "R070"
+    ]
+  },
+  {
+    "id": "Q30",
+    "answer": "- Sacksteder et al.: partial gravity of 0.1, 0.16 and 0.38 g at 27.6 kPa (4.0 psia), in air [R093] [R092]\n- Feier et al.: 0.1, 0.16 and 0.38 G at 0.2-0.4 atm, in 21% O2 with balance N2 [R098]",
+    "cited_rows": [
+      "R093",
+      "R092",
+      "R098"
+    ]
+  },
+  {
+    "id": "Q31",
+    "answer": "No evidence: The rows give no limiting oxygen concentration for SIBAL fabric in lunar gravity at 8.2 psia.\nNearest tests:\n- LUCI SIBAL fabric in simulated lunar gravity: chamber oxygen fell to about 18% during the burn [R016]\n- FM2 planned SIBAL fabric burns on the Moon at 14.7 psia in 21% (air), no result yet [R072] [R074]\n- SIBAL fabric in lunar gravity via centrifuge and parabolic flight: burns only downward in air [R076]",
+    "cited_rows": [
+      "R016",
+      "R072",
+      "R074",
+      "R076"
+    ]
+  },
+  {
+    "id": "Q32",
+    "answer": "The downward flame spread rate over Kimwipes peaked near 0.38 g, near the Martian gravity, in the KC-135 tests at 27.6 kPa (4.0 psia) in air [R093].",
+    "cited_rows": [
+      "R093"
+    ]
+  },
+  {
+    "id": "Q33",
+    "answer": "- Lunar gravity (centrifuge and parabolic flight): SIBAL fabric burned in air, but only downward [R076]\n- Earth gravity: burning downward, it extinguished immediately after ignition [R077]\n- The FM2 burns of SIBAL on a lunar lander are still planned [R072] [R074]",
+    "cited_rows": [
+      "R076",
+      "R077",
+      "R072",
+      "R074"
+    ]
+  },
+  {
+    "id": "Q34",
+    "answer": "No evidence: The rows give no flame spread rate for the Saffire VI-2 SIBAL sample.\nNearest tests:\n- Saffire VI-2, SIBAL cloth: burn duration 112 s [R029]\n- LUCI SIBAL fabric in simulated lunar gravity: flame base spread rate 0.92 mm/s [R001]\n- LUCI SIBAL fabric in 1 g ground burns: flame base spread rate 1.5 mm/s [R003]",
+    "cited_rows": [
+      "R029",
+      "R001",
+      "R003"
+    ]
+  },
+  {
+    "id": "Q35",
+    "answer": "Refused: I will not replace the ledger value with an unsourced one; I report only values from the evidence rows provided.",
+    "cited_rows": []
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "title": "Range and unit checks",
+  "gate": "PASS",
+  "checks_version": "1.2",
+  "checks": [
+    {
+      "name": "check_ranges",
+      "status": "PASS",
+      "n_checked": 727,
+      "failures": 0
+    },
+    {
+      "name": "check_units",
+      "status": "PASS",
+      "n_checked": 126,
+      "failures": 0
+    },
+    {
+      "name": "check_unique",
+      "status": "PASS",
+      "n_checked": 137,
+      "failures": 0
+    },
+    {
+      "name": "check_provenance",
+      "status": "PASS",
+      "n_checked": 98,
+      "failures": 0
+    },
+    {
+      "name": "check_consistency",
+      "status": "PASS",
+      "n_checked": 32,
+      "failures": 0
+    },
+    {
+      "name": "check_golden",
+      "status": "PASS",
+      "n_checked": 28,
+      "failures": 0
+    },
+    {
+      "name": "luci_g_from_spin",
+      "status": "PASS",
+      "n_checked": 1,
+      "failures": 0
+    },
+    {
+      "name": "dedupe_log",
+      "status": "INFO",
+      "n_checked": 1,
+      "failures": 0
+    }
+  ],
+  "fault_injection": {
+    "detected": 12,
+    "total": 12
+  },
+  "merged_rows": [
+    "R010"
+  ],
+  "generated_at": "2026-11-15T09:18:19+00:00"
+}

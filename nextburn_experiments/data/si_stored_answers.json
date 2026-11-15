@@ -1,0 +1,982 @@
+{
+  "title": "Stored SI answers for the demo (fallback when the live SI service fails)",
+  "generated_at": "2026-11-15T09:18:36+00:00",
+  "si_version": "1.7",
+  "question_bank_sha256": "38c15b5656045a7d47709f99a560ce1dbf8c8ecf255e346ca4b48d13e1b36992",
+  "source": "deterministic guarded answerer, nextburn/si.py",
+  "note": "Each answer cites ledger rows in square brackets; every number is copied from a cited row or the question.",
+  "answers": [
+    {
+      "id": "Q01",
+      "category": "direct",
+      "question": "What range of flow speeds did the BASS-II wind tunnel cover?",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- BASS-II poster: ISS Microgravity Science Glovebox (BASS-II wind tunnel); various solid samples; microgravity (ISS); 21% and below; flow up to 40 cm/s: maximum airflow speed of wind tunnel = 40 cm/s (upper bound) [R090]\n- BASS-II poster: ISS Microgravity Science Glovebox (BASS-II); PMMA sheet; microgravity (ISS); flow varied: flow speed below which radiative quenching occurs = 2 cm/s (upper bound) [R082]\n- BASS-II poster: ISS Microgravity Science Glovebox (BASS-II); PMMA sheet; microgravity (ISS); flow varied: flow speed near blow-off extinction = 40 cm/s (approximate) [R083]\n- BASS-II poster: ISS Microgravity Science Glovebox (BASS-II); SIBAL fabric; microgravity (ISS); 1 atm; 18.7%; flow 5 cm/s at ignition: flow speed after gradual reduction (quenching sequence) = 2.2 cm/s [R089]\n- BASS-II poster: ISS Microgravity Science Glovebox (BASS-II); various solid samples; microgravity (ISS); 21% and below; flow 0 to 55 cm/s: airflow speed range = 0 to 55 cm/s (range) [R091]",
+      "cited_rows": [
+        "R090",
+        "R082",
+        "R083",
+        "R089",
+        "R091"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R090",
+          "source_id": "bass2_poster_2014",
+          "source_title": "Ferkul et al., Combustion of Solids in Microgravity: Results from the BASS-II Experiment, ASGSR 2014 poster (NTRS 20160000593)",
+          "locator": "Hardware description",
+          "measurement": "maximum airflow speed of wind tunnel",
+          "value": "40",
+          "unit": "cm/s",
+          "qualifier": "upper bound",
+          "snippet": "could impose airflow speeds up to 40 cm/s"
+        },
+        {
+          "row_id": "R082",
+          "source_id": "bass2_poster_2014",
+          "source_title": "Ferkul et al., Combustion of Solids in Microgravity: Results from the BASS-II Experiment, ASGSR 2014 poster (NTRS 20160000593)",
+          "locator": "Bhattacharjee panel (radiative quenching vs blow off)",
+          "measurement": "flow speed below which radiative quenching occurs",
+          "value": "2",
+          "unit": "cm/s",
+          "qualifier": "upper bound",
+          "snippet": "radiative quenching when flow velocity goes below 2 cm/s"
+        },
+        {
+          "row_id": "R083",
+          "source_id": "bass2_poster_2014",
+          "source_title": "Ferkul et al., Combustion of Solids in Microgravity: Results from the BASS-II Experiment, ASGSR 2014 poster (NTRS 20160000593)",
+          "locator": "Bhattacharjee panel (radiative quenching vs blow off)",
+          "measurement": "flow speed near blow-off extinction",
+          "value": "40",
+          "unit": "cm/s",
+          "qualifier": "approximate",
+          "snippet": "Flame nearing blow off extinction as the flow velocity crosses 40 cm/s."
+        },
+        {
+          "row_id": "R089",
+          "source_id": "bass2_poster_2014",
+          "source_title": "Ferkul et al., Combustion of Solids in Microgravity: Results from the BASS-II Experiment, ASGSR 2014 poster (NTRS 20160000593)",
+          "locator": "T'ien panel, quenching image caption",
+          "measurement": "flow speed after gradual reduction (quenching sequence)",
+          "value": "2.2",
+          "unit": "cm/s",
+          "qualifier": "exact",
+          "snippet": "Ignited at 5 cm/s flow at right end, then reduced to 2.2 cm/s gradually."
+        },
+        {
+          "row_id": "R091",
+          "source_id": "bass2_poster_2014",
+          "source_title": "Ferkul et al., Combustion of Solids in Microgravity: Results from the BASS-II Experiment, ASGSR 2014 poster (NTRS 20160000593)",
+          "locator": "Main variables list",
+          "measurement": "airflow speed range",
+          "value": "0 to 55",
+          "unit": "cm/s",
+          "qualifier": "range",
+          "snippet": "Airflow speed (0 to 55 cm/s)"
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "category": "synthesis",
+      "question": "Which tests sit nearest the Moon-base atmosphere?",
+      "answer": "Nearest tests in the ledger to the Moon-base atmosphere, ranked by oxygen and pressure:\n- FM2 poster: FM2 on a lunar lander (planned); PMMA (acrylic) rod; lunar (on the Moon); 8.2 psia; 34%; 4 mm diameter rod; planned, no result yet [R073] [R075]\n- Saffire VI-2; SIBAL cloth; microgravity (orbit); 54.1 kPa; 31.0 mol %; flow 20 cm/s; concurrent; 50 cm long [R029] [R032]\n- Saffire VI-3; two-sided PMMA; microgravity (orbit); 54.6 kPa; 30.3 mol %; concurrent; 18 cm long [R053] [R030]\n- Saffire VI-4; one-sided PMMA; microgravity (orbit); 55.2 kPa; 28.8 mol %; flow 20 cm/s; concurrent; 18 cm long [R031] [R034]",
+      "cited_rows": [
+        "R073",
+        "R075",
+        "R029",
+        "R032",
+        "R053",
+        "R030",
+        "R031",
+        "R034"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R073",
+          "source_id": "fm2_poster_2024",
+          "source_title": "Zayac et al., Flammability of Materials on the Moon, Glenn Space Technology Symposium poster 2024 (NTRS 20240015307)",
+          "locator": "Poster, Introduction",
+          "measurement": "planned burn",
+          "value": "no result yet",
+          "unit": "-",
+          "qualifier": "categorical",
+          "snippet": "two acrylic rods which will be burned in Normoxic Space Exploration Atmospheres (SEA)"
+        },
+        {
+          "row_id": "R075",
+          "source_id": "fm2_poster_2024",
+          "source_title": "Zayac et al., Flammability of Materials on the Moon, Glenn Space Technology Symposium poster 2024 (NTRS 20240015307)",
+          "locator": "Poster, Introduction",
+          "measurement": "planned burn",
+          "value": "no result yet",
+          "unit": "-",
+          "qualifier": "categorical",
+          "snippet": "two acrylic rods which will be burned in Normoxic Space Exploration Atmospheres (SEA)"
+        },
+        {
+          "row_id": "R029",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-2 (conditions in Table 1, p. 3)",
+          "measurement": "burn duration",
+          "value": "112",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "VI-2 SIBAL 112 3217 580 3,650 409 48 20 2800 1.15 120"
+        },
+        {
+          "row_id": "R032",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-2 (conditions in Table 1, p. 3)",
+          "measurement": "peak heat release (oxygen consumption calorimetry)",
+          "value": "3217",
+          "unit": "W",
+          "qualifier": "exact",
+          "snippet": "VI-2 SIBAL 112 3217 580 3,650 409 48 20 2800 1.15 120"
+        },
+        {
+          "row_id": "R053",
+          "source_id": "saffire6_pres_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES 2024 presentation (NTRS 20240007488)",
+          "locator": "Slide 'Temperature results for Saffire VI-3 (two-sided PMMA)'",
+          "measurement": "ignition time",
+          "value": "637",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "Ignition at 637 s"
+        },
+        {
+          "row_id": "R030",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-3 (conditions in Table 1, p. 3)",
+          "measurement": "burn duration",
+          "value": "780",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "VI-3 2-sided PMMA 780 3080 1280 77 21 8539 3.51 308"
+        },
+        {
+          "row_id": "R031",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-4 (conditions in Table 1, p. 3)",
+          "measurement": "burn duration",
+          "value": "1200",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "VI-4 1-sided PMMA 1200 1507 830 57 21 8117 3.37 320"
+        },
+        {
+          "row_id": "R034",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-4 (conditions in Table 1, p. 3)",
+          "measurement": "peak heat release (oxygen consumption calorimetry)",
+          "value": "1507",
+          "unit": "W",
+          "qualifier": "exact",
+          "snippet": "VI-4 1-sided PMMA 1200 1507 830 57 21 8117 3.37 320"
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "category": "direct",
+      "question": "What was the flame tip spread rate of the SIBAL fabric in lunar gravity on LUCI?",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- LUCI: Blue Origin New Shepard NS-29, spinning capsule; SIBAL fabric (cotton-fiberglass); lunar (simulated by capsule spin); normal pressure; air: flame tip spread rate = 1.1 mm/s [R002]",
+      "cited_rows": [
+        "R002"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R002",
+          "source_id": "luci_2025",
+          "source_title": "Ferkul et al., Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket, ASGSR 2025 (NTRS 20250010653)",
+          "locator": "Slide 'LUCI: SIBAL fabric Linear Fit for SIBAL Flame Spread'",
+          "measurement": "flame tip spread rate",
+          "value": "1.1",
+          "unit": "mm/s",
+          "qualifier": "exact",
+          "snippet": "Flame tip spread rate = 1.1 mm/s"
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "category": "synthesis",
+      "question": "Which materials have been burned in lunar gravity, and on which platforms?",
+      "answer": "Matching tests in the ledger:\n- FM2 poster: lunar-gravity centrifuge and parabolic flight; SIBAL fabric (cotton/fiberglass blend); lunar (simulated); air [R076]\n- Feier et al.: NASA KC-135 aircraft; thin cellulose (Kimwipes); 0.1, 0.16 and 0.38 G; 0.2-0.4 atm; 21% O2, balance N2 [R098]\n- LUCI: Blue Origin New Shepard NS-29, spinning capsule; SIBAL fabric and PMMA rod (burned simultaneously); lunar (simulated by capsule spin); normal pressure; air [R026]\n- Sacksteder et al.: NASA KC-135 aircraft; Kimwipes thin cellulosic tissue; partial gravity (0.1, 0.16, 0.38 g); 27.6 kPa; air [R092]\n- Sacksteder et al.: NASA KC-135 aircraft; Kimwipes thin cellulosic tissue; partial gravity (0.1, 0.16, 0.38 g); 27.6 kPa (4.0 psia); air [R093]\n- FM2 poster: FM2 on a lunar lander (planned); PMMA (acrylic) rod; lunar (on the Moon); 8.2 psia; 34%; planned, no result yet [R073] [R075]",
+      "cited_rows": [
+        "R076",
+        "R098",
+        "R026",
+        "R092",
+        "R093",
+        "R073",
+        "R075"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R076",
+          "source_id": "fm2_poster_2024",
+          "source_title": "Zayac et al., Flammability of Materials on the Moon, Glenn Space Technology Symposium poster 2024 (NTRS 20240015307)",
+          "locator": "Poster, Introduction",
+          "measurement": "burning behaviour",
+          "value": "burns (only downward)",
+          "unit": "-",
+          "qualifier": "categorical",
+          "snippet": "SIBAL fabric has been found to only burn downward in air in lunar gravity (via Lunar gravity centrifuge and parabolic flight)"
+        },
+        {
+          "row_id": "R098",
+          "source_id": "feier_2001",
+          "source_title": "Feier et al., Upward Flame Spread Over Thin Solids in Partial Gravity, AIAA 2001-0466 (NTRS 20010059376)",
+          "locator": "Experimental section (aircraft)",
+          "measurement": "partial-gravity parabolas per flight",
+          "value": "10",
+          "unit": "-",
+          "qualifier": "upper bound",
+          "snippet": "Up to ten partial gravity parabolas were obtained per flight at nominal accelerations levels of 0.1, 0.16, and 0.38 G."
+        },
+        {
+          "row_id": "R026",
+          "source_id": "luci_2025",
+          "source_title": "Ferkul et al., Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket, ASGSR 2025 (NTRS 20250010653)",
+          "locator": "Summary bullets (slide after 'Page 10')",
+          "measurement": "burn duration",
+          "value": "2.5",
+          "unit": "min",
+          "qualifier": "lower bound",
+          "snippet": "the burn lasts for over two and a half minutes"
+        },
+        {
+          "row_id": "R092",
+          "source_id": "sacksteder_2003",
+          "source_title": "Sacksteder et al., Upward and Downward Flame Spreading and Extinction in Partial Gravity Environments, 2003 (NTRS 20040053567)",
+          "locator": "Text discussing Figure 1",
+          "measurement": "dependence of upward spread rate on gravity",
+          "value": "linear",
+          "unit": "-",
+          "qualifier": "categorical",
+          "snippet": "The upward burning spread rate varied linearly with gravity level for all pressure environments and sample widths tested"
+        },
+        {
+          "row_id": "R093",
+          "source_id": "sacksteder_2003",
+          "source_title": "Sacksteder et al., Upward and Downward Flame Spreading and Extinction in Partial Gravity Environments, 2003 (NTRS 20040053567)",
+          "locator": "Figure 1 caption and text",
+          "measurement": "gravity level at which downward spread rate peaks",
+          "value": "0.38",
+          "unit": "g",
+          "qualifier": "approximate",
+          "snippet": "peaks near the Martian gravity"
+        },
+        {
+          "row_id": "R073",
+          "source_id": "fm2_poster_2024",
+          "source_title": "Zayac et al., Flammability of Materials on the Moon, Glenn Space Technology Symposium poster 2024 (NTRS 20240015307)",
+          "locator": "Poster, Introduction",
+          "measurement": "planned burn",
+          "value": "no result yet",
+          "unit": "-",
+          "qualifier": "categorical",
+          "snippet": "two acrylic rods which will be burned in Normoxic Space Exploration Atmospheres (SEA)"
+        },
+        {
+          "row_id": "R075",
+          "source_id": "fm2_poster_2024",
+          "source_title": "Zayac et al., Flammability of Materials on the Moon, Glenn Space Technology Symposium poster 2024 (NTRS 20240015307)",
+          "locator": "Poster, Introduction",
+          "measurement": "planned burn",
+          "value": "no result yet",
+          "unit": "-",
+          "qualifier": "categorical",
+          "snippet": "two acrylic rods which will be burned in Normoxic Space Exploration Atmospheres (SEA)"
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "category": "direct",
+      "question": "What peak heat release did the SIBAL sample reach in Saffire VI-2?",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- Saffire VI-2; SIBAL cloth; microgravity (orbit); 54.1 kPa; 31.0 mol %: peak heat release (oxygen consumption calorimetry) = 3217 W [R032]",
+      "cited_rows": [
+        "R032"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R032",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-2 (conditions in Table 1, p. 3)",
+          "measurement": "peak heat release (oxygen consumption calorimetry)",
+          "value": "3217",
+          "unit": "W",
+          "qualifier": "exact",
+          "snippet": "VI-2 SIBAL 112 3217 580 3,650 409 48 20 2800 1.15 120"
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "category": "synthesis",
+      "question": "How did LUCI's lunar-gravity flame spread rates compare with its 1 g burns?",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- LUCI: ground, LUCI 1-g burns; SIBAL fabric (cotton-fiberglass); 1 g; ~20% (roughly constant): flame base spread rate = 1.5 mm/s [R003]\n- LUCI: ground, LUCI 1-g burns; SIBAL fabric (cotton-fiberglass); 1 g; ~20% (roughly constant): flame tip spread rate = 2.8 mm/s [R004]\n- LUCI: ground, LUCI 1-g burns; PMMA (acrylic) rod; 1 g; 21% at start, falling to 14.5%: flame tip spread rate = 0.40 cm/s [R008]\n- LUCI: ground, LUCI 1-g burns; PMMA (acrylic) rod; 1 g; 21% at start, falling to 14.5%: flame tip growth rate at start of burn = 3.95 mm/s (approximate) [R011]\n- LUCI: Blue Origin New Shepard NS-29, spinning capsule; SIBAL fabric (cotton-fiberglass); lunar (simulated by capsule spin); normal pressure; air: flame base spread rate = 0.92 mm/s [R001]\n- LUCI: Blue Origin New Shepard NS-29, spinning capsule; SIBAL fabric (cotton-fiberglass); lunar (simulated by capsule spin); normal pressure; air: flame tip spread rate = 1.1 mm/s [R002]\n- LUCI: Blue Origin New Shepard NS-29, spinning capsule; PMMA (acrylic) rod; lunar (simulated by capsule spin); normal pressure; air: flame tip spread rate = 0.15 cm/s [R007]\n- LUCI: Blue Origin New Shepard NS-29, spinning capsule; PMMA (acrylic) rod; lunar (simulated by capsule spin); normal pressure; air: peak instantaneous flame base spread rate (before 125 s) = 0.6 mm/s (approximate) [R022]",
+      "cited_rows": [
+        "R003",
+        "R004",
+        "R008",
+        "R011",
+        "R001",
+        "R002",
+        "R007",
+        "R022"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R003",
+          "source_id": "luci_2025",
+          "source_title": "Ferkul et al., Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket, ASGSR 2025 (NTRS 20250010653)",
+          "locator": "Slide 'Combined Results: SIBAL' (flame spread rates from linear fits)",
+          "measurement": "flame base spread rate",
+          "value": "1.5",
+          "unit": "mm/s",
+          "qualifier": "exact",
+          "snippet": "FlameBase .9 1.5 .6"
+        },
+        {
+          "row_id": "R004",
+          "source_id": "luci_2025",
+          "source_title": "Ferkul et al., Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket, ASGSR 2025 (NTRS 20250010653)",
+          "locator": "Slide 'Combined Results: SIBAL' (flame spread rates from linear fits)",
+          "measurement": "flame tip spread rate",
+          "value": "2.8",
+          "unit": "mm/s",
+          "qualifier": "exact",
+          "snippet": "FlameTip 1.1 2.8 .39"
+        },
+        {
+          "row_id": "R008",
+          "source_id": "luci_2025",
+          "source_title": "Ferkul et al., Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket, ASGSR 2025 (NTRS 20250010653)",
+          "locator": "Slide 'Combined Results: PMMA' (flame tip spread from linear fits)",
+          "measurement": "flame tip spread rate",
+          "value": "0.40",
+          "unit": "cm/s",
+          "qualifier": "exact",
+          "snippet": "Partial-G(cm/s) 1-G(cm/s) Ratio .15 .40 .38"
+        },
+        {
+          "row_id": "R011",
+          "source_id": "luci_2025",
+          "source_title": "Ferkul et al., Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket, ASGSR 2025 (NTRS 20250010653)",
+          "locator": "Slide '1-G Results: PMMA Flame Tip Spread Linear Fit'",
+          "measurement": "flame tip growth rate at start of burn",
+          "value": "3.95",
+          "unit": "mm/s",
+          "qualifier": "approximate",
+          "snippet": "Flame tip grows at a rate of ~ 3.95 mm/s at the beginning of the burn."
+        },
+        {
+          "row_id": "R001",
+          "source_id": "luci_2025",
+          "source_title": "Ferkul et al., Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket, ASGSR 2025 (NTRS 20250010653)",
+          "locator": "Slide 'LUCI: SIBAL fabric Linear Fit for SIBAL Flame Spread'",
+          "measurement": "flame base spread rate",
+          "value": "0.92",
+          "unit": "mm/s",
+          "qualifier": "exact",
+          "snippet": "Flame base spread rate = .92 mm/s."
+        },
+        {
+          "row_id": "R002",
+          "source_id": "luci_2025",
+          "source_title": "Ferkul et al., Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket, ASGSR 2025 (NTRS 20250010653)",
+          "locator": "Slide 'LUCI: SIBAL fabric Linear Fit for SIBAL Flame Spread'",
+          "measurement": "flame tip spread rate",
+          "value": "1.1",
+          "unit": "mm/s",
+          "qualifier": "exact",
+          "snippet": "Flame tip spread rate = 1.1 mm/s"
+        },
+        {
+          "row_id": "R007",
+          "source_id": "luci_2025",
+          "source_title": "Ferkul et al., Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket, ASGSR 2025 (NTRS 20250010653)",
+          "locator": "Slide 'Combined Results: PMMA' (flame tip spread from linear fits)",
+          "measurement": "flame tip spread rate",
+          "value": "0.15",
+          "unit": "cm/s",
+          "qualifier": "exact",
+          "snippet": "Partial-G(cm/s) 1-G(cm/s) Ratio .15 .40 .38"
+        },
+        {
+          "row_id": "R022",
+          "source_id": "luci_2025",
+          "source_title": "Ferkul et al., Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket, ASGSR 2025 (NTRS 20250010653)",
+          "locator": "Slide 'LUCI: PMMA Quadratic Fit for PMMA Flame Base Spread'",
+          "measurement": "peak instantaneous flame base spread rate (before 125 s)",
+          "value": "0.6",
+          "unit": "mm/s",
+          "qualifier": "approximate",
+          "snippet": "Flame spread rate increases linearly from 0 to ~.6 mm/s (before gravity starts dropping at t = 125s)"
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "category": "direct",
+      "question": "At what oxygen level did the 1/4 inch PMMA rod blow off in normal gravity in the BASS-II work?",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- BASS-II poster: ground; PMMA rod; 1 g; varied; 1/4 inch diameter rod: blowoff limit oxygen = 16% [R078]",
+      "cited_rows": [
+        "R078"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R078",
+          "source_id": "bass2_poster_2014",
+          "source_title": "Ferkul et al., Combustion of Solids in Microgravity: Results from the BASS-II Experiment, ASGSR 2014 poster (NTRS 20160000593)",
+          "locator": "Olson panel, Status",
+          "measurement": "blowoff limit oxygen",
+          "value": "16",
+          "unit": "%",
+          "qualifier": "exact",
+          "snippet": "The 1g blowoff for the 1\u20444\u201d rod is at 16% oxygen"
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "category": "synthesis",
+      "question": "Which Saffire VI sample produced the largest CO increase, and how do the three samples compare?",
+      "answer": "Highest CO increase at far-field inlet among the matching rows: Saffire VI-4, 320 ppm [R052].\nFrom the evidence ledger (values as reported, no conversion):\n- Saffire VI-4; one-sided PMMA; microgravity (orbit); 55.2 kPa; 28.8 mol %: CO increase at far-field inlet = 320 ppm [R052]\n- Saffire VI-3; two-sided PMMA; microgravity (orbit); 54.6 kPa; 30.3 mol %: CO increase at far-field inlet = 308 ppm [R051]\n- Saffire VI-2; SIBAL cloth; microgravity (orbit); 54.1 kPa; 31.0 mol %: CO increase at far-field inlet = 120 ppm [R050]",
+      "cited_rows": [
+        "R052",
+        "R051",
+        "R050"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R052",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-4 (conditions in Table 1, p. 3)",
+          "measurement": "CO increase at far-field inlet",
+          "value": "320",
+          "unit": "ppm",
+          "qualifier": "exact",
+          "snippet": "VI-4 1-sided PMMA 1200 1507 830 57 21 8117 3.37 320"
+        },
+        {
+          "row_id": "R051",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-3 (conditions in Table 1, p. 3)",
+          "measurement": "CO increase at far-field inlet",
+          "value": "308",
+          "unit": "ppm",
+          "qualifier": "exact",
+          "snippet": "VI-3 2-sided PMMA 780 3080 1280 77 21 8539 3.51 308"
+        },
+        {
+          "row_id": "R050",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-2 (conditions in Table 1, p. 3)",
+          "measurement": "CO increase at far-field inlet",
+          "value": "120",
+          "unit": "ppm",
+          "qualifier": "exact",
+          "snippet": "VI-2 SIBAL 112 3217 580 3,650 409 48 20 2800 1.15 120"
+        }
+      ]
+    },
+    {
+      "id": "Q15",
+      "category": "direct",
+      "question": "What is the lowest oxygen level at which BASS-II obtained steady flame spreading in microgravity?",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- BASS-II poster: ISS Microgravity Science Glovebox (BASS-II); PMMA rod; microgravity (ISS); varied: lowest oxygen with steady spreading = 13.6% [R079]",
+      "cited_rows": [
+        "R079"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R079",
+          "source_id": "bass2_poster_2014",
+          "source_title": "Ferkul et al., Combustion of Solids in Microgravity: Results from the BASS-II Experiment, ASGSR 2014 poster (NTRS 20160000593)",
+          "locator": "Olson panel, Status",
+          "measurement": "lowest oxygen with steady spreading",
+          "value": "13.6",
+          "unit": "%",
+          "qualifier": "exact",
+          "snippet": "we obtained steady spreading at 13.6% oxygen in BASS-II"
+        }
+      ]
+    },
+    {
+      "id": "Q16",
+      "category": "synthesis",
+      "question": "Compare the burn durations of the samples in Saffire IV, V and VI.",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- Saffire IV-1; SIBAL cloth; microgravity (orbit); 100.0 kPa; 22.0 mol %: burn duration = 130 s [R027]\n- Saffire V-2; cotton jersey; microgravity (orbit); 70.7 kPa; 26.2 mol %: burn duration = 200 s [R028]\n- Saffire VI-2; SIBAL cloth; microgravity (orbit); 54.1 kPa; 31.0 mol %: burn duration = 112 s [R029]\n- Saffire VI-3; two-sided PMMA; microgravity (orbit); 54.6 kPa; 30.3 mol %: burn duration = 780 s [R030]\n- Saffire VI-4; one-sided PMMA; microgravity (orbit); 55.2 kPa; 28.8 mol %: burn duration = 1200 s [R031]",
+      "cited_rows": [
+        "R027",
+        "R028",
+        "R029",
+        "R030",
+        "R031"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R027",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row IV-1 (conditions in Table 1, p. 3)",
+          "measurement": "burn duration",
+          "value": "130",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "IV-1 SIBAL 130 3,150 409 45 25 1390 1.03 80"
+        },
+        {
+          "row_id": "R028",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row V-2 (conditions in Table 1, p. 3)",
+          "measurement": "burn duration",
+          "value": "200",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "V-2 Cotton Jersey 200 2,800 560 46 23 2360 1.26 83"
+        },
+        {
+          "row_id": "R029",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-2 (conditions in Table 1, p. 3)",
+          "measurement": "burn duration",
+          "value": "112",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "VI-2 SIBAL 112 3217 580 3,650 409 48 20 2800 1.15 120"
+        },
+        {
+          "row_id": "R030",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-3 (conditions in Table 1, p. 3)",
+          "measurement": "burn duration",
+          "value": "780",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "VI-3 2-sided PMMA 780 3080 1280 77 21 8539 3.51 308"
+        },
+        {
+          "row_id": "R031",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-4 (conditions in Table 1, p. 3)",
+          "measurement": "burn duration",
+          "value": "1200",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "VI-4 1-sided PMMA 1200 1507 830 57 21 8117 3.37 320"
+        }
+      ]
+    },
+    {
+      "id": "Q18",
+      "category": "direct",
+      "question": "How long did the one-sided PMMA sample burn in Saffire VI-4?",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- Saffire VI-4; one-sided PMMA; microgravity (orbit); 55.2 kPa; 28.8 mol %: burn duration = 1200 s [R031]",
+      "cited_rows": [
+        "R031"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R031",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-4 (conditions in Table 1, p. 3)",
+          "measurement": "burn duration",
+          "value": "1200",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "VI-4 1-sided PMMA 1200 1507 830 57 21 8117 3.37 320"
+        }
+      ]
+    },
+    {
+      "id": "Q19",
+      "category": "synthesis",
+      "question": "How did the test conditions of Saffire IV-1 and Saffire VI-2 differ?",
+      "answer": "Matching tests in the ledger:\n- Saffire IV-1; SIBAL cloth; microgravity (orbit); 100.0 kPa; 22.0 mol %; flow 20 cm/s; concurrent; 50 cm long [R027]\n- Saffire VI-2; SIBAL cloth; microgravity (orbit); 54.1 kPa; 31.0 mol %; flow 20 cm/s; concurrent; 50 cm long [R029]",
+      "cited_rows": [
+        "R027",
+        "R029"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R027",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row IV-1 (conditions in Table 1, p. 3)",
+          "measurement": "burn duration",
+          "value": "130",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "IV-1 SIBAL 130 3,150 409 45 25 1390 1.03 80"
+        },
+        {
+          "row_id": "R029",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-2 (conditions in Table 1, p. 3)",
+          "measurement": "burn duration",
+          "value": "112",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "VI-2 SIBAL 112 3217 580 3,650 409 48 20 2800 1.15 120"
+        }
+      ]
+    },
+    {
+      "id": "Q22",
+      "category": "direct",
+      "question": "What rotation rate and radius did LUCI use to simulate lunar gravity?",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- LUCI: Blue Origin New Shepard NS-29, spinning capsule; SIBAL fabric and PMMA rod (burned simultaneously); lunar (simulated by capsule spin); normal pressure; air: vehicle rotation rate = 11 RPM [R024]\n- LUCI: Blue Origin New Shepard NS-29, spinning capsule; SIBAL fabric and PMMA rod (burned simultaneously); lunar (simulated by capsule spin); normal pressure; air: effective radius of rotation at the experiment = 1.22 m [R025]",
+      "cited_rows": [
+        "R024",
+        "R025"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R024",
+          "source_id": "luci_2025",
+          "source_title": "Ferkul et al., Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket, ASGSR 2025 (NTRS 20250010653)",
+          "locator": "Summary bullets (slide after 'Page 10')",
+          "measurement": "vehicle rotation rate",
+          "value": "11",
+          "unit": "RPM",
+          "qualifier": "exact",
+          "snippet": "A steady vehicle rotation of 11 RPM is established, with an effective radius of rotation of 1.22 m at the experiment location."
+        },
+        {
+          "row_id": "R025",
+          "source_id": "luci_2025",
+          "source_title": "Ferkul et al., Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket, ASGSR 2025 (NTRS 20250010653)",
+          "locator": "Summary bullets (slide after 'Page 10')",
+          "measurement": "effective radius of rotation at the experiment",
+          "value": "1.22",
+          "unit": "m",
+          "qualifier": "exact",
+          "snippet": "A steady vehicle rotation of 11 RPM is established, with an effective radius of rotation of 1.22 m at the experiment location."
+        }
+      ]
+    },
+    {
+      "id": "Q23",
+      "category": "synthesis",
+      "question": "Which Saffire tests ran at reduced pressure with enriched oxygen?",
+      "answer": "Matching tests in the ledger:\n- Saffire V-2; cotton jersey; microgravity (orbit); 70.7 kPa; 26.2 mol % [R068]\n- Saffire V-3; one-sided PMMA; microgravity (orbit); 71.3 kPa; 25.4 mol % [R069]\n- Saffire V-4; structured PMMA; microgravity (orbit); 72.6 kPa; 25.7 mol % [R070]\n- Saffire VI-2; SIBAL cloth; microgravity (orbit); 54.1 kPa; 31.0 mol % [R032]\n- Saffire VI-3; two-sided PMMA; microgravity (orbit); 54.6 kPa; 30.3 mol % [R053]\n- Saffire VI-4; one-sided PMMA; microgravity (orbit); 55.2 kPa; 28.8 mol % [R034]",
+      "cited_rows": [
+        "R068",
+        "R069",
+        "R070",
+        "R032",
+        "R053",
+        "R034"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R068",
+          "source_id": "saffire45_paper_2021",
+          "source_title": "Urban et al., Fire Safety Implications of Preliminary Results from Saffire IV and V, ICES-2021-266 (NTRS 20210011521)",
+          "locator": "Text discussing Figure 3 (Saffire V sample 2)",
+          "measurement": "steady burning period while the fan was on",
+          "value": "300",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "The sample burned steadily for the initial 300 seconds while the fan was on."
+        },
+        {
+          "row_id": "R069",
+          "source_id": "saffire45_paper_2021",
+          "source_title": "Urban et al., Fire Safety Implications of Preliminary Results from Saffire IV and V, ICES-2021-266 (NTRS 20210011521)",
+          "locator": "Text discussing Figures 5 and 6",
+          "measurement": "response when fan turned off",
+          "value": "extinguished immediately",
+          "unit": "-",
+          "qualifier": "categorical",
+          "snippet": "when the fan was turned off in Saffire V-3 and V-4, the sample extinguished immediately"
+        },
+        {
+          "row_id": "R070",
+          "source_id": "saffire45_paper_2021",
+          "source_title": "Urban et al., Fire Safety Implications of Preliminary Results from Saffire IV and V, ICES-2021-266 (NTRS 20210011521)",
+          "locator": "Text discussing Figures 5 and 6",
+          "measurement": "response when fan turned off",
+          "value": "extinguished immediately",
+          "unit": "-",
+          "qualifier": "categorical",
+          "snippet": "when the fan was turned off in Saffire V-3 and V-4, the sample extinguished immediately"
+        },
+        {
+          "row_id": "R032",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-2 (conditions in Table 1, p. 3)",
+          "measurement": "peak heat release (oxygen consumption calorimetry)",
+          "value": "3217",
+          "unit": "W",
+          "qualifier": "exact",
+          "snippet": "VI-2 SIBAL 112 3217 580 3,650 409 48 20 2800 1.15 120"
+        },
+        {
+          "row_id": "R053",
+          "source_id": "saffire6_pres_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES 2024 presentation (NTRS 20240007488)",
+          "locator": "Slide 'Temperature results for Saffire VI-3 (two-sided PMMA)'",
+          "measurement": "ignition time",
+          "value": "637",
+          "unit": "s",
+          "qualifier": "exact",
+          "snippet": "Ignition at 637 s"
+        },
+        {
+          "row_id": "R034",
+          "source_id": "saffire6_paper_2024",
+          "source_title": "Urban et al., Preliminary Results from the Saffire VI Experiment, ICES-2024-365 (NTRS 20240002981)",
+          "locator": "Table 2, row VI-4 (conditions in Table 1, p. 3)",
+          "measurement": "peak heat release (oxygen consumption calorimetry)",
+          "value": "1507",
+          "unit": "W",
+          "qualifier": "exact",
+          "snippet": "VI-4 1-sided PMMA 1200 1507 830 57 21 8117 3.37 320"
+        }
+      ]
+    },
+    {
+      "id": "Q25",
+      "category": "direct",
+      "question": "What was the steady-state flame size of the cotton jersey sample in Saffire V-2?",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- Saffire V-2; Cotton jersey; microgravity (orbit); 70.7 kPa; 26.2 %: steady-state flame size = 10.0 cm [R066]",
+      "cited_rows": [
+        "R066"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R066",
+          "source_id": "saffire45_paper_2021",
+          "source_title": "Urban et al., Fire Safety Implications of Preliminary Results from Saffire IV and V, ICES-2021-266 (NTRS 20210011521)",
+          "locator": "Table 2, column V-2",
+          "measurement": "steady-state flame size",
+          "value": "10.0",
+          "unit": "cm",
+          "qualifier": "exact",
+          "snippet": "Table 2 Test Conditions and flame size for thin samples"
+        }
+      ]
+    },
+    {
+      "id": "Q26",
+      "category": "synthesis",
+      "question": "How many BASS-II test points were obtained with PMMA sheets, and in which thickness ranges?",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- BASS-II poster: ISS Microgravity Science Glovebox (BASS-II); PMMA sheets; microgravity (ISS); 18% to 20% initial; 1-cm and 2-cm wide; 1 to 5 mm thick: test points obtained = 20 [R085]\n- BASS-II poster: ISS Microgravity Science Glovebox (BASS-II); PMMA sheets; microgravity (ISS); 1-cm and 2-cm wide; 0.1 to 0.4 mm thick: test points obtained = 22 [R084]",
+      "cited_rows": [
+        "R085",
+        "R084"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R085",
+          "source_id": "bass2_poster_2014",
+          "source_title": "Ferkul et al., Combustion of Solids in Microgravity: Results from the BASS-II Experiment, ASGSR 2014 poster (NTRS 20160000593)",
+          "locator": "Miller panel, Status",
+          "measurement": "test points obtained",
+          "value": "20",
+          "unit": "-",
+          "qualifier": "exact",
+          "snippet": "20 test points obtained with BASS-II experiments."
+        },
+        {
+          "row_id": "R084",
+          "source_id": "bass2_poster_2014",
+          "source_title": "Ferkul et al., Combustion of Solids in Microgravity: Results from the BASS-II Experiment, ASGSR 2014 poster (NTRS 20160000593)",
+          "locator": "Bhattacharjee panel, Status",
+          "measurement": "test points obtained",
+          "value": "22",
+          "unit": "-",
+          "qualifier": "exact",
+          "snippet": "22 test points obtained with BASS-II experiments."
+        }
+      ]
+    },
+    {
+      "id": "Q29",
+      "category": "direct",
+      "question": "What happened to the sample in Saffire V-3 when the fan was turned off?",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- Saffire V-3; one-sided PMMA; microgravity (orbit); 71.3 kPa; 25.4 mol %: response when fan turned off = extinguished immediately [R069]",
+      "cited_rows": [
+        "R069"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R069",
+          "source_id": "saffire45_paper_2021",
+          "source_title": "Urban et al., Fire Safety Implications of Preliminary Results from Saffire IV and V, ICES-2021-266 (NTRS 20210011521)",
+          "locator": "Text discussing Figures 5 and 6",
+          "measurement": "response when fan turned off",
+          "value": "extinguished immediately",
+          "unit": "-",
+          "qualifier": "categorical",
+          "snippet": "when the fan was turned off in Saffire V-3 and V-4, the sample extinguished immediately"
+        }
+      ]
+    },
+    {
+      "id": "Q30",
+      "category": "synthesis",
+      "question": "At which gravity levels and pressures were thin cellulose (Kimwipes) samples burned on the KC-135 aircraft?",
+      "answer": "Matching tests in the ledger:\n- Feier et al.: NASA KC-135 aircraft; thin cellulose (Kimwipes); 0.1, 0.16 and 0.38 G; 0.2-0.4 atm; 21% O2, balance N2 [R098]\n- Sacksteder et al.: NASA KC-135 aircraft; Kimwipes thin cellulosic tissue; partial gravity (0.1, 0.16, 0.38 g); 27.6 kPa; air [R092]\n- Sacksteder et al.: NASA KC-135 aircraft; Kimwipes thin cellulosic tissue; partial gravity (0.1, 0.16, 0.38 g); 27.6 kPa (4.0 psia); air [R093]",
+      "cited_rows": [
+        "R098",
+        "R092",
+        "R093"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R098",
+          "source_id": "feier_2001",
+          "source_title": "Feier et al., Upward Flame Spread Over Thin Solids in Partial Gravity, AIAA 2001-0466 (NTRS 20010059376)",
+          "locator": "Experimental section (aircraft)",
+          "measurement": "partial-gravity parabolas per flight",
+          "value": "10",
+          "unit": "-",
+          "qualifier": "upper bound",
+          "snippet": "Up to ten partial gravity parabolas were obtained per flight at nominal accelerations levels of 0.1, 0.16, and 0.38 G."
+        },
+        {
+          "row_id": "R092",
+          "source_id": "sacksteder_2003",
+          "source_title": "Sacksteder et al., Upward and Downward Flame Spreading and Extinction in Partial Gravity Environments, 2003 (NTRS 20040053567)",
+          "locator": "Text discussing Figure 1",
+          "measurement": "dependence of upward spread rate on gravity",
+          "value": "linear",
+          "unit": "-",
+          "qualifier": "categorical",
+          "snippet": "The upward burning spread rate varied linearly with gravity level for all pressure environments and sample widths tested"
+        },
+        {
+          "row_id": "R093",
+          "source_id": "sacksteder_2003",
+          "source_title": "Sacksteder et al., Upward and Downward Flame Spreading and Extinction in Partial Gravity Environments, 2003 (NTRS 20040053567)",
+          "locator": "Figure 1 caption and text",
+          "measurement": "gravity level at which downward spread rate peaks",
+          "value": "0.38",
+          "unit": "g",
+          "qualifier": "approximate",
+          "snippet": "peaks near the Martian gravity"
+        }
+      ]
+    },
+    {
+      "id": "Q32",
+      "category": "direct",
+      "question": "Near which gravity level did the downward flame spread rate over Kimwipes peak in the KC-135 tests?",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- Sacksteder et al.: NASA KC-135 aircraft; Kimwipes thin cellulosic tissue; partial gravity (0.1, 0.16, 0.38 g); 27.6 kPa (4.0 psia); air; downward: gravity level at which downward spread rate peaks = 0.38 g (approximate) [R093]",
+      "cited_rows": [
+        "R093"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R093",
+          "source_id": "sacksteder_2003",
+          "source_title": "Sacksteder et al., Upward and Downward Flame Spreading and Extinction in Partial Gravity Environments, 2003 (NTRS 20040053567)",
+          "locator": "Figure 1 caption and text",
+          "measurement": "gravity level at which downward spread rate peaks",
+          "value": "0.38",
+          "unit": "g",
+          "qualifier": "approximate",
+          "snippet": "peaks near the Martian gravity"
+        }
+      ]
+    },
+    {
+      "id": "Q33",
+      "category": "synthesis",
+      "question": "How did SIBAL fabric behave in lunar gravity compared with Earth gravity in the FM2 team's tests?",
+      "answer": "From the evidence ledger (values as reported, no conversion):\n- FM2 poster: ground; SIBAL fabric (cotton/fiberglass blend); 1 g; air: burning behaviour = extinguishes immediately after ignition [R077]\n- FM2 poster: lunar-gravity centrifuge and parabolic flight; SIBAL fabric (cotton/fiberglass blend); lunar (simulated); air: burning behaviour = burns (only downward) [R076]",
+      "cited_rows": [
+        "R077",
+        "R076"
+      ],
+      "declined": false,
+      "grounded": true,
+      "citations": [
+        {
+          "row_id": "R077",
+          "source_id": "fm2_poster_2024",
+          "source_title": "Zayac et al., Flammability of Materials on the Moon, Glenn Space Technology Symposium poster 2024 (NTRS 20240015307)",
+          "locator": "Poster, Introduction",
+          "measurement": "burning behaviour",
+          "value": "extinguishes immediately after ignition",
+          "unit": "-",
+          "qualifier": "categorical",
+          "snippet": "where on Earth's gravity it extinguishes immediately after ignition"
+        },
+        {
+          "row_id": "R076",
+          "source_id": "fm2_poster_2024",
+          "source_title": "Zayac et al., Flammability of Materials on the Moon, Glenn Space Technology Symposium poster 2024 (NTRS 20240015307)",
+          "locator": "Poster, Introduction",
+          "measurement": "burning behaviour",
+          "value": "burns (only downward)",
+          "unit": "-",
+          "qualifier": "categorical",
+          "snippet": "SIBAL fabric has been found to only burn downward in air in lunar gravity (via Lunar gravity centrifuge and parabolic flight)"
+        }
+      ]
+    }
+  ]
+}

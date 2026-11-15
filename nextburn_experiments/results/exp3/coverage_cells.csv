@@ -1,0 +1,31 @@
+cell_id,habitat,family,direction,status_default,statuses_by_run,matches,planned,not_proven_safe,microfire_bin,microfire_status,best_distance
+iss_cabin|thin_fabric|with_flow,iss_cabin,thin_fabric,with_flow,tested,tested;tested;tested;tested;tested;tested,TP011,,False,19-21.5%,known,0.52
+iss_cabin|thin_fabric|against_flow,iss_cabin,thin_fabric,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,19-21.5%,known,
+iss_cabin|thick_plastic|with_flow,iss_cabin,thick_plastic,with_flow,tested,tested;tested;tested;tested;tested;tested,TP012,,False,19-21.5%,known,0.52
+iss_cabin|thick_plastic|against_flow,iss_cabin,thick_plastic,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,19-21.5%,known,4.216
+iss_cabin|other_textile|with_flow,iss_cabin,other_textile,with_flow,untested,untested;untested;untested;untested;untested;untested,,,True,19-21.5%,unknown,
+iss_cabin|other_textile|against_flow,iss_cabin,other_textile,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,19-21.5%,unknown,
+moon_base|thin_fabric|with_flow,moon_base,thin_fabric,with_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,7.379
+moon_base|thin_fabric|against_flow,moon_base,thin_fabric,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,8.948
+moon_base|thick_plastic|with_flow,moon_base,thick_plastic,with_flow,untested,untested;untested;untested;untested;untested;untested,,TP003,True,>= 31%,unknown,8.948
+moon_base|thick_plastic|against_flow,moon_base,thick_plastic,against_flow,untested,untested;untested;untested;untested;untested;untested,,TP001,True,>= 31%,unknown,
+moon_base|other_textile|with_flow,moon_base,other_textile,with_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,
+moon_base|other_textile|against_flow,moon_base,other_textile,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,
+moon_upper|thin_fabric|with_flow,moon_upper,thin_fabric,with_flow,bounded,bounded;bounded;bounded;bounded;bounded;bounded,,,False,26-31%,unknown,7.327
+moon_upper|thin_fabric|against_flow,moon_upper,thin_fabric,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,26-31%,unknown,5.931
+moon_upper|thick_plastic|with_flow,moon_upper,thick_plastic,with_flow,untested,untested;untested;untested;untested;untested;untested,,,True,26-31%,unknown,5.931
+moon_upper|thick_plastic|against_flow,moon_upper,thick_plastic,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,26-31%,unknown,
+moon_upper|other_textile|with_flow,moon_upper,other_textile,with_flow,untested,untested;untested;untested;untested;untested;untested,,,True,26-31%,unknown,
+moon_upper|other_textile|against_flow,moon_upper,other_textile,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,26-31%,unknown,
+spacesuit|thin_fabric|with_flow,spacesuit,thin_fabric,with_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,39.5
+spacesuit|thin_fabric|against_flow,spacesuit,thin_fabric,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,39.534
+spacesuit|thick_plastic|with_flow,spacesuit,thick_plastic,with_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,41.577
+spacesuit|thick_plastic|against_flow,spacesuit,thick_plastic,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,
+spacesuit|other_textile|with_flow,spacesuit,other_textile,with_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,
+spacesuit|other_textile|against_flow,spacesuit,other_textile,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,
+mars_hab|thin_fabric|with_flow,mars_hab,thin_fabric,with_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,7.379
+mars_hab|thin_fabric|against_flow,mars_hab,thin_fabric,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,9.96
+mars_hab|thick_plastic|with_flow,mars_hab,thick_plastic,with_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,
+mars_hab|thick_plastic|against_flow,mars_hab,thick_plastic,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,
+mars_hab|other_textile|with_flow,mars_hab,other_textile,with_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,
+mars_hab|other_textile|against_flow,mars_hab,other_textile,against_flow,untested,untested;untested;untested;untested;untested;untested,,,True,>= 31%,unknown,

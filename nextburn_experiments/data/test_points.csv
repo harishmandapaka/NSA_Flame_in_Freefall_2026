@@ -1,0 +1,41 @@
+tp_id,label,family,direction_class,g,g_class,p_kpa,p_lo_kpa,p_hi_kpa,o2_pct,o2_lo_pct,o2_hi_pct,flow_cm_s,flow_lo_cm_s,flow_hi_cm_s,evidence_tier,first_year,sources,row_ids
+TP001,FM2 team 1-g ground,thin_fabric,against_flow,1.0,earth,,,,20.946,20.946,20.946,,,,"Ground, 1 g",2024,fm2_poster_2024,R077
+TP002,FM2 team lunar-g simulation,thin_fabric,against_flow,0.1651940265024244,lunar,,,,20.946,20.946,20.946,,,,Simulated lunar gravity (centrifuge drop and aircraft),2024,fm2_poster_2024,R076
+TP003,LUCI 1-g ground,thick_plastic,unknown,1.0,earth,,,,21.0,14.5,21.0,,,,"Ground, 1 g",2025,luci_2025,R008;R011;R015
+TP004,LUCI 1-g ground,thin_fabric,unknown,1.0,earth,,,,20.0,20.0,20.0,,,,"Ground, 1 g",2025,luci_2025,R003;R004;R017;R023
+TP005,LUCI NS-29 lunar spin,thick_plastic,with_flow,0.165075173104057,lunar,101.325,101.325,101.325,20.946,20.946,20.946,,,,"Flight, simulated lunar gravity (spin)",2025,luci_2025,R007;R012;R013;R014;R022;R024;R025;R026
+TP006,LUCI NS-29 lunar spin,thin_fabric,against_flow,0.165075173104057,lunar,101.325,101.325,101.325,20.946,20.946,20.946,,,,"Flight, simulated lunar gravity (spin)",2025,luci_2025,R001;R002;R016;R019;R020;R021;R024;R025;R026
+TP007,Saffire I-1,thin_fabric,unknown,0.0,micro,100.0,100.0,100.0,21.0,21.0,21.0,20.0,20.0,20.0,"Flight, orbital microgravity",2021,saffire45_paper_2021,R056;R057
+TP008,Saffire II-5,thin_fabric,unknown,0.0,micro,100.0,100.0,100.0,21.0,21.0,21.0,20.0,20.0,20.0,"Flight, orbital microgravity",2021,saffire45_paper_2021,R058;R059
+TP009,Saffire II-6,thin_fabric,unknown,0.0,micro,100.0,100.0,100.0,21.0,21.0,21.0,25.0,25.0,25.0,"Flight, orbital microgravity",2021,saffire45_paper_2021,R060;R061
+TP010,Saffire III-1,thin_fabric,unknown,0.0,micro,100.0,100.0,100.0,21.0,21.0,21.0,25.0,25.0,25.0,"Flight, orbital microgravity",2021,saffire45_paper_2021,R062;R063
+TP011,Saffire IV-1,thin_fabric,with_flow,0.0,micro,100.0,100.0,100.0,22.0,22.0,22.0,20.0,20.0,20.0,"Flight, orbital microgravity",2021,saffire6_paper_2024;saffire45_paper_2021,R027;R035;R038;R043;R048;R064;R065
+TP012,Saffire IV-2,thick_plastic,with_flow,0.0,micro,100.0,100.0,100.0,22.0,22.0,22.0,20.0,20.0,20.0,"Flight, orbital microgravity",2021,saffire45_paper_2021,R071
+TP013,Saffire V-2,thin_fabric,with_flow,0.0,micro,70.7,70.7,70.7,26.2,26.2,26.2,20.0,20.0,20.0,"Flight, orbital microgravity",2021,saffire6_paper_2024;saffire45_paper_2021,R028;R036;R039;R044;R049;R066;R067;R068
+TP014,Saffire V-3,thick_plastic,with_flow,0.0,micro,71.3,71.3,71.3,25.4,25.4,25.4,20.0,0.0,20.0,"Flight, orbital microgravity",2021,saffire45_paper_2021,R069
+TP015,Saffire V-4,thick_plastic,against_flow,0.0,micro,72.6,72.6,72.6,25.7,25.7,25.7,20.0,0.0,20.0,"Flight, orbital microgravity",2021,saffire45_paper_2021,R070
+TP016,Saffire VI-2,thin_fabric,with_flow,0.0,micro,54.1,54.1,54.1,31.0,31.0,31.0,20.0,20.0,20.0,"Flight, orbital microgravity",2024,saffire6_paper_2024,R029;R032;R037;R040;R045;R050
+TP017,Saffire VI-3,thick_plastic,with_flow,0.0,micro,54.6,54.6,54.6,30.3,30.3,30.3,20.0,20.0,20.0,"Flight, orbital microgravity",2024,saffire6_paper_2024;saffire6_pres_2024,R030;R033;R041;R046;R051;R053;R054;R055
+TP018,Saffire VI-4,thick_plastic,with_flow,0.0,micro,55.2,55.2,55.2,28.8,28.8,28.8,20.0,20.0,20.0,"Flight, orbital microgravity",2024,saffire6_paper_2024,R031;R034;R042;R047;R052
+TP019,bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II wind tunnel),unknown,unknown,0.0,micro,,,,,,21.0,,0.0,40.0,"Flight, orbital microgravity",2014,bass2_poster_2014,R090
+TP020,bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II),thick_plastic,other,0.0,micro,,,,,,,,,,"Flight, orbital microgravity",2014,bass2_poster_2014,R079;R081
+TP021,bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II),thick_plastic,against_flow,0.0,micro,,,,,,,,,,"Flight, orbital microgravity",2014,bass2_poster_2014,R082;R083;R084
+TP022,bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II),thick_plastic,against_flow,0.0,micro,,,,19.0,18.0,20.0,,,,"Flight, orbital microgravity",2014,bass2_poster_2014,R085
+TP023,bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II),thick_plastic,unknown,0.0,micro,,,,18.5,16.0,21.0,2.2,0.4,4.0,"Flight, orbital microgravity",2014,bass2_poster_2014,R086
+TP024,bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II),thick_plastic,with_flow,0.0,micro,,,,,,,,,,"Flight, orbital microgravity",2014,bass2_poster_2014,R087
+TP025,bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II),thin_fabric,with_flow,0.0,micro,,,,,,,,,,"Flight, orbital microgravity",2014,bass2_poster_2014,R087
+TP026,bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II),thin_fabric,with_flow,0.0,micro,,,,,,,,,,"Flight, orbital microgravity",2014,bass2_poster_2014,R088
+TP027,bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II),thin_fabric,with_flow,0.0,micro,101.325,101.325,101.325,18.7,18.7,18.7,5.0,5.0,5.0,"Flight, orbital microgravity",2014,bass2_poster_2014,R089
+TP028,bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II),unknown,unknown,0.0,micro,,,,,,21.0,27.5,0.0,55.0,"Flight, orbital microgravity",2014,bass2_poster_2014,R091
+TP029,bass2_poster_2014 ground,thick_plastic,unknown,1.0,earth,,,,,,,,,,"Ground, 1 g",2014,bass2_poster_2014,R078
+TP030,feier_2001 NASA KC-135 aircraft,thin_fabric,with_flow,0.1,partial_low,30.3975,20.265,40.53,21.0,21.0,21.0,,,,"Aircraft, partial gravity",2001,feier_2001,R097;R098
+TP031,feier_2001 NASA KC-135 aircraft,thin_fabric,with_flow,0.16,lunar,30.3975,20.265,40.53,21.0,21.0,21.0,,,,"Aircraft, partial gravity",2001,feier_2001,R097;R098
+TP032,feier_2001 NASA KC-135 aircraft,thin_fabric,with_flow,0.38,mars,30.3975,20.265,40.53,21.0,21.0,21.0,,,,"Aircraft, partial gravity",2001,feier_2001,R097;R098
+TP033,feier_2001 ground,thin_fabric,with_flow,1.0,earth,,15.19875,,20.946,20.946,20.946,,,,"Ground, 1 g",2001,feier_2001,R095
+TP034,feier_2001 ground,thin_fabric,with_flow,1.0,earth,,,10.1325,20.946,20.946,20.946,,,,"Ground, 1 g",2001,feier_2001,R096
+TP035,sacksteder_2003 NASA KC-135 aircraft,thin_fabric,with_flow,0.1,partial_low,27.6,27.6,27.6,20.946,20.946,20.946,,,,"Aircraft, partial gravity",2003,sacksteder_2003,R092
+TP036,sacksteder_2003 NASA KC-135 aircraft,thin_fabric,against_flow,0.1,partial_low,27.6,27.6,27.6,20.946,20.946,20.946,,,,"Aircraft, partial gravity",2003,sacksteder_2003,R093
+TP037,sacksteder_2003 NASA KC-135 aircraft,thin_fabric,with_flow,0.16,lunar,27.6,27.6,27.6,20.946,20.946,20.946,,,,"Aircraft, partial gravity",2003,sacksteder_2003,R092
+TP038,sacksteder_2003 NASA KC-135 aircraft,thin_fabric,against_flow,0.16,lunar,27.6,27.6,27.6,20.946,20.946,20.946,,,,"Aircraft, partial gravity",2003,sacksteder_2003,R093
+TP039,sacksteder_2003 NASA KC-135 aircraft,thin_fabric,with_flow,0.38,mars,27.6,27.6,27.6,20.946,20.946,20.946,,,,"Aircraft, partial gravity",2003,sacksteder_2003,R092
+TP040,sacksteder_2003 NASA KC-135 aircraft,thin_fabric,against_flow,0.38,mars,27.6,27.6,27.6,20.946,20.946,20.946,,,,"Aircraft, partial gravity",2003,sacksteder_2003,R093

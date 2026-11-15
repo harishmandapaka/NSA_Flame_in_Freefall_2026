@@ -1,0 +1,120 @@
+{
+ "raw": {
+  "fields_checked": 650,
+  "fields_ok": 631,
+  "field_accuracy": 0.9707692307692307,
+  "field_ci95": [
+   0.9547981952624734,
+   0.9812083237476353
+  ],
+  "rows_checked": 50,
+  "rows_all_ok": 34,
+  "row_accuracy": 0.68,
+  "row_ci95": [
+   0.5418944286372392,
+   0.792419559060006
+  ],
+  "by_field": {
+   "locator": "49/50",
+   "platform": "46/50",
+   "gravity": "50/50",
+   "material": "49/50",
+   "geometry": "45/50",
+   "direction": "48/50",
+   "flow": "49/50",
+   "pressure": "50/50",
+   "oxygen": "45/50",
+   "measurement": "50/50",
+   "value": "50/50",
+   "unit": "50/50",
+   "qualifier": "50/50"
+  },
+  "by_source": {
+   "bass2_poster_2014": "89/91",
+   "feier_2001": "23/26",
+   "fm2_poster_2024": "39/39",
+   "luci_2025": "163/169",
+   "sacksteder_2003": "23/26",
+   "saffire45_paper_2021": "99/104",
+   "saffire6_paper_2024": "169/169",
+   "saffire6_pres_2024": "26/26"
+  },
+  "error_types": {
+   "MISSED": 12,
+   "NOT_IN_SOURCE": 4,
+   "WRONG": 3
+  }
+ },
+ "after_adjudication": {
+  "fields_checked": 650,
+  "fields_ok": 632,
+  "field_accuracy": 0.9723076923076923,
+  "field_ci95": [
+   0.9566524948072369,
+   0.9824128690362383
+  ],
+  "rows_checked": 50,
+  "rows_all_ok": 35,
+  "row_accuracy": 0.7,
+  "row_ci95": [
+   0.562493877226366,
+   0.8089661091039063
+  ],
+  "by_field": {
+   "locator": "49/50",
+   "platform": "46/50",
+   "gravity": "50/50",
+   "material": "49/50",
+   "geometry": "46/50",
+   "direction": "48/50",
+   "flow": "49/50",
+   "pressure": "50/50",
+   "oxygen": "45/50",
+   "measurement": "50/50",
+   "value": "50/50",
+   "unit": "50/50",
+   "qualifier": "50/50"
+  },
+  "by_source": {
+   "bass2_poster_2014": "90/91",
+   "feier_2001": "23/26",
+   "fm2_poster_2024": "39/39",
+   "luci_2025": "163/169",
+   "sacksteder_2003": "23/26",
+   "saffire45_paper_2021": "99/104",
+   "saffire6_paper_2024": "169/169",
+   "saffire6_pres_2024": "26/26"
+  },
+  "error_types": {
+   "MISSED": 11,
+   "NOT_IN_SOURCE": 4,
+   "WRONG": 3
+  },
+  "field_ci95_row_bootstrap": [
+   0.9584615384615385,
+   0.9846153846153847
+  ],
+  "bootstrap_share_at_or_above_98pct": 0.1479
+ },
+ "provenance": {
+  "ledger_rows": 98,
+  "rows_with_source_and_locator": 98,
+  "sample_rows_with_source_and_locator": 50
+ },
+ "checker_quotes_not_found": [],
+ "rows_value_not_in_checker_quotes": [
+  "R098"
+ ],
+ "problems": [],
+ "numbers_only": {
+  "checks": 200,
+  "ok": 200,
+  "wilson_ci95": [
+   0.9812,
+   1.0
+  ]
+ },
+ "checker_disagreement_on_equivalent_cells": [
+  "R005.oxygen judged OK while equivalent R006.oxygen judged MISSED by a different checker"
+ ]
+}

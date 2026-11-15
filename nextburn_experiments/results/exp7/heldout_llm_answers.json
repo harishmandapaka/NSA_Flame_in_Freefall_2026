@@ -1,0 +1,83 @@
+[
+  {
+    "id": "H01",
+    "answer": "Saffire V-2 (cotton jersey) used 26.2 mol % oxygen at 70.7 kPa [R028].\n- The Saffire IV and V paper lists the same 70.7 kPa and 26.2 % [R066].",
+    "cited_rows": [
+      "R028",
+      "R066"
+    ]
+  },
+  {
+    "id": "H02",
+    "answer": "The two-sided PMMA sample in Saffire VI-3 burned for 780 s [R030].",
+    "cited_rows": [
+      "R030"
+    ]
+  },
+  {
+    "id": "H03",
+    "answer": "The LUCI capsule held a steady vehicle rotation of 11 RPM [R024].",
+    "cited_rows": [
+      "R024"
+    ]
+  },
+  {
+    "id": "H04",
+    "answer": "In the LUCI simulated lunar-gravity burn, the acrylic (PMMA) rod flame tip spread at 0.15 cm/s [R007].\n- For comparison, the 1 g ground burn gave 0.40 cm/s [R008].",
+    "cited_rows": [
+      "R007",
+      "R008"
+    ]
+  },
+  {
+    "id": "H05",
+    "answer": "These Saffire tests ran below 60 kPa:\n- VI-2, SIBAL cloth: 54.1 kPa [R029]\n- VI-3, two-sided PMMA: 54.6 kPa [R053]\n- VI-4, one-sided PMMA: 55.2 kPa [R031]",
+    "cited_rows": [
+      "R029",
+      "R053",
+      "R031"
+    ]
+  },
+  {
+    "id": "H06",
+    "answer": "- Feier et al.: thin cellulose (Kimwipes) burned upward on the NASA KC-135 aircraft at 0.1, 0.16 and 0.38 G [R098]\n- Sacksteder et al.: Kimwipes thin cellulosic tissue burned upward and downward on the NASA KC-135 aircraft in partial gravity [R092] [R093]\n- The FM2 poster also reports SIBAL fabric burns in lunar gravity via a lunar-gravity centrifuge and parabolic flight [R076]",
+    "cited_rows": [
+      "R098",
+      "R092",
+      "R093",
+      "R076"
+    ]
+  },
+  {
+    "id": "H07",
+    "answer": "No evidence: The rows have no cotton jersey spread rate in lunar gravity at 34% oxygen.\nNearest tests:\n- Saffire V-2 cotton jersey in orbit at 70.7 kPa and 26.2 mol % oxygen: burn duration 200 s [R028]\n- Saffire V-2 cotton jersey: steady-state flame size 10.0 cm [R066]\n- Saffire V-2 cotton jersey: burned steadily for 300 s while the fan was on [R068]",
+    "cited_rows": [
+      "R028",
+      "R066",
+      "R068"
+    ]
+  },
+  {
+    "id": "H08",
+    "answer": "No evidence: The rows contain no Nomex tests aboard the space station.\nNearest tests:\n- BASS-II in the ISS Microgravity Science Glovebox: 24 PMMA rods burned in concurrent (stagnation point) flow [R081]\n- Saffire V-2 cotton jersey in orbit: burned steadily for 300 s while the fan was on [R068]\n- LUCI SIBAL fabric and PMMA rod in simulated lunar gravity: the burn lasted over 2.5 min [R026]",
+    "cited_rows": [
+      "R081",
+      "R068",
+      "R026"
+    ]
+  },
+  {
+    "id": "H09",
+    "answer": "No evidence: The rows give no heat release measurement from the LUCI flight.\nNearest tests:\n- LUCI PMMA rod in simulated lunar gravity: peak instantaneous flame base spread rate 0.6 mm/s (approximate) [R022]\n- LUCI PMMA rod in simulated lunar gravity: total flame base spread about 6 cm until extinction [R012]\n- LUCI SIBAL fabric in simulated lunar gravity: chamber oxygen fell to about 18% during the burn [R016]",
+    "cited_rows": [
+      "R022",
+      "R012",
+      "R016"
+    ]
+  },
+  {
+    "id": "H10",
+    "answer": "Refused: I will not estimate or guess a value that is not in the evidence rows.",
+    "cited_rows": []
+  }
+]

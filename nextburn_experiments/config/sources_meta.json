@@ -1,0 +1,37 @@
+{
+  "luci_2025": {
+    "year": 2025,
+    "tier": "partial_gravity",
+    "note": "ASGSR 2025 presentation; LUCI flew on New Shepard NS-29 on 4 February 2025"
+  },
+  "saffire6_paper_2024": {
+    "year": 2024,
+    "tier": "flight_outside_psi"
+  },
+  "saffire6_pres_2024": {
+    "year": 2024,
+    "tier": "flight_outside_psi"
+  },
+  "saffire45_paper_2021": {
+    "year": 2021,
+    "tier": "flight_outside_psi"
+  },
+  "fm2_poster_2024": {
+    "year": 2024,
+    "tier": "partial_gravity"
+  },
+  "bass2_poster_2014": {
+    "year": 2014,
+    "tier": "flight_outside_psi",
+    "note": "PSI-25 holds the BASS-II experimental table; this ledger uses the NTRS poster"
+  },
+  "sacksteder_2003": {
+    "year": 2003,
+    "tier": "partial_gravity"
+  },
+  "feier_2001": {
+    "year": 2001,
+    "tier": "partial_gravity"
+  },
+  "_note": "Only the publication year is recorded. The retrodiction cut-off (1 January 2025) keeps sources from 2024 or earlier."
+}

@@ -1,0 +1,95 @@
+{
+ "run": 1,
+ "label": "First run on ledger v2 with the first version of the checks",
+ "generated_at": "2026-11-15T08:00:11+00:00",
+ "air_o2_pct_used": 20.9,
+ "checks": [
+  {
+   "name": "check_ranges",
+   "status": "PASS",
+   "n_checked": 734,
+   "failures": []
+  },
+  {
+   "name": "check_units",
+   "status": "FAIL",
+   "n_checked": 130,
+   "failures": [
+    {
+     "row_id": "R086",
+     "field": "unit",
+     "value": "-",
+     "limit": "speed unit for a spread rate"
+    },
+    {
+     "row_id": "R093",
+     "field": "unit",
+     "value": "g",
+     "limit": "speed unit for a spread rate"
+    }
+   ]
+  },
+  {
+   "name": "check_unique",
+   "status": "FAIL",
+   "n_checked": 138,
+   "failures": [
+    {
+     "row_id": "R010",
+     "duplicate_of": "R007",
+     "measurement": "flame tip spread rate",
+     "value": "1.5 mm/s = 0.15 cm/s"
+    },
+    {
+     "tp_id": "TP008",
+     "duplicate_of": "Saffire I-1",
+     "measurement": "test point",
+     "value": "Saffire II-5"
+    },
+    {
+     "tp_id": "TP010",
+     "duplicate_of": "Saffire II-6",
+     "measurement": "test point",
+     "value": "Saffire III-1"
+    }
+   ]
+  },
+  {
+   "name": "check_provenance",
+   "status": "PASS",
+   "n_checked": 98,
+   "failures": []
+  },
+  {
+   "name": "check_consistency",
+   "status": "FAIL",
+   "n_checked": 32,
+   "failures": [
+    {
+     "row_id": "R083",
+     "field": "unit",
+     "value": "cm/s",
+     "limit": "no spread rate on an extinction row"
+    },
+    {
+     "row_id": null,
+     "field": "ppO2",
+     "value": "Sea-level air, 21% at 14.7 psia (plan: 3.08 psia): stated 3.08, calculated 3.087",
+     "limit": "0.006 psia"
+    }
+   ]
+  },
+  {
+   "name": "check_golden",
+   "status": "PASS",
+   "n_checked": 28,
+   "failures": []
+  },
+  {
+   "name": "luci_g_from_spin",
+   "status": "PASS",
+   "n_checked": 1,
+   "failures": []
+  }
+ ]
+}

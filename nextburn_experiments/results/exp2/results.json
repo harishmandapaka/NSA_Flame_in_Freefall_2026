@@ -1,0 +1,272 @@
+{
+  "experiment": 2,
+  "title": "Range and unit checks",
+  "generated_at": "2026-11-15T09:18:19+00:00",
+  "checks_version": "1.2",
+  "ledger": "ledger_v2.json",
+  "ledger_sha256": "198b3231b0dde5879933bf449ba2f0300d0eae6465a7f9e98524b8158ac84885",
+  "rows": 98,
+  "test_points": 40,
+  "checks": [
+    {
+      "name": "check_ranges",
+      "what": "Oxygen 0 to 100%, pressure 0 to 120 kPa, flow 0 to 100 cm/s, gravity 0 to 1.1 g, thickness above zero",
+      "status": "PASS",
+      "n_checked": 727,
+      "failures": []
+    },
+    {
+      "name": "check_units",
+      "what": "Allowed units only; kPa, psia and atm round-trip within 0.1%; a value stated in two units agrees within 0.1%; spread rates carry speed units and durations carry time units",
+      "status": "PASS",
+      "n_checked": 126,
+      "failures": []
+    },
+    {
+      "name": "check_unique",
+      "what": "No duplicate measurements of the same test (after unit normalization) and no test recorded twice under two names",
+      "status": "PASS",
+      "n_checked": 137,
+      "failures": []
+    },
+    {
+      "name": "check_provenance",
+      "what": "Every row has a listed source, a locator (page, slide, table or section) and a supporting quote",
+      "status": "PASS",
+      "n_checked": 98,
+      "failures": []
+    },
+    {
+      "name": "check_consistency",
+      "what": "Extinction rows carry no spread rate; a test reported twice agrees; stated ratios match their rates; oxygen partial pressure equals oxygen fraction times pressure",
+      "status": "PASS",
+      "n_checked": 32,
+      "failures": []
+    },
+    {
+      "name": "check_golden",
+      "what": "Hand-verified reference rows (Saffire IV-1, VI-2, VI-3, VI-4; FM2 atmospheres; LUCI spin) match exactly",
+      "status": "PASS",
+      "n_checked": 28,
+      "failures": []
+    },
+    {
+      "name": "luci_g_from_spin",
+      "what": "LUCI's 11 rpm spin at 1.22 m must give lunar gravity within 2% (NASA fact-sheet value 1.62 m/s2)",
+      "status": "PASS",
+      "n_checked": 1,
+      "failures": [],
+      "accel_m_s2": 1.6188344463209006,
+      "g_ratio": 0.165075173104057,
+      "deviation": -0.0007194775796910742
+    },
+    {
+      "name": "dedupe_log",
+      "what": "Rows merged by the documented duplicate rule before the checks ran",
+      "status": "INFO",
+      "n_checked": 1,
+      "failures": [],
+      "dropped": [
+        {
+          "row_id": "R010",
+          "merged_into": "R007",
+          "rule": "Two rows are one measurement when they describe the same test and material family, name the same measurand and agree within 0.5% after unit normalization. The lower row ID is kept; the other row's locator is kept as corroboration."
+        }
+      ]
+    }
+  ],
+  "gate": "PASS",
+  "fault_injection": {
+    "detected": 12,
+    "total": 12,
+    "faults": [
+      {
+        "fault": "F01",
+        "description": "Oxygen typed as 140%",
+        "expected_check": "check_ranges",
+        "row": "R029",
+        "detected": true,
+        "located": true,
+        "checks_failed": [
+          "check_ranges",
+          "check_consistency",
+          "check_golden"
+        ]
+      },
+      {
+        "fault": "F02",
+        "description": "Pressure in hPa labelled kPa (1013)",
+        "expected_check": "check_ranges",
+        "row": "R027",
+        "detected": true,
+        "located": true,
+        "checks_failed": [
+          "check_ranges",
+          "check_consistency",
+          "check_golden"
+        ]
+      },
+      {
+        "fault": "F03",
+        "description": "Negative flow speed",
+        "expected_check": "check_ranges",
+        "row": "R028",
+        "detected": true,
+        "located": true,
+        "checks_failed": [
+          "check_ranges"
+        ]
+      },
+      {
+        "fault": "F04",
+        "description": "Gravity in m/s2 instead of g",
+        "expected_check": "check_ranges",
+        "row": "R001",
+        "detected": true,
+        "located": true,
+        "checks_failed": [
+          "check_ranges"
+        ]
+      },
+      {
+        "fault": "F05",
+        "description": "Same row entered twice",
+        "expected_check": "check_unique",
+        "row": "R999",
+        "detected": true,
+        "located": true,
+        "checks_failed": [
+          "check_unique"
+        ]
+      },
+      {
+        "fault": "F06",
+        "description": "Locator missing",
+        "expected_check": "check_provenance",
+        "row": "R030",
+        "detected": true,
+        "located": true,
+        "checks_failed": [
+          "check_provenance"
+        ]
+      },
+      {
+        "fault": "F07",
+        "description": "Unknown unit",
+        "expected_check": "check_units",
+        "row": "R031",
+        "detected": true,
+        "located": true,
+        "checks_failed": [
+          "check_units"
+        ]
+      },
+      {
+        "fault": "F08",
+        "description": "Reference value drifted (VI-2 at 51.4 kPa)",
+        "expected_check": "check_golden",
+        "row": "R029",
+        "detected": true,
+        "located": true,
+        "checks_failed": [
+          "check_consistency",
+          "check_golden"
+        ]
+      },
+      {
+        "fault": "F09",
+        "description": "Two stated units disagree (27.6 kPa vs 14.0 psia)",
+        "expected_check": "check_units",
+        "row": "R093",
+        "detected": true,
+        "located": true,
+        "checks_failed": [
+          "check_units"
+        ]
+      },
+      {
+        "fault": "F10",
+        "description": "Spread rate on an extinction row",
+        "expected_check": "check_consistency",
+        "row": "R071",
+        "detected": true,
+        "located": true,
+        "checks_failed": [
+          "check_consistency"
+        ]
+      },
+      {
+        "fault": "F11",
+        "description": "Spread rate recorded in seconds",
+        "expected_check": "check_units",
+        "row": "R002",
+        "detected": true,
+        "located": true,
+        "checks_failed": [
+          "check_units"
+        ]
+      },
+      {
+        "fault": "F12",
+        "description": "Stated ratio inconsistent with its rates (0.93)",
+        "expected_check": "check_consistency",
+        "row": "R006",
+        "detected": true,
+        "located": true,
+        "checks_failed": [
+          "check_consistency"
+        ]
+      }
+    ]
+  },
+  "reference_values_in_source_text": {
+    "status": "PASS",
+    "found": {
+      "IV-1": {
+        "100.0": true,
+        "22.0": true,
+        "IV-1": true
+      },
+      "VI-2": {
+        "54.1": true,
+        "31.0": true,
+        "VI-2": true
+      },
+      "VI-3": {
+        "54.6": true,
+        "30.3": true,
+        "VI-3": true
+      },
+      "VI-4": {
+        "55.2": true,
+        "28.8": true,
+        "VI-4": true
+      }
+    }
+  },
+  "history": {
+    "run1": {
+      "checks_version": "1.0",
+      "failed_checks": [
+        "check_units",
+        "check_unique",
+        "check_consistency"
+      ],
+      "findings": 7,
+      "classification": "1 real duplicate in the ledger (R010 repeats R007 in other units); 2 false alarms on distinct Saffire tests with identical conditions; 3 rule false alarms (R083, R086, R093); 1 constant error (air oxygen 21.0% instead of 20.946%) that flagged the plan's correct 3.08 psia"
+    },
+    "run2": {
+      "checks_version": "1.1",
+      "fault_injection": "11 of 12 detected",
+      "finding": "F10 missed: the 1.1 rule needed the measurand to be named a spread rate, and the F10 mutation also overwrote the row's extinction wording"
+    },
+    "changes": [
+      "A row is treated as a spread-rate measurement only when its measurand is a spread rate, not a count of spread rates or a gravity level (false alarms on R086 and R093 in run 1).",
+      "An extinction row fails when it carries a speed that is not a flow speed; a flow speed at blowoff is legitimate (false alarm on R083 in run 1). Version 1.1 required the measurand name to say 'spread rate', which missed injected fault F10, so version 1.2 tests the unit instead.",
+      "Two test points with identical conditions are duplicates only when at least one has no named test ID; Saffire I-1, II-5, II-6 and III-1 are distinct tests (false alarms in run 1).",
+      "Air is 20.946% oxygen by volume (IUPAC); run 1 used 20.9% for rows and 21.0% for the plan's sea-level partial pressure, which flagged the plan's 3.08 psia wrongly."
+    ]
+  },
+  "pass": true,
+  "pass_rule": "Every check passes on the ledger, and every injected fault is detected"
+}

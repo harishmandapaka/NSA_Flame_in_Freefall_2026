@@ -1,0 +1,651 @@
+row_id,source_id,field,ledger_value,checker_verdict,checker_correct_value,checker_note,adjudication,final_verdict
+R001,luci_2025,locator,Slide 'LUCI: SIBAL fabric Linear Fit for SIBAL Flame Spread',OK,,,,OK
+R001,luci_2025,platform,"Blue Origin New Shepard NS-29, spinning capsule",OK,,,,OK
+R001,luci_2025,gravity,lunar (simulated by capsule spin),OK,,,,OK
+R001,luci_2025,material,SIBAL fabric (cotton-fiberglass),OK,,,,OK
+R001,luci_2025,geometry,5 cm wide x 30 cm long,OK,,,,OK
+R001,luci_2025,direction,downward,OK,,,,OK
+R001,luci_2025,flow,not stated,OK,,,,OK
+R001,luci_2025,pressure,normal pressure,OK,,,,OK
+R001,luci_2025,oxygen,air,OK,,,,OK
+R001,luci_2025,measurement,flame base spread rate,OK,,,,OK
+R001,luci_2025,value,0.92,OK,,,,OK
+R001,luci_2025,unit,mm/s,OK,,,,OK
+R001,luci_2025,qualifier,exact,OK,,,,OK
+R003,luci_2025,locator,Slide 'Combined Results: SIBAL' (flame spread rates from linear fits),OK,,,,OK
+R003,luci_2025,platform,"ground, LUCI 1-g burns",OK,,,,OK
+R003,luci_2025,gravity,1 g,OK,,,,OK
+R003,luci_2025,material,SIBAL fabric (cotton-fiberglass),OK,,,,OK
+R003,luci_2025,geometry,5 cm wide x 30 cm long,OK,,From the LUCI sample description (schematic slide); the 1-g burns are of the same LUCI SIBAL samples.,,OK
+R003,luci_2025,direction,not stated,OK,,Direction not stated for the 1-g SIBAL burn.,,OK
+R003,luci_2025,flow,not stated,OK,,,,OK
+R003,luci_2025,pressure,not stated,OK,,"""Air at normal pressure"" is stated only for the flight; not stated for the 1-g burns.",,OK
+R003,luci_2025,oxygen,not stated,MISSED,~20% O2 (roughly constant during the 1-g SIBAL burn),The 1-G SIBAL O2% slide in the same results section says O2 is roughly constant at 20%.,upheld,MISSED
+R003,luci_2025,measurement,flame base spread rate,OK,,,,OK
+R003,luci_2025,value,1.5,OK,,,,OK
+R003,luci_2025,unit,mm/s,OK,,,,OK
+R003,luci_2025,qualifier,exact,OK,,"The table gives 1.5 with no ~. The 1-g SIBAL fit slide warns the fit is ""only an approximate relationship"".",,OK
+R004,luci_2025,locator,Slide 'Combined Results: SIBAL' (flame spread rates from linear fits),OK,,,,OK
+R004,luci_2025,platform,"ground, LUCI 1-g burns",OK,,,,OK
+R004,luci_2025,gravity,1 g,OK,,,,OK
+R004,luci_2025,material,SIBAL fabric (cotton-fiberglass),OK,,,,OK
+R004,luci_2025,geometry,5 cm wide x 30 cm long,OK,,Size given in LUCI experiment schematic; 1-g burns are the LUCI comparison burns of the same samples.,,OK
+R004,luci_2025,direction,not stated,OK,,,,OK
+R004,luci_2025,flow,not stated,OK,,,,OK
+R004,luci_2025,pressure,not stated,OK,,,,OK
+R004,luci_2025,oxygen,not stated,MISSED,~20% O2 (roughly constant during the 1-g SIBAL burn),1-G Results SIBAL slide: 'O2% varies slightly but is roughly constant at 20%'.,upheld,MISSED
+R004,luci_2025,measurement,flame tip spread rate,OK,,,,OK
+R004,luci_2025,value,2.8,OK,,,,OK
+R004,luci_2025,unit,mm/s,OK,,,,OK
+R004,luci_2025,qualifier,exact,OK,,Combined table gives 2.8 with no ~ (the 1-g fit slide does call the fit 'only an approximate relationship').,,OK
+R005,luci_2025,locator,Slide 'Combined Results: SIBAL' (flame spread rates from linear fits),OK,,,,OK
+R005,luci_2025,platform,New Shepard NS-29 vs ground 1-g burns,OK,,,,OK
+R005,luci_2025,gravity,lunar (simulated) vs 1 g,OK,,,,OK
+R005,luci_2025,material,SIBAL fabric (cotton-fiberglass),OK,,,,OK
+R005,luci_2025,geometry,5 cm wide x 30 cm long,OK,,,,OK
+R005,luci_2025,direction,not stated,OK,,"Combined-results slide gives no direction; 'downward' appears only in an earlier photo caption for the lunar-g burn and the 1-g direction is never stated, so 'not stated' is acceptable.",,OK
+R005,luci_2025,flow,not stated,OK,,,,OK
+R005,luci_2025,pressure,not stated,OK,,,,OK
+R005,luci_2025,oxygen,not stated,OK,,,,OK
+R005,luci_2025,measurement,ratio of lunar to 1-g flame base spread rate,OK,,,,OK
+R005,luci_2025,value,0.6,OK,,"Table reads Partial-G .9, 1-G 1.5, Ratio .6 (=0.9/1.5, i.e. lunar/1-g).",,OK
+R005,luci_2025,unit,-,OK,,,,OK
+R005,luci_2025,qualifier,exact,OK,,,,OK
+R006,luci_2025,locator,Slide 'Combined Results: SIBAL' (flame spread rates from linear fits),OK,,,,OK
+R006,luci_2025,platform,New Shepard NS-29 vs ground 1-g burns,OK,,,,OK
+R006,luci_2025,gravity,lunar (simulated) vs 1 g,OK,,,,OK
+R006,luci_2025,material,SIBAL fabric (cotton-fiberglass),OK,,,,OK
+R006,luci_2025,geometry,5 cm wide x 30 cm long,OK,,,,OK
+R006,luci_2025,direction,not stated,OK,,Not stated at the locator or for the 1-g burn. An early slide says the lunar-g SIBAL burned downward.,,OK
+R006,luci_2025,flow,not stated,OK,,,,OK
+R006,luci_2025,pressure,not stated,OK,,"""Air at normal pressure"" appears only in the overview, for the flight. Not stated for the 1-g burn.",,OK
+R006,luci_2025,oxygen,not stated,MISSED,"air, ~20% O2 (1-g burn roughly constant at 20%; lunar burn fell from ~20% to ~18%)",O2 is stated for both burns on nearby 1-g and lunar SIBAL O2 slides.,upheld,MISSED
+R006,luci_2025,measurement,ratio of lunar to 1-g flame tip spread rate,OK,,,,OK
+R006,luci_2025,value,0.39,OK,,Table writes .39 (=1.1/2.8).,,OK
+R006,luci_2025,unit,-,OK,,,,OK
+R006,luci_2025,qualifier,exact,OK,,,,OK
+R007,luci_2025,locator,Slide 'Combined Results: PMMA' (flame tip spread from linear fits),OK,,,,OK
+R007,luci_2025,platform,"Blue Origin New Shepard NS-29, spinning capsule",OK,,,,OK
+R007,luci_2025,gravity,lunar (simulated by capsule spin),OK,,,,OK
+R007,luci_2025,material,PMMA (acrylic) rod,OK,,,,OK
+R007,luci_2025,geometry,4 mm diameter rod,OK,,,,OK
+R007,luci_2025,direction,upward,OK,,,,OK
+R007,luci_2025,flow,not stated,OK,,,,OK
+R007,luci_2025,pressure,normal pressure,OK,,,,OK
+R007,luci_2025,oxygen,air,OK,,,,OK
+R007,luci_2025,measurement,flame tip spread rate,OK,,,,OK
+R007,luci_2025,value,0.15,OK,,,,OK
+R007,luci_2025,unit,cm/s,OK,,,,OK
+R007,luci_2025,qualifier,exact,OK,,,,OK
+R010,luci_2025,locator,Slide 'LUCI: PMMA Flame Tip Spread Linear Fit',OK,,,,OK
+R010,luci_2025,platform,"Blue Origin New Shepard NS-29, spinning capsule",OK,,,,OK
+R010,luci_2025,gravity,lunar (simulated by capsule spin),OK,,,,OK
+R010,luci_2025,material,PMMA (acrylic) rod,OK,,,,OK
+R010,luci_2025,geometry,4 mm diameter rod,OK,,,,OK
+R010,luci_2025,direction,upward,OK,,,,OK
+R010,luci_2025,flow,not stated,OK,,,,OK
+R010,luci_2025,pressure,normal pressure,OK,,,,OK
+R010,luci_2025,oxygen,air,OK,,,,OK
+R010,luci_2025,measurement,flame tip spread rate,OK,,,,OK
+R010,luci_2025,value,1.5,OK,,,,OK
+R010,luci_2025,unit,mm/s,OK,,,,OK
+R010,luci_2025,qualifier,exact,OK,,,,OK
+R011,luci_2025,locator,Slide '1-G Results: PMMA Flame Tip Spread Linear Fit',OK,,,,OK
+R011,luci_2025,platform,"ground, LUCI 1-g burns",OK,,,,OK
+R011,luci_2025,gravity,1 g,OK,,,,OK
+R011,luci_2025,material,PMMA (acrylic) rod,OK,,,,OK
+R011,luci_2025,geometry,4 mm diameter rod,OK,,From the LUCI sample description (4-mm-DIA acrylic); 1-g burns use the LUCI PMMA rod.,,OK
+R011,luci_2025,direction,not stated,OK,,Not stated for the 1-g PMMA burn. Only the lunar-g rod is described as burning upward.,,OK
+R011,luci_2025,flow,not stated,OK,,,,OK
+R011,luci_2025,pressure,not stated,OK,,,,OK
+R011,luci_2025,oxygen,not stated,MISSED,"~21% O2 at start, decreasing ~linearly to 14.5% during the 1-g PMMA burn","Stated 2 slides later on the PMMA O2% slide in the 1-g section. The title lacks ""1-G"", but the slide sits in the 1-g section and its values differ from the flight slide (20% to 14.3%).",upheld,MISSED
+R011,luci_2025,measurement,flame tip growth rate at start of burn,OK,,,,OK
+R011,luci_2025,value,3.95,OK,,,,OK
+R011,luci_2025,unit,mm/s,OK,,,,OK
+R011,luci_2025,qualifier,approximate,OK,,,,OK
+R013,luci_2025,locator,Slide 'LUCI: PMMA Flame Base Spread and Flame Length vs. O2% for LUCI PMMA',OK,,,,OK
+R013,luci_2025,platform,"Blue Origin New Shepard NS-29, spinning capsule",OK,,,,OK
+R013,luci_2025,gravity,lunar (simulated by capsule spin),OK,,,,OK
+R013,luci_2025,material,PMMA (acrylic) rod,OK,,,,OK
+R013,luci_2025,geometry,4 mm diameter rod,OK,,,,OK
+R013,luci_2025,direction,upward,OK,,,,OK
+R013,luci_2025,flow,not stated,OK,,,,OK
+R013,luci_2025,pressure,normal pressure,OK,,,,OK
+R013,luci_2025,oxygen,air,OK,,,,OK
+R013,luci_2025,measurement,lowest chamber oxygen during burn,OK,,,,OK
+R013,luci_2025,value,14.3,OK,,,,OK
+R013,luci_2025,unit,%,OK,,,,OK
+R013,luci_2025,qualifier,exact,OK,,,,OK
+R015,luci_2025,locator,Slide 'Results: PMMA Flame Spread vs. O2% for LUCI PMMA' (1-G),OK,,Slide title in text lacks the '1-G' prefix but sits in the 1-G results sequence; partial-g PMMA O2 slide reports 20% to 14.3% instead.,,OK
+R015,luci_2025,platform,"ground, LUCI 1-g burns",OK,,,,OK
+R015,luci_2025,gravity,1 g,OK,,,,OK
+R015,luci_2025,material,PMMA (acrylic) rod,OK,,,,OK
+R015,luci_2025,geometry,4 mm diameter rod,OK,,,,OK
+R015,luci_2025,direction,not stated,OK,,,,OK
+R015,luci_2025,flow,not stated,OK,,,,OK
+R015,luci_2025,pressure,not stated,OK,,,,OK
+R015,luci_2025,oxygen,not stated,MISSED,"about 21% at start, falling ~linearly to 14.5% during the 1-g burn","The same bullet states the chamber O2 history (21% down to 14.5%), so the test oxygen is stated at the locator.",upheld,MISSED
+R015,luci_2025,measurement,lowest chamber oxygen during burn,OK,,,,OK
+R015,luci_2025,value,14.5,OK,,,,OK
+R015,luci_2025,unit,%,OK,,,,OK
+R015,luci_2025,qualifier,exact,OK,,,,OK
+R016,luci_2025,locator,Slide 'LUCI: SIBAL fabric Flame Length and Flame Width vs. O2% for LUCI SIBAL',OK,,,,OK
+R016,luci_2025,platform,"Blue Origin New Shepard NS-29, spinning capsule",OK,,"Source says ""spinning Blue Origin New Shepard vehicle"" and ""NS-29"". ""Capsule"" is a harmless paraphrase.",,OK
+R016,luci_2025,gravity,lunar (simulated by capsule spin),OK,,,,OK
+R016,luci_2025,material,SIBAL fabric (cotton-fiberglass),OK,,,,OK
+R016,luci_2025,geometry,5 cm wide x 30 cm long,OK,,,,OK
+R016,luci_2025,direction,downward,OK,,The SIBAL fabric is described as burning downward in Lunar-g (sample-photo slide).,,OK
+R016,luci_2025,flow,not stated,OK,,,,OK
+R016,luci_2025,pressure,normal pressure,OK,,"Overview: ""burned simultaneously in air at normal pressure"".",,OK
+R016,luci_2025,oxygen,air,OK,,,,OK
+R016,luci_2025,measurement,final chamber oxygen during burn,OK,,,,OK
+R016,luci_2025,value,18,OK,,,,OK
+R016,luci_2025,unit,%,OK,,,,OK
+R016,luci_2025,qualifier,approximate,OK,,,,OK
+R020,luci_2025,locator,Slide 'LUCI Partial-G Recap: SIBAL',OK,,,,OK
+R020,luci_2025,platform,"Blue Origin New Shepard NS-29, spinning capsule",OK,,,,OK
+R020,luci_2025,gravity,lunar (simulated by capsule spin),OK,,,,OK
+R020,luci_2025,material,SIBAL fabric (cotton-fiberglass),OK,,,,OK
+R020,luci_2025,geometry,5 cm wide x 30 cm long,OK,,,,OK
+R020,luci_2025,direction,downward,OK,,,,OK
+R020,luci_2025,flow,not stated,OK,,,,OK
+R020,luci_2025,pressure,normal pressure,OK,,,,OK
+R020,luci_2025,oxygen,air,OK,,,,OK
+R020,luci_2025,measurement,flame length during semi-steady spread,OK,,,,OK
+R020,luci_2025,value,1.5,OK,,,,OK
+R020,luci_2025,unit,cm,OK,,,,OK
+R020,luci_2025,qualifier,approximate,OK,,,,OK
+R024,luci_2025,locator,Summary bullets (slide after 'Page 10'),OK,,,,OK
+R024,luci_2025,platform,"Blue Origin New Shepard NS-29, spinning capsule",OK,,,,OK
+R024,luci_2025,gravity,lunar (simulated by capsule spin),OK,,,,OK
+R024,luci_2025,material,SIBAL fabric and PMMA rod (burned simultaneously),OK,,,,OK
+R024,luci_2025,geometry,not stated,MISSED,fabric sheet and 4-mm diameter acrylic (PMMA) rod (fabric is 5 cm x 30 cm per schematic slide),The same summary bullet list specifies 'a 4-mm diameter rod of acrylic plastic'.,upheld,MISSED
+R024,luci_2025,direction,not stated,OK,,,,OK
+R024,luci_2025,flow,not stated,OK,,,,OK
+R024,luci_2025,pressure,normal pressure,OK,,,,OK
+R024,luci_2025,oxygen,air,OK,,,,OK
+R024,luci_2025,measurement,vehicle rotation rate,OK,,,,OK
+R024,luci_2025,value,11,OK,,,,OK
+R024,luci_2025,unit,RPM,OK,,,,OK
+R024,luci_2025,qualifier,exact,OK,,,,OK
+R027,saffire6_paper_2024,locator,"Table 2, row IV-1 (conditions in Table 1, p. 3)",OK,,,,OK
+R027,saffire6_paper_2024,platform,"Cygnus cargo spacecraft (in orbit), test IV-1",OK,,,,OK
+R027,saffire6_paper_2024,gravity,microgravity (orbit),OK,,,,OK
+R027,saffire6_paper_2024,material,SIBAL cloth,OK,,,,OK
+R027,saffire6_paper_2024,geometry,50 cm long,OK,,,,OK
+R027,saffire6_paper_2024,direction,concurrent,OK,,,,OK
+R027,saffire6_paper_2024,flow,20 cm/s,OK,,,,OK
+R027,saffire6_paper_2024,pressure,100.0 kPa,OK,,,,OK
+R027,saffire6_paper_2024,oxygen,22.0 mol %,OK,,,,OK
+R027,saffire6_paper_2024,measurement,burn duration,OK,,,,OK
+R027,saffire6_paper_2024,value,130,OK,,,,OK
+R027,saffire6_paper_2024,unit,s,OK,,,,OK
+R027,saffire6_paper_2024,qualifier,exact,OK,,,,OK
+R028,saffire6_paper_2024,locator,"Table 2, row V-2 (conditions in Table 1, p. 3)",OK,,,,OK
+R028,saffire6_paper_2024,platform,"Cygnus cargo spacecraft (in orbit), test V-2",OK,,,,OK
+R028,saffire6_paper_2024,gravity,microgravity (orbit),OK,,,,OK
+R028,saffire6_paper_2024,material,cotton jersey,OK,,,,OK
+R028,saffire6_paper_2024,geometry,50 cm long,OK,,,,OK
+R028,saffire6_paper_2024,direction,concurrent,OK,,,,OK
+R028,saffire6_paper_2024,flow,20 cm/s,OK,,,,OK
+R028,saffire6_paper_2024,pressure,70.7 kPa,OK,,,,OK
+R028,saffire6_paper_2024,oxygen,26.2 mol %,OK,,,,OK
+R028,saffire6_paper_2024,measurement,burn duration,OK,,,,OK
+R028,saffire6_paper_2024,value,200,OK,,,,OK
+R028,saffire6_paper_2024,unit,s,OK,,,,OK
+R028,saffire6_paper_2024,qualifier,exact,OK,,,,OK
+R031,saffire6_paper_2024,locator,"Table 2, row VI-4 (conditions in Table 1, p. 3)",OK,,,,OK
+R031,saffire6_paper_2024,platform,"Cygnus cargo spacecraft (in orbit), test VI-4",OK,,,,OK
+R031,saffire6_paper_2024,gravity,microgravity (orbit),OK,,,,OK
+R031,saffire6_paper_2024,material,one-sided PMMA,OK,,,,OK
+R031,saffire6_paper_2024,geometry,18 cm long,OK,,"Table 1 length 18 cm; text adds samples 41 cm wide, one-sided PMMA 5 mm thick (not wrong, just partial).",,OK
+R031,saffire6_paper_2024,direction,concurrent,OK,,,,OK
+R031,saffire6_paper_2024,flow,20 cm/s,OK,,,,OK
+R031,saffire6_paper_2024,pressure,55.2 kPa,OK,,,,OK
+R031,saffire6_paper_2024,oxygen,28.8 mol %,OK,,,,OK
+R031,saffire6_paper_2024,measurement,burn duration,OK,,,,OK
+R031,saffire6_paper_2024,value,1200,OK,,,,OK
+R031,saffire6_paper_2024,unit,s,OK,,,,OK
+R031,saffire6_paper_2024,qualifier,exact,OK,,,,OK
+R033,saffire6_paper_2024,locator,"Table 2, row VI-3 (conditions in Table 1, p. 3)",OK,,,,OK
+R033,saffire6_paper_2024,platform,"Cygnus cargo spacecraft (in orbit), test VI-3",OK,,,,OK
+R033,saffire6_paper_2024,gravity,microgravity (orbit),OK,,,,OK
+R033,saffire6_paper_2024,material,two-sided PMMA,OK,,,,OK
+R033,saffire6_paper_2024,geometry,18 cm long,OK,,,,OK
+R033,saffire6_paper_2024,direction,concurrent,OK,,,,OK
+R033,saffire6_paper_2024,flow,20 cm/s,OK,,,,OK
+R033,saffire6_paper_2024,pressure,54.6 kPa,OK,,,,OK
+R033,saffire6_paper_2024,oxygen,30.3 mol %,OK,,,,OK
+R033,saffire6_paper_2024,measurement,peak heat release (oxygen consumption calorimetry),OK,,,,OK
+R033,saffire6_paper_2024,value,3080,OK,,,,OK
+R033,saffire6_paper_2024,unit,W,OK,,,,OK
+R033,saffire6_paper_2024,qualifier,exact,OK,,,,OK
+R036,saffire6_paper_2024,locator,"Table 2, row V-2 (conditions in Table 1, p. 3)",OK,,,,OK
+R036,saffire6_paper_2024,platform,"Cygnus cargo spacecraft (in orbit), test V-2",OK,,,,OK
+R036,saffire6_paper_2024,gravity,microgravity (orbit),OK,,,,OK
+R036,saffire6_paper_2024,material,cotton jersey,OK,,,,OK
+R036,saffire6_paper_2024,geometry,50 cm long,OK,,,,OK
+R036,saffire6_paper_2024,direction,concurrent,OK,,,,OK
+R036,saffire6_paper_2024,flow,20 cm/s,OK,,,,OK
+R036,saffire6_paper_2024,pressure,70.7 kPa,OK,,,,OK
+R036,saffire6_paper_2024,oxygen,26.2 mol %,OK,,,,OK
+R036,saffire6_paper_2024,measurement,average heat release (fuel consumption calorimetry),OK,,,,OK
+R036,saffire6_paper_2024,value,2800,OK,,,,OK
+R036,saffire6_paper_2024,unit,W,OK,,,,OK
+R036,saffire6_paper_2024,qualifier,exact,OK,,,,OK
+R038,saffire6_paper_2024,locator,"Table 2, row IV-1 (conditions in Table 1, p. 3)",OK,,,,OK
+R038,saffire6_paper_2024,platform,"Cygnus cargo spacecraft (in orbit), test IV-1",OK,,,,OK
+R038,saffire6_paper_2024,gravity,microgravity (orbit),OK,,,,OK
+R038,saffire6_paper_2024,material,SIBAL cloth,OK,,,,OK
+R038,saffire6_paper_2024,geometry,50 cm long,OK,,,,OK
+R038,saffire6_paper_2024,direction,concurrent,OK,,,,OK
+R038,saffire6_paper_2024,flow,20 cm/s,OK,,,,OK
+R038,saffire6_paper_2024,pressure,100.0 kPa,OK,,,,OK
+R038,saffire6_paper_2024,oxygen,22.0 mol %,OK,,,,OK
+R038,saffire6_paper_2024,measurement,maximum temperature at flow-unit outlet,OK,,,,OK
+R038,saffire6_paper_2024,value,45,OK,,,,OK
+R038,saffire6_paper_2024,unit,degC,OK,,,,OK
+R038,saffire6_paper_2024,qualifier,exact,OK,,,,OK
+R040,saffire6_paper_2024,locator,"Table 2, row VI-2 (conditions in Table 1, p. 3)",OK,,,,OK
+R040,saffire6_paper_2024,platform,"Cygnus cargo spacecraft (in orbit), test VI-2",OK,,,,OK
+R040,saffire6_paper_2024,gravity,microgravity (orbit),OK,,,,OK
+R040,saffire6_paper_2024,material,SIBAL cloth,OK,,,,OK
+R040,saffire6_paper_2024,geometry,50 cm long,OK,,,,OK
+R040,saffire6_paper_2024,direction,concurrent,OK,,,,OK
+R040,saffire6_paper_2024,flow,20 cm/s,OK,,,,OK
+R040,saffire6_paper_2024,pressure,54.1 kPa,OK,,,,OK
+R040,saffire6_paper_2024,oxygen,31.0 mol %,OK,,,,OK
+R040,saffire6_paper_2024,measurement,maximum temperature at flow-unit outlet,OK,,,,OK
+R040,saffire6_paper_2024,value,48,OK,,,,OK
+R040,saffire6_paper_2024,unit,degC,OK,,,,OK
+R040,saffire6_paper_2024,qualifier,exact,OK,,,,OK
+R041,saffire6_paper_2024,locator,"Table 2, row VI-3 (conditions in Table 1, p. 3)",OK,,,,OK
+R041,saffire6_paper_2024,platform,"Cygnus cargo spacecraft (in orbit), test VI-3",OK,,,,OK
+R041,saffire6_paper_2024,gravity,microgravity (orbit),OK,,,,OK
+R041,saffire6_paper_2024,material,two-sided PMMA,OK,,,,OK
+R041,saffire6_paper_2024,geometry,18 cm long,OK,,,,OK
+R041,saffire6_paper_2024,direction,concurrent,OK,,,,OK
+R041,saffire6_paper_2024,flow,20 cm/s,OK,,,,OK
+R041,saffire6_paper_2024,pressure,54.6 kPa,OK,,,,OK
+R041,saffire6_paper_2024,oxygen,30.3 mol %,OK,,,,OK
+R041,saffire6_paper_2024,measurement,maximum temperature at flow-unit outlet,OK,,,,OK
+R041,saffire6_paper_2024,value,77,OK,,,,OK
+R041,saffire6_paper_2024,unit,degC,OK,,,,OK
+R041,saffire6_paper_2024,qualifier,exact,OK,,,,OK
+R045,saffire6_paper_2024,locator,"Table 2, row VI-2 (conditions in Table 1, p. 3)",OK,,,,OK
+R045,saffire6_paper_2024,platform,"Cygnus cargo spacecraft (in orbit), test VI-2",OK,,,,OK
+R045,saffire6_paper_2024,gravity,microgravity (orbit),OK,,,,OK
+R045,saffire6_paper_2024,material,SIBAL cloth,OK,,,,OK
+R045,saffire6_paper_2024,geometry,50 cm long,OK,,,,OK
+R045,saffire6_paper_2024,direction,concurrent,OK,,,,OK
+R045,saffire6_paper_2024,flow,20 cm/s,OK,,,,OK
+R045,saffire6_paper_2024,pressure,54.1 kPa,OK,,,,OK
+R045,saffire6_paper_2024,oxygen,31.0 mol %,OK,,,,OK
+R045,saffire6_paper_2024,measurement,CO2 increase at far-field inlet,OK,,,,OK
+R045,saffire6_paper_2024,value,2800,OK,,,,OK
+R045,saffire6_paper_2024,unit,ppm,OK,,,,OK
+R045,saffire6_paper_2024,qualifier,exact,OK,,,,OK
+R047,saffire6_paper_2024,locator,"Table 2, row VI-4 (conditions in Table 1, p. 3)",OK,,,,OK
+R047,saffire6_paper_2024,platform,"Cygnus cargo spacecraft (in orbit), test VI-4",OK,,,,OK
+R047,saffire6_paper_2024,gravity,microgravity (orbit),OK,,,,OK
+R047,saffire6_paper_2024,material,one-sided PMMA,OK,,,,OK
+R047,saffire6_paper_2024,geometry,18 cm long,OK,,,,OK
+R047,saffire6_paper_2024,direction,concurrent,OK,,,,OK
+R047,saffire6_paper_2024,flow,20 cm/s,OK,,,,OK
+R047,saffire6_paper_2024,pressure,55.2 kPa,OK,,,,OK
+R047,saffire6_paper_2024,oxygen,28.8 mol %,OK,,,,OK
+R047,saffire6_paper_2024,measurement,CO2 increase at far-field inlet,OK,,,,OK
+R047,saffire6_paper_2024,value,8117,OK,,,,OK
+R047,saffire6_paper_2024,unit,ppm,OK,,,,OK
+R047,saffire6_paper_2024,qualifier,exact,OK,,,,OK
+R048,saffire6_paper_2024,locator,"Table 2, row IV-1 (conditions in Table 1, p. 3)",OK,,,,OK
+R048,saffire6_paper_2024,platform,"Cygnus cargo spacecraft (in orbit), test IV-1",OK,,,,OK
+R048,saffire6_paper_2024,gravity,microgravity (orbit),OK,,,,OK
+R048,saffire6_paper_2024,material,SIBAL cloth,OK,,,,OK
+R048,saffire6_paper_2024,geometry,50 cm long,OK,,,,OK
+R048,saffire6_paper_2024,direction,concurrent,OK,,,,OK
+R048,saffire6_paper_2024,flow,20 cm/s,OK,,,,OK
+R048,saffire6_paper_2024,pressure,100.0 kPa,OK,,,,OK
+R048,saffire6_paper_2024,oxygen,22.0 mol %,OK,,,,OK
+R048,saffire6_paper_2024,measurement,CO increase at far-field inlet,OK,,,,OK
+R048,saffire6_paper_2024,value,80,OK,,,,OK
+R048,saffire6_paper_2024,unit,ppm,OK,,,,OK
+R048,saffire6_paper_2024,qualifier,exact,OK,,,,OK
+R049,saffire6_paper_2024,locator,"Table 2, row V-2 (conditions in Table 1, p. 3)",OK,,,,OK
+R049,saffire6_paper_2024,platform,"Cygnus cargo spacecraft (in orbit), test V-2",OK,,,,OK
+R049,saffire6_paper_2024,gravity,microgravity (orbit),OK,,,,OK
+R049,saffire6_paper_2024,material,cotton jersey,OK,,,,OK
+R049,saffire6_paper_2024,geometry,50 cm long,OK,,,,OK
+R049,saffire6_paper_2024,direction,concurrent,OK,,,,OK
+R049,saffire6_paper_2024,flow,20 cm/s,OK,,,,OK
+R049,saffire6_paper_2024,pressure,70.7 kPa,OK,,,,OK
+R049,saffire6_paper_2024,oxygen,26.2 mol %,OK,,,,OK
+R049,saffire6_paper_2024,measurement,CO increase at far-field inlet,OK,,,,OK
+R049,saffire6_paper_2024,value,83,OK,,,,OK
+R049,saffire6_paper_2024,unit,ppm,OK,,,,OK
+R049,saffire6_paper_2024,qualifier,exact,OK,,,,OK
+R052,saffire6_paper_2024,locator,"Table 2, row VI-4 (conditions in Table 1, p. 3)",OK,,,,OK
+R052,saffire6_paper_2024,platform,"Cygnus cargo spacecraft (in orbit), test VI-4",OK,,,,OK
+R052,saffire6_paper_2024,gravity,microgravity (orbit),OK,,,,OK
+R052,saffire6_paper_2024,material,one-sided PMMA,OK,,,,OK
+R052,saffire6_paper_2024,geometry,18 cm long,OK,,,,OK
+R052,saffire6_paper_2024,direction,concurrent,OK,,,,OK
+R052,saffire6_paper_2024,flow,20 cm/s,OK,,,,OK
+R052,saffire6_paper_2024,pressure,55.2 kPa,OK,,,,OK
+R052,saffire6_paper_2024,oxygen,28.8 mol %,OK,,,,OK
+R052,saffire6_paper_2024,measurement,CO increase at far-field inlet,OK,,,,OK
+R052,saffire6_paper_2024,value,320,OK,,,,OK
+R052,saffire6_paper_2024,unit,ppm,OK,,,,OK
+R052,saffire6_paper_2024,qualifier,exact,OK,,,,OK
+R054,saffire6_pres_2024,locator,Slide 'Temperature results for Saffire VI-3 (two-sided PMMA)',OK,,,,OK
+R054,saffire6_pres_2024,platform,"Cygnus cargo spacecraft (in orbit), test VI-3",OK,,,,OK
+R054,saffire6_pres_2024,gravity,microgravity (orbit),OK,,,,OK
+R054,saffire6_pres_2024,material,two-sided PMMA,OK,,,,OK
+R054,saffire6_pres_2024,geometry,18 cm long,OK,,,,OK
+R054,saffire6_pres_2024,direction,concurrent,OK,,,,OK
+R054,saffire6_pres_2024,flow,"20 cm/s, reduced to 5 cm/s",OK,,,,OK
+R054,saffire6_pres_2024,pressure,54.6 kPa,OK,,,,OK
+R054,saffire6_pres_2024,oxygen,30.3 mol %,OK,,,,OK
+R054,saffire6_pres_2024,measurement,time flow reduced from 20 to 5 cm/s,OK,,,,OK
+R054,saffire6_pres_2024,value,1120,OK,,,,OK
+R054,saffire6_pres_2024,unit,s,OK,,,,OK
+R054,saffire6_pres_2024,qualifier,exact,OK,,,,OK
+R055,saffire6_pres_2024,locator,Slide 'Temperature results for Saffire VI-3 (two-sided PMMA)',OK,,,,OK
+R055,saffire6_pres_2024,platform,"Cygnus cargo spacecraft (in orbit), test VI-3",OK,,,,OK
+R055,saffire6_pres_2024,gravity,microgravity (orbit),OK,,,,OK
+R055,saffire6_pres_2024,material,two-sided PMMA,OK,,,,OK
+R055,saffire6_pres_2024,geometry,18 cm long,OK,,,,OK
+R055,saffire6_pres_2024,direction,concurrent,OK,,,,OK
+R055,saffire6_pres_2024,flow,"20 cm/s, reduced to 5 cm/s",OK,,,,OK
+R055,saffire6_pres_2024,pressure,54.6 kPa,OK,,,,OK
+R055,saffire6_pres_2024,oxygen,30.3 mol %,OK,,,,OK
+R055,saffire6_pres_2024,measurement,time duct flow terminated,OK,,,,OK
+R055,saffire6_pres_2024,value,1420,OK,,,,OK
+R055,saffire6_pres_2024,unit,s,OK,,,,OK
+R055,saffire6_pres_2024,qualifier,exact,OK,,,,OK
+R057,saffire45_paper_2021,locator,"Table 2, column I-1",OK,,,,OK
+R057,saffire45_paper_2021,platform,"Cygnus cargo spacecraft (in orbit), Saffire I-1",NOT_IN_SOURCE,"orbiting spacecraft, Saffire I flight (vehicle not named in this source)","Source puts Saffire I-V in space (""spacecraft experiments"", Fig. 10 ""in microgravity""), but it names the Cygnus vehicle only for Saffire IV-V (NG-13/NG-14). The vehicle for the earlier flights is not stated.",upheld,NOT_IN_SOURCE
+R057,saffire45_paper_2021,gravity,microgravity (orbit),OK,,,,OK
+R057,saffire45_paper_2021,material,SIBAL,OK,,,,OK
+R057,saffire45_paper_2021,geometry,41 cm wide x 94 cm long; duct height 46 cm,OK,,,,OK
+R057,saffire45_paper_2021,direction,not stated,OK,,"Table 2 gives no direction. The text conflicts: it says ""steady opposed spread rate"" for all Saffire I-V thin samples, but its summary calls them concurrent flames, and Fig. 10 shows both. Not clearly stated for this test.",,OK
+R057,saffire45_paper_2021,flow,20 cm/s,OK,,,,OK
+R057,saffire45_paper_2021,pressure,100 kPa,OK,,,,OK
+R057,saffire45_paper_2021,oxygen,21 %,OK,,,,OK
+R057,saffire45_paper_2021,measurement,maximum flame size,OK,,,,OK
+R057,saffire45_paper_2021,value,6.2,OK,,,,OK
+R057,saffire45_paper_2021,unit,cm,OK,,,,OK
+R057,saffire45_paper_2021,qualifier,exact,OK,,,,OK
+R058,saffire45_paper_2021,locator,"Table 2, column II-5",OK,,,,OK
+R058,saffire45_paper_2021,platform,"Cygnus cargo spacecraft (in orbit), Saffire II-5",NOT_IN_SOURCE,"orbiting spacecraft, Saffire II-5 (vehicle not named in this source)",Source ties Cygnus only to Saffire IV and V (NG-13/NG-14); Saffire I-III are described only as spacecraft flights in microgravity. Orbit category itself is right.,upheld,NOT_IN_SOURCE
+R058,saffire45_paper_2021,gravity,microgravity (orbit),OK,,,,OK
+R058,saffire45_paper_2021,material,SIBAL,OK,,,,OK
+R058,saffire45_paper_2021,geometry,5 cm wide x 30 cm long; duct height 46 cm,OK,,,,OK
+R058,saffire45_paper_2021,direction,not stated,OK,,No direction in Table 2; text is contradictory ('steady opposed spread rate' for all Table 2 tests vs. 'concurrent flames ... will achieve a limiting size').,,OK
+R058,saffire45_paper_2021,flow,20 cm/s,OK,,,,OK
+R058,saffire45_paper_2021,pressure,100 kPa,OK,,,,OK
+R058,saffire45_paper_2021,oxygen,21 %,OK,,,,OK
+R058,saffire45_paper_2021,measurement,steady-state flame size,OK,,,,OK
+R058,saffire45_paper_2021,value,4,OK,,,,OK
+R058,saffire45_paper_2021,unit,cm,OK,,,,OK
+R058,saffire45_paper_2021,qualifier,exact,OK,,,,OK
+R060,saffire45_paper_2021,locator,"Table 2, column II-6",OK,,,,OK
+R060,saffire45_paper_2021,platform,"Cygnus cargo spacecraft (in orbit), Saffire II-6",NOT_IN_SOURCE,Saffire II spacecraft flight in orbit (microgravity); this source does not name the vehicle for Saffire I-III,"Cygnus is tied only to Saffire IV/V (NG-13, NG-14 flights); Saffire I-III are described only as prior spacecraft flights burning in microgravity, so 'Cygnus' for II-6 is inferred.",upheld,NOT_IN_SOURCE
+R060,saffire45_paper_2021,gravity,microgravity (orbit),OK,,,,OK
+R060,saffire45_paper_2021,material,SIBAL,OK,,,,OK
+R060,saffire45_paper_2021,geometry,5 cm wide x 30 cm long; duct height 46 cm,OK,,,,OK
+R060,saffire45_paper_2021,direction,not stated,OK,,"Text near Table 2 is self-contradictory ('steady opposed spread rate' vs. 'concurrent flames spreading over thin fuels'), so 'not stated' is defensible.",,OK
+R060,saffire45_paper_2021,flow,25 cm/s,OK,,,,OK
+R060,saffire45_paper_2021,pressure,100 kPa,OK,,,,OK
+R060,saffire45_paper_2021,oxygen,21 %,OK,,,,OK
+R060,saffire45_paper_2021,measurement,steady-state flame size,OK,,,,OK
+R060,saffire45_paper_2021,value,5,OK,,,,OK
+R060,saffire45_paper_2021,unit,cm,OK,,,,OK
+R060,saffire45_paper_2021,qualifier,exact,OK,,,,OK
+R061,saffire45_paper_2021,locator,"Table 2, column II-6",OK,,,,OK
+R061,saffire45_paper_2021,platform,"Cygnus cargo spacecraft (in orbit), Saffire II-6",NOT_IN_SOURCE,"orbiting spacecraft, Saffire II flight (vehicle not named in this source)","Source puts Saffire I-V in space (""spacecraft experiments"", Fig. 10 ""in microgravity""), but it names the Cygnus vehicle only for Saffire IV-V (NG-13/NG-14). The vehicle for the earlier flights is not stated.",upheld,NOT_IN_SOURCE
+R061,saffire45_paper_2021,gravity,microgravity (orbit),OK,,,,OK
+R061,saffire45_paper_2021,material,SIBAL,OK,,,,OK
+R061,saffire45_paper_2021,geometry,5 cm wide x 30 cm long; duct height 46 cm,OK,,,,OK
+R061,saffire45_paper_2021,direction,not stated,OK,,"Table 2 gives no direction. The text conflicts: it says ""steady opposed spread rate"" for all Saffire I-V thin samples, but its summary calls them concurrent flames, and Fig. 10 shows both. Not clearly stated for this test.",,OK
+R061,saffire45_paper_2021,flow,25 cm/s,OK,,,,OK
+R061,saffire45_paper_2021,pressure,100 kPa,OK,,,,OK
+R061,saffire45_paper_2021,oxygen,21 %,OK,,,,OK
+R061,saffire45_paper_2021,measurement,maximum flame size,OK,,,,OK
+R061,saffire45_paper_2021,value,5,OK,,,,OK
+R061,saffire45_paper_2021,unit,cm,OK,,,,OK
+R061,saffire45_paper_2021,qualifier,exact,OK,,,,OK
+R064,saffire45_paper_2021,locator,"Table 2, column IV-1",OK,,,,OK
+R064,saffire45_paper_2021,platform,"Cygnus cargo spacecraft (in orbit), Saffire IV-1",OK,,,,OK
+R064,saffire45_paper_2021,gravity,microgravity (orbit),OK,,,,OK
+R064,saffire45_paper_2021,material,SIBAL,OK,,,,OK
+R064,saffire45_paper_2021,geometry,41 cm wide x 50 cm long; duct height 30 cm,OK,,,,OK
+R064,saffire45_paper_2021,direction,concurrent,OK,,,,OK
+R064,saffire45_paper_2021,flow,20 cm/s,OK,,,,OK
+R064,saffire45_paper_2021,pressure,100 kPa,OK,,,,OK
+R064,saffire45_paper_2021,oxygen,22 %,OK,,,,OK
+R064,saffire45_paper_2021,measurement,steady-state flame size,OK,,,,OK
+R064,saffire45_paper_2021,value,8.5,OK,,,,OK
+R064,saffire45_paper_2021,unit,cm,OK,,,,OK
+R064,saffire45_paper_2021,qualifier,exact,OK,,,,OK
+R065,saffire45_paper_2021,locator,"Table 2, column IV-1",OK,,,,OK
+R065,saffire45_paper_2021,platform,"Cygnus cargo spacecraft (in orbit), Saffire IV-1",OK,,,,OK
+R065,saffire45_paper_2021,gravity,microgravity (orbit),OK,,,,OK
+R065,saffire45_paper_2021,material,SIBAL,OK,,,,OK
+R065,saffire45_paper_2021,geometry,41 cm wide x 50 cm long; duct height 30 cm,OK,,,,OK
+R065,saffire45_paper_2021,direction,concurrent,OK,,,,OK
+R065,saffire45_paper_2021,flow,20 cm/s,OK,,,,OK
+R065,saffire45_paper_2021,pressure,100 kPa,OK,,,,OK
+R065,saffire45_paper_2021,oxygen,22 %,OK,,,,OK
+R065,saffire45_paper_2021,measurement,maximum flame size,OK,,,,OK
+R065,saffire45_paper_2021,value,11.0,OK,,,,OK
+R065,saffire45_paper_2021,unit,cm,OK,,,,OK
+R065,saffire45_paper_2021,qualifier,exact,OK,,,,OK
+R067,saffire45_paper_2021,locator,"Table 2, column V-2",OK,,,,OK
+R067,saffire45_paper_2021,platform,"Cygnus cargo spacecraft (in orbit), Saffire V-2",OK,,"Saffire V flew on Cygnus (NG-14). ""Cargo"" is a descriptor only.",,OK
+R067,saffire45_paper_2021,gravity,microgravity (orbit),OK,,,,OK
+R067,saffire45_paper_2021,material,Cotton jersey,OK,,,,OK
+R067,saffire45_paper_2021,geometry,41 cm wide x 50 cm long; duct height 30 cm,OK,,,,OK
+R067,saffire45_paper_2021,direction,concurrent,OK,,Table 1 lists V-2 flow direction as Concurrent.,,OK
+R067,saffire45_paper_2021,flow,20 cm/s,OK,,,,OK
+R067,saffire45_paper_2021,pressure,70.7 kPa,OK,,,,OK
+R067,saffire45_paper_2021,oxygen,26.2 %,OK,,,,OK
+R067,saffire45_paper_2021,measurement,maximum flame size,OK,,,,OK
+R067,saffire45_paper_2021,value,14.0,OK,,,,OK
+R067,saffire45_paper_2021,unit,cm,OK,,,,OK
+R067,saffire45_paper_2021,qualifier,exact,OK,,,,OK
+R070,saffire45_paper_2021,locator,Text discussing Figures 5 and 6,OK,,,,OK
+R070,saffire45_paper_2021,platform,"Cygnus cargo spacecraft (in orbit), Saffire V-4",OK,,,,OK
+R070,saffire45_paper_2021,gravity,microgravity (orbit),OK,,,,OK
+R070,saffire45_paper_2021,material,structured PMMA,OK,,,,OK
+R070,saffire45_paper_2021,geometry,20 cm long,OK,,,,OK
+R070,saffire45_paper_2021,direction,opposed,OK,,,,OK
+R070,saffire45_paper_2021,flow,"20 cm/s, then fan off",WRONG,"20 cm/s, reduced to 5 cm/s and held 300 s, then fan off",Flow was cut to 5 cm/s for 300 s before the fan was turned off; source credits this step for the immediate extinction.,upheld,WRONG
+R070,saffire45_paper_2021,pressure,72.6 kPa,OK,,,,OK
+R070,saffire45_paper_2021,oxygen,25.7 mol %,OK,,,,OK
+R070,saffire45_paper_2021,measurement,response when fan turned off,OK,,,,OK
+R070,saffire45_paper_2021,value,extinguished immediately,OK,,,,OK
+R070,saffire45_paper_2021,unit,-,OK,,,,OK
+R070,saffire45_paper_2021,qualifier,categorical,OK,,,,OK
+R072,fm2_poster_2024,locator,"Poster, Introduction",OK,,,,OK
+R072,fm2_poster_2024,platform,FM2 on a lunar lander (planned),OK,,,,OK
+R072,fm2_poster_2024,gravity,lunar (on the Moon),OK,,,,OK
+R072,fm2_poster_2024,material,SIBAL fabric (cotton/fiberglass blend),OK,,,,OK
+R072,fm2_poster_2024,geometry,not stated,OK,,,,OK
+R072,fm2_poster_2024,direction,upward,OK,,Poster says one of each fuel will be burned upward and one downward; this row is the upward SIBAL burn.,,OK
+R072,fm2_poster_2024,flow,not stated,OK,,,,OK
+R072,fm2_poster_2024,pressure,14.7 psia,OK,,,,OK
+R072,fm2_poster_2024,oxygen,21% (air),OK,,,,OK
+R072,fm2_poster_2024,measurement,planned burn,OK,,,,OK
+R072,fm2_poster_2024,value,no result yet,OK,,,,OK
+R072,fm2_poster_2024,unit,-,OK,,,,OK
+R072,fm2_poster_2024,qualifier,categorical,OK,,,,OK
+R073,fm2_poster_2024,locator,"Poster, Introduction",OK,,,,OK
+R073,fm2_poster_2024,platform,FM2 on a lunar lander (planned),OK,,,,OK
+R073,fm2_poster_2024,gravity,lunar (on the Moon),OK,,,,OK
+R073,fm2_poster_2024,material,PMMA (acrylic) rod,OK,,,,OK
+R073,fm2_poster_2024,geometry,4 mm diameter rod,OK,,"Poster figure label: ""Fuel Rod 4 mm PMMA Rod"".",,OK
+R073,fm2_poster_2024,direction,upward,OK,,,,OK
+R073,fm2_poster_2024,flow,not stated,OK,,,,OK
+R073,fm2_poster_2024,pressure,8.2 psia,OK,,"Rods burn in ""Normoxic SEA"". The intro lists 34% O2 at 8.2 psia as the elevated-O2 (SEA) atmosphere and 21%/14.7 psia as air.",,OK
+R073,fm2_poster_2024,oxygen,34%,OK,,Same pairing as for pressure: SEA = 34% oxygen at 8.2 psia.,,OK
+R073,fm2_poster_2024,measurement,planned burn,OK,,,,OK
+R073,fm2_poster_2024,value,no result yet,OK,,A planned burn with no results reported; the source shows only planned samples and 1-g lab tests.,,OK
+R073,fm2_poster_2024,unit,-,OK,,,,OK
+R073,fm2_poster_2024,qualifier,categorical,OK,,,,OK
+R075,fm2_poster_2024,locator,"Poster, Introduction",OK,,,,OK
+R075,fm2_poster_2024,platform,FM2 on a lunar lander (planned),OK,,,,OK
+R075,fm2_poster_2024,gravity,lunar (on the Moon),OK,,,,OK
+R075,fm2_poster_2024,material,PMMA (acrylic) rod,OK,,,,OK
+R075,fm2_poster_2024,geometry,4 mm diameter rod,OK,,,,OK
+R075,fm2_poster_2024,direction,downward,OK,,,,OK
+R075,fm2_poster_2024,flow,not stated,OK,,,,OK
+R075,fm2_poster_2024,pressure,8.2 psia,OK,,,,OK
+R075,fm2_poster_2024,oxygen,34%,OK,,,,OK
+R075,fm2_poster_2024,measurement,planned burn,OK,,,,OK
+R075,fm2_poster_2024,value,no result yet,OK,,,,OK
+R075,fm2_poster_2024,unit,-,OK,,,,OK
+R075,fm2_poster_2024,qualifier,categorical,OK,,,,OK
+R079,bass2_poster_2014,locator,"Olson panel, Status",OK,,,,OK
+R079,bass2_poster_2014,platform,ISS Microgravity Science Glovebox (BASS-II),OK,,,,OK
+R079,bass2_poster_2014,gravity,microgravity (ISS),OK,,,,OK
+R079,bass2_poster_2014,material,PMMA rod,OK,,,,OK
+R079,bass2_poster_2014,geometry,1/4 inch diameter rod,OK,,,,OK
+R079,bass2_poster_2014,direction,concurrent (stagnation point),OK,,,,OK
+R079,bass2_poster_2014,flow,not stated,OK,,,,OK
+R079,bass2_poster_2014,pressure,not stated,OK,,,,OK
+R079,bass2_poster_2014,oxygen,varied,OK,,O2 was the varied parameter (mapping to find minimum O2); the datum's own O2 is the value 13.6%.,,OK
+R079,bass2_poster_2014,measurement,lowest oxygen with steady spreading,OK,,'Lowest' is implied: 13.6% is the steady-spreading level used to derive the 2.4% O2 margin ('at least').,,OK
+R079,bass2_poster_2014,value,13.6,OK,,,,OK
+R079,bass2_poster_2014,unit,%,OK,,,,OK
+R079,bass2_poster_2014,qualifier,exact,OK,,,,OK
+R081,bass2_poster_2014,locator,"Olson panel, Status",OK,,,,OK
+R081,bass2_poster_2014,platform,ISS Microgravity Science Glovebox (BASS-II),OK,,,,OK
+R081,bass2_poster_2014,gravity,microgravity (ISS),OK,,,,OK
+R081,bass2_poster_2014,material,PMMA rods,OK,,,,OK
+R081,bass2_poster_2014,geometry,not stated,MISSED,1/4-inch diameter rod,"Olson status refers to ""the 1/4” rod"" when comparing the 1-g blowoff with BASS-II steady spreading. It does not say whether all 24 rods were this size.",overturned,OK
+R081,bass2_poster_2014,direction,concurrent (stagnation point),OK,,,,OK
+R081,bass2_poster_2014,flow,not stated,OK,,,,OK
+R081,bass2_poster_2014,pressure,not stated,OK,,,,OK
+R081,bass2_poster_2014,oxygen,not stated,OK,,"O2 varied across the flammability map. Only 13.6% is given, as a result (steady spreading), not as a test condition.",,OK
+R081,bass2_poster_2014,measurement,number of rods burned,OK,,,,OK
+R081,bass2_poster_2014,value,24,OK,,,,OK
+R081,bass2_poster_2014,unit,-,OK,,,,OK
+R081,bass2_poster_2014,qualifier,exact,OK,,,,OK
+R083,bass2_poster_2014,locator,Bhattacharjee panel (radiative quenching vs blow off),OK,,,,OK
+R083,bass2_poster_2014,platform,ISS Microgravity Science Glovebox (BASS-II),OK,,,,OK
+R083,bass2_poster_2014,gravity,microgravity (ISS),OK,,,,OK
+R083,bass2_poster_2014,material,PMMA sheet,OK,,,,OK
+R083,bass2_poster_2014,geometry,0.1 mm thick,OK,,,,OK
+R083,bass2_poster_2014,direction,opposed,OK,,,,OK
+R083,bass2_poster_2014,flow,varied,OK,,,,OK
+R083,bass2_poster_2014,pressure,not stated,OK,,,,OK
+R083,bass2_poster_2014,oxygen,not stated,OK,,,,OK
+R083,bass2_poster_2014,measurement,flow speed near blow-off extinction,OK,,,,OK
+R083,bass2_poster_2014,value,40,OK,,,,OK
+R083,bass2_poster_2014,unit,cm/s,OK,,,,OK
+R083,bass2_poster_2014,qualifier,approximate,OK,,"Source: 'nearing blow off extinction as the flow velocity crosses 40 cm/s' (no explicit ~); approximate is a fair reading, lower bound also defensible.",,OK
+R084,bass2_poster_2014,locator,"Bhattacharjee panel, Status",OK,,,,OK
+R084,bass2_poster_2014,platform,ISS Microgravity Science Glovebox (BASS-II),OK,,,,OK
+R084,bass2_poster_2014,gravity,microgravity (ISS),OK,,,,OK
+R084,bass2_poster_2014,material,PMMA sheets,OK,,,,OK
+R084,bass2_poster_2014,geometry,1-cm and 2-cm wide; 0.1 to 0.4 mm thick,OK,,,,OK
+R084,bass2_poster_2014,direction,not stated,MISSED,opposed flow (opposing flow),Same panel's figure caption describes flame extinction at low opposing flow velocity for these PMMA sheet tests.,upheld,MISSED
+R084,bass2_poster_2014,flow,not stated,OK,,"Panel gives only extinction-event velocities for one 0.1 mm sample (below 2 cm/s quenching, ~40 cm/s blow-off), not a flow condition for the 22 test points.",,OK
+R084,bass2_poster_2014,pressure,not stated,OK,,,,OK
+R084,bass2_poster_2014,oxygen,not stated,OK,,,,OK
+R084,bass2_poster_2014,measurement,test points obtained,OK,,,,OK
+R084,bass2_poster_2014,value,22,OK,,,,OK
+R084,bass2_poster_2014,unit,-,OK,,,,OK
+R084,bass2_poster_2014,qualifier,exact,OK,,,,OK
+R086,bass2_poster_2014,locator,"Fernandez-Pello panel, Status",OK,,,,OK
+R086,bass2_poster_2014,platform,ISS Microgravity Science Glovebox (BASS-II),OK,,,,OK
+R086,bass2_poster_2014,gravity,microgravity (ISS),OK,,,,OK
+R086,bass2_poster_2014,material,PMMA rods (black and clear),OK,,,,OK
+R086,bass2_poster_2014,geometry,"0.25, 0.375 and 0.5 inch diameter",OK,,,,OK
+R086,bass2_poster_2014,direction,not stated,OK,,,,OK
+R086,bass2_poster_2014,flow,0.4 to 4 cm/s,OK,,,,OK
+R086,bass2_poster_2014,pressure,not stated,OK,,,,OK
+R086,bass2_poster_2014,oxygen,16% to 21%,OK,,,,OK
+R086,bass2_poster_2014,measurement,unique flame spread rates obtained,OK,,,,OK
+R086,bass2_poster_2014,value,54,OK,,,,OK
+R086,bass2_poster_2014,unit,-,OK,,,,OK
+R086,bass2_poster_2014,qualifier,exact,OK,,,,OK
+R089,bass2_poster_2014,locator,"T'ien panel, quenching image caption",OK,,,,OK
+R089,bass2_poster_2014,platform,ISS Microgravity Science Glovebox (BASS-II),OK,,,,OK
+R089,bass2_poster_2014,gravity,microgravity (ISS),OK,,,,OK
+R089,bass2_poster_2014,material,SIBAL fabric,OK,,,,OK
+R089,bass2_poster_2014,geometry,2.2 cm wide,OK,,,,OK
+R089,bass2_poster_2014,direction,concurrent,OK,,,,OK
+R089,bass2_poster_2014,flow,5 cm/s at ignition,OK,,,,OK
+R089,bass2_poster_2014,pressure,1 atm,OK,,,,OK
+R089,bass2_poster_2014,oxygen,18.7%,OK,,,,OK
+R089,bass2_poster_2014,measurement,flow speed after gradual reduction (quenching sequence),OK,,,,OK
+R089,bass2_poster_2014,value,2.2,OK,,,,OK
+R089,bass2_poster_2014,unit,cm/s,OK,,,,OK
+R089,bass2_poster_2014,qualifier,exact,OK,,,,OK
+R091,bass2_poster_2014,locator,Main variables list,OK,,,,OK
+R091,bass2_poster_2014,platform,ISS Microgravity Science Glovebox (BASS-II),OK,,,,OK
+R091,bass2_poster_2014,gravity,microgravity (ISS),OK,,,,OK
+R091,bass2_poster_2014,material,various solid samples,OK,,,,OK
+R091,bass2_poster_2014,geometry,not stated,OK,,"Hardware list gives no geometry; samples are of various types, consistent with the generic material entry.",,OK
+R091,bass2_poster_2014,direction,not stated,OK,,,,OK
+R091,bass2_poster_2014,flow,0 to 55 cm/s,OK,,,,OK
+R091,bass2_poster_2014,pressure,not stated,OK,,,,OK
+R091,bass2_poster_2014,oxygen,21% and below,OK,,,,OK
+R091,bass2_poster_2014,measurement,airflow speed range,OK,,,,OK
+R091,bass2_poster_2014,value,0 to 55,OK,,Matches the Hardware 'Main variables' list; note the Approach panel separately says the tunnel 'could impose airflow speeds up to 40 cm/s' (source inconsistency).,,OK
+R091,bass2_poster_2014,unit,cm/s,OK,,,,OK
+R091,bass2_poster_2014,qualifier,range,OK,,,,OK
+R093,sacksteder_2003,locator,Figure 1 caption and text,OK,,,,OK
+R093,sacksteder_2003,platform,NASA KC-135 aircraft,OK,,,,OK
+R093,sacksteder_2003,gravity,"partial gravity (0.1, 0.16, 0.38 g)",OK,,"The KC-135 partial-g levels are 0.1, 0.16 and 0.38 g. Fig. 1 also spans higher gravity (normal-g tests), but the peak lies at a partial-g level.",,OK
+R093,sacksteder_2003,material,Kimwipes thin cellulosic tissue,OK,,,,OK
+R093,sacksteder_2003,geometry,2 cm wide,OK,,,,OK
+R093,sacksteder_2003,direction,downward,OK,,,,OK
+R093,sacksteder_2003,flow,not stated,OK,,,,OK
+R093,sacksteder_2003,pressure,27.6 kPa (4.0 psia),OK,,,,OK
+R093,sacksteder_2003,oxygen,air,OK,,,,OK
+R093,sacksteder_2003,measurement,gravity level at which downward spread rate peaks,OK,,,,OK
+R093,sacksteder_2003,value,0.38,OK,,,,OK
+R093,sacksteder_2003,unit,g,OK,,,,OK
+R093,sacksteder_2003,qualifier,approximate,OK,,"""peaks near ... 0.38 g/gEarth"".",,OK
+R094,sacksteder_2003,locator,Text discussing Figure 3 (computed LOI),OK,,,,OK
+R094,sacksteder_2003,platform,numerical model,OK,,,,OK
+R094,sacksteder_2003,gravity,zero gravity (computed),OK,,,,OK
+R094,sacksteder_2003,material,thin solid fuel (model),WRONG,cotton/fiberglass composite fuel (simulated),Source names the simulated fuel: 'A cotton fiberglass composite fuel was simulated'; Fig. 3 caption 'cotton/ fiberglass fuel'. 'Thin solid fuel' is not stated for the model.,upheld,WRONG
+R094,sacksteder_2003,geometry,not stated,MISSED,5 cm wide x 15 cm long sample (6 mm inert side stripes) in a 10 cm x 10 cm x 50 cm vertical flow tunnel,Stated in the Figure 3 caption.,upheld,MISSED
+R094,sacksteder_2003,direction,not stated,MISSED,downward (opposed-flow) spread,Section is '3-D modeling of downward spreading flames' (opposed flow in mixed convection).,upheld,MISSED
+R094,sacksteder_2003,flow,forced flow (varied),OK,,,,OK
+R094,sacksteder_2003,pressure,not stated,OK,,,,OK
+R094,sacksteder_2003,oxygen,not stated,OK,,Oxygen is the computed output (LOI); the minimum LOI value appears only in the garbled figure axes.,,OK
+R094,sacksteder_2003,measurement,forced flow speed at minimum limiting oxygen index (computed),OK,,,,OK
+R094,sacksteder_2003,value,5,OK,,,,OK
+R094,sacksteder_2003,unit,cm/s,OK,,,,OK
+R094,sacksteder_2003,qualifier,approximate,OK,,,,OK
+R097,feier_2001,locator,Experimental section (aircraft),WRONG,"Experimental Results section, 'Acceleration Environment' subsection (Figure 2 discussion)",The value is not in the Experiments section's aircraft paragraph (which gives a 20-45 s reduced-gravity period) but in the following Experimental Results / Acceleration Environment subsection.,upheld,WRONG
+R097,feier_2001,platform,NASA KC-135 aircraft,OK,,,,OK
+R097,feier_2001,gravity,"0.10, 0.16 and 0.38 G",OK,,,,OK
+R097,feier_2001,material,thin cellulose (Kimwipes),OK,,,,OK
+R097,feier_2001,geometry,not stated,MISSED,"1-cm, 2-cm or 4-cm wide samples","Experiments section states the sample holders exposed 1-, 2- or 4-cm widths for these tests.",upheld,MISSED
+R097,feier_2001,direction,upward,OK,,,,OK
+R097,feier_2001,flow,not stated,OK,,,,OK
+R097,feier_2001,pressure,0.2-0.4 atm,OK,,,,OK
+R097,feier_2001,oxygen,"21% O2, balance N2",OK,,,,OK
+R097,feier_2001,measurement,time within 15% of nominal acceleration,OK,,,,OK
+R097,feier_2001,value,5-20,OK,,,,OK
+R097,feier_2001,unit,s,OK,,,,OK
+R097,feier_2001,qualifier,range,OK,,,,OK
+R098,feier_2001,locator,Experimental section (aircraft),OK,,,,OK
+R098,feier_2001,platform,NASA KC-135 aircraft,OK,,,,OK
+R098,feier_2001,gravity,"0.1, 0.16 and 0.38 G",OK,,,,OK
+R098,feier_2001,material,thin cellulose (Kimwipes),OK,,,,OK
+R098,feier_2001,geometry,not stated,MISSED,"1-cm, 2-cm or 4-cm wide samples","Same Experiments section: sample holders exposed 1-, 2- or 4-cm widths. The abstract repeats this for the KC-135 tests.",upheld,MISSED
+R098,feier_2001,direction,upward,OK,,,,OK
+R098,feier_2001,flow,not stated,OK,,,,OK
+R098,feier_2001,pressure,0.2-0.4 atm,OK,,,,OK
+R098,feier_2001,oxygen,"21% O2, balance N2",OK,,,,OK
+R098,feier_2001,measurement,partial-gravity parabolas per flight,OK,,,,OK
+R098,feier_2001,value,10,OK,,"Source writes ""ten"".",,OK
+R098,feier_2001,unit,-,OK,,,,OK
+R098,feier_2001,qualifier,upper bound,OK,,"""Up to ten"" means upper bound.",,OK

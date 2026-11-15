@@ -1,0 +1,25 @@
+{
+  "file": "config/si_questions.json",
+  "sha256": "38c15b5656045a7d47709f99a560ce1dbf8c8ecf255e346ca4b48d13e1b36992",
+  "bytes": 13955,
+  "frozen_at_utc": "2026-11-15T08:18:51+00:00",
+  "items": 35,
+  "counts": {
+    "direct": 10,
+    "synthesis": 10,
+    "unanswerable": 10,
+    "adversarial": 5
+  },
+  "answering_code_present_at_freeze": {
+    "nextburn/si.py": false,
+    "experiments/exp7_si_test_set.py": false
+  },
+  "pre_freeze_checks": {
+    "ids_unique_and_counts_match": true,
+    "expected_matches_category": true,
+    "every_expected_row_in_ledger_v2": true,
+    "every_key_fact_number_in_expected_rows": true,
+    "unanswerable_items_have_no_supporting_row": "10 of 10 confirmed by searching all 98 rows (Q13: a first substring search matched 'preheat' in R021; a word-bounded search for 'heat release' found no LUCI row)"
+  },
+  "rule": "Do not edit the bank after this freeze. Corrections go in results/exp7/question_bank_corrections.json under new IDs and are reported in results.md."
+}

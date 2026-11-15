@@ -1,0 +1,411 @@
+{
+  "title": "Planner retrodiction",
+  "pass": true,
+  "strict_luci_like": true,
+  "plan_before_2025": [
+    {
+      "cell_id": "moon_base|thin_fabric|with_flow",
+      "habitat": "moon_base",
+      "habitat_name": "Moon base and pressurized rover",
+      "family": "thin_fabric",
+      "direction": "with_flow",
+      "status": "untested",
+      "o2_pct": 34.0,
+      "p_psia": 8.2,
+      "g_class": "lunar",
+      "facility": "parabolic_novespace",
+      "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+      "g_level": 0.16,
+      "test_time_s": 25.0,
+      "measurand": "spread_rate",
+      "cost_tier": 2,
+      "risk": 1.619047619047619,
+      "gap": 1.0,
+      "score": 0.8095238095238095,
+      "lunar": true,
+      "luci_like": true,
+      "rationale": "Moon base and pressurized rover (34% oxygen, 8.2 psia, lunar gravity), thin fabric, upward/concurrent: untested in the evidence so far. Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s) gives 0.160 g for about 25 s, enough for a spread-rate measurement. Risk weight 1.62, gap weight 1.0, cost tier 2."
+    },
+    {
+      "cell_id": "moon_base|thin_fabric|against_flow",
+      "habitat": "moon_base",
+      "habitat_name": "Moon base and pressurized rover",
+      "family": "thin_fabric",
+      "direction": "against_flow",
+      "status": "untested",
+      "o2_pct": 34.0,
+      "p_psia": 8.2,
+      "g_class": "lunar",
+      "facility": "parabolic_novespace",
+      "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+      "g_level": 0.16,
+      "test_time_s": 25.0,
+      "measurand": "spread_rate",
+      "cost_tier": 2,
+      "risk": 1.619047619047619,
+      "gap": 1.0,
+      "score": 0.8095238095238095,
+      "lunar": true,
+      "luci_like": true,
+      "rationale": "Moon base and pressurized rover (34% oxygen, 8.2 psia, lunar gravity), thin fabric, downward/opposed: untested in the evidence so far. Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s) gives 0.160 g for about 25 s, enough for a spread-rate measurement. Risk weight 1.62, gap weight 1.0, cost tier 2."
+    },
+    {
+      "cell_id": "iss_cabin|thin_fabric|against_flow",
+      "habitat": "iss_cabin",
+      "habitat_name": "Space station cabin",
+      "family": "thin_fabric",
+      "direction": "against_flow",
+      "status": "untested",
+      "o2_pct": 21.0,
+      "p_psia": 14.7,
+      "g_class": "micro",
+      "facility": "drop_2_2s",
+      "facility_name": "NASA Glenn 2.2 Second Drop Tower",
+      "g_level": 0.0,
+      "test_time_s": 2.2,
+      "measurand": "go_no_go",
+      "cost_tier": 1,
+      "risk": 1.0,
+      "gap": 1.0,
+      "score": 0.6,
+      "lunar": false,
+      "luci_like": false,
+      "rationale": "Space station cabin (21% oxygen, 14.7 psia, micro gravity), thin fabric, downward/opposed: untested in the evidence so far. NASA Glenn 2.2 Second Drop Tower gives 0.000 g for about 2.2 s, enough for a go/no-go limit test. Risk weight 1.00, gap weight 1.0, cost tier 1."
+    },
+    {
+      "cell_id": "moon_upper|thin_fabric|against_flow",
+      "habitat": "moon_upper",
+      "habitat_name": "Moon base, upper bound",
+      "family": "thin_fabric",
+      "direction": "against_flow",
+      "status": "untested",
+      "o2_pct": 30.0,
+      "p_psia": 10.2,
+      "g_class": "lunar",
+      "facility": "parabolic_novespace",
+      "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+      "g_level": 0.16,
+      "test_time_s": 25.0,
+      "measurand": "spread_rate",
+      "cost_tier": 2,
+      "risk": 1.142857142857143,
+      "gap": 1.0,
+      "score": 0.5714285714285715,
+      "lunar": true,
+      "luci_like": true,
+      "rationale": "Moon base, upper bound (30% oxygen, 10.2 psia, lunar gravity), thin fabric, downward/opposed: untested in the evidence so far. Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s) gives 0.160 g for about 25 s, enough for a spread-rate measurement. Risk weight 1.14, gap weight 1.0, cost tier 2."
+    },
+    {
+      "cell_id": "moon_base|other_textile|with_flow",
+      "habitat": "moon_base",
+      "habitat_name": "Moon base and pressurized rover",
+      "family": "other_textile",
+      "direction": "with_flow",
+      "status": "untested",
+      "o2_pct": 34.0,
+      "p_psia": 8.2,
+      "g_class": "lunar",
+      "facility": "parabolic_novespace",
+      "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+      "g_level": 0.16,
+      "test_time_s": 25.0,
+      "measurand": "spread_rate",
+      "cost_tier": 2,
+      "risk": 0.9714285714285714,
+      "gap": 1.0,
+      "score": 0.4857142857142857,
+      "lunar": true,
+      "luci_like": false,
+      "rationale": "Moon base and pressurized rover (34% oxygen, 8.2 psia, lunar gravity), other textile, upward/concurrent: untested in the evidence so far. Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s) gives 0.160 g for about 25 s, enough for a spread-rate measurement. Risk weight 0.97, gap weight 1.0, cost tier 2."
+    }
+  ],
+  "plan_today": [
+    {
+      "cell_id": "moon_base|thin_fabric|with_flow",
+      "habitat": "moon_base",
+      "habitat_name": "Moon base and pressurized rover",
+      "family": "thin_fabric",
+      "direction": "with_flow",
+      "status": "untested",
+      "o2_pct": 34.0,
+      "p_psia": 8.2,
+      "g_class": "lunar",
+      "facility": "parabolic_novespace",
+      "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+      "g_level": 0.16,
+      "test_time_s": 25.0,
+      "measurand": "spread_rate",
+      "cost_tier": 2,
+      "risk": 1.619047619047619,
+      "gap": 1.0,
+      "score": 0.8095238095238095,
+      "lunar": true,
+      "luci_like": true,
+      "rationale": "Moon base and pressurized rover (34% oxygen, 8.2 psia, lunar gravity), thin fabric, upward/concurrent: untested in the evidence so far. Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s) gives 0.160 g for about 25 s, enough for a spread-rate measurement. Risk weight 1.62, gap weight 1.0, cost tier 2."
+    },
+    {
+      "cell_id": "moon_base|thin_fabric|against_flow",
+      "habitat": "moon_base",
+      "habitat_name": "Moon base and pressurized rover",
+      "family": "thin_fabric",
+      "direction": "against_flow",
+      "status": "untested",
+      "o2_pct": 34.0,
+      "p_psia": 8.2,
+      "g_class": "lunar",
+      "facility": "parabolic_novespace",
+      "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+      "g_level": 0.16,
+      "test_time_s": 25.0,
+      "measurand": "spread_rate",
+      "cost_tier": 2,
+      "risk": 1.619047619047619,
+      "gap": 1.0,
+      "score": 0.8095238095238095,
+      "lunar": true,
+      "luci_like": true,
+      "rationale": "Moon base and pressurized rover (34% oxygen, 8.2 psia, lunar gravity), thin fabric, downward/opposed: untested in the evidence so far. Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s) gives 0.160 g for about 25 s, enough for a spread-rate measurement. Risk weight 1.62, gap weight 1.0, cost tier 2."
+    },
+    {
+      "cell_id": "iss_cabin|thin_fabric|against_flow",
+      "habitat": "iss_cabin",
+      "habitat_name": "Space station cabin",
+      "family": "thin_fabric",
+      "direction": "against_flow",
+      "status": "untested",
+      "o2_pct": 21.0,
+      "p_psia": 14.7,
+      "g_class": "micro",
+      "facility": "drop_2_2s",
+      "facility_name": "NASA Glenn 2.2 Second Drop Tower",
+      "g_level": 0.0,
+      "test_time_s": 2.2,
+      "measurand": "go_no_go",
+      "cost_tier": 1,
+      "risk": 1.0,
+      "gap": 1.0,
+      "score": 0.6,
+      "lunar": false,
+      "luci_like": false,
+      "rationale": "Space station cabin (21% oxygen, 14.7 psia, micro gravity), thin fabric, downward/opposed: untested in the evidence so far. NASA Glenn 2.2 Second Drop Tower gives 0.000 g for about 2.2 s, enough for a go/no-go limit test. Risk weight 1.00, gap weight 1.0, cost tier 1."
+    },
+    {
+      "cell_id": "moon_upper|thin_fabric|against_flow",
+      "habitat": "moon_upper",
+      "habitat_name": "Moon base, upper bound",
+      "family": "thin_fabric",
+      "direction": "against_flow",
+      "status": "untested",
+      "o2_pct": 30.0,
+      "p_psia": 10.2,
+      "g_class": "lunar",
+      "facility": "parabolic_novespace",
+      "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+      "g_level": 0.16,
+      "test_time_s": 25.0,
+      "measurand": "spread_rate",
+      "cost_tier": 2,
+      "risk": 1.142857142857143,
+      "gap": 1.0,
+      "score": 0.5714285714285715,
+      "lunar": true,
+      "luci_like": true,
+      "rationale": "Moon base, upper bound (30% oxygen, 10.2 psia, lunar gravity), thin fabric, downward/opposed: untested in the evidence so far. Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s) gives 0.160 g for about 25 s, enough for a spread-rate measurement. Risk weight 1.14, gap weight 1.0, cost tier 2."
+    },
+    {
+      "cell_id": "moon_base|other_textile|with_flow",
+      "habitat": "moon_base",
+      "habitat_name": "Moon base and pressurized rover",
+      "family": "other_textile",
+      "direction": "with_flow",
+      "status": "untested",
+      "o2_pct": 34.0,
+      "p_psia": 8.2,
+      "g_class": "lunar",
+      "facility": "parabolic_novespace",
+      "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+      "g_level": 0.16,
+      "test_time_s": 25.0,
+      "measurand": "spread_rate",
+      "cost_tier": 2,
+      "risk": 0.9714285714285714,
+      "gap": 1.0,
+      "score": 0.4857142857142857,
+      "lunar": true,
+      "luci_like": false,
+      "rationale": "Moon base and pressurized rover (34% oxygen, 8.2 psia, lunar gravity), other textile, upward/concurrent: untested in the evidence so far. Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s) gives 0.160 g for about 25 s, enough for a spread-rate measurement. Risk weight 0.97, gap weight 1.0, cost tier 2."
+    }
+  ],
+  "sensitivity": {
+    "draws": 1000,
+    "lunar_in_top5_share": 0.998,
+    "luci_like_in_top5_share": 0.781,
+    "kendall_tau_median": 0.5137846344506232,
+    "kendall_tau_p10": 0.3189468250225946
+  },
+  "null_baseline": {
+    "probability_random_five_include_lunar": 0.9871794871794872,
+    "probability_random_five_include_luci_like": 0.4245,
+    "feasible_gap_cells": 16,
+    "lunar_cells": 8,
+    "reading": "If this is near 1, the basic pass criterion is weak; read the strict check and the sensitivity instead"
+  },
+  "infeasible_gaps_today": [
+    {
+      "cell_id": "spacesuit|thin_fabric|with_flow",
+      "value": 2.380952380952381,
+      "why": [
+        "5.2 s is shorter than the 20 s a spread rate needs",
+        "already allocated",
+        "no lunar gravity",
+        "oxygen 100% outside as flown: air at normal pressure"
+      ]
+    },
+    {
+      "cell_id": "spacesuit|thin_fabric|against_flow",
+      "value": 2.380952380952381,
+      "why": [
+        "5.2 s is shorter than the 20 s a spread rate needs",
+        "already allocated",
+        "no lunar gravity",
+        "oxygen 100% outside as flown: air at normal pressure"
+      ]
+    },
+    {
+      "cell_id": "spacesuit|thick_plastic|with_flow",
+      "value": 1.9047619047619049,
+      "why": [
+        "20.0 s is shorter than the 100 s a spread rate needs",
+        "25.0 s is shorter than the 100 s a spread rate needs",
+        "5.2 s is shorter than the 100 s a spread rate needs",
+        "already allocated"
+      ]
+    },
+    {
+      "cell_id": "spacesuit|thick_plastic|against_flow",
+      "value": 1.9047619047619049,
+      "why": [
+        "20.0 s is shorter than the 100 s a spread rate needs",
+        "25.0 s is shorter than the 100 s a spread rate needs",
+        "5.2 s is shorter than the 100 s a spread rate needs",
+        "already allocated"
+      ]
+    },
+    {
+      "cell_id": "spacesuit|other_textile|with_flow",
+      "value": 1.4285714285714286,
+      "why": [
+        "5.2 s is shorter than the 20 s a spread rate needs",
+        "already allocated",
+        "no lunar gravity",
+        "oxygen 100% outside as flown: air at normal pressure"
+      ]
+    },
+    {
+      "cell_id": "spacesuit|other_textile|against_flow",
+      "value": 1.4285714285714286,
+      "why": [
+        "5.2 s is shorter than the 20 s a spread rate needs",
+        "already allocated",
+        "no lunar gravity",
+        "oxygen 100% outside as flown: air at normal pressure"
+      ]
+    },
+    {
+      "cell_id": "moon_base|thick_plastic|with_flow",
+      "value": 1.2952380952380953,
+      "why": [
+        "20.0 s is shorter than the 100 s a spread rate needs",
+        "25.0 s is shorter than the 100 s a spread rate needs",
+        "5.2 s is shorter than the 100 s a spread rate needs",
+        "already allocated"
+      ]
+    },
+    {
+      "cell_id": "moon_base|thick_plastic|against_flow",
+      "value": 1.2952380952380953,
+      "why": [
+        "20.0 s is shorter than the 100 s a spread rate needs",
+        "25.0 s is shorter than the 100 s a spread rate needs",
+        "5.2 s is shorter than the 100 s a spread rate needs",
+        "already allocated"
+      ]
+    },
+    {
+      "cell_id": "moon_upper|thick_plastic|with_flow",
+      "value": 0.9142857142857145,
+      "why": [
+        "20.0 s is shorter than the 100 s a spread rate needs",
+        "25.0 s is shorter than the 100 s a spread rate needs",
+        "5.2 s is shorter than the 100 s a spread rate needs",
+        "already allocated"
+      ]
+    },
+    {
+      "cell_id": "moon_upper|thick_plastic|against_flow",
+      "value": 0.9142857142857145,
+      "why": [
+        "20.0 s is shorter than the 100 s a spread rate needs",
+        "25.0 s is shorter than the 100 s a spread rate needs",
+        "5.2 s is shorter than the 100 s a spread rate needs",
+        "already allocated"
+      ]
+    },
+    {
+      "cell_id": "mars_hab|thick_plastic|with_flow",
+      "value": 0.6476190476190476,
+      "why": [
+        "20.0 s is shorter than the 100 s a spread rate needs",
+        "30.0 s is shorter than the 100 s a spread rate needs",
+        "already allocated",
+        "go/no-go on thick samples needs a long-duration facility"
+      ]
+    },
+    {
+      "cell_id": "mars_hab|thick_plastic|against_flow",
+      "value": 0.6476190476190476,
+      "why": [
+        "20.0 s is shorter than the 100 s a spread rate needs",
+        "30.0 s is shorter than the 100 s a spread rate needs",
+        "already allocated",
+        "go/no-go on thick samples needs a long-duration facility"
+      ]
+    }
+  ],
+  "burn_distance_cm": [
+    {
+      "rate_label": "Acrylic rod tip, 0.15 cm/s [R007]",
+      "rate_cm_s": 0.15,
+      "distances_cm": {
+        "2.2 s drop": 0.33,
+        "5.18 s drop": 0.7769999999999999,
+        "NASA parabola, about 20 s": 3.0,
+        "Novespace 0.16 g, up to 25 s": 3.75,
+        "New Shepard spin, about 120 s": 18.0
+      }
+    },
+    {
+      "rate_label": "Fabric tip, 1.1 mm/s [R002]",
+      "rate_cm_s": 0.11,
+      "distances_cm": {
+        "2.2 s drop": 0.24200000000000002,
+        "5.18 s drop": 0.5698,
+        "NASA parabola, about 20 s": 2.2,
+        "Novespace 0.16 g, up to 25 s": 2.75,
+        "New Shepard spin, about 120 s": 13.2
+      }
+    },
+    {
+      "rate_label": "Fabric base, 0.92 mm/s [R001]",
+      "rate_cm_s": 0.092,
+      "distances_cm": {
+        "2.2 s drop": 0.20240000000000002,
+        "5.18 s drop": 0.47656,
+        "NASA parabola, about 20 s": 1.8399999999999999,
+        "Novespace 0.16 g, up to 25 s": 2.3,
+        "New Shepard spin, about 120 s": 11.04
+      }
+    }
+  ],
+  "generated_at": "2026-11-15T09:18:33+00:00"
+}

@@ -1,0 +1,1657 @@
+{
+  "experiment": 3,
+  "title": "Coverage sensitivity",
+  "generated_at": "2026-11-15T09:18:21+00:00",
+  "ledger_sha256": "198b3231b0dde5879933bf449ba2f0300d0eae6465a7f9e98524b8158ac84885",
+  "presets_sha256": "0850aed2b98136678775adf290fbe25f47d7e02644e8a22a597494cb8eaa2bb8",
+  "cells": 30,
+  "test_points": 40,
+  "planned_points": 4,
+  "runs": [
+    {
+      "tol_o2_pts": 1,
+      "tol_p_frac": 0.1,
+      "counts": {
+        "tested": 2,
+        "bounded": 1,
+        "untested": 27
+      },
+      "shares": {
+        "tested": 0.06666666666666667,
+        "bounded": 0.03333333333333333,
+        "untested": 0.9
+      }
+    },
+    {
+      "tol_o2_pts": 1,
+      "tol_p_frac": 0.2,
+      "counts": {
+        "tested": 2,
+        "bounded": 1,
+        "untested": 27
+      },
+      "shares": {
+        "tested": 0.06666666666666667,
+        "bounded": 0.03333333333333333,
+        "untested": 0.9
+      }
+    },
+    {
+      "tol_o2_pts": 2,
+      "tol_p_frac": 0.1,
+      "counts": {
+        "tested": 2,
+        "bounded": 1,
+        "untested": 27
+      },
+      "shares": {
+        "tested": 0.06666666666666667,
+        "bounded": 0.03333333333333333,
+        "untested": 0.9
+      }
+    },
+    {
+      "tol_o2_pts": 2,
+      "tol_p_frac": 0.2,
+      "counts": {
+        "tested": 2,
+        "bounded": 1,
+        "untested": 27
+      },
+      "shares": {
+        "tested": 0.06666666666666667,
+        "bounded": 0.03333333333333333,
+        "untested": 0.9
+      }
+    },
+    {
+      "tol_o2_pts": 4,
+      "tol_p_frac": 0.1,
+      "counts": {
+        "tested": 2,
+        "bounded": 1,
+        "untested": 27
+      },
+      "shares": {
+        "tested": 0.06666666666666667,
+        "bounded": 0.03333333333333333,
+        "untested": 0.9
+      }
+    },
+    {
+      "tol_o2_pts": 4,
+      "tol_p_frac": 0.2,
+      "counts": {
+        "tested": 2,
+        "bounded": 1,
+        "untested": 27
+      },
+      "shares": {
+        "tested": 0.06666666666666667,
+        "bounded": 0.03333333333333333,
+        "untested": 0.9
+      }
+    }
+  ],
+  "ranges": {
+    "tested": [
+      2,
+      2
+    ],
+    "bounded": [
+      1,
+      1
+    ],
+    "untested": [
+      27,
+      27
+    ]
+  },
+  "per_habitat": {
+    "iss_cabin": {
+      "name": "Space station cabin",
+      "cells": 6,
+      "tested_min": 2,
+      "tested_max": 2,
+      "share_tested_range": [
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    "moon_base": {
+      "name": "Moon base and pressurized rover",
+      "cells": 6,
+      "tested_min": 0,
+      "tested_max": 0,
+      "share_tested_range": [
+        0.0,
+        0.0
+      ]
+    },
+    "moon_upper": {
+      "name": "Moon base, upper bound",
+      "cells": 6,
+      "tested_min": 0,
+      "tested_max": 0,
+      "share_tested_range": [
+        0.0,
+        0.0
+      ]
+    },
+    "spacesuit": {
+      "name": "Spacesuit on the Moon",
+      "cells": 6,
+      "tested_min": 0,
+      "tested_max": 0,
+      "share_tested_range": [
+        0.0,
+        0.0
+      ]
+    },
+    "mars_hab": {
+      "name": "Mars habitat",
+      "cells": 6,
+      "tested_min": 0,
+      "tested_max": 0,
+      "share_tested_range": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "headline": {
+    "claim": "The Moon-base atmosphere (34% oxygen at 8.2 psia) has no direct test in lunar gravity",
+    "holds_in_all_runs": true,
+    "moon_base_tested_cells_per_run": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "cross_checks": {
+      "normalized_distance": true,
+      "microfire_bins": true
+    }
+  },
+  "nearest_evidence_moon_base": {
+    "thin_fabric": [
+      {
+        "tp_id": "TP016",
+        "label": "Saffire VI-2",
+        "distance": 1.569622661594388,
+        "o2_pct": 31.0,
+        "p_kpa": 54.1,
+        "p_psia": 7.846541611204319,
+        "g_class": "micro",
+        "differences": [
+          "gravity micro, not lunar",
+          "forced flow 20 cm/s"
+        ],
+        "row_ids": [
+          "R029",
+          "R032",
+          "R037",
+          "R040",
+          "R045",
+          "R050"
+        ]
+      },
+      {
+        "tp_id": "TP013",
+        "label": "Saffire V-2",
+        "distance": 4.5509750900718275,
+        "o2_pct": 26.2,
+        "p_kpa": 70.7,
+        "p_psia": 10.254168057525792,
+        "g_class": "micro",
+        "differences": [
+          "gravity micro, not lunar",
+          "forced flow 20 cm/s"
+        ],
+        "row_ids": [
+          "R028",
+          "R036",
+          "R039",
+          "R044",
+          "R049",
+          "R066",
+          "R067",
+          "R068"
+        ]
+      },
+      {
+        "tp_id": "TP030",
+        "label": "feier_2001 NASA KC-135 aircraft",
+        "distance": 7.378770446746649,
+        "o2_pct": 21.0,
+        "p_kpa": 30.3975,
+        "p_psia": 4.408784632654035,
+        "g_class": "partial_low",
+        "differences": [
+          "gravity partial_low, not lunar"
+        ],
+        "row_ids": [
+          "R097",
+          "R098"
+        ]
+      }
+    ],
+    "thick_plastic": [
+      {
+        "tp_id": "TP017",
+        "label": "Saffire VI-3",
+        "distance": 1.8858121641401127,
+        "o2_pct": 30.3,
+        "p_kpa": 54.6,
+        "p_psia": 7.919060480069424,
+        "g_class": "micro",
+        "differences": [
+          "gravity micro, not lunar",
+          "forced flow 20 cm/s"
+        ],
+        "row_ids": [
+          "R030",
+          "R033",
+          "R041",
+          "R046",
+          "R051",
+          "R053",
+          "R054",
+          "R055"
+        ]
+      },
+      {
+        "tp_id": "TP018",
+        "label": "Saffire VI-4",
+        "distance": 2.6120972165908554,
+        "o2_pct": 28.8,
+        "p_kpa": 55.2,
+        "p_psia": 8.00608312270755,
+        "g_class": "micro",
+        "differences": [
+          "gravity micro, not lunar",
+          "forced flow 20 cm/s"
+        ],
+        "row_ids": [
+          "R031",
+          "R034",
+          "R042",
+          "R047",
+          "R052"
+        ]
+      },
+      {
+        "tp_id": "TP015",
+        "label": "Saffire V-4",
+        "distance": 4.909840073401088,
+        "o2_pct": 25.7,
+        "p_kpa": 72.6,
+        "p_psia": 10.52973975921319,
+        "g_class": "micro",
+        "differences": [
+          "gravity micro, not lunar",
+          "direction against_flow",
+          "forced flow 20 cm/s"
+        ],
+        "row_ids": [
+          "R070"
+        ]
+      }
+    ],
+    "other_textile": []
+  },
+  "gravity_ignored_check": {
+    "what": "Same six runs with the gravity axis ignored, to show which cells only lack a gravity match",
+    "runs": [
+      {
+        "tol_o2_pts": 1,
+        "tol_p_frac": 0.1,
+        "counts": {
+          "tested": 3,
+          "bounded": 1,
+          "untested": 26
+        }
+      },
+      {
+        "tol_o2_pts": 1,
+        "tol_p_frac": 0.2,
+        "counts": {
+          "tested": 3,
+          "bounded": 1,
+          "untested": 26
+        }
+      },
+      {
+        "tol_o2_pts": 2,
+        "tol_p_frac": 0.1,
+        "counts": {
+          "tested": 3,
+          "bounded": 1,
+          "untested": 26
+        }
+      },
+      {
+        "tol_o2_pts": 2,
+        "tol_p_frac": 0.2,
+        "counts": {
+          "tested": 3,
+          "bounded": 1,
+          "untested": 26
+        }
+      },
+      {
+        "tol_o2_pts": 4,
+        "tol_p_frac": 0.1,
+        "counts": {
+          "tested": 8,
+          "bounded": 0,
+          "untested": 22
+        }
+      },
+      {
+        "tol_o2_pts": 4,
+        "tol_p_frac": 0.2,
+        "counts": {
+          "tested": 8,
+          "bounded": 0,
+          "untested": 22
+        }
+      }
+    ],
+    "cells_that_become_tested": {
+      "moon_base|thin_fabric|with_flow": [
+        {
+          "tol_o2_pts": 4,
+          "tol_p_frac": 0.1,
+          "matches": [
+            "TP016"
+          ]
+        },
+        {
+          "tol_o2_pts": 4,
+          "tol_p_frac": 0.2,
+          "matches": [
+            "TP016"
+          ]
+        }
+      ],
+      "moon_base|thick_plastic|with_flow": [
+        {
+          "tol_o2_pts": 4,
+          "tol_p_frac": 0.1,
+          "matches": [
+            "TP017"
+          ]
+        },
+        {
+          "tol_o2_pts": 4,
+          "tol_p_frac": 0.2,
+          "matches": [
+            "TP017"
+          ]
+        }
+      ],
+      "moon_upper|thin_fabric|with_flow": [
+        {
+          "tol_o2_pts": 4,
+          "tol_p_frac": 0.1,
+          "matches": [
+            "TP013"
+          ]
+        },
+        {
+          "tol_o2_pts": 4,
+          "tol_p_frac": 0.2,
+          "matches": [
+            "TP013"
+          ]
+        }
+      ],
+      "mars_hab|thin_fabric|with_flow": [
+        {
+          "tol_o2_pts": 4,
+          "tol_p_frac": 0.1,
+          "matches": [
+            "TP016"
+          ]
+        },
+        {
+          "tol_o2_pts": 4,
+          "tol_p_frac": 0.2,
+          "matches": [
+            "TP016"
+          ]
+        }
+      ],
+      "mars_hab|thick_plastic|with_flow": [
+        {
+          "tol_o2_pts": 4,
+          "tol_p_frac": 0.1,
+          "matches": [
+            "TP017"
+          ]
+        },
+        {
+          "tol_o2_pts": 4,
+          "tol_p_frac": 0.2,
+          "matches": [
+            "TP017"
+          ]
+        }
+      ]
+    },
+    "reading": "Cells listed here have an orbit test at nearly the same atmosphere; their gap is gravity, not atmosphere."
+  },
+  "ledger_gaps": {
+    "iss_cabin|thick_plastic|against_flow": [
+      "TP021",
+      "TP022"
+    ]
+  },
+  "saffire_vi2_note": {
+    "p_kpa": 54.1,
+    "p_psia": 7.846541611204319,
+    "o2_pct": 31.0,
+    "gravity": "micro",
+    "statement": "Nearest flight evidence, not a test of the Moon-base case: it burned in microgravity with forced flow"
+  },
+  "cells_detail": [
+    {
+      "cell_id": "iss_cabin|thin_fabric|with_flow",
+      "habitat": "iss_cabin",
+      "habitat_name": "Space station cabin",
+      "o2_pct": 21.0,
+      "p_kpa": 101.3529322095749,
+      "p_psia": 14.7,
+      "g_class": "micro",
+      "family": "thin_fabric",
+      "direction": "with_flow",
+      "status": "tested",
+      "matches": [
+        "TP011"
+      ],
+      "planned": [],
+      "not_proven_safe": false,
+      "unstated": [
+        "TP025",
+        "TP026"
+      ],
+      "statuses_by_run": [
+        "tested",
+        "tested",
+        "tested",
+        "tested",
+        "tested",
+        "tested"
+      ],
+      "distance_check": {
+        "status": "tested",
+        "best_distance": 0.5195003876978932,
+        "best_tp": "TP011"
+      },
+      "microfire": {
+        "bin": "19-21.5%",
+        "status": "known",
+        "matches": [
+          "TP007",
+          "TP008",
+          "TP009",
+          "TP010"
+        ]
+      }
+    },
+    {
+      "cell_id": "iss_cabin|thin_fabric|against_flow",
+      "habitat": "iss_cabin",
+      "habitat_name": "Space station cabin",
+      "o2_pct": 21.0,
+      "p_kpa": 101.3529322095749,
+      "p_psia": 14.7,
+      "g_class": "micro",
+      "family": "thin_fabric",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": "19-21.5%",
+        "status": "known",
+        "matches": [
+          "TP007",
+          "TP008",
+          "TP009",
+          "TP010"
+        ]
+      }
+    },
+    {
+      "cell_id": "iss_cabin|thick_plastic|with_flow",
+      "habitat": "iss_cabin",
+      "habitat_name": "Space station cabin",
+      "o2_pct": 21.0,
+      "p_kpa": 101.3529322095749,
+      "p_psia": 14.7,
+      "g_class": "micro",
+      "family": "thick_plastic",
+      "direction": "with_flow",
+      "status": "tested",
+      "matches": [
+        "TP012"
+      ],
+      "planned": [],
+      "not_proven_safe": false,
+      "unstated": [
+        "TP024"
+      ],
+      "statuses_by_run": [
+        "tested",
+        "tested",
+        "tested",
+        "tested",
+        "tested",
+        "tested"
+      ],
+      "distance_check": {
+        "status": "tested",
+        "best_distance": 0.5195003876978932,
+        "best_tp": "TP012"
+      },
+      "microfire": {
+        "bin": "19-21.5%",
+        "status": "known",
+        "matches": [
+          "TP022",
+          "TP023"
+        ]
+      }
+    },
+    {
+      "cell_id": "iss_cabin|thick_plastic|against_flow",
+      "habitat": "iss_cabin",
+      "habitat_name": "Space station cabin",
+      "o2_pct": 21.0,
+      "p_kpa": 101.3529322095749,
+      "p_psia": 14.7,
+      "g_class": "micro",
+      "family": "thick_plastic",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure"
+      ],
+      "unstated": [
+        "TP021",
+        "TP022"
+      ],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": 4.2162517382248845,
+        "best_tp": "TP015"
+      },
+      "microfire": {
+        "bin": "19-21.5%",
+        "status": "known",
+        "matches": [
+          "TP022",
+          "TP023"
+        ]
+      }
+    },
+    {
+      "cell_id": "iss_cabin|other_textile|with_flow",
+      "habitat": "iss_cabin",
+      "habitat_name": "Space station cabin",
+      "o2_pct": 21.0,
+      "p_kpa": 101.3529322095749,
+      "p_psia": 14.7,
+      "g_class": "micro",
+      "family": "other_textile",
+      "direction": "with_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": "19-21.5%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "iss_cabin|other_textile|against_flow",
+      "habitat": "iss_cabin",
+      "habitat_name": "Space station cabin",
+      "o2_pct": 21.0,
+      "p_kpa": 101.3529322095749,
+      "p_psia": 14.7,
+      "g_class": "micro",
+      "family": "other_textile",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": "19-21.5%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "moon_base|thin_fabric|with_flow",
+      "habitat": "moon_base",
+      "habitat_name": "Moon base and pressurized rover",
+      "o2_pct": 34.0,
+      "p_kpa": 56.53700980398055,
+      "p_psia": 8.2,
+      "g_class": "lunar",
+      "family": "thin_fabric",
+      "direction": "with_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": 7.378770446746649,
+        "best_tp": "TP031"
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "moon_base|thin_fabric|against_flow",
+      "habitat": "moon_base",
+      "habitat_name": "Moon base and pressurized rover",
+      "o2_pct": 34.0,
+      "p_kpa": 56.53700980398055,
+      "p_psia": 8.2,
+      "g_class": "lunar",
+      "family": "thin_fabric",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": 8.94840959371758,
+        "best_tp": "TP006"
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "moon_base|thick_plastic|with_flow",
+      "habitat": "moon_base",
+      "habitat_name": "Moon base and pressurized rover",
+      "o2_pct": 34.0,
+      "p_kpa": 56.53700980398055,
+      "p_psia": 8.2,
+      "g_class": "lunar",
+      "family": "thick_plastic",
+      "direction": "with_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [
+        "TP003"
+      ],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": 8.94840959371758,
+        "best_tp": "TP005"
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "moon_base|thick_plastic|against_flow",
+      "habitat": "moon_base",
+      "habitat_name": "Moon base and pressurized rover",
+      "o2_pct": 34.0,
+      "p_kpa": 56.53700980398055,
+      "p_psia": 8.2,
+      "g_class": "lunar",
+      "family": "thick_plastic",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [
+        "TP001"
+      ],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "moon_base|other_textile|with_flow",
+      "habitat": "moon_base",
+      "habitat_name": "Moon base and pressurized rover",
+      "o2_pct": 34.0,
+      "p_kpa": 56.53700980398055,
+      "p_psia": 8.2,
+      "g_class": "lunar",
+      "family": "other_textile",
+      "direction": "with_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "moon_base|other_textile|against_flow",
+      "habitat": "moon_base",
+      "habitat_name": "Moon base and pressurized rover",
+      "o2_pct": 34.0,
+      "p_kpa": 56.53700980398055,
+      "p_psia": 8.2,
+      "g_class": "lunar",
+      "family": "other_textile",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "moon_upper|thin_fabric|with_flow",
+      "habitat": "moon_upper",
+      "habitat_name": "Moon base, upper bound",
+      "o2_pct": 30.0,
+      "p_kpa": 70.32652439031727,
+      "p_psia": 10.2,
+      "g_class": "lunar",
+      "family": "thin_fabric",
+      "direction": "with_flow",
+      "status": "bounded",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": false,
+      "bracket_counts": {
+        "oxygen": [
+          9,
+          1
+        ],
+        "pressure": [
+          7,
+          3
+        ],
+        "gravity": [
+          8,
+          2
+        ]
+      },
+      "unstated": [],
+      "statuses_by_run": [
+        "bounded",
+        "bounded",
+        "bounded",
+        "bounded",
+        "bounded",
+        "bounded"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": 7.3269591546791935,
+        "best_tp": "TP031"
+      },
+      "microfire": {
+        "bin": "26-31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "moon_upper|thin_fabric|against_flow",
+      "habitat": "moon_upper",
+      "habitat_name": "Moon base, upper bound",
+      "o2_pct": 30.0,
+      "p_kpa": 70.32652439031727,
+      "p_psia": 10.2,
+      "g_class": "lunar",
+      "family": "thin_fabric",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": 5.930799067201671,
+        "best_tp": "TP006"
+      },
+      "microfire": {
+        "bin": "26-31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "moon_upper|thick_plastic|with_flow",
+      "habitat": "moon_upper",
+      "habitat_name": "Moon base, upper bound",
+      "o2_pct": 30.0,
+      "p_kpa": 70.32652439031727,
+      "p_psia": 10.2,
+      "g_class": "lunar",
+      "family": "thick_plastic",
+      "direction": "with_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": 5.930799067201671,
+        "best_tp": "TP005"
+      },
+      "microfire": {
+        "bin": "26-31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "moon_upper|thick_plastic|against_flow",
+      "habitat": "moon_upper",
+      "habitat_name": "Moon base, upper bound",
+      "o2_pct": 30.0,
+      "p_kpa": 70.32652439031727,
+      "p_psia": 10.2,
+      "g_class": "lunar",
+      "family": "thick_plastic",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": "26-31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "moon_upper|other_textile|with_flow",
+      "habitat": "moon_upper",
+      "habitat_name": "Moon base, upper bound",
+      "o2_pct": 30.0,
+      "p_kpa": 70.32652439031727,
+      "p_psia": 10.2,
+      "g_class": "lunar",
+      "family": "other_textile",
+      "direction": "with_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": "26-31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "moon_upper|other_textile|against_flow",
+      "habitat": "moon_upper",
+      "habitat_name": "Moon base, upper bound",
+      "o2_pct": 30.0,
+      "p_kpa": 70.32652439031727,
+      "p_psia": 10.2,
+      "g_class": "lunar",
+      "family": "other_textile",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": "26-31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "spacesuit|thin_fabric|with_flow",
+      "habitat": "spacesuit",
+      "habitat_name": "Spacesuit on the Moon",
+      "o2_pct": 100.0,
+      "p_kpa": 29.647456360623952,
+      "p_psia": 4.3,
+      "g_class": "lunar",
+      "family": "thin_fabric",
+      "direction": "with_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": 39.5,
+        "best_tp": "TP031"
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "spacesuit|thin_fabric|against_flow",
+      "habitat": "spacesuit",
+      "habitat_name": "Spacesuit on the Moon",
+      "o2_pct": 100.0,
+      "p_kpa": 29.647456360623952,
+      "p_psia": 4.3,
+      "g_class": "lunar",
+      "family": "thin_fabric",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": 39.534130268216316,
+        "best_tp": "TP038"
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "spacesuit|thick_plastic|with_flow",
+      "habitat": "spacesuit",
+      "habitat_name": "Spacesuit on the Moon",
+      "o2_pct": 100.0,
+      "p_kpa": 29.647456360623952,
+      "p_psia": 4.3,
+      "g_class": "lunar",
+      "family": "thick_plastic",
+      "direction": "with_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": 41.576993320741,
+        "best_tp": "TP005"
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "spacesuit|thick_plastic|against_flow",
+      "habitat": "spacesuit",
+      "habitat_name": "Spacesuit on the Moon",
+      "o2_pct": 100.0,
+      "p_kpa": 29.647456360623952,
+      "p_psia": 4.3,
+      "g_class": "lunar",
+      "family": "thick_plastic",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "spacesuit|other_textile|with_flow",
+      "habitat": "spacesuit",
+      "habitat_name": "Spacesuit on the Moon",
+      "o2_pct": 100.0,
+      "p_kpa": 29.647456360623952,
+      "p_psia": 4.3,
+      "g_class": "lunar",
+      "family": "other_textile",
+      "direction": "with_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "spacesuit|other_textile|against_flow",
+      "habitat": "spacesuit",
+      "habitat_name": "Spacesuit on the Moon",
+      "o2_pct": 100.0,
+      "p_kpa": 29.647456360623952,
+      "p_psia": 4.3,
+      "g_class": "lunar",
+      "family": "other_textile",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "mars_hab|thin_fabric|with_flow",
+      "habitat": "mars_hab",
+      "habitat_name": "Mars habitat",
+      "o2_pct": 34.0,
+      "p_kpa": 56.53700980398055,
+      "p_psia": 8.2,
+      "g_class": "mars",
+      "family": "thin_fabric",
+      "direction": "with_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": 7.378770446746649,
+        "best_tp": "TP032"
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "mars_hab|thin_fabric|against_flow",
+      "habitat": "mars_hab",
+      "habitat_name": "Mars habitat",
+      "o2_pct": 34.0,
+      "p_kpa": 56.53700980398055,
+      "p_psia": 8.2,
+      "g_class": "mars",
+      "family": "thin_fabric",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": 9.960267119670748,
+        "best_tp": "TP040"
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "mars_hab|thick_plastic|with_flow",
+      "habitat": "mars_hab",
+      "habitat_name": "Mars habitat",
+      "o2_pct": 34.0,
+      "p_kpa": 56.53700980398055,
+      "p_psia": 8.2,
+      "g_class": "mars",
+      "family": "thick_plastic",
+      "direction": "with_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "mars_hab|thick_plastic|against_flow",
+      "habitat": "mars_hab",
+      "habitat_name": "Mars habitat",
+      "o2_pct": 34.0,
+      "p_kpa": 56.53700980398055,
+      "p_psia": 8.2,
+      "g_class": "mars",
+      "family": "thick_plastic",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "mars_hab|other_textile|with_flow",
+      "habitat": "mars_hab",
+      "habitat_name": "Mars habitat",
+      "o2_pct": 34.0,
+      "p_kpa": 56.53700980398055,
+      "p_psia": 8.2,
+      "g_class": "mars",
+      "family": "other_textile",
+      "direction": "with_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    },
+    {
+      "cell_id": "mars_hab|other_textile|against_flow",
+      "habitat": "mars_hab",
+      "habitat_name": "Mars habitat",
+      "o2_pct": 34.0,
+      "p_kpa": 56.53700980398055,
+      "p_psia": 8.2,
+      "g_class": "mars",
+      "family": "other_textile",
+      "direction": "against_flow",
+      "status": "untested",
+      "matches": [],
+      "planned": [],
+      "not_proven_safe": true,
+      "missing_bracket": [
+        "oxygen",
+        "pressure",
+        "gravity"
+      ],
+      "unstated": [],
+      "statuses_by_run": [
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested",
+        "untested"
+      ],
+      "distance_check": {
+        "status": "not_tested",
+        "best_distance": null,
+        "best_tp": null
+      },
+      "microfire": {
+        "bin": ">= 31%",
+        "status": "unknown",
+        "matches": []
+      }
+    }
+  ],
+  "default_tolerance": {
+    "tol_o2_pts": 2,
+    "tol_p_frac": 0.1
+  },
+  "pass": true,
+  "pass_rule": "The Moon-base headline holds in all six tolerance runs and in both cross-checks; coverage is reported as a range",
+  "limits": [
+    "Flow is not matched because habitat presets do not set a flow; ignoring flow makes matching more lenient, so 'untested' is conservative.",
+    "BASS-II rows from the poster lack pressure, so they cannot match any cell; the PSI-25 table would add them.",
+    "Rows whose direction is not stated (Saffire I to III, LUCI 1-g) cannot match a direction class."
+  ]
+}

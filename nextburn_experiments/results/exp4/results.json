@@ -1,0 +1,237 @@
+{
+  "experiment": 4,
+  "title": "LUCI holdout and gravity-rule comparison",
+  "generated_at": "2026-11-15T09:18:26+00:00",
+  "rules_file_sha256": "f152b6f46ca9281ca4d769231814e5fc027e5bbae920e776884eecd3df29b700",
+  "rules_frozen_at_utc": "2026-11-15T07:56:00Z",
+  "honesty_note": "The team had seen the LUCI presentation before this file was frozen, so this is a check of rules that were not fitted to LUCI, not a blind prediction.",
+  "g_ratio_luci_spin": 0.165075173104057,
+  "g_ratio_plan": 0.1657,
+  "hit_threshold_pct": 10.0,
+  "observations": [
+    {
+      "label": "Fabric flame tip",
+      "family": "thin_fabric",
+      "g_ratio": 0.165075173104057,
+      "ratio": 0.39285714285714296,
+      "lunar": "1.1 mm/s [R002]",
+      "earth": "2.8 mm/s [R004]",
+      "row_ids": [
+        "R002",
+        "R004"
+      ],
+      "implied_n": 0.5186704414444889,
+      "rules": {
+        "sqrt": {
+          "predicted": 0.40629444138956294,
+          "error_pct": 3.420403262797813,
+          "hit": true
+        },
+        "cube_root": {
+          "predicted": 0.5485639375329898,
+          "error_pct": 39.63445682657919,
+          "hit": false
+        },
+        "linear": {
+          "predicted": 0.165075173104057,
+          "error_pct": -57.980865028058226,
+          "hit": false
+        }
+      }
+    },
+    {
+      "label": "Acrylic rod flame tip",
+      "family": "thick_plastic",
+      "g_ratio": 0.165075173104057,
+      "ratio": 0.37499999999999994,
+      "lunar": "0.15 cm/s [R007]",
+      "earth": "0.40 cm/s [R008]",
+      "row_ids": [
+        "R007",
+        "R008"
+      ],
+      "implied_n": 0.5444954639103889,
+      "rules": {
+        "sqrt": {
+          "predicted": 0.40629444138956294,
+          "error_pct": 8.345184370550134,
+          "hit": true
+        },
+        "cube_root": {
+          "predicted": 0.5485639375329898,
+          "error_pct": 46.28371667546398,
+          "hit": false
+        },
+        "linear": {
+          "predicted": 0.165075173104057,
+          "error_pct": -55.97995383891812,
+          "hit": false
+        }
+      }
+    },
+    {
+      "label": "Fabric flame base",
+      "family": "thin_fabric",
+      "g_ratio": 0.165075173104057,
+      "ratio": 0.6133333333333333,
+      "lunar": "0.92 mm/s [R001]",
+      "earth": "1.5 mm/s [R003]",
+      "row_ids": [
+        "R001",
+        "R003"
+      ],
+      "implied_n": 0.27137732603547454,
+      "rules": {
+        "sqrt": {
+          "predicted": 0.40629444138956294,
+          "error_pct": -33.75634107778865,
+          "hit": false
+        },
+        "cube_root": {
+          "predicted": 0.5485639375329898,
+          "error_pct": -10.560227576142957,
+          "hit": false
+        },
+        "linear": {
+          "predicted": 0.165075173104057,
+          "error_pct": -73.08556960259939,
+          "hit": false
+        }
+      }
+    }
+  ],
+  "stated_ratios": [
+    {
+      "label": "Fabric flame tip",
+      "ratio": 0.39,
+      "row_id": "R006",
+      "implied_n": 0.5227225606882243
+    },
+    {
+      "label": "Acrylic rod flame tip",
+      "ratio": 0.38,
+      "row_id": "R009",
+      "implied_n": 0.537142536923652
+    },
+    {
+      "label": "Fabric flame base",
+      "ratio": 0.6,
+      "row_id": "R005",
+      "implied_n": 0.28357864953121614
+    }
+  ],
+  "sensitivity_plan_g_0_1657": [
+    {
+      "label": "Fabric flame tip",
+      "sqrt": 3.6159469522423975,
+      "cube_root": 39.81041204612045,
+      "linear": -57.8218181818182
+    },
+    {
+      "label": "Acrylic rod flame tip",
+      "sqrt": 8.550039664253985,
+      "cube_root": 46.468050714983384,
+      "linear": -55.81333333333333
+    },
+    {
+      "label": "Fabric flame base",
+      "sqrt": -33.63108987919254,
+      "cube_root": -10.44752334002375,
+      "linear": -72.98369565217392
+    }
+  ],
+  "hits_per_rule": {
+    "sqrt": 2,
+    "cube_root": 0,
+    "linear": 0
+  },
+  "second_check": {
+    "source": "Sacksteder and colleagues, NASA KC-135 aircraft, thin cellulose at 27.6 kPa in air",
+    "upward": {
+      "row_id": "R092",
+      "finding": "linear",
+      "implied_n": 1.0
+    },
+    "downward": {
+      "row_id": "R093",
+      "finding": "downward spread peaks near 0.38 g"
+    },
+    "reading": "Upward spread over thin paper at reduced pressure scaled linearly with gravity (n = 1), which neither the square-root nor the cube-root rule predicts. Downward spread peaked between the gravity levels, so no single power law with a positive exponent describes it.",
+    "feier": "Feier and colleagues report spread rates only in figures; the cited text has no spread-rate numbers. Digitizing the figures (WebPlotDigitizer) is a next step and is not done here."
+  },
+  "implied_exponents": {
+    "rate_derived": [
+      0.5186704414444889,
+      0.5444954639103889,
+      0.27137732603547454
+    ],
+    "stated_ratios": [
+      0.5227225606882243,
+      0.537142536923652,
+      0.28357864953121614
+    ],
+    "n_low": 0.27137732603547454,
+    "n_high": 1.0
+  },
+  "uncertainty_band": {
+    "moon": {
+      "g_ratio": 0.1651940265024244,
+      "ratio_low": 0.1651940265024244,
+      "ratio_high": 0.6134531414070458,
+      "fold": 3.713531018011978
+    },
+    "mars": {
+      "g_ratio": 0.38035414744076723,
+      "ratio_low": 0.38035414744076723,
+      "ratio_high": 0.7692589971515574,
+      "fold": 2.0224808966263597
+    },
+    "use": "Spread-rate ratio band shown for any cell with no direct test; never shown as tested"
+  },
+  "buoyancy_index": [
+    {
+      "setting": "Earth, sea level",
+      "o2_pct": 20.946,
+      "p_psia": 14.7,
+      "g": 1.0,
+      "buoyancy_index": 1.0
+    },
+    {
+      "setting": "Earth laboratory at exploration pressure",
+      "o2_pct": 34,
+      "p_psia": 8.2,
+      "g": 1.0,
+      "buoyancy_index": 0.31116664352815954
+    },
+    {
+      "setting": "Mars habitat",
+      "o2_pct": 34,
+      "p_psia": 8.2,
+      "g": 0.38035414744076723,
+      "buoyancy_index": 0.11835352341115825
+    },
+    {
+      "setting": "Moon base, upper pressure bound",
+      "o2_pct": 30,
+      "p_psia": 10.2,
+      "g": 0.1651940265024244,
+      "buoyancy_index": 0.07953531638350796
+    },
+    {
+      "setting": "Moon base, exploration atmosphere",
+      "o2_pct": 34,
+      "p_psia": 8.2,
+      "g": 0.1651940265024244,
+      "buoyancy_index": 0.051402870757661236
+    },
+    {
+      "setting": "Spacesuit on the Moon",
+      "o2_pct": 100,
+      "p_psia": 4.3,
+      "g": 0.1651940265024244,
+      "buoyancy_index": 0.014135024989725702
+    }
+  ],
+  "pass": true,
+  "pass_rule": "Report every hit and miss as it falls, and publish the band of implied exponents for untested cells"
+}

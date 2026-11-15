@@ -1,0 +1,13 @@
+{
+  "g0_m_s2": 9.80665,
+  "lunar_surface_gravity_m_s2": 1.62,
+  "mars_surface_gravity_m_s2": 3.73,
+  "kpa_per_psia": 6.894757293168361,
+  "kpa_per_atm": 101.325,
+  "air_o2_pct": 20.946,
+  "sources": {
+    "lunar_surface_gravity_m_s2": "NASA NSSDCA Moon Fact Sheet, surface gravity 1.62 m/s2: https://nssdc.gsfc.nasa.gov/planetary/factsheet/moonfact.html",
+    "mars_surface_gravity_m_s2": "NASA NSSDCA Mars Fact Sheet, mean surface gravity 3.73 m/s2: https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html",
+    "air_o2_pct": "IUPAC Gold Book, composition of pure air: oxygen 20.946% of dry air by volume (https://goldbook.iupac.org/terms/view/C01214)"
+  }
+}

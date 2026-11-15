@@ -1,0 +1,507 @@
+{
+  "experiment": 6,
+  "title": "Experiment 6: Planner efficiency (SIMULATION)",
+  "label": "SIMULATION",
+  "settings": {
+    "label": "SIMULATION",
+    "quick_run": false,
+    "budget_tests": 40,
+    "tolerance_o2_pts": 0.5,
+    "noise_sd_o2_pts": 0.5,
+    "lcb_kappa": 2.0,
+    "counts": {
+      "two_variable_boundaries": 200,
+      "one_variable_boundaries": 200,
+      "go_no_go_boundaries": 200,
+      "strategies": 4,
+      "runs_main": 2400,
+      "runs_fixed_matrix_sensitivity": 1200
+    },
+    "seeds": {
+      "master": 2026,
+      "boundary_seed": "600000 + boundary index (same in every variant)",
+      "noise_draws": "numpy default_rng([2026, variant_code, boundary_index]).standard_normal(40)",
+      "random_strategy": "numpy default_rng([2026, variant_code, boundary_index, strategy_code])",
+      "variant_codes": {
+        "two_variable": 2,
+        "one_variable": 1,
+        "go_no_go": 3
+      },
+      "strategy_codes": {
+        "fixed_matrix": 1,
+        "space_filling": 2,
+        "random": 3,
+        "uncertainty_driven": 4
+      },
+      "fixed_matrix_shuffle": 6,
+      "bootstrap": [
+        2026,
+        77
+      ],
+      "bootstrap_resamples": 2000
+    },
+    "anchors_published_ranges": {
+      "flow_cm_s": [
+        0.2,
+        80.0
+      ],
+      "o2_pct": [
+        13.0,
+        34.0
+      ],
+      "pressure_atm": [
+        0.15,
+        1.1
+      ],
+      "source": "NASA SoFIE-GEL operating ranges as quoted in the team plan"
+    },
+    "boundary_model": {
+      "form": "MOC = clip(xmin + rise*((1-curv)*lo + curv*lo^2) + a_side*(1+steep*lo)*(u - u0 - shift*lo)^2, 13, 34); u = normalized log10 flow, lo = 1 - normalized pressure (0 at 1.1 atm, 1 at 0.15 atm)",
+      "xmin_min_extinction_o2_pct": [
+        13.0,
+        14.0
+      ],
+      "u0_flow_at_min_normalized": [
+        0.3,
+        0.7
+      ],
+      "u0_flow_at_min_cm_s": [
+        1.21,
+        13.26
+      ],
+      "a_quench_low_flow_side": [
+        20.0,
+        60.0
+      ],
+      "a_blowoff_high_flow_side": [
+        8.0,
+        30.0
+      ],
+      "rise_o2_pts_at_0p15_atm": [
+        3.0,
+        8.0
+      ],
+      "curv": [
+        0.0,
+        0.5
+      ],
+      "steep": [
+        0.5,
+        1.5
+      ],
+      "shift": "random sign x U(0.3, 1.0) x the largest shift that keeps MOC rising as pressure falls at every flow",
+      "minimum_location": "u = u0 at 1.1 atm (the highest pressure)",
+      "one_variable_and_go_no_go": "1.1 atm slice of the same boundary (flow only)"
+    },
+    "fixed_matrix": {
+      "levels_normalized": {
+        "inset": [
+          0.05,
+          0.23,
+          0.41,
+          0.59,
+          0.77,
+          0.95
+        ],
+        "endpoints": [
+          0.0,
+          0.2,
+          0.4,
+          0.6,
+          0.8,
+          1.0
+        ]
+      },
+      "main_levels": "inset (5-95% of each range, as in the plan prototype)",
+      "flow_levels_cm_s": [
+        0.27,
+        0.793,
+        2.333,
+        6.859,
+        20.166,
+        59.291
+      ],
+      "pressure_levels_atm": [
+        0.1975,
+        0.3685,
+        0.5395,
+        0.7105,
+        0.8815,
+        1.0525
+      ],
+      "o2_levels_pct": [
+        14.05,
+        17.83,
+        21.61,
+        25.39,
+        29.17,
+        32.95
+      ],
+      "main_order": "flows low to high; at each flow, pressures low to high (plan prototype order)",
+      "after_36_tests": "the matrix repeats from its first cell (tests 37-40)",
+      "one_variable": "6 flows swept low to high, repeated",
+      "sensitivity_designs": {
+        "two_variable": [
+          "pressure_high_first/inset",
+          "pressure_low_first/inset",
+          "shuffled/inset",
+          "flow_major/endpoints",
+          "pressure_high_first/endpoints"
+        ],
+        "go_no_go": [
+          "flow_major/endpoints"
+        ]
+      }
+    },
+    "space_filling": "unscrambled Halton sequence, bases 2 (flow) and 3 (pressure or oxygen), origin skipped",
+    "random": "independent uniform draws over the normalized test range",
+    "uncertainty_driven": "first n Halton points (n = first_estimate_after_test), then the grid point minimizing posterior mean - kappa * posterior s.d. of MOC (go/no-go: the flow minimizing that bound, tested at the posterior-mean boundary oxygen)",
+    "estimator_limit_tests": {
+      "model": "Gaussian-process regression, Matern-5/2 ARD kernel, constant mean, outputs standardized, known noise s.d. 0.5 O2 points",
+      "hyperparameters": "signal variance and length scales by maximum marginal likelihood (L-BFGS-B, warm start + default start), refitted at the first fit and every 5th test, fixed in between",
+      "bounds": {
+        "signal_variance_standardized": [
+          0.05,
+          20.0
+        ],
+        "length_scale_normalized": [
+          0.05,
+          2.0
+        ]
+      },
+      "estimate": "minimum of the posterior mean over a dense grid (41x41 two-variable, 201 points one-variable)"
+    },
+    "estimator_go_no_go": {
+      "model": "Bayesian grid posterior over (xmin, u0, aL, aR) of an asymmetric U boundary clipped at 34%, probit likelihood with known noise s.d. 0.5 (likelihood read from a 0.002-point lookup table)",
+      "prior_grid": {
+        "xmin_pct": "11.0 to 22.0 in steps of 0.1",
+        "u0": "33 points over [0, 1]",
+        "aL_aR": "7 log-spaced values over [5, 120] each"
+      },
+      "estimate": "posterior mean of xmin (minimum extinction oxygen)"
+    },
+    "convergence": "first test count after which the estimate stays within tolerance for the rest of the budget; never converging = failure (infinite); median and 80th percentile use linear interpolation with failures as infinite (null = not reached); mean_tests is over converged runs only",
+    "claim_rule": "'about half' only if the two-variable pass holds and the median ratio is within 0.40-0.60; qualified by the fixed-matrix layout check",
+    "runtime_by_part_s": {
+      "two_variable": 299.1,
+      "one_variable": 121.6,
+      "go_no_go": 343.6,
+      "fixed_matrix_sensitivity": 352.9
+    },
+    "run_sizing": "Counts were sized from a 10-boundary pilot of every variant plus the sensitivity runs. It took 52.5 s wall time on the shared single core (21.5 s CPU), which projects about 18 min for 200 boundaries per variant, under the 40-minute limit.",
+    "variants": {
+      "two_variable": {
+        "first_estimate_after_test": 5,
+        "n_boundaries": 200
+      },
+      "one_variable": {
+        "first_estimate_after_test": 4,
+        "n_boundaries": 200
+      },
+      "go_no_go": {
+        "first_estimate_after_test": 5,
+        "n_boundaries": 200
+      }
+    }
+  },
+  "variants": {
+    "two_variable": {
+      "title": "Two-variable boundary (log-flow x pressure), main variant",
+      "n_boundaries": 200,
+      "measurement": "noisy MOC value (limit test)",
+      "test_variables": [
+        "log flow",
+        "pressure"
+      ],
+      "fixed_design": "Fixed 6x6 test matrix (6 flows x 6 pressures)",
+      "fixed_order": "flow_major",
+      "fixed_levels": "inset",
+      "first_estimate_after_test": 5,
+      "strategies": [
+        {
+          "name": "fixed_matrix",
+          "label": "Fixed 6x6 test matrix (6 flows x 6 pressures)",
+          "n_runs": 200,
+          "n_success": 172,
+          "success_rate": 0.86,
+          "median_tests": 24.0,
+          "p80_tests": 30.0,
+          "mean_tests": 22.41
+        },
+        {
+          "name": "space_filling",
+          "label": "Space-filling (Halton)",
+          "n_runs": 200,
+          "n_success": 155,
+          "success_rate": 0.775,
+          "median_tests": 22.5,
+          "p80_tests": null,
+          "mean_tests": 20.37
+        },
+        {
+          "name": "random",
+          "label": "Random",
+          "n_runs": 200,
+          "n_success": 154,
+          "success_rate": 0.77,
+          "median_tests": 26.0,
+          "p80_tests": null,
+          "mean_tests": 21.54
+        },
+        {
+          "name": "uncertainty_driven",
+          "label": "Uncertainty-driven (lower confidence bound)",
+          "n_runs": 200,
+          "n_success": 200,
+          "success_rate": 1.0,
+          "median_tests": 11.0,
+          "p80_tests": 14.0,
+          "mean_tests": 11.05
+        }
+      ],
+      "paired_vs_fixed": {
+        "vs": "fixed_matrix",
+        "n": 200,
+        "fewer_tests": 194,
+        "same": 2,
+        "more_tests": 4
+      },
+      "median_ratio_vs_fixed": 0.458,
+      "median_ratio_vs_fixed_95ci": [
+        0.417,
+        0.479
+      ],
+      "fixed_matrix_sensitivity": [
+        {
+          "order": "flow_major",
+          "levels": "inset",
+          "main": true,
+          "description": "plan order (flows low to high, every pressure level at each flow); levels at 5-95% of each range",
+          "n_runs": 200,
+          "n_success": 172,
+          "success_rate": 0.86,
+          "median_tests": 24.0,
+          "p80_tests": 30.0,
+          "mean_tests": 22.41
+        },
+        {
+          "order": "pressure_high_first",
+          "levels": "inset",
+          "main": false,
+          "description": "highest-pressure row first (flows low to high in each row); levels at 5-95% of each range",
+          "n_runs": 200,
+          "n_success": 180,
+          "success_rate": 0.9,
+          "median_tests": 10.0,
+          "p80_tests": 39.0,
+          "mean_tests": 14.04
+        },
+        {
+          "order": "pressure_low_first",
+          "levels": "inset",
+          "main": false,
+          "description": "lowest-pressure row first (flows low to high in each row); levels at 5-95% of each range",
+          "n_runs": 200,
+          "n_success": 162,
+          "success_rate": 0.81,
+          "median_tests": 33.0,
+          "p80_tests": 36.2,
+          "mean_tests": 30.77
+        },
+        {
+          "order": "shuffled",
+          "levels": "inset",
+          "main": false,
+          "description": "one fixed shuffled order (seed 6); levels at 5-95% of each range",
+          "n_runs": 200,
+          "n_success": 156,
+          "success_rate": 0.78,
+          "median_tests": 18.0,
+          "p80_tests": null,
+          "mean_tests": 16.42
+        },
+        {
+          "order": "flow_major",
+          "levels": "endpoints",
+          "main": false,
+          "description": "plan order (flows low to high, every pressure level at each flow); levels span the full ranges, ends included",
+          "n_runs": 200,
+          "n_success": 177,
+          "success_rate": 0.885,
+          "median_tests": 23.0,
+          "p80_tests": 30.0,
+          "mean_tests": 22.27
+        },
+        {
+          "order": "pressure_high_first",
+          "levels": "endpoints",
+          "main": false,
+          "description": "highest-pressure row first (flows low to high in each row); levels span the full ranges, ends included",
+          "n_runs": 200,
+          "n_success": 184,
+          "success_rate": 0.92,
+          "median_tests": 9.0,
+          "p80_tests": 23.4,
+          "mean_tests": 11.52
+        }
+      ]
+    },
+    "one_variable": {
+      "title": "One-variable control (flow only, 1.1 atm slice)",
+      "n_boundaries": 200,
+      "measurement": "noisy MOC value (limit test)",
+      "test_variables": [
+        "log flow"
+      ],
+      "fixed_design": "Fixed sweep (6 flows, repeated low to high)",
+      "fixed_order": "flow_ascending",
+      "fixed_levels": "inset",
+      "first_estimate_after_test": 4,
+      "strategies": [
+        {
+          "name": "fixed_matrix",
+          "label": "Fixed sweep (6 flows, repeated low to high)",
+          "n_runs": 200,
+          "n_success": 200,
+          "success_rate": 1.0,
+          "median_tests": 4.0,
+          "p80_tests": 10.0,
+          "mean_tests": 7.0
+        },
+        {
+          "name": "space_filling",
+          "label": "Space-filling (Halton)",
+          "n_runs": 200,
+          "n_success": 200,
+          "success_rate": 1.0,
+          "median_tests": 4.0,
+          "p80_tests": 10.0,
+          "mean_tests": 7.64
+        },
+        {
+          "name": "random",
+          "label": "Random",
+          "n_runs": 200,
+          "n_success": 197,
+          "success_rate": 0.985,
+          "median_tests": 6.0,
+          "p80_tests": 12.0,
+          "mean_tests": 9.1
+        },
+        {
+          "name": "uncertainty_driven",
+          "label": "Uncertainty-driven (lower confidence bound)",
+          "n_runs": 200,
+          "n_success": 200,
+          "success_rate": 1.0,
+          "median_tests": 4.0,
+          "p80_tests": 9.0,
+          "mean_tests": 6.11
+        }
+      ],
+      "paired_vs_fixed": {
+        "vs": "fixed_matrix",
+        "n": 200,
+        "fewer_tests": 66,
+        "same": 70,
+        "more_tests": 64
+      }
+    },
+    "go_no_go": {
+      "title": "Go/no-go tests (drop-tower style: flow x oxygen, burn / no-burn only)",
+      "n_boundaries": 200,
+      "measurement": "burn / no-burn",
+      "test_variables": [
+        "log flow",
+        "oxygen"
+      ],
+      "fixed_design": "Fixed 6x6 test matrix (6 flows x 6 oxygen levels)",
+      "fixed_order": "flow_major",
+      "fixed_levels": "inset",
+      "first_estimate_after_test": 5,
+      "strategies": [
+        {
+          "name": "fixed_matrix",
+          "label": "Fixed 6x6 test matrix (6 flows x 6 oxygen levels)",
+          "n_runs": 200,
+          "n_success": 100,
+          "success_rate": 0.5,
+          "median_tests": null,
+          "p80_tests": null,
+          "mean_tests": 24.7
+        },
+        {
+          "name": "space_filling",
+          "label": "Space-filling (Halton)",
+          "n_runs": 200,
+          "n_success": 110,
+          "success_rate": 0.55,
+          "median_tests": 36.0,
+          "p80_tests": null,
+          "mean_tests": 23.85
+        },
+        {
+          "name": "random",
+          "label": "Random",
+          "n_runs": 200,
+          "n_success": 96,
+          "success_rate": 0.48,
+          "median_tests": null,
+          "p80_tests": null,
+          "mean_tests": 25.42
+        },
+        {
+          "name": "uncertainty_driven",
+          "label": "Uncertainty-driven (lower confidence bound)",
+          "n_runs": 200,
+          "n_success": 199,
+          "success_rate": 0.995,
+          "median_tests": 11.0,
+          "p80_tests": 14.0,
+          "mean_tests": 12.02
+        }
+      ],
+      "paired_vs_fixed": {
+        "vs": "fixed_matrix",
+        "n": 200,
+        "fewer_tests": 192,
+        "same": 2,
+        "more_tests": 6
+      },
+      "fixed_matrix_sensitivity": [
+        {
+          "order": "flow_major",
+          "levels": "inset",
+          "main": true,
+          "description": "plan order (flows low to high, every oxygen level at each flow); levels at 5-95% of each range",
+          "n_runs": 200,
+          "n_success": 100,
+          "success_rate": 0.5,
+          "median_tests": null,
+          "p80_tests": null,
+          "mean_tests": 24.7
+        },
+        {
+          "order": "flow_major",
+          "levels": "endpoints",
+          "main": false,
+          "description": "plan order (flows low to high, every oxygen level at each flow); levels span the full ranges, ends included",
+          "n_runs": 200,
+          "n_success": 42,
+          "success_rate": 0.21,
+          "median_tests": null,
+          "p80_tests": null,
+          "mean_tests": 28.19
+        }
+      ]
+    }
+  },
+  "headline": "In simulation (200 random two-variable boundaries), choosing each test by uncertainty found the minimum extinction oxygen within 0.5 points in a median of 11 tests (80th percentile 14) versus 24 (80th percentile 30) for the plan's fixed 6x6 test matrix, with 100% vs 86% success.",
+  "claim": "Choosing each test by uncertainty needed about half the tests of a fixed matrix run in the plan's order, in simulation (median 11 vs 24 tests, success 100% vs 86%, 200 simulated two-variable boundaries); a matrix that includes 1.1 atm, where the simulated minimum always lies, and runs that row first needed fewer at the median (9) but succeeded less often (92%) and had a longer tail (80th percentile 23.4 vs 14).",
+  "caveats": [
+    "The saving depends on how the fixed matrix is laid out. MOC rises as pressure falls, so the simulated minimum always lies at 1.1 atm. A 6x6 matrix that includes 1.1 atm and runs that row first needed a median of 9 tests (80th percentile 23.4, success 92%). The uncertainty-driven planner, given no hint about where the hazard lies, needed a median of 11 (80th percentile 14, success 100%). The planner's advantage is that it does not need that prior knowledge, not that it beats every matrix at the median. See the fixed-matrix layout table."
+  ],
+  "pass": true,
+  "runtime_s": 1119.1,
+  "generated_at": "2026-11-15T09:07:39+00:00"
+}

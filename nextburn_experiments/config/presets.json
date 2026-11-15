@@ -1,0 +1,142 @@
+{
+  "version": "1.0",
+  "basis": "NextBurn plan, coverage model table",
+  "habitats": [
+    {
+      "id": "iss_cabin",
+      "name": "Space station cabin",
+      "o2_pct": 21.0,
+      "p_psia": 14.7,
+      "g_class": "micro",
+      "basis": "Current station atmosphere"
+    },
+    {
+      "id": "moon_base",
+      "name": "Moon base and pressurized rover",
+      "o2_pct": 34.0,
+      "p_psia": 8.2,
+      "g_class": "lunar",
+      "basis": "Exploration atmosphere FM2 targets for the human lander and rover"
+    },
+    {
+      "id": "moon_upper",
+      "name": "Moon base, upper bound",
+      "o2_pct": 30.0,
+      "p_psia": 10.2,
+      "g_class": "lunar",
+      "basis": "Challenge text: 30% or more at 10.2 psi or less"
+    },
+    {
+      "id": "spacesuit",
+      "name": "Spacesuit on the Moon",
+      "o2_pct": 100.0,
+      "p_psia": 4.3,
+      "g_class": "lunar",
+      "basis": "Challenge text"
+    },
+    {
+      "id": "mars_hab",
+      "name": "Mars habitat",
+      "o2_pct": 34.0,
+      "p_psia": 8.2,
+      "g_class": "mars",
+      "basis": "Assumption: same exploration atmosphere"
+    }
+  ],
+  "gravity_classes": {
+    "micro": [
+      0.0,
+      0.01
+    ],
+    "partial_low": [
+      0.01,
+      0.14
+    ],
+    "lunar": [
+      0.14,
+      0.19
+    ],
+    "partial_mid": [
+      0.19,
+      0.3
+    ],
+    "mars": [
+      0.3,
+      0.42
+    ],
+    "partial_high": [
+      0.42,
+      0.9
+    ],
+    "earth": [
+      0.9,
+      1.1
+    ]
+  },
+  "material_families": {
+    "thin_fabric": {
+      "label": "Thin fabrics and papers",
+      "keywords": [
+        "sibal",
+        "cotton",
+        "fabric",
+        "cloth",
+        "kimwipe",
+        "cellulos",
+        "tissue",
+        "fiberglass"
+      ]
+    },
+    "thick_plastic": {
+      "label": "Thick plastics (PMMA)",
+      "keywords": [
+        "pmma",
+        "acrylic",
+        "plexiglas"
+      ]
+    },
+    "other_textile": {
+      "label": "Other textiles (Nomex and similar)",
+      "keywords": [
+        "nomex",
+        "nylon",
+        "kevlar"
+      ]
+    }
+  },
+  "direction_classes": {
+    "with_flow": {
+      "label": "Upward or concurrent",
+      "keywords": [
+        "upward",
+        "concurrent"
+      ]
+    },
+    "against_flow": {
+      "label": "Downward or opposed",
+      "keywords": [
+        "downward",
+        "opposed"
+      ]
+    }
+  },
+  "flow_bands_cm_s": {
+    "quiescent": [
+      0,
+      2
+    ],
+    "low": [
+      2,
+      10
+    ],
+    "cabin_ventilation": [
+      10,
+      30
+    ],
+    "high": [
+      30,
+      1000
+    ]
+  },
+  "flow_band_note": "Flow-band edges are a NextBurn assumption for display; habitat presets do not set a flow, so matching ignores flow unless stated."
+}

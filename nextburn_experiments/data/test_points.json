@@ -1,0 +1,1423 @@
+{
+ "meta": {
+  "g_spin": 0.165075173104057,
+  "spin": {
+   "rpm": 11.0,
+   "radius_m": 1.22
+  },
+  "g_lunar": 0.1651940265024244,
+  "g_mars": 0.38035414744076723,
+  "merged_rows": [
+   {
+    "row_id": "R010",
+    "merged_into": "R007",
+    "rule": "Two rows are one measurement when they describe the same test and material family, name the same measurand and agree within 0.5% after unit normalization. The lower row ID is kept; the other row's locator is kept as corroboration."
+   }
+  ]
+ },
+ "test_points": [
+  {
+   "tp_id": "TP001",
+   "test_id": "FM2 team 1-g ground",
+   "label": "FM2 team 1-g ground",
+   "family": "thin_fabric",
+   "direction_class": "against_flow",
+   "g": 1.0,
+   "g_class": "earth",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": 20.946,
+   "o2_lo_pct": 20.946,
+   "o2_hi_pct": 20.946,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Ground, 1 g",
+   "sources": [
+    "fm2_poster_2024"
+   ],
+   "row_ids": [
+    "R077"
+   ],
+   "years": [
+    2024
+   ],
+   "measurands": [
+    "burning behaviour"
+   ],
+   "first_year": 2024
+  },
+  {
+   "tp_id": "TP002",
+   "test_id": "FM2 team lunar-g simulation",
+   "label": "FM2 team lunar-g simulation",
+   "family": "thin_fabric",
+   "direction_class": "against_flow",
+   "g": 0.1651940265024244,
+   "g_class": "lunar",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": 20.946,
+   "o2_lo_pct": 20.946,
+   "o2_hi_pct": 20.946,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Simulated lunar gravity (centrifuge drop and aircraft)",
+   "sources": [
+    "fm2_poster_2024"
+   ],
+   "row_ids": [
+    "R076"
+   ],
+   "years": [
+    2024
+   ],
+   "measurands": [
+    "burning behaviour"
+   ],
+   "first_year": 2024
+  },
+  {
+   "tp_id": "TP003",
+   "test_id": "LUCI 1-g ground",
+   "label": "LUCI 1-g ground",
+   "family": "thick_plastic",
+   "direction_class": "unknown",
+   "g": 1.0,
+   "g_class": "earth",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": 21.0,
+   "o2_lo_pct": 14.5,
+   "o2_hi_pct": 21.0,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Ground, 1 g",
+   "sources": [
+    "luci_2025"
+   ],
+   "row_ids": [
+    "R008",
+    "R011",
+    "R015"
+   ],
+   "years": [
+    2025
+   ],
+   "measurands": [
+    "flame tip spread rate",
+    "flame tip growth rate at start of burn",
+    "lowest chamber oxygen during burn"
+   ],
+   "first_year": 2025
+  },
+  {
+   "tp_id": "TP004",
+   "test_id": "LUCI 1-g ground",
+   "label": "LUCI 1-g ground",
+   "family": "thin_fabric",
+   "direction_class": "unknown",
+   "g": 1.0,
+   "g_class": "earth",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": 20.0,
+   "o2_lo_pct": 20.0,
+   "o2_hi_pct": 20.0,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Ground, 1 g",
+   "sources": [
+    "luci_2025"
+   ],
+   "row_ids": [
+    "R003",
+    "R004",
+    "R017",
+    "R023"
+   ],
+   "years": [
+    2025
+   ],
+   "measurands": [
+    "flame base spread rate",
+    "flame tip spread rate",
+    "chamber oxygen during burn",
+    "time at which flame width suddenly decreases"
+   ],
+   "first_year": 2025
+  },
+  {
+   "tp_id": "TP005",
+   "test_id": "LUCI NS-29 lunar spin",
+   "label": "LUCI NS-29 lunar spin",
+   "family": "thick_plastic",
+   "direction_class": "with_flow",
+   "g": 0.165075173104057,
+   "g_class": "lunar",
+   "p_kpa": 101.325,
+   "p_lo_kpa": 101.325,
+   "p_hi_kpa": 101.325,
+   "o2_pct": 20.946,
+   "o2_lo_pct": 20.946,
+   "o2_hi_pct": 20.946,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Flight, simulated lunar gravity (spin)",
+   "sources": [
+    "luci_2025"
+   ],
+   "row_ids": [
+    "R007",
+    "R012",
+    "R013",
+    "R014",
+    "R022",
+    "R024",
+    "R025",
+    "R026"
+   ],
+   "years": [
+    2025
+   ],
+   "measurands": [
+    "flame tip spread rate",
+    "total flame base spread until extinction",
+    "lowest chamber oxygen during burn",
+    "chamber oxygen after gravity decreased at 125 s",
+    "peak instantaneous flame base spread rate (before 125 s)",
+    "vehicle rotation rate",
+    "effective radius of rotation at the experiment",
+    "burn duration"
+   ],
+   "first_year": 2025
+  },
+  {
+   "tp_id": "TP006",
+   "test_id": "LUCI NS-29 lunar spin",
+   "label": "LUCI NS-29 lunar spin",
+   "family": "thin_fabric",
+   "direction_class": "against_flow",
+   "g": 0.165075173104057,
+   "g_class": "lunar",
+   "p_kpa": 101.325,
+   "p_lo_kpa": 101.325,
+   "p_hi_kpa": 101.325,
+   "o2_pct": 20.946,
+   "o2_lo_pct": 20.946,
+   "o2_hi_pct": 20.946,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Flight, simulated lunar gravity (spin)",
+   "sources": [
+    "luci_2025"
+   ],
+   "row_ids": [
+    "R001",
+    "R002",
+    "R016",
+    "R019",
+    "R020",
+    "R021",
+    "R024",
+    "R025",
+    "R026"
+   ],
+   "years": [
+    2025
+   ],
+   "measurands": [
+    "flame base spread rate",
+    "flame tip spread rate",
+    "final chamber oxygen during burn",
+    "flame width during semi-steady spread",
+    "flame length during semi-steady spread",
+    "preheat length shrink rate",
+    "vehicle rotation rate",
+    "effective radius of rotation at the experiment",
+    "burn duration"
+   ],
+   "first_year": 2025
+  },
+  {
+   "tp_id": "TP007",
+   "test_id": "Saffire I-1",
+   "label": "Saffire I-1",
+   "family": "thin_fabric",
+   "direction_class": "unknown",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": 100.0,
+   "p_lo_kpa": 100.0,
+   "p_hi_kpa": 100.0,
+   "o2_pct": 21.0,
+   "o2_lo_pct": 21.0,
+   "o2_hi_pct": 21.0,
+   "flow_cm_s": 20.0,
+   "flow_lo_cm_s": 20.0,
+   "flow_hi_cm_s": 20.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "saffire45_paper_2021"
+   ],
+   "row_ids": [
+    "R056",
+    "R057"
+   ],
+   "years": [
+    2021
+   ],
+   "measurands": [
+    "steady-state flame size",
+    "maximum flame size"
+   ],
+   "first_year": 2021
+  },
+  {
+   "tp_id": "TP008",
+   "test_id": "Saffire II-5",
+   "label": "Saffire II-5",
+   "family": "thin_fabric",
+   "direction_class": "unknown",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": 100.0,
+   "p_lo_kpa": 100.0,
+   "p_hi_kpa": 100.0,
+   "o2_pct": 21.0,
+   "o2_lo_pct": 21.0,
+   "o2_hi_pct": 21.0,
+   "flow_cm_s": 20.0,
+   "flow_lo_cm_s": 20.0,
+   "flow_hi_cm_s": 20.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "saffire45_paper_2021"
+   ],
+   "row_ids": [
+    "R058",
+    "R059"
+   ],
+   "years": [
+    2021
+   ],
+   "measurands": [
+    "steady-state flame size",
+    "maximum flame size"
+   ],
+   "first_year": 2021
+  },
+  {
+   "tp_id": "TP009",
+   "test_id": "Saffire II-6",
+   "label": "Saffire II-6",
+   "family": "thin_fabric",
+   "direction_class": "unknown",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": 100.0,
+   "p_lo_kpa": 100.0,
+   "p_hi_kpa": 100.0,
+   "o2_pct": 21.0,
+   "o2_lo_pct": 21.0,
+   "o2_hi_pct": 21.0,
+   "flow_cm_s": 25.0,
+   "flow_lo_cm_s": 25.0,
+   "flow_hi_cm_s": 25.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "saffire45_paper_2021"
+   ],
+   "row_ids": [
+    "R060",
+    "R061"
+   ],
+   "years": [
+    2021
+   ],
+   "measurands": [
+    "steady-state flame size",
+    "maximum flame size"
+   ],
+   "first_year": 2021
+  },
+  {
+   "tp_id": "TP010",
+   "test_id": "Saffire III-1",
+   "label": "Saffire III-1",
+   "family": "thin_fabric",
+   "direction_class": "unknown",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": 100.0,
+   "p_lo_kpa": 100.0,
+   "p_hi_kpa": 100.0,
+   "o2_pct": 21.0,
+   "o2_lo_pct": 21.0,
+   "o2_hi_pct": 21.0,
+   "flow_cm_s": 25.0,
+   "flow_lo_cm_s": 25.0,
+   "flow_hi_cm_s": 25.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "saffire45_paper_2021"
+   ],
+   "row_ids": [
+    "R062",
+    "R063"
+   ],
+   "years": [
+    2021
+   ],
+   "measurands": [
+    "steady-state flame size",
+    "maximum flame size"
+   ],
+   "first_year": 2021
+  },
+  {
+   "tp_id": "TP011",
+   "test_id": "Saffire IV-1",
+   "label": "Saffire IV-1",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": 100.0,
+   "p_lo_kpa": 100.0,
+   "p_hi_kpa": 100.0,
+   "o2_pct": 22.0,
+   "o2_lo_pct": 22.0,
+   "o2_hi_pct": 22.0,
+   "flow_cm_s": 20.0,
+   "flow_lo_cm_s": 20.0,
+   "flow_hi_cm_s": 20.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "saffire6_paper_2024",
+    "saffire45_paper_2021"
+   ],
+   "row_ids": [
+    "R027",
+    "R035",
+    "R038",
+    "R043",
+    "R048",
+    "R064",
+    "R065"
+   ],
+   "years": [
+    2024,
+    2021
+   ],
+   "measurands": [
+    "burn duration",
+    "average heat release (fuel consumption calorimetry)",
+    "maximum temperature at flow-unit outlet",
+    "CO2 increase at far-field inlet",
+    "CO increase at far-field inlet",
+    "steady-state flame size",
+    "maximum flame size"
+   ],
+   "first_year": 2021
+  },
+  {
+   "tp_id": "TP012",
+   "test_id": "Saffire IV-2",
+   "label": "Saffire IV-2",
+   "family": "thick_plastic",
+   "direction_class": "with_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": 100.0,
+   "p_lo_kpa": 100.0,
+   "p_hi_kpa": 100.0,
+   "o2_pct": 22.0,
+   "o2_lo_pct": 22.0,
+   "o2_hi_pct": 22.0,
+   "flow_cm_s": 20.0,
+   "flow_lo_cm_s": 20.0,
+   "flow_hi_cm_s": 20.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "saffire45_paper_2021"
+   ],
+   "row_ids": [
+    "R071"
+   ],
+   "years": [
+    2021
+   ],
+   "measurands": [
+    "extinguishment behaviour"
+   ],
+   "first_year": 2021
+  },
+  {
+   "tp_id": "TP013",
+   "test_id": "Saffire V-2",
+   "label": "Saffire V-2",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": 70.7,
+   "p_lo_kpa": 70.7,
+   "p_hi_kpa": 70.7,
+   "o2_pct": 26.2,
+   "o2_lo_pct": 26.2,
+   "o2_hi_pct": 26.2,
+   "flow_cm_s": 20.0,
+   "flow_lo_cm_s": 20.0,
+   "flow_hi_cm_s": 20.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "saffire6_paper_2024",
+    "saffire45_paper_2021"
+   ],
+   "row_ids": [
+    "R028",
+    "R036",
+    "R039",
+    "R044",
+    "R049",
+    "R066",
+    "R067",
+    "R068"
+   ],
+   "years": [
+    2024,
+    2021
+   ],
+   "measurands": [
+    "burn duration",
+    "average heat release (fuel consumption calorimetry)",
+    "maximum temperature at flow-unit outlet",
+    "CO2 increase at far-field inlet",
+    "CO increase at far-field inlet",
+    "steady-state flame size",
+    "maximum flame size",
+    "steady burning period while the fan was on"
+   ],
+   "first_year": 2021
+  },
+  {
+   "tp_id": "TP014",
+   "test_id": "Saffire V-3",
+   "label": "Saffire V-3",
+   "family": "thick_plastic",
+   "direction_class": "with_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": 71.3,
+   "p_lo_kpa": 71.3,
+   "p_hi_kpa": 71.3,
+   "o2_pct": 25.4,
+   "o2_lo_pct": 25.4,
+   "o2_hi_pct": 25.4,
+   "flow_cm_s": 20.0,
+   "flow_lo_cm_s": 0.0,
+   "flow_hi_cm_s": 20.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "saffire45_paper_2021"
+   ],
+   "row_ids": [
+    "R069"
+   ],
+   "years": [
+    2021
+   ],
+   "measurands": [
+    "response when fan turned off"
+   ],
+   "first_year": 2021
+  },
+  {
+   "tp_id": "TP015",
+   "test_id": "Saffire V-4",
+   "label": "Saffire V-4",
+   "family": "thick_plastic",
+   "direction_class": "against_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": 72.6,
+   "p_lo_kpa": 72.6,
+   "p_hi_kpa": 72.6,
+   "o2_pct": 25.7,
+   "o2_lo_pct": 25.7,
+   "o2_hi_pct": 25.7,
+   "flow_cm_s": 20.0,
+   "flow_lo_cm_s": 0.0,
+   "flow_hi_cm_s": 20.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "saffire45_paper_2021"
+   ],
+   "row_ids": [
+    "R070"
+   ],
+   "years": [
+    2021
+   ],
+   "measurands": [
+    "response when fan turned off"
+   ],
+   "first_year": 2021
+  },
+  {
+   "tp_id": "TP016",
+   "test_id": "Saffire VI-2",
+   "label": "Saffire VI-2",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": 54.1,
+   "p_lo_kpa": 54.1,
+   "p_hi_kpa": 54.1,
+   "o2_pct": 31.0,
+   "o2_lo_pct": 31.0,
+   "o2_hi_pct": 31.0,
+   "flow_cm_s": 20.0,
+   "flow_lo_cm_s": 20.0,
+   "flow_hi_cm_s": 20.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "saffire6_paper_2024"
+   ],
+   "row_ids": [
+    "R029",
+    "R032",
+    "R037",
+    "R040",
+    "R045",
+    "R050"
+   ],
+   "years": [
+    2024
+   ],
+   "measurands": [
+    "burn duration",
+    "peak heat release (oxygen consumption calorimetry)",
+    "average heat release (fuel consumption calorimetry)",
+    "maximum temperature at flow-unit outlet",
+    "CO2 increase at far-field inlet",
+    "CO increase at far-field inlet"
+   ],
+   "first_year": 2024
+  },
+  {
+   "tp_id": "TP017",
+   "test_id": "Saffire VI-3",
+   "label": "Saffire VI-3",
+   "family": "thick_plastic",
+   "direction_class": "with_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": 54.6,
+   "p_lo_kpa": 54.6,
+   "p_hi_kpa": 54.6,
+   "o2_pct": 30.3,
+   "o2_lo_pct": 30.3,
+   "o2_hi_pct": 30.3,
+   "flow_cm_s": 20.0,
+   "flow_lo_cm_s": 20.0,
+   "flow_hi_cm_s": 20.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "saffire6_paper_2024",
+    "saffire6_pres_2024"
+   ],
+   "row_ids": [
+    "R030",
+    "R033",
+    "R041",
+    "R046",
+    "R051",
+    "R053",
+    "R054",
+    "R055"
+   ],
+   "years": [
+    2024
+   ],
+   "measurands": [
+    "burn duration",
+    "peak heat release (oxygen consumption calorimetry)",
+    "maximum temperature at flow-unit outlet",
+    "CO2 increase at far-field inlet",
+    "CO increase at far-field inlet",
+    "ignition time",
+    "time flow reduced from 20 to 5 cm/s",
+    "time duct flow terminated"
+   ],
+   "first_year": 2024
+  },
+  {
+   "tp_id": "TP018",
+   "test_id": "Saffire VI-4",
+   "label": "Saffire VI-4",
+   "family": "thick_plastic",
+   "direction_class": "with_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": 55.2,
+   "p_lo_kpa": 55.2,
+   "p_hi_kpa": 55.2,
+   "o2_pct": 28.8,
+   "o2_lo_pct": 28.8,
+   "o2_hi_pct": 28.8,
+   "flow_cm_s": 20.0,
+   "flow_lo_cm_s": 20.0,
+   "flow_hi_cm_s": 20.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "saffire6_paper_2024"
+   ],
+   "row_ids": [
+    "R031",
+    "R034",
+    "R042",
+    "R047",
+    "R052"
+   ],
+   "years": [
+    2024
+   ],
+   "measurands": [
+    "burn duration",
+    "peak heat release (oxygen consumption calorimetry)",
+    "maximum temperature at flow-unit outlet",
+    "CO2 increase at far-field inlet",
+    "CO increase at far-field inlet"
+   ],
+   "first_year": 2024
+  },
+  {
+   "tp_id": "TP019",
+   "test_id": "bass2_poster_2014:R090",
+   "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II wind tunnel)",
+   "family": "unknown",
+   "direction_class": "unknown",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": null,
+   "o2_lo_pct": null,
+   "o2_hi_pct": 21.0,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": 0.0,
+   "flow_hi_cm_s": 40.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "bass2_poster_2014"
+   ],
+   "row_ids": [
+    "R090"
+   ],
+   "years": [
+    2014
+   ],
+   "measurands": [
+    "maximum airflow speed of wind tunnel"
+   ],
+   "first_year": 2014
+  },
+  {
+   "tp_id": "TP020",
+   "test_id": "bass2_poster_2014:R079",
+   "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+   "family": "thick_plastic",
+   "direction_class": "other",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": null,
+   "o2_lo_pct": null,
+   "o2_hi_pct": null,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "bass2_poster_2014"
+   ],
+   "row_ids": [
+    "R079",
+    "R081"
+   ],
+   "years": [
+    2014
+   ],
+   "measurands": [
+    "lowest oxygen with steady spreading",
+    "number of rods burned"
+   ],
+   "first_year": 2014
+  },
+  {
+   "tp_id": "TP021",
+   "test_id": "bass2_poster_2014:R082",
+   "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+   "family": "thick_plastic",
+   "direction_class": "against_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": null,
+   "o2_lo_pct": null,
+   "o2_hi_pct": null,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "bass2_poster_2014"
+   ],
+   "row_ids": [
+    "R082",
+    "R083",
+    "R084"
+   ],
+   "years": [
+    2014
+   ],
+   "measurands": [
+    "flow speed below which radiative quenching occurs",
+    "flow speed near blow-off extinction",
+    "test points obtained"
+   ],
+   "first_year": 2014
+  },
+  {
+   "tp_id": "TP022",
+   "test_id": "bass2_poster_2014:R085",
+   "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+   "family": "thick_plastic",
+   "direction_class": "against_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": 19.0,
+   "o2_lo_pct": 18.0,
+   "o2_hi_pct": 20.0,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "bass2_poster_2014"
+   ],
+   "row_ids": [
+    "R085"
+   ],
+   "years": [
+    2014
+   ],
+   "measurands": [
+    "test points obtained"
+   ],
+   "first_year": 2014
+  },
+  {
+   "tp_id": "TP023",
+   "test_id": "bass2_poster_2014:R086",
+   "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+   "family": "thick_plastic",
+   "direction_class": "unknown",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": 18.5,
+   "o2_lo_pct": 16.0,
+   "o2_hi_pct": 21.0,
+   "flow_cm_s": 2.2,
+   "flow_lo_cm_s": 0.4,
+   "flow_hi_cm_s": 4.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "bass2_poster_2014"
+   ],
+   "row_ids": [
+    "R086"
+   ],
+   "years": [
+    2014
+   ],
+   "measurands": [
+    "unique flame spread rates obtained"
+   ],
+   "first_year": 2014
+  },
+  {
+   "tp_id": "TP024",
+   "test_id": "bass2_poster_2014:R087",
+   "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+   "family": "thick_plastic",
+   "direction_class": "with_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": null,
+   "o2_lo_pct": null,
+   "o2_hi_pct": null,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "bass2_poster_2014"
+   ],
+   "row_ids": [
+    "R087"
+   ],
+   "years": [
+    2014
+   ],
+   "measurands": [
+    "tests conducted"
+   ],
+   "first_year": 2014
+  },
+  {
+   "tp_id": "TP025",
+   "test_id": "bass2_poster_2014:R087",
+   "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": null,
+   "o2_lo_pct": null,
+   "o2_hi_pct": null,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "bass2_poster_2014"
+   ],
+   "row_ids": [
+    "R087"
+   ],
+   "years": [
+    2014
+   ],
+   "measurands": [
+    "tests conducted"
+   ],
+   "first_year": 2014
+  },
+  {
+   "tp_id": "TP026",
+   "test_id": "bass2_poster_2014:R088",
+   "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": null,
+   "o2_lo_pct": null,
+   "o2_hi_pct": null,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "bass2_poster_2014"
+   ],
+   "row_ids": [
+    "R088"
+   ],
+   "years": [
+    2014
+   ],
+   "measurands": [
+    "quenching cases"
+   ],
+   "first_year": 2014
+  },
+  {
+   "tp_id": "TP027",
+   "test_id": "bass2_poster_2014:R089",
+   "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": 101.325,
+   "p_lo_kpa": 101.325,
+   "p_hi_kpa": 101.325,
+   "o2_pct": 18.7,
+   "o2_lo_pct": 18.7,
+   "o2_hi_pct": 18.7,
+   "flow_cm_s": 5.0,
+   "flow_lo_cm_s": 5.0,
+   "flow_hi_cm_s": 5.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "bass2_poster_2014"
+   ],
+   "row_ids": [
+    "R089"
+   ],
+   "years": [
+    2014
+   ],
+   "measurands": [
+    "flow speed after gradual reduction (quenching sequence)"
+   ],
+   "first_year": 2014
+  },
+  {
+   "tp_id": "TP028",
+   "test_id": "bass2_poster_2014:R091",
+   "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+   "family": "unknown",
+   "direction_class": "unknown",
+   "g": 0.0,
+   "g_class": "micro",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": null,
+   "o2_lo_pct": null,
+   "o2_hi_pct": 21.0,
+   "flow_cm_s": 27.5,
+   "flow_lo_cm_s": 0.0,
+   "flow_hi_cm_s": 55.0,
+   "evidence_tier": "Flight, orbital microgravity",
+   "sources": [
+    "bass2_poster_2014"
+   ],
+   "row_ids": [
+    "R091"
+   ],
+   "years": [
+    2014
+   ],
+   "measurands": [
+    "airflow speed range"
+   ],
+   "first_year": 2014
+  },
+  {
+   "tp_id": "TP029",
+   "test_id": "bass2_poster_2014:R078",
+   "label": "bass2_poster_2014 ground",
+   "family": "thick_plastic",
+   "direction_class": "unknown",
+   "g": 1.0,
+   "g_class": "earth",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": null,
+   "o2_pct": null,
+   "o2_lo_pct": null,
+   "o2_hi_pct": null,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Ground, 1 g",
+   "sources": [
+    "bass2_poster_2014"
+   ],
+   "row_ids": [
+    "R078"
+   ],
+   "years": [
+    2014
+   ],
+   "measurands": [
+    "blowoff limit oxygen"
+   ],
+   "first_year": 2014
+  },
+  {
+   "tp_id": "TP030",
+   "test_id": "feier_2001:R097",
+   "label": "feier_2001 NASA KC-135 aircraft",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 0.1,
+   "g_class": "partial_low",
+   "p_kpa": 30.3975,
+   "p_lo_kpa": 20.265,
+   "p_hi_kpa": 40.53,
+   "o2_pct": 21.0,
+   "o2_lo_pct": 21.0,
+   "o2_hi_pct": 21.0,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Aircraft, partial gravity",
+   "sources": [
+    "feier_2001"
+   ],
+   "row_ids": [
+    "R097",
+    "R098"
+   ],
+   "years": [
+    2001
+   ],
+   "measurands": [
+    "time within 15% of nominal acceleration",
+    "partial-gravity parabolas per flight"
+   ],
+   "first_year": 2001
+  },
+  {
+   "tp_id": "TP031",
+   "test_id": "feier_2001:R097",
+   "label": "feier_2001 NASA KC-135 aircraft",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 0.16,
+   "g_class": "lunar",
+   "p_kpa": 30.3975,
+   "p_lo_kpa": 20.265,
+   "p_hi_kpa": 40.53,
+   "o2_pct": 21.0,
+   "o2_lo_pct": 21.0,
+   "o2_hi_pct": 21.0,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Aircraft, partial gravity",
+   "sources": [
+    "feier_2001"
+   ],
+   "row_ids": [
+    "R097",
+    "R098"
+   ],
+   "years": [
+    2001
+   ],
+   "measurands": [
+    "time within 15% of nominal acceleration",
+    "partial-gravity parabolas per flight"
+   ],
+   "first_year": 2001
+  },
+  {
+   "tp_id": "TP032",
+   "test_id": "feier_2001:R097",
+   "label": "feier_2001 NASA KC-135 aircraft",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 0.38,
+   "g_class": "mars",
+   "p_kpa": 30.3975,
+   "p_lo_kpa": 20.265,
+   "p_hi_kpa": 40.53,
+   "o2_pct": 21.0,
+   "o2_lo_pct": 21.0,
+   "o2_hi_pct": 21.0,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Aircraft, partial gravity",
+   "sources": [
+    "feier_2001"
+   ],
+   "row_ids": [
+    "R097",
+    "R098"
+   ],
+   "years": [
+    2001
+   ],
+   "measurands": [
+    "time within 15% of nominal acceleration",
+    "partial-gravity parabolas per flight"
+   ],
+   "first_year": 2001
+  },
+  {
+   "tp_id": "TP033",
+   "test_id": "feier_2001:R095",
+   "label": "feier_2001 ground",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 1.0,
+   "g_class": "earth",
+   "p_kpa": null,
+   "p_lo_kpa": 15.19875,
+   "p_hi_kpa": null,
+   "o2_pct": 20.946,
+   "o2_lo_pct": 20.946,
+   "o2_hi_pct": 20.946,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Ground, 1 g",
+   "sources": [
+    "feier_2001"
+   ],
+   "row_ids": [
+    "R095"
+   ],
+   "years": [
+    2001
+   ],
+   "measurands": [
+    "outcome above this pressure"
+   ],
+   "first_year": 2001
+  },
+  {
+   "tp_id": "TP034",
+   "test_id": "feier_2001:R096",
+   "label": "feier_2001 ground",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 1.0,
+   "g_class": "earth",
+   "p_kpa": null,
+   "p_lo_kpa": null,
+   "p_hi_kpa": 10.1325,
+   "o2_pct": 20.946,
+   "o2_lo_pct": 20.946,
+   "o2_hi_pct": 20.946,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Ground, 1 g",
+   "sources": [
+    "feier_2001"
+   ],
+   "row_ids": [
+    "R096"
+   ],
+   "years": [
+    2001
+   ],
+   "measurands": [
+    "outcome below this pressure"
+   ],
+   "first_year": 2001
+  },
+  {
+   "tp_id": "TP035",
+   "test_id": "sacksteder_2003:R092",
+   "label": "sacksteder_2003 NASA KC-135 aircraft",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 0.1,
+   "g_class": "partial_low",
+   "p_kpa": 27.6,
+   "p_lo_kpa": 27.6,
+   "p_hi_kpa": 27.6,
+   "o2_pct": 20.946,
+   "o2_lo_pct": 20.946,
+   "o2_hi_pct": 20.946,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Aircraft, partial gravity",
+   "sources": [
+    "sacksteder_2003"
+   ],
+   "row_ids": [
+    "R092"
+   ],
+   "years": [
+    2003
+   ],
+   "measurands": [
+    "dependence of upward spread rate on gravity"
+   ],
+   "first_year": 2003
+  },
+  {
+   "tp_id": "TP036",
+   "test_id": "sacksteder_2003:R093",
+   "label": "sacksteder_2003 NASA KC-135 aircraft",
+   "family": "thin_fabric",
+   "direction_class": "against_flow",
+   "g": 0.1,
+   "g_class": "partial_low",
+   "p_kpa": 27.6,
+   "p_lo_kpa": 27.6,
+   "p_hi_kpa": 27.6,
+   "o2_pct": 20.946,
+   "o2_lo_pct": 20.946,
+   "o2_hi_pct": 20.946,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Aircraft, partial gravity",
+   "sources": [
+    "sacksteder_2003"
+   ],
+   "row_ids": [
+    "R093"
+   ],
+   "years": [
+    2003
+   ],
+   "measurands": [
+    "gravity level at which downward spread rate peaks"
+   ],
+   "first_year": 2003
+  },
+  {
+   "tp_id": "TP037",
+   "test_id": "sacksteder_2003:R092",
+   "label": "sacksteder_2003 NASA KC-135 aircraft",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 0.16,
+   "g_class": "lunar",
+   "p_kpa": 27.6,
+   "p_lo_kpa": 27.6,
+   "p_hi_kpa": 27.6,
+   "o2_pct": 20.946,
+   "o2_lo_pct": 20.946,
+   "o2_hi_pct": 20.946,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Aircraft, partial gravity",
+   "sources": [
+    "sacksteder_2003"
+   ],
+   "row_ids": [
+    "R092"
+   ],
+   "years": [
+    2003
+   ],
+   "measurands": [
+    "dependence of upward spread rate on gravity"
+   ],
+   "first_year": 2003
+  },
+  {
+   "tp_id": "TP038",
+   "test_id": "sacksteder_2003:R093",
+   "label": "sacksteder_2003 NASA KC-135 aircraft",
+   "family": "thin_fabric",
+   "direction_class": "against_flow",
+   "g": 0.16,
+   "g_class": "lunar",
+   "p_kpa": 27.6,
+   "p_lo_kpa": 27.6,
+   "p_hi_kpa": 27.6,
+   "o2_pct": 20.946,
+   "o2_lo_pct": 20.946,
+   "o2_hi_pct": 20.946,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Aircraft, partial gravity",
+   "sources": [
+    "sacksteder_2003"
+   ],
+   "row_ids": [
+    "R093"
+   ],
+   "years": [
+    2003
+   ],
+   "measurands": [
+    "gravity level at which downward spread rate peaks"
+   ],
+   "first_year": 2003
+  },
+  {
+   "tp_id": "TP039",
+   "test_id": "sacksteder_2003:R092",
+   "label": "sacksteder_2003 NASA KC-135 aircraft",
+   "family": "thin_fabric",
+   "direction_class": "with_flow",
+   "g": 0.38,
+   "g_class": "mars",
+   "p_kpa": 27.6,
+   "p_lo_kpa": 27.6,
+   "p_hi_kpa": 27.6,
+   "o2_pct": 20.946,
+   "o2_lo_pct": 20.946,
+   "o2_hi_pct": 20.946,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Aircraft, partial gravity",
+   "sources": [
+    "sacksteder_2003"
+   ],
+   "row_ids": [
+    "R092"
+   ],
+   "years": [
+    2003
+   ],
+   "measurands": [
+    "dependence of upward spread rate on gravity"
+   ],
+   "first_year": 2003
+  },
+  {
+   "tp_id": "TP040",
+   "test_id": "sacksteder_2003:R093",
+   "label": "sacksteder_2003 NASA KC-135 aircraft",
+   "family": "thin_fabric",
+   "direction_class": "against_flow",
+   "g": 0.38,
+   "g_class": "mars",
+   "p_kpa": 27.6,
+   "p_lo_kpa": 27.6,
+   "p_hi_kpa": 27.6,
+   "o2_pct": 20.946,
+   "o2_lo_pct": 20.946,
+   "o2_hi_pct": 20.946,
+   "flow_cm_s": null,
+   "flow_lo_cm_s": null,
+   "flow_hi_cm_s": null,
+   "evidence_tier": "Aircraft, partial gravity",
+   "sources": [
+    "sacksteder_2003"
+   ],
+   "row_ids": [
+    "R093"
+   ],
+   "years": [
+    2003
+   ],
+   "measurands": [
+    "gravity level at which downward spread rate peaks"
+   ],
+   "first_year": 2003
+  }
+ ]
+}

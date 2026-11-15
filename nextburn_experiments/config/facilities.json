@@ -1,0 +1,170 @@
+{
+  "version": "1.0",
+  "basis": "NextBurn plan facility table and Appendix A facility data; atmosphere envelopes marked 'assumed' are NextBurn assumptions, not facility specifications",
+  "facilities": [
+    {
+      "id": "drop_2_2s",
+      "name": "NASA Glenn 2.2 Second Drop Tower",
+      "gravity_levels": [
+        0.0
+      ],
+      "test_time_s": 2.2,
+      "cost_tier": 1,
+      "thick_ok": false,
+      "atmosphere": {
+        "o2_max_pct": 40,
+        "p_min_kpa": 30,
+        "p_max_kpa": 102,
+        "status": "assumed (depends on the rig)"
+      },
+      "available": true
+    },
+    {
+      "id": "zgrf_5_18s",
+      "name": "NASA Glenn Zero Gravity Research Facility (5.18 s), with centrifuge drop rig",
+      "gravity_levels": [
+        0.0,
+        "lunar_nominal"
+      ],
+      "test_time_s": 5.18,
+      "cost_tier": 2,
+      "thick_ok": false,
+      "atmosphere": {
+        "o2_max_pct": 40,
+        "p_min_kpa": 30,
+        "p_max_kpa": 102,
+        "status": "assumed (flow tunnel with oxygen and pressure control)"
+      },
+      "available": true
+    },
+    {
+      "id": "zarm_drop",
+      "name": "ZARM Bremen drop tower (4.7 s drop, 9.3 s catapult)",
+      "gravity_levels": [
+        0.0
+      ],
+      "test_time_s": 9.3,
+      "cost_tier": 2,
+      "thick_ok": false,
+      "atmosphere": {
+        "o2_max_pct": 40,
+        "p_min_kpa": 30,
+        "p_max_kpa": 102,
+        "status": "assumed (depends on the rig)"
+      },
+      "available": true
+    },
+    {
+      "id": "parabolic_nasa",
+      "name": "NASA parabolic flight (about 20 s per parabola)",
+      "gravity_levels": [
+        0.0,
+        0.1,
+        0.1667,
+        0.3333,
+        0.5
+      ],
+      "test_time_s": 20.0,
+      "cost_tier": 2,
+      "thick_ok": false,
+      "atmosphere": {
+        "o2_max_pct": 40,
+        "p_min_kpa": 30,
+        "p_max_kpa": 102,
+        "status": "assumed (depends on the rig)"
+      },
+      "available": true
+    },
+    {
+      "id": "parabolic_novespace",
+      "name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+      "gravity_levels": [
+        0.16,
+        0.38
+      ],
+      "test_time_s": 25.0,
+      "test_time_by_level_s": {
+        "0.16": 25.0,
+        "0.38": 30.0
+      },
+      "cost_tier": 2,
+      "thick_ok": false,
+      "atmosphere": {
+        "o2_max_pct": 40,
+        "p_min_kpa": 30,
+        "p_max_kpa": 102,
+        "status": "assumed (depends on the rig)"
+      },
+      "available": true
+    },
+    {
+      "id": "new_shepard_spin",
+      "name": "Blue Origin New Shepard spin, as flown by LUCI (about 2 minutes)",
+      "gravity_levels": [
+        "luci_spin"
+      ],
+      "test_time_s": 120.0,
+      "cost_tier": 3,
+      "thick_ok": true,
+      "atmosphere": {
+        "o2_min_pct": 20.0,
+        "o2_max_pct": 21.5,
+        "p_min_kpa": 95,
+        "p_max_kpa": 102,
+        "status": "as flown: air at normal pressure"
+      },
+      "available": true
+    },
+    {
+      "id": "iss_sofie",
+      "name": "Space station combustion rack (SoFIE)",
+      "gravity_levels": [
+        0.0
+      ],
+      "test_time_s": 3600.0,
+      "cost_tier": 4,
+      "thick_ok": true,
+      "atmosphere": {
+        "o2_max_pct": 34,
+        "p_min_kpa": 15.2,
+        "p_max_kpa": 111.5,
+        "status": "SoFIE-GEL ranges: oxygen 13 to 34%, pressure 0.15 to 1.1 atm"
+      },
+      "available": true
+    },
+    {
+      "id": "fm2_moon",
+      "name": "FM2 on the Moon",
+      "gravity_levels": [
+        "lunar_nominal"
+      ],
+      "test_time_s": 600.0,
+      "cost_tier": 5,
+      "thick_ok": true,
+      "atmosphere": {
+        "o2_max_pct": 34,
+        "p_min_kpa": 0,
+        "p_max_kpa": 101.3,
+        "status": "0 to 1 atm and 0 to 34% oxygen"
+      },
+      "available": false,
+      "note": "Four samples already allocated; not a candidate"
+    }
+  ],
+  "measurands": {
+    "spread_rate": {
+      "min_time_s_thin": 20.0,
+      "min_time_s_thick": 100.0,
+      "note": "Thin fuels need about 2 cm of burn at about 0.1 cm/s; thick samples need long burns (BASS team)"
+    },
+    "go_no_go": {
+      "min_time_s_thin": 2.0,
+      "thick": false,
+      "note": "Ignition or extinction limit test; thin fuels only in short facilities"
+    }
+  },
+  "gravity_level_names": {
+    "lunar_nominal": "NASA fact-sheet lunar gravity (computed at run time)",
+    "luci_spin": "LUCI spin gravity from 11 rpm at 1.22 m (computed at run time)"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "experiment": 6,
+  "label": "SIMULATION",
+  "title": "Experiment 6: Planner efficiency (SIMULATION)",
+  "headline": "In simulation (200 random two-variable boundaries), choosing each test by uncertainty found the minimum extinction oxygen within 0.5 points in a median of 11 tests (80th percentile 14) versus 24 (80th percentile 30) for the plan's fixed 6x6 test matrix, with 100% vs 86% success.",
+  "claim": "Choosing each test by uncertainty needed about half the tests of a fixed matrix run in the plan's order, in simulation (median 11 vs 24 tests, success 100% vs 86%, 200 simulated two-variable boundaries); a matrix that includes 1.1 atm, where the simulated minimum always lies, and runs that row first needed fewer at the median (9) but succeeded less often (92%) and had a longer tail (80th percentile 23.4 vs 14).",
+  "pass": true,
+  "caveats": [
+    "The saving depends on how the fixed matrix is laid out. MOC rises as pressure falls, so the simulated minimum always lies at 1.1 atm. A 6x6 matrix that includes 1.1 atm and runs that row first needed a median of 9 tests (80th percentile 23.4, success 92%). The uncertainty-driven planner, given no hint about where the hazard lies, needed a median of 11 (80th percentile 14, success 100%). The planner's advantage is that it does not need that prior knowledge, not that it beats every matrix at the median. See the fixed-matrix layout table."
+  ],
+  "budget_tests": 40,
+  "tolerance_o2_pts": 0.5,
+  "variants": {
+    "two_variable": {
+      "n_boundaries": 200,
+      "strategies": [
+        {
+          "name": "fixed_matrix",
+          "label": "Fixed 6x6 test matrix (6 flows x 6 pressures)",
+          "success_rate": 0.86,
+          "median_tests": 24.0,
+          "p80_tests": 30.0
+        },
+        {
+          "name": "space_filling",
+          "label": "Space-filling (Halton)",
+          "success_rate": 0.775,
+          "median_tests": 22.5,
+          "p80_tests": null
+        },
+        {
+          "name": "random",
+          "label": "Random",
+          "success_rate": 0.77,
+          "median_tests": 26.0,
+          "p80_tests": null
+        },
+        {
+          "name": "uncertainty_driven",
+          "label": "Uncertainty-driven (lower confidence bound)",
+          "success_rate": 1.0,
+          "median_tests": 11.0,
+          "p80_tests": 14.0
+        }
+      ]
+    },
+    "go_no_go": {
+      "n_boundaries": 200,
+      "strategies": [
+        {
+          "name": "fixed_matrix",
+          "label": "Fixed 6x6 test matrix (6 flows x 6 oxygen levels)",
+          "success_rate": 0.5,
+          "median_tests": null,
+          "p80_tests": null
+        },
+        {
+          "name": "space_filling",
+          "label": "Space-filling (Halton)",
+          "success_rate": 0.55,
+          "median_tests": 36.0,
+          "p80_tests": null
+        },
+        {
+          "name": "random",
+          "label": "Random",
+          "success_rate": 0.48,
+          "median_tests": null,
+          "p80_tests": null
+        },
+        {
+          "name": "uncertainty_driven",
+          "label": "Uncertainty-driven (lower confidence bound)",
+          "success_rate": 0.995,
+          "median_tests": 11.0,
+          "p80_tests": 14.0
+        }
+      ]
+    },
+    "one_variable": {
+      "n_boundaries": 200,
+      "strategies": [
+        {
+          "name": "fixed_matrix",
+          "label": "Fixed sweep (6 flows, repeated low to high)",
+          "success_rate": 1.0,
+          "median_tests": 4.0,
+          "p80_tests": 10.0
+        },
+        {
+          "name": "space_filling",
+          "label": "Space-filling (Halton)",
+          "success_rate": 1.0,
+          "median_tests": 4.0,
+          "p80_tests": 10.0
+        },
+        {
+          "name": "random",
+          "label": "Random",
+          "success_rate": 0.985,
+          "median_tests": 6.0,
+          "p80_tests": 12.0
+        },
+        {
+          "name": "uncertainty_driven",
+          "label": "Uncertainty-driven (lower confidence bound)",
+          "success_rate": 1.0,
+          "median_tests": 4.0,
+          "p80_tests": 9.0
+        }
+      ]
+    }
+  },
+  "fixed_matrix_sensitivity_two_variable": [
+    {
+      "order": "flow_major",
+      "levels": "inset",
+      "main": true,
+      "success_rate": 0.86,
+      "median_tests": 24.0,
+      "p80_tests": 30.0
+    },
+    {
+      "order": "pressure_high_first",
+      "levels": "inset",
+      "main": false,
+      "success_rate": 0.9,
+      "median_tests": 10.0,
+      "p80_tests": 39.0
+    },
+    {
+      "order": "pressure_low_first",
+      "levels": "inset",
+      "main": false,
+      "success_rate": 0.81,
+      "median_tests": 33.0,
+      "p80_tests": 36.2
+    },
+    {
+      "order": "shuffled",
+      "levels": "inset",
+      "main": false,
+      "success_rate": 0.78,
+      "median_tests": 18.0,
+      "p80_tests": null
+    },
+    {
+      "order": "flow_major",
+      "levels": "endpoints",
+      "main": false,
+      "success_rate": 0.885,
+      "median_tests": 23.0,
+      "p80_tests": 30.0
+    },
+    {
+      "order": "pressure_high_first",
+      "levels": "endpoints",
+      "main": false,
+      "success_rate": 0.92,
+      "median_tests": 9.0,
+      "p80_tests": 23.4
+    }
+  ],
+  "note": "SIMULATION: simulated boundaries anchored on SoFIE-GEL ranges, not NASA data. null median/p80 = not reached within the 40-test budget.",
+  "source": "results/exp6/results.json",
+  "generated_at": "2026-11-15T09:07:39+00:00"
+}

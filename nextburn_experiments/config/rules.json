@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "frozen_at_utc": "2026-11-15T07:56:00Z",
+  "purpose": "Candidate gravity-scaling rules for the lunar-to-Earth spread-rate ratio, ratio = g_ratio ** n. Chosen from standard scaling arguments, not fitted to LUCI.",
+  "rules": [
+    {
+      "id": "sqrt",
+      "label": "Square root (n = 1/2)",
+      "n": 0.5
+    },
+    {
+      "id": "cube_root",
+      "label": "Cube root (n = 1/3)",
+      "n": 0.3333333333333333
+    },
+    {
+      "id": "linear",
+      "label": "Linear (n = 1)",
+      "n": 1.0
+    }
+  ],
+  "hit_threshold_pct": 10.0,
+  "honesty_note": "The team had seen the LUCI presentation before this file was frozen, so this is a check of rules that were not fitted to LUCI, not a blind prediction."
+}

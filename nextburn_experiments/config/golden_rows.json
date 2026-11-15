@@ -1,0 +1,88 @@
+{
+  "version": "1.0",
+  "basis": "Hand-verified reference rows listed in the plan (Experiment 2). Each value is also checked against the source text when the source folder is available.",
+  "saffire": [
+    {
+      "test": "IV-1",
+      "material_family": "thin_fabric",
+      "p_kpa": 100.0,
+      "o2_pct": 22.0,
+      "flow_cm_s": 20.0,
+      "direction": "with_flow"
+    },
+    {
+      "test": "VI-2",
+      "material_family": "thin_fabric",
+      "p_kpa": 54.1,
+      "o2_pct": 31.0,
+      "flow_cm_s": 20.0,
+      "direction": "with_flow"
+    },
+    {
+      "test": "VI-3",
+      "material_family": "thick_plastic",
+      "p_kpa": 54.6,
+      "o2_pct": 30.3,
+      "flow_cm_s": 20.0,
+      "direction": "with_flow"
+    },
+    {
+      "test": "VI-4",
+      "material_family": "thick_plastic",
+      "p_kpa": 55.2,
+      "o2_pct": 28.8,
+      "flow_cm_s": 20.0,
+      "direction": "with_flow"
+    }
+  ],
+  "fm2_atmospheres": [
+    {
+      "material_family": "thin_fabric",
+      "o2_pct": 21.0,
+      "p_psia": 14.7
+    },
+    {
+      "material_family": "thick_plastic",
+      "o2_pct": 34.0,
+      "p_psia": 8.2
+    }
+  ],
+  "luci_spin": {
+    "rpm": 11.0,
+    "radius_m": 1.22,
+    "o2": "air",
+    "pressure": "normal pressure"
+  },
+  "source_quotes": {
+    "IV-1": [
+      "100.0",
+      "22.0"
+    ],
+    "VI-2": [
+      "54.1",
+      "31.0"
+    ],
+    "VI-3": [
+      "54.6",
+      "30.3"
+    ],
+    "VI-4": [
+      "55.2",
+      "28.8"
+    ]
+  },
+  "derived_ppo2_psia": [
+    {
+      "label": "Moon base, 34% oxygen at 8.2 psia (plan states 2.79 psia)",
+      "o2_pct": 34.0,
+      "p_psia": 8.2,
+      "stated_ppo2_psia": 2.79
+    },
+    {
+      "label": "Sea-level air, 20.946% oxygen at 14.7 psia (plan states 3.08 psia)",
+      "o2_pct": 20.946,
+      "p_psia": 14.7,
+      "stated_ppo2_psia": 3.08
+    }
+  ]
+}

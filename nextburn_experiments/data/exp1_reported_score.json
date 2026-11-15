@@ -1,0 +1,534 @@
+{
+ "ok": true,
+ "run_id": "AUD-20261115-055827-3cc2",
+ "scoring": "001",
+ "time_utc": "2026-11-15T05:58:28Z",
+ "operator": "Copilot (AI assistant)",
+ "note": "Replay of Experiment 1 (ledger v1). Checkers: 3 AI reviewers. Review of findings: AI, extraction side. A human review of the 19 findings is still necessary.",
+ "result": "NOT SATISFACTORY",
+ "status": "scored",
+ "limits": {
+  "field_limit": 0.98,
+  "provenance_limit": 1.0
+ },
+ "gate": {
+  "field_accuracy_passed": false,
+  "provenance_passed": true,
+  "fields_needed_ok": 637,
+  "errors_permitted": 13,
+  "errors_after_review": 18
+ },
+ "raw": {
+  "fields_checked": 650,
+  "fields_ok": 631,
+  "field_accuracy": 0.9707692307692307,
+  "field_ci95": [
+   0.9547981952624734,
+   0.9812083237476353
+  ],
+  "rows_checked": 50,
+  "rows_all_ok": 34,
+  "row_accuracy": 0.68,
+  "row_ci95": [
+   0.5418944286372392,
+   0.792419559060006
+  ],
+  "by_field": {
+   "locator": {
+    "ok": 49,
+    "n": 50
+   },
+   "platform": {
+    "ok": 46,
+    "n": 50
+   },
+   "gravity": {
+    "ok": 50,
+    "n": 50
+   },
+   "material": {
+    "ok": 49,
+    "n": 50
+   },
+   "geometry": {
+    "ok": 45,
+    "n": 50
+   },
+   "direction": {
+    "ok": 48,
+    "n": 50
+   },
+   "flow": {
+    "ok": 49,
+    "n": 50
+   },
+   "pressure": {
+    "ok": 50,
+    "n": 50
+   },
+   "oxygen": {
+    "ok": 45,
+    "n": 50
+   },
+   "measurement": {
+    "ok": 50,
+    "n": 50
+   },
+   "value": {
+    "ok": 50,
+    "n": 50
+   },
+   "unit": {
+    "ok": 50,
+    "n": 50
+   },
+   "qualifier": {
+    "ok": 50,
+    "n": 50
+   }
+  },
+  "by_source": {
+   "bass2_poster_2014": {
+    "ok": 89,
+    "n": 91
+   },
+   "feier_2001": {
+    "ok": 23,
+    "n": 26
+   },
+   "fm2_poster_2024": {
+    "ok": 39,
+    "n": 39
+   },
+   "luci_2025": {
+    "ok": 163,
+    "n": 169
+   },
+   "sacksteder_2003": {
+    "ok": 23,
+    "n": 26
+   },
+   "saffire45_paper_2021": {
+    "ok": 99,
+    "n": 104
+   },
+   "saffire6_paper_2024": {
+    "ok": 169,
+    "n": 169
+   },
+   "saffire6_pres_2024": {
+    "ok": 26,
+    "n": 26
+   }
+  },
+  "error_types": {
+   "MISSED": 12,
+   "NOT_IN_SOURCE": 4,
+   "WRONG": 3
+  }
+ },
+ "final": {
+  "fields_checked": 650,
+  "fields_ok": 632,
+  "field_accuracy": 0.9723076923076923,
+  "field_ci95": [
+   0.9566524948072369,
+   0.9824128690362383
+  ],
+  "rows_checked": 50,
+  "rows_all_ok": 35,
+  "row_accuracy": 0.7,
+  "row_ci95": [
+   0.562493877226366,
+   0.8089661091039063
+  ],
+  "by_field": {
+   "locator": {
+    "ok": 49,
+    "n": 50
+   },
+   "platform": {
+    "ok": 46,
+    "n": 50
+   },
+   "gravity": {
+    "ok": 50,
+    "n": 50
+   },
+   "material": {
+    "ok": 49,
+    "n": 50
+   },
+   "geometry": {
+    "ok": 46,
+    "n": 50
+   },
+   "direction": {
+    "ok": 48,
+    "n": 50
+   },
+   "flow": {
+    "ok": 49,
+    "n": 50
+   },
+   "pressure": {
+    "ok": 50,
+    "n": 50
+   },
+   "oxygen": {
+    "ok": 45,
+    "n": 50
+   },
+   "measurement": {
+    "ok": 50,
+    "n": 50
+   },
+   "value": {
+    "ok": 50,
+    "n": 50
+   },
+   "unit": {
+    "ok": 50,
+    "n": 50
+   },
+   "qualifier": {
+    "ok": 50,
+    "n": 50
+   }
+  },
+  "by_source": {
+   "bass2_poster_2014": {
+    "ok": 90,
+    "n": 91
+   },
+   "feier_2001": {
+    "ok": 23,
+    "n": 26
+   },
+   "fm2_poster_2024": {
+    "ok": 39,
+    "n": 39
+   },
+   "luci_2025": {
+    "ok": 163,
+    "n": 169
+   },
+   "sacksteder_2003": {
+    "ok": 23,
+    "n": 26
+   },
+   "saffire45_paper_2021": {
+    "ok": 99,
+    "n": 104
+   },
+   "saffire6_paper_2024": {
+    "ok": 169,
+    "n": 169
+   },
+   "saffire6_pres_2024": {
+    "ok": 26,
+    "n": 26
+   }
+  },
+  "error_types": {
+   "MISSED": 11,
+   "NOT_IN_SOURCE": 4,
+   "WRONG": 3
+  }
+ },
+ "numbers_only": {
+  "fields": [
+   "measurement",
+   "value",
+   "unit",
+   "qualifier"
+  ],
+  "checks": 200,
+  "ok": 200,
+  "accuracy": 1.0,
+  "ci95": [
+   0.9811539940816792,
+   1.0
+  ]
+ },
+ "bootstrap": {
+  "resamples": 10000,
+  "seed": 2026,
+  "ci95": [
+   0.9584615384615385,
+   0.9846153846153847
+  ],
+  "share_at_or_above_limit": 0.1479
+ },
+ "provenance": {
+  "rows": 98,
+  "rows_with_source_and_locator": 98,
+  "rows_with_quote_in_source": 98
+ },
+ "review": {
+  "findings": 19,
+  "upheld": 18,
+  "overturned": 1,
+  "added": 0,
+  "pending": 0,
+  "root_causes": {
+   "condition stated on another slide of the same source": 5,
+   "fact inferred from outside the cited source": 4,
+   "condition stated elsewhere in the same source": 3,
+   "incomplete transcription": 1,
+   "condition stated elsewhere in the same panel": 1,
+   "imprecise transcription": 1,
+   "condition stated in a figure caption": 1,
+   "condition stated elsewhere in the same section": 1,
+   "imprecise locator": 1
+  }
+ },
+ "quotes": {
+  "checked": 147,
+  "not_found": [],
+  "match_levels": {
+   "exact": 147
+  },
+  "rows_with_finding_but_no_quote": [],
+  "rows_value_not_in_quotes": [
+   "R098"
+  ]
+ },
+ "findings": [
+  {
+   "row_id": "R003",
+   "source_id": "luci_2025",
+   "field": "oxygen",
+   "ledger_value": "not stated",
+   "raw": "MISSED",
+   "decision": "upheld",
+   "final": "MISSED",
+   "correct": "~20% O2 (roughly constant during the 1-g SIBAL burn)",
+   "cause": "condition stated on another slide of the same source",
+   "reason": "1-G SIBAL slide: O2 roughly constant at 20%"
+  },
+  {
+   "row_id": "R004",
+   "source_id": "luci_2025",
+   "field": "oxygen",
+   "ledger_value": "not stated",
+   "raw": "MISSED",
+   "decision": "upheld",
+   "final": "MISSED",
+   "correct": "~20% O2 (roughly constant during the 1-g SIBAL burn)",
+   "cause": "condition stated on another slide of the same source",
+   "reason": "1-G SIBAL slide: O2 roughly constant at 20%"
+  },
+  {
+   "row_id": "R006",
+   "source_id": "luci_2025",
+   "field": "oxygen",
+   "ledger_value": "not stated",
+   "raw": "MISSED",
+   "decision": "upheld",
+   "final": "MISSED",
+   "correct": "air, ~20% O2 (1-g burn roughly constant at 20%; lunar burn fell from ~20% to ~18%)",
+   "cause": "condition stated on another slide of the same source",
+   "reason": "both burns in air (lunar burn 'in air at normal pressure'; 1-g burn ~20%)"
+  },
+  {
+   "row_id": "R011",
+   "source_id": "luci_2025",
+   "field": "oxygen",
+   "ledger_value": "not stated",
+   "raw": "MISSED",
+   "decision": "upheld",
+   "final": "MISSED",
+   "correct": "~21% O2 at start, decreasing ~linearly to 14.5% during the 1-g PMMA burn",
+   "cause": "condition stated on another slide of the same source",
+   "reason": "1-G PMMA slide: O2 from 21% falling to 14.5%"
+  },
+  {
+   "row_id": "R015",
+   "source_id": "luci_2025",
+   "field": "oxygen",
+   "ledger_value": "not stated",
+   "raw": "MISSED",
+   "decision": "upheld",
+   "final": "MISSED",
+   "correct": "about 21% at start, falling ~linearly to 14.5% during the 1-g burn",
+   "cause": "condition stated on another slide of the same source",
+   "reason": "same bullet gives starting O2 of 21%"
+  },
+  {
+   "row_id": "R024",
+   "source_id": "luci_2025",
+   "field": "geometry",
+   "ledger_value": "not stated",
+   "raw": "MISSED",
+   "decision": "upheld",
+   "final": "MISSED",
+   "correct": "fabric sheet and 4-mm diameter acrylic (PMMA) rod (fabric is 5 cm x 30 cm per schematic slide)",
+   "cause": "condition stated elsewhere in the same source",
+   "reason": "summary bullets name a fabric sheet and a 4-mm diameter rod"
+  },
+  {
+   "row_id": "R057",
+   "source_id": "saffire45_paper_2021",
+   "field": "platform",
+   "ledger_value": "Cygnus cargo spacecraft (in orbit), Saffire I-1",
+   "raw": "NOT_IN_SOURCE",
+   "decision": "upheld",
+   "final": "NOT_IN_SOURCE",
+   "correct": "orbiting spacecraft, Saffire I flight (vehicle not named in this source)",
+   "cause": "fact inferred from outside the cited source",
+   "reason": "this paper names Cygnus only for Saffire IV and V"
+  },
+  {
+   "row_id": "R058",
+   "source_id": "saffire45_paper_2021",
+   "field": "platform",
+   "ledger_value": "Cygnus cargo spacecraft (in orbit), Saffire II-5",
+   "raw": "NOT_IN_SOURCE",
+   "decision": "upheld",
+   "final": "NOT_IN_SOURCE",
+   "correct": "orbiting spacecraft, Saffire II-5 (vehicle not named in this source)",
+   "cause": "fact inferred from outside the cited source",
+   "reason": "this paper names Cygnus only for Saffire IV and V"
+  },
+  {
+   "row_id": "R060",
+   "source_id": "saffire45_paper_2021",
+   "field": "platform",
+   "ledger_value": "Cygnus cargo spacecraft (in orbit), Saffire II-6",
+   "raw": "NOT_IN_SOURCE",
+   "decision": "upheld",
+   "final": "NOT_IN_SOURCE",
+   "correct": "Saffire II spacecraft flight in orbit (microgravity); this source does not name the vehicle for Saffire I-III",
+   "cause": "fact inferred from outside the cited source",
+   "reason": "this paper names Cygnus only for Saffire IV and V"
+  },
+  {
+   "row_id": "R061",
+   "source_id": "saffire45_paper_2021",
+   "field": "platform",
+   "ledger_value": "Cygnus cargo spacecraft (in orbit), Saffire II-6",
+   "raw": "NOT_IN_SOURCE",
+   "decision": "upheld",
+   "final": "NOT_IN_SOURCE",
+   "correct": "orbiting spacecraft, Saffire II flight (vehicle not named in this source)",
+   "cause": "fact inferred from outside the cited source",
+   "reason": "this paper names Cygnus only for Saffire IV and V"
+  },
+  {
+   "row_id": "R070",
+   "source_id": "saffire45_paper_2021",
+   "field": "flow",
+   "ledger_value": "20 cm/s, then fan off",
+   "raw": "WRONG",
+   "decision": "upheld",
+   "final": "WRONG",
+   "correct": "20 cm/s, reduced to 5 cm/s and held 300 s, then fan off",
+   "cause": "incomplete transcription",
+   "reason": "flow was reduced from 20 to 5 cm/s and held 300 s before the fan was turned off"
+  },
+  {
+   "row_id": "R081",
+   "source_id": "bass2_poster_2014",
+   "field": "geometry",
+   "ledger_value": "not stated",
+   "raw": "MISSED",
+   "decision": "overturned",
+   "final": "OK",
+   "correct": "1/4-inch diameter rod",
+   "cause": "checker over-reach",
+   "reason": "the poster gives 1/4 inch only for the rod in the 1-g comparison, not for all 24 rods; 'not stated' is correct"
+  },
+  {
+   "row_id": "R084",
+   "source_id": "bass2_poster_2014",
+   "field": "direction",
+   "ledger_value": "not stated",
+   "raw": "MISSED",
+   "decision": "upheld",
+   "final": "MISSED",
+   "correct": "opposed flow (opposing flow)",
+   "cause": "condition stated elsewhere in the same panel",
+   "reason": "panel compares extinction at low opposing flow velocity"
+  },
+  {
+   "row_id": "R094",
+   "source_id": "sacksteder_2003",
+   "field": "material",
+   "ledger_value": "thin solid fuel (model)",
+   "raw": "WRONG",
+   "decision": "upheld",
+   "final": "WRONG",
+   "correct": "cotton/fiberglass composite fuel (simulated)",
+   "cause": "imprecise transcription",
+   "reason": "source: 'A cotton fiberglass composite fuel was simulated'"
+  },
+  {
+   "row_id": "R094",
+   "source_id": "sacksteder_2003",
+   "field": "geometry",
+   "ledger_value": "not stated",
+   "raw": "MISSED",
+   "decision": "upheld",
+   "final": "MISSED",
+   "correct": "5 cm wide x 15 cm long sample (6 mm inert side stripes) in a 10 cm x 10 cm x 50 cm vertical flow tunnel",
+   "cause": "condition stated in a figure caption",
+   "reason": "Figure 3 caption: samples 5 cm wide by 15 cm long in a vertical flow tunnel"
+  },
+  {
+   "row_id": "R094",
+   "source_id": "sacksteder_2003",
+   "field": "direction",
+   "ledger_value": "not stated",
+   "raw": "MISSED",
+   "decision": "upheld",
+   "final": "MISSED",
+   "correct": "downward (opposed-flow) spread",
+   "cause": "condition stated elsewhere in the same section",
+   "reason": "model of downward spreading used to evaluate the LOI device"
+  },
+  {
+   "row_id": "R097",
+   "source_id": "feier_2001",
+   "field": "locator",
+   "ledger_value": "Experimental section (aircraft)",
+   "raw": "WRONG",
+   "decision": "upheld",
+   "final": "WRONG",
+   "correct": "Experimental Results section, 'Acceleration Environment' subsection (Figure 2 discussion)",
+   "cause": "imprecise locator",
+   "reason": "value sits under 'Experimental Results: Acceleration Environment', not the aircraft paragraph"
+  },
+  {
+   "row_id": "R097",
+   "source_id": "feier_2001",
+   "field": "geometry",
+   "ledger_value": "not stated",
+   "raw": "MISSED",
+   "decision": "upheld",
+   "final": "MISSED",
+   "correct": "1-cm, 2-cm or 4-cm wide samples",
+   "cause": "condition stated elsewhere in the same source",
+   "reason": "samples were 1, 2 and 4 cm wide"
+  },
+  {
+   "row_id": "R098",
+   "source_id": "feier_2001",
+   "field": "geometry",
+   "ledger_value": "not stated",
+   "raw": "MISSED",
+   "decision": "upheld",
+   "final": "MISSED",
+   "correct": "1-cm, 2-cm or 4-cm wide samples",
+   "cause": "condition stated elsewhere in the same source",
+   "reason": "samples were 1, 2 and 4 cm wide"
+  }
+ ],
+ "warnings": [],
+ "inputs": {
+  "verdict_files": [
+   "runs/AUD-20261115-055827-3cc2/scoring/001/inputs/verdicts/01_checker_verdicts.json"
+  ],
+  "review_file": "runs/AUD-20261115-055827-3cc2/scoring/001/inputs/review.json"
+ }
+}
