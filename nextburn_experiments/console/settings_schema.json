@@ -1,0 +1,1074 @@
+{
+ "version": "1.0",
+ "groups": [
+  {
+   "id": "envelope",
+   "title": "Operating envelope (Step 2)",
+   "file": "config/envelope.json",
+   "affects": [
+    "method"
+   ],
+   "note": "Moves the operating points used by coverage (Step 3), the model answers (Step 4) and the test plan (Step 5). The frozen FM2 predictions do not change.",
+   "fields": [
+    {
+     "path": "operating_points[id=iss_cabin_air].o2_pct",
+     "label": "ISS cabin air: oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 40,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=iss_cabin_air].p_psia",
+     "label": "ISS cabin air: pressure (psia)",
+     "type": "number",
+     "min": 3,
+     "max": 16,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=iss_cabin_air].g",
+     "label": "ISS cabin air: gravity (g)",
+     "type": "number",
+     "min": 0.0,
+     "max": 0.01,
+     "step": 0.01
+    },
+    {
+     "path": "operating_points[id=iss_cabin_air].weight",
+     "label": "ISS cabin air: weight in the test plan",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=xa_moon].o2_pct",
+     "label": "Exploration atmosphere, Moon: oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 40,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=xa_moon].p_psia",
+     "label": "Exploration atmosphere, Moon: pressure (psia)",
+     "type": "number",
+     "min": 3,
+     "max": 16,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=xa_moon].g",
+     "label": "Exploration atmosphere, Moon: gravity (g)",
+     "type": "number",
+     "min": 0.1,
+     "max": 0.25,
+     "step": 0.01
+    },
+    {
+     "path": "operating_points[id=xa_moon].weight",
+     "label": "Exploration atmosphere, Moon: weight in the test plan",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=nesc37_moon].o2_pct",
+     "label": "37% condition, Moon: oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 40,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=nesc37_moon].p_psia",
+     "label": "37% condition, Moon: pressure (psia)",
+     "type": "number",
+     "min": 3,
+     "max": 16,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=nesc37_moon].g",
+     "label": "37% condition, Moon: gravity (g)",
+     "type": "number",
+     "min": 0.1,
+     "max": 0.25,
+     "step": 0.01
+    },
+    {
+     "path": "operating_points[id=nesc37_moon].weight",
+     "label": "37% condition, Moon: weight in the test plan",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=xa_mars].o2_pct",
+     "label": "Exploration atmosphere, Mars: oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 40,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=xa_mars].p_psia",
+     "label": "Exploration atmosphere, Mars: pressure (psia)",
+     "type": "number",
+     "min": 3,
+     "max": 16,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=xa_mars].g",
+     "label": "Exploration atmosphere, Mars: gravity (g)",
+     "type": "number",
+     "min": 0.25,
+     "max": 0.5,
+     "step": 0.01
+    },
+    {
+     "path": "operating_points[id=xa_mars].weight",
+     "label": "Exploration atmosphere, Mars: weight in the test plan",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=nesc37_mars].o2_pct",
+     "label": "37% condition, Mars: oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 40,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=nesc37_mars].p_psia",
+     "label": "37% condition, Mars: pressure (psia)",
+     "type": "number",
+     "min": 3,
+     "max": 16,
+     "step": 0.1
+    },
+    {
+     "path": "operating_points[id=nesc37_mars].g",
+     "label": "37% condition, Mars: gravity (g)",
+     "type": "number",
+     "min": 0.25,
+     "max": 0.5,
+     "step": 0.01
+    },
+    {
+     "path": "operating_points[id=nesc37_mars].weight",
+     "label": "37% condition, Mars: weight in the test plan",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    }
+   ]
+  },
+  {
+   "id": "decline",
+   "title": "Model decline rule (Step 4)",
+   "file": "config/boundary_model.json",
+   "affects": [
+    "method"
+   ],
+   "frozen_input": true,
+   "note": "This file is an input of the frozen FM2 predictions. Saving a change re-fits Steps 4 and 5 on the next run; the published FM2 predictions stay frozen and the integrity check will show that this input changed.",
+   "fields": [
+    {
+     "path": "decline.support_max_distance",
+     "label": "Support radius (distance units)",
+     "type": "number",
+     "min": 0.1,
+     "max": 5,
+     "step": 0.1,
+     "help": "Answer only if a test lies within this distance."
+    },
+    {
+     "path": "decline.ci90_max_width",
+     "label": "Widest 90% interval allowed",
+     "type": "number",
+     "min": 0.05,
+     "max": 1,
+     "step": 0.05
+    },
+    {
+     "path": "decline.conflict_radius",
+     "label": "Conflict radius (distance units)",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1,
+     "help": "Decline if a test this close had the opposite outcome."
+    },
+    {
+     "path": "decline.scales.o2_pts",
+     "label": "Oxygen points per distance unit",
+     "type": "number",
+     "min": 0.5,
+     "max": 10,
+     "step": 0.5
+    },
+    {
+     "path": "decline.scales.p_frac",
+     "label": "Pressure change per distance unit (fraction)",
+     "type": "number",
+     "min": 0.05,
+     "max": 1,
+     "step": 0.05
+    },
+    {
+     "path": "decline.scales.g",
+     "label": "Gravity per distance unit (g)",
+     "type": "number",
+     "min": 0.01,
+     "max": 0.5,
+     "step": 0.01
+    },
+    {
+     "path": "decline.scales.direction_mismatch",
+     "label": "Penalty for opposite flame direction",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.5
+    }
+   ]
+  },
+  {
+   "id": "priors",
+   "title": "Model priors and sampling (Step 4)",
+   "file": "config/boundary_model.json",
+   "affects": [
+    "method"
+   ],
+   "frozen_input": true,
+   "note": "Same file as the decline rule. Wider priors make the model less sure; the decline rule then answers less often.",
+   "fields": [
+    {
+     "path": "priors.o2.mean",
+     "label": "Oxygen effect: prior mean (per 5 points)",
+     "type": "number",
+     "min": -5,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "priors.o2.sd",
+     "label": "Oxygen effect: prior spread",
+     "type": "number",
+     "min": 0.1,
+     "max": 10,
+     "step": 0.1
+    },
+    {
+     "path": "priors.lnp.mean",
+     "label": "Pressure effect: prior mean (per doubling)",
+     "type": "number",
+     "min": -5,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "priors.lnp.sd",
+     "label": "Pressure effect: prior spread",
+     "type": "number",
+     "min": 0.1,
+     "max": 10,
+     "step": 0.1
+    },
+    {
+     "path": "priors.micro.sd",
+     "label": "Microgravity regime: prior spread",
+     "type": "number",
+     "min": 0.1,
+     "max": 10,
+     "step": 0.1
+    },
+    {
+     "path": "priors.g.sd",
+     "label": "Gravity term: prior spread",
+     "type": "number",
+     "min": 0.1,
+     "max": 10,
+     "step": 0.1
+    },
+    {
+     "path": "priors.g2.sd",
+     "label": "Gravity curvature: prior spread",
+     "type": "number",
+     "min": 0.1,
+     "max": 10,
+     "step": 0.1
+    },
+    {
+     "path": "priors.dir.sd",
+     "label": "Direction term: prior spread",
+     "type": "number",
+     "min": 0.1,
+     "max": 10,
+     "step": 0.1
+    },
+    {
+     "path": "priors.dir_g.sd",
+     "label": "Direction x gravity: prior spread",
+     "type": "number",
+     "min": 0.1,
+     "max": 10,
+     "step": 0.1
+    },
+    {
+     "path": "priors.dir_g2.sd",
+     "label": "Direction x gravity curvature: prior spread",
+     "type": "number",
+     "min": 0.1,
+     "max": 10,
+     "step": 0.1
+    },
+    {
+     "path": "material_sd",
+     "label": "Material-to-material spread",
+     "type": "number",
+     "min": 0.1,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "unknown_pressure_range_kpa[0]",
+     "label": "Pressure not stated: low end (kPa)",
+     "type": "number",
+     "min": 10,
+     "max": 110,
+     "step": 1
+    },
+    {
+     "path": "unknown_pressure_range_kpa[1]",
+     "label": "Pressure not stated: high end (kPa)",
+     "type": "number",
+     "min": 10,
+     "max": 120,
+     "step": 1
+    },
+    {
+     "path": "mcmc.iterations",
+     "label": "Sampler iterations per chain",
+     "type": "int",
+     "min": 2000,
+     "max": 50000,
+     "step": 1000
+    },
+    {
+     "path": "mcmc.seed",
+     "label": "Sampler seed",
+     "type": "int",
+     "min": 0,
+     "max": 999999,
+     "step": 1
+    }
+   ]
+  },
+  {
+   "id": "coverage",
+   "title": "Coverage tolerances (Experiment 3)",
+   "file": "config/coverage.json",
+   "affects": [
+    "exp3"
+   ],
+   "note": "Experiment 3 checks the Moon-base headline at every oxygen tolerance crossed with every pressure tolerance.",
+   "fields": [
+    {
+     "path": "o2_tolerances_pts[0]",
+     "label": "Oxygen tolerance 1 (points)",
+     "type": "number",
+     "min": 0.5,
+     "max": 10,
+     "step": 0.5
+    },
+    {
+     "path": "o2_tolerances_pts[1]",
+     "label": "Oxygen tolerance 2 (points)",
+     "type": "number",
+     "min": 0.5,
+     "max": 10,
+     "step": 0.5
+    },
+    {
+     "path": "o2_tolerances_pts[2]",
+     "label": "Oxygen tolerance 3 (points)",
+     "type": "number",
+     "min": 0.5,
+     "max": 10,
+     "step": 0.5
+    },
+    {
+     "path": "p_tolerances_frac[0]",
+     "label": "Pressure tolerance 1 (fraction)",
+     "type": "number",
+     "min": 0.01,
+     "max": 1,
+     "step": 0.01
+    },
+    {
+     "path": "p_tolerances_frac[1]",
+     "label": "Pressure tolerance 2 (fraction)",
+     "type": "number",
+     "min": 0.01,
+     "max": 1,
+     "step": 0.01
+    },
+    {
+     "path": "default_o2_pts",
+     "label": "Heatmap oxygen tolerance (points)",
+     "type": "number",
+     "min": 0.5,
+     "max": 10,
+     "step": 0.5
+    },
+    {
+     "path": "default_p_frac",
+     "label": "Heatmap pressure tolerance (fraction)",
+     "type": "number",
+     "min": 0.01,
+     "max": 1,
+     "step": 0.01
+    }
+   ]
+  },
+  {
+   "id": "planner",
+   "title": "Planner weights (Experiment 5)",
+   "file": "config/weights.json",
+   "affects": [
+    "exp5"
+   ],
+   "note": "Experiment 5 was judged with these weights frozen in advance. A change gives a what-if run, not the frozen result.",
+   "fields": [
+    {
+     "path": "habitat_priority.iss_cabin",
+     "label": "Habitat priority: space station cabin",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "habitat_priority.moon_base",
+     "label": "Habitat priority: Moon base",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "habitat_priority.moon_upper",
+     "label": "Habitat priority: Moon base, upper bound",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "habitat_priority.spacesuit",
+     "label": "Habitat priority: spacesuit",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "habitat_priority.mars_hab",
+     "label": "Habitat priority: Mars habitat",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "material_commonness.thin_fabric",
+     "label": "How common: thin fabrics",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "material_commonness.thick_plastic",
+     "label": "How common: PMMA",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "material_commonness.other_textile",
+     "label": "How common: other textiles",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "measurand_value.spread_rate",
+     "label": "Value of a spread-rate test",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "measurand_value.go_no_go",
+     "label": "Value of a go/no-go test",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    },
+    {
+     "path": "status_gap.bounded",
+     "label": "Gap weight of a bounded cell",
+     "type": "number",
+     "min": 0,
+     "max": 1,
+     "step": 0.05
+    },
+    {
+     "path": "oxygen_exponent",
+     "label": "Oxygen risk exponent",
+     "type": "number",
+     "min": 0,
+     "max": 5,
+     "step": 0.1
+    }
+   ]
+  },
+  {
+   "id": "facilities",
+   "title": "Facility catalogue (Experiment 5 and Step 5)",
+   "file": "config/facilities.json",
+   "affects": [
+    "exp5",
+    "method"
+   ],
+   "note": "Atmosphere limits marked 'assumed' in the file are team assumptions, not facility specifications.",
+   "fields": [
+    {
+     "path": "facilities[id=drop_2_2s].available",
+     "label": "NASA Glenn 2.2 Second Drop Tower: available",
+     "type": "bool"
+    },
+    {
+     "path": "facilities[id=drop_2_2s].cost_tier",
+     "label": "NASA Glenn 2.2 Second Drop Tower: cost tier",
+     "type": "int",
+     "min": 1,
+     "max": 5,
+     "step": 1
+    },
+    {
+     "path": "facilities[id=drop_2_2s].test_time_s",
+     "label": "NASA Glenn 2.2 Second Drop Tower: test time (s)",
+     "type": "number",
+     "min": 0.5,
+     "max": 100000,
+     "step": 0.1
+    },
+    {
+     "path": "facilities[id=drop_2_2s].atmosphere.o2_max_pct",
+     "label": "NASA Glenn 2.2 Second Drop Tower: highest oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 100,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=drop_2_2s].atmosphere.p_min_kpa",
+     "label": "NASA Glenn 2.2 Second Drop Tower: lowest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 110,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=drop_2_2s].atmosphere.p_max_kpa",
+     "label": "NASA Glenn 2.2 Second Drop Tower: highest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 120,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=zgrf_5_18s].available",
+     "label": "NASA Glenn Zero Gravity Research Facility: available",
+     "type": "bool"
+    },
+    {
+     "path": "facilities[id=zgrf_5_18s].cost_tier",
+     "label": "NASA Glenn Zero Gravity Research Facility: cost tier",
+     "type": "int",
+     "min": 1,
+     "max": 5,
+     "step": 1
+    },
+    {
+     "path": "facilities[id=zgrf_5_18s].test_time_s",
+     "label": "NASA Glenn Zero Gravity Research Facility: test time (s)",
+     "type": "number",
+     "min": 0.5,
+     "max": 100000,
+     "step": 0.1
+    },
+    {
+     "path": "facilities[id=zgrf_5_18s].atmosphere.o2_max_pct",
+     "label": "NASA Glenn Zero Gravity Research Facility: highest oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 100,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=zgrf_5_18s].atmosphere.p_min_kpa",
+     "label": "NASA Glenn Zero Gravity Research Facility: lowest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 110,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=zgrf_5_18s].atmosphere.p_max_kpa",
+     "label": "NASA Glenn Zero Gravity Research Facility: highest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 120,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=zarm_drop].available",
+     "label": "ZARM Bremen drop tower: available",
+     "type": "bool"
+    },
+    {
+     "path": "facilities[id=zarm_drop].cost_tier",
+     "label": "ZARM Bremen drop tower: cost tier",
+     "type": "int",
+     "min": 1,
+     "max": 5,
+     "step": 1
+    },
+    {
+     "path": "facilities[id=zarm_drop].test_time_s",
+     "label": "ZARM Bremen drop tower: test time (s)",
+     "type": "number",
+     "min": 0.5,
+     "max": 100000,
+     "step": 0.1
+    },
+    {
+     "path": "facilities[id=zarm_drop].atmosphere.o2_max_pct",
+     "label": "ZARM Bremen drop tower: highest oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 100,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=zarm_drop].atmosphere.p_min_kpa",
+     "label": "ZARM Bremen drop tower: lowest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 110,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=zarm_drop].atmosphere.p_max_kpa",
+     "label": "ZARM Bremen drop tower: highest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 120,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=parabolic_nasa].available",
+     "label": "NASA parabolic flight: available",
+     "type": "bool"
+    },
+    {
+     "path": "facilities[id=parabolic_nasa].cost_tier",
+     "label": "NASA parabolic flight: cost tier",
+     "type": "int",
+     "min": 1,
+     "max": 5,
+     "step": 1
+    },
+    {
+     "path": "facilities[id=parabolic_nasa].test_time_s",
+     "label": "NASA parabolic flight: test time (s)",
+     "type": "number",
+     "min": 0.5,
+     "max": 100000,
+     "step": 0.1
+    },
+    {
+     "path": "facilities[id=parabolic_nasa].atmosphere.o2_max_pct",
+     "label": "NASA parabolic flight: highest oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 100,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=parabolic_nasa].atmosphere.p_min_kpa",
+     "label": "NASA parabolic flight: lowest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 110,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=parabolic_nasa].atmosphere.p_max_kpa",
+     "label": "NASA parabolic flight: highest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 120,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=parabolic_novespace].available",
+     "label": "Novespace parabolic flight: available",
+     "type": "bool"
+    },
+    {
+     "path": "facilities[id=parabolic_novespace].cost_tier",
+     "label": "Novespace parabolic flight: cost tier",
+     "type": "int",
+     "min": 1,
+     "max": 5,
+     "step": 1
+    },
+    {
+     "path": "facilities[id=parabolic_novespace].test_time_s",
+     "label": "Novespace parabolic flight: test time (s)",
+     "type": "number",
+     "min": 0.5,
+     "max": 100000,
+     "step": 0.1
+    },
+    {
+     "path": "facilities[id=parabolic_novespace].atmosphere.o2_max_pct",
+     "label": "Novespace parabolic flight: highest oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 100,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=parabolic_novespace].atmosphere.p_min_kpa",
+     "label": "Novespace parabolic flight: lowest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 110,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=parabolic_novespace].atmosphere.p_max_kpa",
+     "label": "Novespace parabolic flight: highest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 120,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=new_shepard_spin].available",
+     "label": "Blue Origin New Shepard spin, as flown by LUCI: available",
+     "type": "bool"
+    },
+    {
+     "path": "facilities[id=new_shepard_spin].cost_tier",
+     "label": "Blue Origin New Shepard spin, as flown by LUCI: cost tier",
+     "type": "int",
+     "min": 1,
+     "max": 5,
+     "step": 1
+    },
+    {
+     "path": "facilities[id=new_shepard_spin].test_time_s",
+     "label": "Blue Origin New Shepard spin, as flown by LUCI: test time (s)",
+     "type": "number",
+     "min": 0.5,
+     "max": 100000,
+     "step": 0.1
+    },
+    {
+     "path": "facilities[id=new_shepard_spin].atmosphere.o2_max_pct",
+     "label": "Blue Origin New Shepard spin, as flown by LUCI: highest oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 100,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=new_shepard_spin].atmosphere.p_min_kpa",
+     "label": "Blue Origin New Shepard spin, as flown by LUCI: lowest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 110,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=new_shepard_spin].atmosphere.p_max_kpa",
+     "label": "Blue Origin New Shepard spin, as flown by LUCI: highest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 120,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=iss_sofie].available",
+     "label": "Space station combustion rack: available",
+     "type": "bool"
+    },
+    {
+     "path": "facilities[id=iss_sofie].cost_tier",
+     "label": "Space station combustion rack: cost tier",
+     "type": "int",
+     "min": 1,
+     "max": 5,
+     "step": 1
+    },
+    {
+     "path": "facilities[id=iss_sofie].test_time_s",
+     "label": "Space station combustion rack: test time (s)",
+     "type": "number",
+     "min": 0.5,
+     "max": 100000,
+     "step": 0.1
+    },
+    {
+     "path": "facilities[id=iss_sofie].atmosphere.o2_max_pct",
+     "label": "Space station combustion rack: highest oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 100,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=iss_sofie].atmosphere.p_min_kpa",
+     "label": "Space station combustion rack: lowest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 110,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=iss_sofie].atmosphere.p_max_kpa",
+     "label": "Space station combustion rack: highest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 120,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=fm2_moon].available",
+     "label": "FM2 on the Moon: available",
+     "type": "bool"
+    },
+    {
+     "path": "facilities[id=fm2_moon].cost_tier",
+     "label": "FM2 on the Moon: cost tier",
+     "type": "int",
+     "min": 1,
+     "max": 5,
+     "step": 1
+    },
+    {
+     "path": "facilities[id=fm2_moon].test_time_s",
+     "label": "FM2 on the Moon: test time (s)",
+     "type": "number",
+     "min": 0.5,
+     "max": 100000,
+     "step": 0.1
+    },
+    {
+     "path": "facilities[id=fm2_moon].atmosphere.o2_max_pct",
+     "label": "FM2 on the Moon: highest oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 100,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=fm2_moon].atmosphere.p_min_kpa",
+     "label": "FM2 on the Moon: lowest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 110,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=fm2_moon].atmosphere.p_max_kpa",
+     "label": "FM2 on the Moon: highest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 120,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=ground_1g].available",
+     "label": "Ground chamber at 1 g: available",
+     "type": "bool"
+    },
+    {
+     "path": "facilities[id=ground_1g].cost_tier",
+     "label": "Ground chamber at 1 g: cost tier",
+     "type": "int",
+     "min": 1,
+     "max": 5,
+     "step": 1
+    },
+    {
+     "path": "facilities[id=ground_1g].test_time_s",
+     "label": "Ground chamber at 1 g: test time (s)",
+     "type": "number",
+     "min": 0.5,
+     "max": 100000,
+     "step": 0.1
+    },
+    {
+     "path": "facilities[id=ground_1g].atmosphere.o2_max_pct",
+     "label": "Ground chamber at 1 g: highest oxygen (%)",
+     "type": "number",
+     "min": 15,
+     "max": 100,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=ground_1g].atmosphere.p_min_kpa",
+     "label": "Ground chamber at 1 g: lowest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 110,
+     "step": 0.5
+    },
+    {
+     "path": "facilities[id=ground_1g].atmosphere.p_max_kpa",
+     "label": "Ground chamber at 1 g: highest pressure (kPa)",
+     "type": "number",
+     "min": 0,
+     "max": 120,
+     "step": 0.5
+    }
+   ]
+  }
+ ],
+ "run_targets": [
+  {
+   "id": "fast",
+   "label": "Rerun everything except the simulation",
+   "command": [
+    "run_all.py",
+    "--skip-sim"
+   ],
+   "minutes": 1.5
+  },
+  {
+   "id": "tests",
+   "label": "Regression tests (deployment gate)",
+   "command": [
+    "tests/run_tests.py"
+   ],
+   "minutes": 0.2
+  },
+  {
+   "id": "exp2",
+   "label": "Experiment 2: range and unit checks",
+   "command": [
+    "experiments/exp2_checks.py"
+   ],
+   "minutes": 0.1
+  },
+  {
+   "id": "exp3",
+   "label": "Experiment 3: coverage sensitivity",
+   "command": [
+    "experiments/exp3_coverage.py"
+   ],
+   "minutes": 0.1
+  },
+  {
+   "id": "exp4",
+   "label": "Experiment 4: LUCI rule check",
+   "command": [
+    "experiments/exp4_luci_rules.py"
+   ],
+   "minutes": 0.1
+  },
+  {
+   "id": "exp5",
+   "label": "Experiment 5: planner retrodiction",
+   "command": [
+    "experiments/exp5_retrodiction.py"
+   ],
+   "minutes": 0.2
+  },
+  {
+   "id": "exp6_quick",
+   "label": "Experiment 6: quick simulation (10 boundaries, separate output)",
+   "command": [
+    "experiments/exp6_planner_sim.py",
+    "--quick"
+   ],
+   "minutes": 1
+  },
+  {
+   "id": "exp6_full",
+   "label": "Experiment 6: full simulation (slow)",
+   "command": [
+    "experiments/exp6_planner_sim.py"
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "exp7",
+   "label": "Experiment 7: SI test set",
+   "command": [
+    "experiments/exp7_si_test_set.py"
+   ],
+   "minutes": 0.1
+  },
+  {
+   "id": "method",
+   "label": "Six-step method (FM2 predictions stay frozen)",
+   "command": [
+    "experiments/method_six_steps.py",
+    "--no-predictions"
+   ],
+   "then": [
+    [
+     "experiments/method_report.py"
+    ]
+   ],
+   "minutes": 1
+  },
+  {
+   "id": "refreeze",
+   "label": "Re-freeze the FM2 predictions (new timestamp and hash)",
+   "command": [
+    "experiments/method_six_steps.py"
+   ],
+   "then": [
+    [
+     "experiments/method_report.py"
+    ]
+   ],
+   "minutes": 1,
+   "confirm": "REFREEZE",
+   "warning": "Creates a new prediction file and hash. Only do this before FM2 results exist, and post the new hash."
+  }
+ ]
+}

@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NextBurn Coverage Console</title>
+<meta name="description" content="NextBurn: fire-safety test coverage for Moon and Mars habitats. Evidence ledger, coverage map, a boundary model that declines to guess, ranked next tests and frozen FM2 predictions.">
+<style>
+:root{--bg:#f4f5f7;--surface:#ffffff;--text:#1a1d23;--muted:#5a6372;--border:#d8dde4;--accent:#b93d0b;--accent-soft:#fff1e8;--link:#1d4ed8;--ok:#237a37;--ok-soft:#e5f4e9;--warn:#8a5300;--warn-soft:#fff3d6;--bad:#b42323;--bad-soft:#fdeaea;--neutral-soft:#eceff3;--code:#eef1f5;--focus:#2563eb;--shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.08)}
+@media (prefers-color-scheme: dark){:root{--bg:#0f1115;--surface:#171a21;--text:#e7e9ee;--muted:#9aa3b2;--border:#2b313c;--accent:#ff8a4c;--accent-soft:#2a1a10;--link:#8fb0ff;--ok:#6fd38a;--ok-soft:#13261a;--warn:#f3bd5c;--warn-soft:#2a2210;--bad:#ff8686;--bad-soft:#2c1515;--neutral-soft:#222833;--code:#1f242d;--focus:#8fb0ff;--shadow:none}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--link)}
+code,pre,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.86em}
+code{background:var(--code);padding:1px 5px;border-radius:4px}
+pre{background:var(--code);padding:10px 12px;border-radius:8px;overflow:auto;white-space:pre-wrap;word-break:break-word}
+.skip{position:absolute;left:-9999px}.skip:focus{left:8px;top:8px;background:var(--surface);padding:6px 10px;z-index:10}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.top{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--surface);border-bottom:1px solid var(--border)}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#f97316,#b91c1c);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;letter-spacing:.5px}
+h1{font-size:1.25rem;margin:0}
+.tag{margin:0;color:var(--muted);font-size:.9rem}
+.mode{font-size:.85rem;padding:6px 10px;border-radius:999px;background:var(--neutral-soft);color:var(--text);max-width:520px}
+.mode.live{background:var(--ok-soft);color:var(--ok)}
+.tabs{display:flex;gap:4px;overflow-x:auto;padding:8px 16px 0;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:5}
+.tabs button{border:0;background:none;color:var(--muted);padding:10px 12px;font:inherit;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+.tabs button:hover{color:var(--text)}
+main{max-width:1240px;margin:0 auto;padding:18px 16px 40px}
+main:focus{outline:none}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin:0 0 16px;box-shadow:var(--shadow)}
+.card h2{font-size:1.08rem;margin:0 0 8px}
+.card h3{font-size:.98rem;margin:14px 0 6px}
+.intro{color:var(--muted);margin:0 0 10px}
+.muted{color:var(--muted)}
+.small{font-size:.85rem}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:16px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--border);border-radius:10px;padding:12px 14px;box-shadow:var(--shadow)}
+.kpi.ok{border-left-color:var(--ok)}.kpi.warn{border-left-color:#e8a317}.kpi.bad{border-left-color:var(--bad)}.kpi.accent{border-left-color:var(--accent)}
+.kpi .l{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.kpi .v{font-size:1.35rem;font-weight:700;margin:2px 0;line-height:1.25}
+.kpi .s{font-size:.85rem;color:var(--muted)}
+.badge{display:inline-block;padding:1px 8px;border-radius:999px;font-size:.8rem;font-weight:600;white-space:nowrap}
+.badge.ok{background:var(--ok-soft);color:var(--ok)}.badge.warn{background:var(--warn-soft);color:var(--warn)}.badge.bad{background:var(--bad-soft);color:var(--bad)}.badge.neutral{background:var(--neutral-soft);color:var(--text)}
+.tw{overflow-x:auto;margin:6px 0 4px}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--border);vertical-align:top}
+thead th{background:var(--neutral-soft);font-weight:600;position:sticky;top:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.clk{cursor:pointer}tr.clk:hover td{background:var(--accent-soft)}
+tr.open td{background:var(--accent-soft)}
+.ctl{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:4px 0 12px}
+.ctl label{display:flex;flex-direction:column;font-size:.82rem;color:var(--muted);gap:3px}
+.ctl label.chk{flex-direction:row;align-items:center;gap:6px;color:var(--text)}
+select,input[type=text],input[type=search],input[type=number],input[type=url]{font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:6px 8px;min-width:0}
+input[type=number]{width:120px}
+button.b{font:inherit;font-size:.88rem;border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:8px;padding:6px 12px;cursor:pointer}
+button.b:hover{border-color:var(--accent)}
+button.b.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+button.b:disabled{opacity:.5;cursor:not-allowed}
+button.lnk{border:0;background:none;color:var(--link);padding:0;font:inherit;cursor:pointer;text-decoration:underline}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:12px}
+.covs{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px}
+figure{margin:0}
+figcaption{font-size:.88rem;margin:0 0 6px}
+svg{max-width:100%;height:auto;display:block}
+svg text{fill:var(--text);font-family:inherit}
+svg .ax{font-size:10px;fill:var(--muted)}
+svg rect.cell{stroke:var(--surface);stroke-width:1;cursor:pointer}
+svg rect.cell:hover,svg rect.cell.sel{stroke:var(--text);stroke-width:2}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:.82rem;color:var(--muted);align-items:center}
+.sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:4px;border:1px solid rgba(0,0,0,.15)}
+.sliders{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 18px;align-items:end;margin:6px 0 10px}
+.sl{display:flex;flex-direction:column;gap:2px;font-size:.85rem}
+.sl span{display:flex;justify-content:space-between;gap:8px}
+.sl output{font-weight:700;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.note{background:var(--neutral-soft);border-radius:8px;padding:8px 12px;font-size:.88rem;margin:8px 0}
+.warnbox{background:var(--warn-soft);color:var(--text);border-left:4px solid #e8a317;border-radius:6px;padding:8px 12px;font-size:.88rem;margin:8px 0}
+.okbox{background:var(--ok-soft);border-left:4px solid var(--ok);border-radius:6px;padding:8px 12px;font-size:.88rem;margin:8px 0}
+.badbox{background:var(--bad-soft);border-left:4px solid var(--bad);border-radius:6px;padding:8px 12px;font-size:.88rem;margin:8px 0}
+.detail{border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin:10px 0;background:var(--surface)}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:3px 12px;font-size:.88rem}
+.kv dt{color:var(--muted)}.kv dd{margin:0}
+.exps{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:14px}
+.exp img{width:100%;height:auto;border:1px solid var(--border);border-radius:8px;background:#fff;margin-top:8px}
+.exp .hd{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+details{margin:8px 0}
+summary{cursor:pointer;font-weight:600}
+.setgrp tr.chg td,.setgrp tr.chg th{background:var(--accent-soft)}
+.setgrp tr.err td,.setgrp tr.err th{background:var(--bad-soft)}
+.setgrp th{font-weight:500;width:42%}
+.help{font-size:.8rem;color:var(--muted);font-weight:400}
+.emsg{font-size:.8rem;color:var(--bad)}
+.gfoot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.gfoot .msg{flex-basis:100%}
+.pager{display:flex;gap:6px;align-items:center;margin-top:8px;flex-wrap:wrap}
+.bar{height:14px;background:var(--neutral-soft);border-radius:4px;overflow:hidden;min-width:120px}
+.bar span{display:block;height:100%;background:var(--accent)}
+.foot{max-width:1240px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font-size:.82rem}
+.hash{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;word-break:break-all;font-size:.85rem}
+@media (max-width:640px){.kpi .v{font-size:1.1rem}main{padding:12px 10px 30px}.card{padding:12px}}
+@media print{.tabs,.ctl,.sliders,.gfoot,.mode{display:none}.card{break-inside:avoid;box-shadow:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="brand">
+    <div class="logo" aria-hidden="true">NB</div>
+    <div>
+      <h1>NextBurn Coverage Console</h1>
+      <p class="tag" id="nb-tagline">From evidence gap to test plan</p>
+    </div>
+  </div>
+  <div class="mode" id="nb-mode" role="status">Loading the results</div>
+</header>
+<nav class="tabs" role="tablist" aria-label="Console sections" id="nb-tabs">
+  <button type="button" role="tab" data-tab="overview" aria-selected="true">Overview</button>
+  <button type="button" role="tab" data-tab="coverage" aria-selected="false">Coverage</button>
+  <button type="button" role="tab" data-tab="boundary" aria-selected="false">Boundary model</button>
+  <button type="button" role="tab" data-tab="plan" aria-selected="false">Next tests</button>
+  <button type="button" role="tab" data-tab="fm2" aria-selected="false">FM2 predictions</button>
+  <button type="button" role="tab" data-tab="ledger" aria-selected="false">Evidence ledger</button>
+  <button type="button" role="tab" data-tab="experiments" aria-selected="false">Experiments</button>
+  <button type="button" role="tab" data-tab="settings" aria-selected="false">Settings</button>
+  <button type="button" role="tab" data-tab="runs" aria-selected="false">Runs</button>
+  <button type="button" role="tab" data-tab="about" aria-selected="false">About</button>
+</nav>
+<main id="main" tabindex="-1"><div id="nb-view" role="tabpanel" aria-live="polite"><p class="muted">Loading. This page needs JavaScript.</p></div></main>
+<footer class="foot" id="nb-foot">NextBurn is an independent NASA Space Apps Challenge 2026 entry. It is not produced, reviewed or endorsed by NASA.</footer>
+<script type="application/json" id="nb-data">/*__NB_DATA__*/</script>
+<script type="application/json" id="nb-images">/*__NB_IMAGES__*/</script>
+<script id="nb-app">
+"use strict";
+var NBR = (function () {
+  var FAM = { thin_fabric: "Thin fabrics", thick_plastic: "Thick plastics (PMMA)", other_textile: "Other textiles", unknown: "Material not stated" };
+  var GRAV = { micro: "Microgravity", lunar: "Moon (0.16 g)", mars: "Mars (0.38 g)", earth: "Earth (1 g)", unknown: "Gravity not stated" };
+  var COV_COL = { tested: "#2f9e44", nearby: "#f2a516", none: "#e03131" };
+  var KPA_PER_PSI = 6.894757;
+
+  function esc(v) {
+    if (v === null || v === undefined) return "";
+    return String(v).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; });
+  }
+  function num(v) { if (v === null || v === undefined || v === "") return null; var x = Number(v); return isFinite(x) ? x : null; }
+  function fx(v, d) { var x = num(v); return x === null ? "–" : x.toFixed(d === undefined ? 2 : d); }
+  function pc(v, d) { var x = num(v); return x === null ? "–" : (x * 100).toFixed(d === undefined ? 1 : d) + "%"; }
+  function pp(v, d) { var x = num(v); return x === null ? "–" : x.toFixed(d === undefined ? 1 : d) + "%"; }
+  function famName(k) { return FAM[k] || k || "–"; }
+  function gName(k) { return GRAV[k] || k || "–"; }
+  function dirName(d) { d = Number(d); return d > 0 ? "upward" : d < 0 ? "downward" : "either direction"; }
+  function gClassOf(g) { var x = num(g); if (x === null) return "unknown"; if (x < 0.05) return "micro"; if (x < 0.27) return "lunar"; if (x < 0.7) return "mars"; return "earth"; }
+  function when(s) { return s ? String(s).replace("T", " ").replace("+00:00", " UTC").replace(/Z$/, " UTC") : "–"; }
+  function statusClass(s) {
+    s = String(s === undefined || s === null ? "" : s).toLowerCase();
+    if (/not satisfactory|fail|declin|contradict|^none$|changed/.test(s)) return "bad";
+    if (/with gaps|partial|pending|simulation|reported|nearby|^not done/.test(s)) return "warn";
+    if (/^pass|^done|^ok|^sustains|^true|^tested|unchanged|^yes/.test(s)) return "ok";
+    return "neutral";
+  }
+  function badge(s, cls) { return '<span class="badge ' + (cls || statusClass(s)) + '">' + esc(s) + "</span>"; }
+  function N(v) { return { v: v, c: "num" }; }
+  function td(c) { return (c && typeof c === "object") ? '<td class="' + esc(c.c || "") + '">' + c.v + "</td>" : "<td>" + (c === undefined || c === null ? "" : c) + "</td>"; }
+  function table(head, rows, extra) {
+    var h = '<div class="tw"><table' + (extra ? " " + extra : "") + "><thead><tr>" + head.map(function (x) {
+      return (x && typeof x === "object") ? '<th scope="col" class="' + esc(x.c) + '">' + x.v + "</th>" : '<th scope="col">' + x + "</th>";
+    }).join("") + "</tr></thead><tbody>";
+    h += rows.map(function (r) { return "<tr>" + r.map(td).join("") + "</tr>"; }).join("");
+    return h + "</tbody></table></div>";
+  }
+  function kpi(label, value, sub, cls) { return '<div class="kpi ' + (cls || "") + '"><div class="l">' + esc(label) + '</div><div class="v">' + value + '</div><div class="s">' + (sub || "") + "</div></div>"; }
+  function sec(title, body, intro, id) { return '<section class="card"' + (id ? ' id="' + esc(id) + '"' : "") + "><h2>" + esc(title) + "</h2>" + (intro ? '<p class="intro">' + intro + "</p>" : "") + body + "</section>"; }
+  function kv(pairs) { return '<dl class="kv">' + pairs.map(function (p) { return "<dt>" + esc(p[0]) + "</dt><dd>" + p[1] + "</dd>"; }).join("") + "</dl>"; }
+  function ids(text) {
+    return esc(text).replace(/\b(TP\d{3}|PSI-\d+_[A-Za-z0-9.]+)\b/g, function (m) { return '<button type="button" class="lnk" data-action="ledger-find" data-q="' + m + '">' + m + "</button>"; });
+  }
+  function fileLink(ctx, path, label) {
+    var href = ctx && ctx.link ? ctx.link(path) : path;
+    if (!href) return esc(label || path);
+    return '<a href="' + esc(href) + '" target="_blank" rel="noopener">' + esc(label || path) + "</a>";
+  }
+  function plural(n, one, many) { return n + " " + (n === 1 ? one : (many || one + "s")); }
+
+  // ------------------------------------------------------------------ settings paths (same syntax as console_lib.py)
+  function splitPath(path) {
+    var parts = [], buf = "", depth = 0;
+    for (var i = 0; i < path.length; i++) {
+      var ch = path[i];
+      if (ch === "[") depth++;
+      if (ch === "]") depth--;
+      if (ch === "." && depth === 0) { parts.push(buf); buf = ""; } else buf += ch;
+    }
+    parts.push(buf);
+    return parts;
+  }
+  var SEG = /^([A-Za-z_]\w*)(?:\[(?:(\w+)=([\w\-.]+)|(\d+))\])?$/;
+  function stepInto(node, seg) {
+    var m = SEG.exec(seg);
+    if (!m) throw new Error("bad path segment " + seg);
+    if (!node || typeof node !== "object" || !(m[1] in node)) throw new Error("no setting named " + m[1]);
+    node = node[m[1]];
+    if (m[2] !== undefined) {
+      var hits = Array.isArray(node) ? node.filter(function (x) { return x && String(x[m[2]]) === m[3]; }) : [];
+      if (hits.length !== 1) throw new Error(m[1] + "[" + m[2] + "=" + m[3] + "] matched " + hits.length + " items");
+      node = hits[0];
+    } else if (m[4] !== undefined) {
+      if (!Array.isArray(node) || +m[4] >= node.length) throw new Error(m[1] + "[" + m[4] + "] is out of range");
+      node = node[+m[4]];
+    }
+    return node;
+  }
+  function getPath(obj, path) { return splitPath(path).reduce(stepInto, obj); }
+  function setPath(obj, path, value) {
+    var parts = splitPath(path), node = obj;
+    for (var i = 0; i < parts.length - 1; i++) node = stepInto(node, parts[i]);
+    var m = SEG.exec(parts[parts.length - 1]);
+    if (!m || m[2] !== undefined) throw new Error("a setting path must end on a value");
+    if (m[4] !== undefined) node[m[1]][+m[4]] = value; else node[m[1]] = value;
+    return obj;
+  }
+  function coerce(f, raw) {
+    var t = f.type || "number", v;
+    if (t === "bool") {
+      if (raw === true || raw === false) v = raw;
+      else if (/^(true|1|yes)$/i.test(String(raw))) v = true;
+      else if (/^(false|0|no)$/i.test(String(raw))) v = false;
+      else return { ok: false, msg: "choose yes or no" };
+      return { ok: true, value: v };
+    }
+    if (String(raw).trim() === "") return { ok: false, msg: "a value is needed" };
+    v = Number(raw);
+    if (!isFinite(v)) return { ok: false, msg: "not a number" };
+    if (t === "int" && Math.floor(v) !== v) return { ok: false, msg: "a whole number is needed" };
+    if (f.min !== undefined && v < f.min) return { ok: false, msg: "below the minimum " + f.min };
+    if (f.max !== undefined && v > f.max) return { ok: false, msg: "above the maximum " + f.max };
+    return { ok: true, value: v };
+  }
+  function sameVal(a, b) { if (typeof a === "boolean" || typeof b === "boolean") return a === b; return Number(a) === Number(b); }
+  function fileChanges(d, edits, file) {
+    var out = { changes: [], errors: [] };
+    d.settings.schema.groups.forEach(function (g) {
+      if (g.file !== file) return;
+      g.fields.forEach(function (f) {
+        var key = g.file + "|" + f.path;
+        if (!Object.prototype.hasOwnProperty.call(edits, key)) return;
+        var r = coerce(f, edits[key]), cur = d.settings.values[key];
+        if (!r.ok) out.errors.push({ path: f.path, label: f.label, msg: r.msg });
+        else if (!sameVal(r.value, cur)) out.changes.push({ path: f.path, label: f.label, old: cur, value: r.value, group: g.id });
+      });
+    });
+    return out;
+  }
+  function updatedFile(d, file, changes) {
+    var obj = JSON.parse(JSON.stringify(d.settings.files[file]));
+    changes.forEach(function (c) { setPath(obj, c.path, c.value); });
+    return obj;
+  }
+  function changeRequest(d, file, changes, when_) {
+    return { nextburn_settings_change: 1, file: file, created_utc: when_ || null, made_with: "NextBurn Coverage Console", changes: changes.map(function (c) { return { path: c.path, old: c.old, "new": c.value }; }) };
+  }
+  function issueBody(req) {
+    var lines = ["Proposed settings change for `" + req.file + "`, made in the NextBurn Coverage Console.", "", "| Setting | Now | Proposed |", "|---|---|---|"];
+    req.changes.forEach(function (c) { lines.push("| `" + c.path + "` | " + c.old + " | " + c["new"] + " |"); });
+    lines.push("", "Apply it with `python console/apply_settings.py change.json`, where change.json holds the block below, then rerun the experiments listed in the Runs tab.", "", "```json", JSON.stringify(req, null, 2), "```");
+    return lines.join("\n");
+  }
+
+  // ------------------------------------------------------------------ boundary what-if
+  function declinedAt(P, j, i, t) {
+    return P.support_distance[j][i] > t.support || P.ci90_width[j][i] > t.width || P.contra_distance[j][i] <= t.conflict;
+  }
+  function defaultThr(d) { var dc = (d.grid && d.grid.decline) || {}; return { support: num(dc.support_max_distance) || 1, width: num(dc.ci90_max_width) || 0.6, conflict: num(dc.conflict_radius) || 0 }; }
+  function panelShares(d, t) {
+    var G = d.grid, out = [], all = 0, allN = 0, model = 0, diff = 0;
+    (G.panels || []).forEach(function (P) {
+      var n = 0, dec = 0, m = 0;
+      for (var j = 0; j < P.p_mean.length; j++) for (var i = 0; i < P.p_mean[j].length; i++) {
+        n++; var w = declinedAt(P, j, i, t); if (w) dec++; if (P.declined[j][i]) m++; if (w !== !!P.declined[j][i]) diff++;
+      }
+      out.push({ label: P.label, g_class: P.g_class, direction: P.direction, n: n, whatif: dec / n, model: m / n });
+      all += dec; allN += n; model += m;
+    });
+    return { panels: out, whatif: allN ? all / allN : 0, model: allN ? model / allN : 0, cells: allN, diff: diff };
+  }
+  function probColor(p) {
+    var stops = [[0, [33, 102, 172]], [0.25, [103, 169, 207]], [0.5, [247, 247, 247]], [0.75, [239, 138, 98]], [1, [178, 24, 43]]];
+    p = Math.max(0, Math.min(1, p));
+    for (var k = 1; k < stops.length; k++) if (p <= stops[k][0]) {
+      var a = stops[k - 1], b = stops[k], u = (p - a[0]) / (b[0] - a[0]);
+      return "rgb(" + [0, 1, 2].map(function (c) { return Math.round(a[1][c] + u * (b[1][c] - a[1][c])); }).join(",") + ")";
+    }
+    return "rgb(178,24,43)";
+  }
+
+  // ------------------------------------------------------------------ tabs
+  function renderOverview(d, st, ctx) {
+    var s1 = d.step1 || {}, fams = (d.coverage && d.coverage.families) || {}, by = ((fams.thin_fabric || {}).summary_by_gravity) || {};
+    var plan = ((d.plan || {}).plan || {}).plan || [], top = plan[0], b = d.boundary || {}, fm = d.fm2 || {}, v = d.verify || {};
+    var k = [];
+    k.push(kpi("Test points in the ledger", esc(s1.test_points), esc(s1.with_outcome) + " with a burn outcome; " + esc((s1.sources || []).length) + " sources", "accent"));
+    if (by.lunar) k.push(kpi("Moon envelope bins tested", esc(by.lunar.tested) + " of " + esc(by.lunar.bins), "thin fabrics; " + esc(by.lunar.nearby) + " nearby, " + esc(by.lunar.none) + " with no test", by.lunar.tested ? "warn" : "bad"));
+    if (by.mars) k.push(kpi("Mars envelope bins tested", esc(by.mars.tested) + " of " + esc(by.mars.bins), "thin fabrics; " + esc(by.mars.nearby) + " nearby, " + esc(by.mars.none) + " with no test", by.mars.tested ? "warn" : "bad"));
+    k.push(kpi("Model declines on", pc(b.grid_decline_share, 0) + " of the map", "it answers only near tested conditions", "warn"));
+    if (top) k.push(kpi("Most useful next test", esc(gName(top.g_class)) + ", " + fx(top.o2_pct, 0) + "% O\u2082, " + fx(top.p_psia, 1) + " psia", esc(dirName(top.dir)) + " burn; cuts weighted uncertainty by " + pp(top.cumulative_reduction_pct), "ok"));
+    k.push(kpi("FM2 predictions frozen", esc(when(fm.frozen_at_utc)), "SHA-256 " + esc(String(v.sha256 || "").slice(0, 12)) + "\u2026; inputs " + (v.all_inputs_unchanged ? "unchanged" : "changed since the freeze"), v.all_inputs_unchanged && v.sums_match ? "ok" : "bad"));
+    var html = '<div class="kpis">' + k.join("") + "</div>";
+    html += sec("What this console shows",
+      "<p>NextBurn collects every flame-spread test condition it can trace to a public NASA source, places the tests on the atmosphere and gravity envelope of future Moon and Mars habitats, and shows where the evidence is missing. A probability model fills in the map only where tests are close; elsewhere it declines to answer. The planner then ranks the next tests by how much uncertainty each would remove, and the predictions for NASA's FM2 lunar burns are frozen so the method can be checked against real results.</p>" +
+      '<p class="muted small">Use the tabs above: <strong>Coverage</strong> for the test map, <strong>Boundary model</strong> for the what-if controls, <strong>Next tests</strong> for the ranked plan, <strong>Settings</strong> to change inputs and <strong>Runs</strong> to rerun the scripts.</p>');
+    var steps = ((d.checklist || {}).steps) || [];
+    html += sec("Six-step method", table(["#", "Requirement", "Status", "Evidence", "Known gap"], steps.map(function (s) { return [esc(s.step), esc(s.requirement), badge(s.status), esc(s.evidence), '<span class="muted">' + esc(s.gap) + "</span>"]; })));
+    var ex = ((d.summary || {}).experiments) || [], labels = (d.summary || {}).labels || {};
+    html += sec("Experiments 1 to 7", table(["#", "Experiment", "Status", "Headline"], ex.map(function (e) {
+      return [esc(e.id), esc(e.title) + (labels[e.id] ? '<div class="muted small">' + esc(labels[e.id]) + "</div>" : ""), badge(e.status), esc(e.headline)];
+    })), "Each experiment had its pass mark written down before it ran. Experiment 1 failed its 98% mark and is reported as failed.");
+    var cor = ((d.summary || {}).corrections_to_plan) || [];
+    if (cor.length) html += sec("Figures that changed when the scripts recomputed them", table(["Item", "Plan said", "Scripts give", "Why"], cor.map(function (c) { return [esc(c.item), esc(c.plan), esc(c.now), esc(c.why)]; })));
+    return html;
+  }
+
+  function parseBin(label) { var m = /^(-?[\d.]+)-(-?[\d.]+)$/.exec(String(label || "")); return m ? [Number(m[1]), Number(m[2])] : null; }
+  function coverageSvg(d, fam, g, selKey) {
+    var e = d.envelope || {}, oe = e.bins.o2_edges, pe = e.bins.p_psia_edges, R = e.region || {};
+    var rows = (d.coverage.bins || []).filter(function (r) { return r.family === fam && r.gravity === g; });
+    var map = {};
+    rows.forEach(function (r) { var a = parseBin(r.o2_bin_pct), b = parseBin(r.p_bin_psia); if (a && b) map[a[0].toFixed(2) + "|" + b[0].toFixed(2)] = r; });
+    var cw = 36, ch = 30, ml = 44, mt = 8, mb = 36, nO = oe.length - 1, nP = pe.length - 1, W = ml + nO * cw + 8, H = mt + nP * ch + mb;
+    var s = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Coverage bins for ' + esc(famName(fam)) + " in " + esc(gName(g)) + '">';
+    for (var i = 0; i < nO; i++) for (var j = 0; j < nP; j++) {
+      var r = map[oe[i].toFixed(2) + "|" + pe[j].toFixed(2)] || { status: "none", n_tests: "0", o2_bin_pct: oe[i] + "-" + oe[i + 1], p_bin_psia: pe[j] + "-" + pe[j + 1] };
+      var inR = R.o2_pct && oe[i] >= R.o2_pct[0] - 1e-9 && oe[i + 1] <= R.o2_pct[1] + 1e-9 && pe[j] >= R.p_psia[0] - 1e-9 && pe[j + 1] <= R.p_psia[1] + 1e-9;
+      var key = fam + "|" + g + "|" + r.o2_bin_pct + "|" + r.p_bin_psia, x = ml + i * cw, y = mt + (nP - 1 - j) * ch, n = Number(r.n_tests) || 0;
+      s += '<rect class="cell' + (key === selKey ? " sel" : "") + '" role="button" tabindex="0" data-action="cov-bin" data-key="' + esc(key) + '" x="' + x + '" y="' + y + '" width="' + (cw - 1) + '" height="' + (ch - 1) + '" rx="3" fill="' + (COV_COL[r.status] || "#999") + '" fill-opacity="' + (inR ? 0.95 : 0.3) + '"><title>' + esc(r.o2_bin_pct) + "% O2, " + esc(r.p_bin_psia) + " psia: " + esc(r.status) + (n ? " (" + plural(n, "test") + ")" : "") + (inR ? "" : ", outside the envelope") + "</title></rect>";
+      if (n) s += '<text x="' + (x + cw / 2) + '" y="' + (y + ch / 2 + 4) + '" text-anchor="middle" font-size="11" font-weight="700" style="fill:#fff;pointer-events:none">' + n + "</text>";
+    }
+    if (R.o2_pct) {
+      var rx = ml + (R.o2_pct[0] - oe[0]) / (oe[nO] - oe[0]) * nO * cw, rw = (R.o2_pct[1] - R.o2_pct[0]) / (oe[nO] - oe[0]) * nO * cw;
+      var ry = mt + (pe[nP] - R.p_psia[1]) / (pe[nP] - pe[0]) * nP * ch, rh = (R.p_psia[1] - R.p_psia[0]) / (pe[nP] - pe[0]) * nP * ch;
+      s += '<rect x="' + rx + '" y="' + ry + '" width="' + rw + '" height="' + rh + '" fill="none" stroke="currentColor" style="stroke:var(--text)" stroke-width="2" stroke-dasharray="5 3" pointer-events="none"/>';
+    }
+    (e.operating_points || []).forEach(function (op) {
+      if (op.g_class !== g) return;
+      var x = ml + (op.o2_pct - oe[0]) / (oe[nO] - oe[0]) * nO * cw, y = mt + (pe[nP] - op.p_psia) / (pe[nP] - pe[0]) * nP * ch;
+      s += '<path d="M' + x + " " + (y - 7) + " L" + (x + 6) + " " + y + " L" + x + " " + (y + 7) + " L" + (x - 6) + " " + y + ' Z" fill="#111" stroke="#fff" stroke-width="1.5" pointer-events="none"><title>' + esc(op.name) + "</title></path>";
+    });
+    for (i = 0; i <= nO; i += 1) if (i % 2 === 0 || nO < 8) s += '<text class="ax" x="' + (ml + i * cw) + '" y="' + (mt + nP * ch + 13) + '" text-anchor="middle">' + oe[i] + "</text>";
+    for (j = 0; j <= nP; j++) s += '<text class="ax" x="' + (ml - 4) + '" y="' + (mt + (nP - j) * ch + 3) + '" text-anchor="end">' + pe[j] + "</text>";
+    s += '<text class="ax" x="' + (ml + nO * cw / 2) + '" y="' + (H - 4) + '" text-anchor="middle">oxygen (%)</text>';
+    s += '<text class="ax" transform="translate(11 ' + (mt + nP * ch / 2) + ') rotate(-90)" text-anchor="middle">pressure (psia)</text>';
+    return s + "</svg>";
+  }
+  function renderCoverage(d, st, ctx) {
+    var fams = Object.keys((d.coverage && d.coverage.families) || {});
+    var fam = st.cov && fams.indexOf(st.cov.family) >= 0 ? st.cov.family : fams[0];
+    var F = d.coverage.families[fam] || {}, sel = st.cov && st.cov.bin, rules = (d.envelope || {}).rules || {};
+    var html = sec("Where the tests are",
+      '<div class="ctl"><label>Material family <select data-input="cov-family">' + fams.map(function (f) { return '<option value="' + esc(f) + '"' + (f === fam ? " selected" : "") + ">" + esc(famName(f)) + "</option>"; }).join("") + "</select></label>" +
+      '<div class="legend"><span><i class="sw" style="background:' + COV_COL.tested + '"></i>tested</span><span><i class="sw" style="background:' + COV_COL.nearby + '"></i>only nearby tests</span><span><i class="sw" style="background:' + COV_COL.none + '"></i>no test</span><span>dashed box: operating envelope</span><span>diamond: operating point</span><span>number: tests in the bin</span></div></div>' +
+      '<div class="covs">' + ["micro", "lunar", "mars"].map(function (g) {
+        var s = (F.summary_by_gravity || {})[g] || {};
+        return "<figure><figcaption><strong>" + esc(gName(g)) + "</strong>: " + esc(s.tested) + " tested, " + esc(s.nearby) + " nearby, " + esc(s.none) + " none, of " + esc(s.bins) + " envelope bins</figcaption>" + coverageSvg(d, fam, g, sel) + "</figure>";
+      }).join("") + "</div>",
+      "Each square is a bin of 3 oxygen points by 2 psia, read the way a coverage report shows holes in a verification plan. A test at another gravity level never counts. Select a square to see its tests.");
+    if (sel) {
+      var parts = sel.split("|"), row = (d.coverage.bins || []).filter(function (r) { return r.family === parts[0] && r.gravity === parts[1] && r.o2_bin_pct === parts[2] && r.p_bin_psia === parts[3]; })[0];
+      html += '<div class="detail"><strong>' + esc(famName(parts[0])) + ", " + esc(gName(parts[1])) + ", " + esc(parts[2]) + "% oxygen, " + esc(parts[3]) + " psia</strong> " + badge(row ? row.status : "none") +
+        (row ? kv([["Tests in the bin", row.tests ? ids(row.tests) : "none"], ["Outcomes", esc(row.outcomes || "–")], ["Nearby tests", row.nearby_tests ? ids(row.nearby_tests) : "none"]]) : "<p>No record for this bin.</p>") + "</div>";
+    }
+    html += sec("Operating points for " + famName(fam), table(["Operating point", "Status", "Tests in the bin", "Nearby tests", "Nearest test at any gravity"], (F.operating_points || []).map(function (o) {
+      var n = (o.nearest_any_gravity || [])[0];
+      return [esc(o.name), badge(o.status), ids((o.tests_in_bin || []).join(", ")) || "–", ids((o.nearby_tests || []).join(", ")) || "–",
+        n ? ids(n.tp_id) + " " + esc(n.label) + '<div class="muted small">' + fx(n.o2_pct, 1) + "% O2, " + fx(n.p_psia, 1) + " psia, " + esc(gName(n.g_class)) + "</div>" : "–"];
+    })));
+    var un = F.unplaced || [];
+    html += sec("Rules", kv(Object.keys(rules).map(function (k) { return [k, esc(rules[k])]; })) +
+      (un.length ? "<details><summary>" + plural(un.length, "test point") + " could not be placed on the map</summary>" + table(["Test point", "Label", "Gravity", "Why"], un.map(function (u) { return [ids(u.tp_id), esc(u.label), esc(gName(u.g_class)), esc(u.why)]; })) + "</details>" : ""));
+    return html;
+  }
+
+  function boundarySvg(d, st) {
+    var G = d.grid, P = G.panels[st.bd.panel], o2 = G.o2_pct, ps = G.p_psia, t = st.bd.thr;
+    var cw = 18, ch = 12, ml = 46, mt = 8, mb = 36, nO = o2.length, nP = ps.length, W = ml + nO * cw + 8, H = mt + nP * ch + mb;
+    var s = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Probability of a sustained flame, ' + esc(P.label) + ", " + esc(P.direction) + '"><defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#8d96a3"/><line x1="0" y1="0" x2="0" y2="6" stroke="#5b6470" stroke-width="2.5"/></pattern></defs>';
+    var sel = st.bd.cell;
+    for (var j = 0; j < nP; j++) for (var i = 0; i < nO; i++) {
+      var p = P.p_mean[j][i], dec = declinedAt(P, j, i, t), x = ml + i * cw, y = mt + (nP - 1 - j) * ch;
+      var fill = dec && st.bd.hide ? "url(#hatch)" : probColor(p);
+      s += '<rect class="cell' + (sel && sel[0] === j && sel[1] === i ? " sel" : "") + '" data-action="bd-cell" data-j="' + j + '" data-i="' + i + '" x="' + x + '" y="' + y + '" width="' + cw + '" height="' + ch + '" fill="' + fill + '"' + (dec && !st.bd.hide ? ' fill-opacity="0.45"' : "") + "><title>" + o2[i] + "% O2, " + ps[j] + " psia: P(sustained) " + p.toFixed(2) + (dec ? ", declined" : ", answered") + "</title></rect>";
+    }
+    var gc = P.g_class, dir = P.direction;
+    (d.observations || []).forEach(function (o) {
+      if (o.family !== d.grid.family) return;
+      if (gClassOf(o.g) !== gc) return;
+      if (o.direction !== dir && o.direction !== "not stated") return;
+      var op = num(o.o2_pct), pk = num(o.p_kpa); if (op === null || pk === null) return;
+      var p_ = pk / KPA_PER_PSI;
+      if (op < o2[0] || op > o2[nO - 1] || p_ < ps[0] || p_ > ps[nP - 1]) return;
+      var x = ml + (op - o2[0]) / (o2[nO - 1] - o2[0]) * (nO - 1) * cw + cw / 2, y = mt + (ps[nP - 1] - p_) / (ps[nP - 1] - ps[0]) * (nP - 1) * ch + ch / 2;
+      var tt = "<title>" + esc(o.obs_id + " " + o.label + ": " + o.outcome + (o.pressure_assumed_range === "True" ? " (pressure not stated)" : "")) + "</title>";
+      if (o.y === "1") s += '<circle cx="' + x + '" cy="' + y + '" r="5" fill="#111" stroke="#fff" stroke-width="1.5"' + (o.pressure_assumed_range === "True" ? ' stroke-dasharray="2 2"' : "") + ">" + tt + "</circle>";
+      else s += '<g stroke="#111" stroke-width="3">' + tt + '<line x1="' + (x - 5) + '" y1="' + (y - 5) + '" x2="' + (x + 5) + '" y2="' + (y + 5) + '"/><line x1="' + (x - 5) + '" y1="' + (y + 5) + '" x2="' + (x + 5) + '" y2="' + (y - 5) + '"/></g>';
+    });
+    ((d.envelope || {}).operating_points || []).forEach(function (op) {
+      if (op.g_class !== gc) return;
+      var x = ml + (op.o2_pct - o2[0]) / (o2[nO - 1] - o2[0]) * (nO - 1) * cw + cw / 2, y = mt + (ps[nP - 1] - op.p_psia) / (ps[nP - 1] - ps[0]) * (nP - 1) * ch + ch / 2;
+      s += '<path d="M' + x + " " + (y - 8) + " L" + (x + 7) + " " + y + " L" + x + " " + (y + 8) + " L" + (x - 7) + " " + y + ' Z" fill="#ffd43b" stroke="#111" stroke-width="1.5" pointer-events="none"><title>' + esc(op.name) + "</title></path>";
+    });
+    for (var a = 0; a < nO; a += 4) s += '<text class="ax" x="' + (ml + a * cw + cw / 2) + '" y="' + (mt + nP * ch + 13) + '" text-anchor="middle">' + o2[a] + "</text>";
+    for (var b = 0; b < nP; b += 4) s += '<text class="ax" x="' + (ml - 4) + '" y="' + (mt + (nP - 1 - b) * ch + ch / 2 + 3) + '" text-anchor="end">' + ps[b] + "</text>";
+    s += '<text class="ax" x="' + (ml + nO * cw / 2) + '" y="' + (H - 4) + '" text-anchor="middle">oxygen (%)</text><text class="ax" transform="translate(12 ' + (mt + nP * ch / 2) + ') rotate(-90)" text-anchor="middle">pressure (psia)</text>';
+    return s + "</svg>";
+  }
+  function whyDeclined(P, j, i, t) {
+    var r = [];
+    if (P.support_distance[j][i] > t.support) r.push("nearest test is " + P.support_distance[j][i].toFixed(2) + " away, beyond " + t.support.toFixed(2));
+    if (P.ci90_width[j][i] > t.width) r.push("90% interval is " + P.ci90_width[j][i].toFixed(2) + " wide, more than " + t.width.toFixed(2));
+    if (P.contra_distance[j][i] <= t.conflict) r.push("a test " + P.contra_distance[j][i].toFixed(2) + " away had the opposite outcome");
+    return r;
+  }
+  function renderBoundaryOut(d, st) {
+    var G = d.grid, t = st.bd.thr, P = G.panels[st.bd.panel], sh = panelShares(d, t), def = panelShares(d, defaultThr(d)), me = sh.panels[st.bd.panel];
+    var html = '<div class="note">With these settings the model declines on <strong>' + pc(me.whatif, 0) + "</strong> of this panel (" + pc(me.model, 0) + " with the model's own settings) and on <strong>" + pc(sh.whatif, 1) + "</strong> of all " + sh.cells + " cells (" + pc(sh.model, 1) + " with the model's own settings).</div>";
+    html += '<div class="grid2"><figure><figcaption><strong>' + esc(P.label) + ", " + esc(P.direction) + "</strong>: probability that " + esc(G.material) + " sustains a flame</figcaption>" + boundarySvg(d, st) +
+      '<div class="legend"><span><i class="sw" style="background:' + probColor(0) + '"></i>0</span><span><i class="sw" style="background:' + probColor(0.5) + '"></i>0.5</span><span><i class="sw" style="background:' + probColor(1) + '"></i>1</span><span>' + (st.bd.hide ? "hatched" : "faded") + ': model declines</span><span>dot: burned; cross: did not burn; dashed dot: pressure not stated</span><span>yellow diamond: operating point</span></div></figure><div>';
+    if (st.bd.cell) {
+      var j = st.bd.cell[0], i = st.bd.cell[1], why = whyDeclined(P, j, i, t), dec = why.length > 0;
+      html += '<div class="detail"><strong>' + G.o2_pct[i] + "% oxygen, " + G.p_psia[j] + " psia</strong> " + badge(dec ? "declined" : (P.p_mean[j][i] >= 0.5 ? "sustains" : "does not sustain")) +
+        kv([["P(sustained), mean", fx(P.p_mean[j][i], 3)], ["90% interval width", fx(P.ci90_width[j][i], 3)], ["Distance to nearest test", fx(P.support_distance[j][i], 3)], ["Distance to an opposite outcome", P.contra_distance[j][i] >= 99 ? "none within 99" : fx(P.contra_distance[j][i], 3)],
+          ["Why", dec ? esc(why.join("; ")) : "a test is close, the interval is narrow and no nearby test disagrees"], ["Model's own decision", P.declined[j][i] ? "declined" : "answered"]]) + "</div>";
+    } else html += '<p class="muted">Select a cell to see why the model answers or declines there.</p>';
+    html += table(["Panel", "Direction", { v: "Declines, what-if", c: "num" }, { v: "Declines, model", c: "num" }], sh.panels.map(function (p, k) { return [(k === st.bd.panel ? "<strong>" : "") + esc(p.label) + (k === st.bd.panel ? "</strong>" : ""), esc(p.direction), N(pc(p.whatif, 0)), N(pc(p.model, 0))]; }));
+    html += '<p class="muted small">The what-if uses distances rounded to three decimals. At the model\'s own settings it agrees with the model on ' + (def.cells - def.diff) + " of " + def.cells + " cells; the rest sit exactly on a threshold.</p></div></div>";
+    return html;
+  }
+  function slider(k, label, min, max, step, val, help) {
+    return '<label class="sl"><span>' + esc(label) + ' <output id="bd-v-' + k + '">' + Number(val).toFixed(2) + '</output></span><input type="range" min="' + min + '" max="' + max + '" step="' + step + '" value="' + val + '" data-input="bd-thr" data-k="' + k + '" aria-label="' + esc(label) + '"><span class="muted small">' + esc(help) + "</span></label>";
+  }
+  function renderBoundary(d, st, ctx) {
+    var G = d.grid || {}, b = d.boundary || {}, t = st.bd.thr, def = defaultThr(d);
+    if (!G.panels || !G.panels.length) return sec("Boundary model", "<p>No boundary grid in this build. Run the six-step method.</p>");
+    var html = sec("Flammability boundary with a decline rule",
+      '<div class="ctl"><label>Gravity and flame direction <select data-input="bd-panel">' + G.panels.map(function (p, k) { return '<option value="' + k + '"' + (k === st.bd.panel ? " selected" : "") + ">" + esc(p.label + ", " + p.direction) + "</option>"; }).join("") + "</select></label>" +
+      '<label class="chk"><input type="checkbox" data-input="bd-hide"' + (st.bd.hide ? " checked" : "") + "> Hatch declined cells</label></div>" +
+      '<div class="sliders">' + slider("support", "Support radius", 0.25, 3, 0.05, t.support, "model setting " + def.support.toFixed(2) + "; answer only if a test is this close") +
+      slider("width", "Widest 90% interval", 0.1, 1, 0.05, t.width, "model setting " + def.width.toFixed(2)) +
+      slider("conflict", "Conflict radius", 0, 3, 0.05, t.conflict, "model setting " + def.conflict.toFixed(2) + "; decline if a test this close disagrees") +
+      '<div><button type="button" class="b" data-action="bd-reset">Reset to the model settings</button></div></div>' +
+      '<div id="bd-out">' + renderBoundaryOut(d, st) + "</div>",
+      "The colours are the model's probability that " + esc(G.material) + " keeps burning. Move the sliders to see how strict the decline rule is; the fit itself does not change. To refit, change the settings and rerun the method.");
+    html += sec("Model", "<p>" + esc(b.model) + "</p><p>" + esc(b.decline_rule) + "</p>");
+    var fits = b.fits || {};
+    html += sec("Fit quality", Object.keys(fits).map(function (k) {
+      var f = fits[k], l = f.loo || {}, br = num(l.base_rate), brier0 = br === null ? null : br * (1 - br);
+      return "<h3>" + esc(famName(k)) + "</h3>" + kv([["Observations", esc(f.observations) + " (" + esc(f.sustained) + " sustained, " + esc(f.not_sustained) + " did not)"], ["Materials", esc((f.materials || []).join(", "))],
+        ["Largest R-hat", fx(f.max_rhat, 3) + (num(f.max_rhat) !== null && f.max_rhat < 1.05 ? " (chains agree)" : "")], ["Leave-one-out Brier score", fx(l.brier_loo, 3) + (brier0 !== null ? " against " + fx(brier0, 3) + " for always predicting the base rate" + (l.brier_loo > brier0 ? '. <strong>Worse than the base rate</strong>: too few tests that did not burn.' : "") : "")],
+        ["Leave-one-out accuracy", pc(l.accuracy_loo, 0)]]) +
+        "<details><summary>Coefficients</summary>" + table(["Term", { v: "5%", c: "num" }, { v: "Median", c: "num" }, { v: "95%", c: "num" }], (f.coefficients || []).map(function (c) { return [esc(c.name), N(fx(c.q05)), N(fx(c.median)), N(fx(c.q95))]; })) + "</details>";
+    }).join(""));
+    html += sec("Answers at the operating points", table(["Operating point", "Direction", "Material", { v: "P(sustained)", c: "num" }, { v: "90% interval", c: "num" }, { v: "Nearest test", c: "num" }, "Decision", "Reasons"], (b.operating_points || []).map(function (o) {
+      return [esc(o.name), esc(o.direction), esc(o.material), N(fx(o.p_mean)), N(fx(o.p_lo90) + " to " + fx(o.p_hi90)), N(fx(o.support_distance)), badge(o.decision), '<span class="small">' + esc((o.reasons || []).join("; ")) + "</span>"];
+    })));
+    return html;
+  }
+
+  function renderPlan(d, st, ctx) {
+    var P = (d.plan || {}).plan || {}, steps = P.plan || [], R = (d.plan || {}).single_test_ranking || {};
+    var max = Math.max.apply(null, steps.map(function (s) { return num(s.cumulative_reduction_pct) || 0; }).concat([1]));
+    var html = sec("Recommended sequence of tests", table(["#", "Facility", "Gravity", { v: "O\u2082", c: "num" }, { v: "Pressure", c: "num" }, "Direction", { v: "P(sustained) now", c: "num" }, { v: "Adds", c: "num" }, "Uncertainty removed so far"], steps.map(function (s) {
+      return [esc(s.step), esc(s.facility_name), esc(gName(s.g_class)) + " (" + fx(s.g, 2) + " g)", N(fx(s.o2_pct, 1) + "%"), N(fx(s.p_psia, 1) + " psia"), esc(dirName(s.dir)), N(fx(s.p_sustain_now)), N(pp(s.added_reduction_pct)),
+        '<div class="bar" title="' + pp(s.cumulative_reduction_pct) + '"><span style="width:' + Math.max(0, Math.min(100, (num(s.cumulative_reduction_pct) || 0) / max * 100)).toFixed(1) + '%"></span></div><span class="small">' + pp(s.cumulative_reduction_pct) + "</span>"];
+    })), "Each test is chosen, one at a time, to remove the most uncertainty at the operating points that matter, the way directed tests are picked to close coverage holes. " + esc(plural(num(P.distinct_conditions) || 0, "distinct condition")) + " were considered for " + esc(P.material) + ".");
+    html += sec("Best single tests", table([{ v: "Rank", c: "num" }, "Facility", "Gravity", { v: "O\u2082", c: "num" }, { v: "Pressure", c: "num" }, "Direction", { v: "Uncertainty removed", c: "num" }, { v: "Per cost tier", c: "num" }], (R.top || []).map(function (s) {
+      return [N(esc(s.rank)), esc(s.facility_name), esc(gName(s.g_class)) + " (" + fx(s.g, 2) + " g)", N(fx(s.o2_pct, 1) + "%"), N(fx(s.p_psia, 1) + " psia"), esc(dirName(s.dir)), N(pp(s.evr_pct)), N(fx(s.evr_per_cost, 3))];
+    })), "Ranked on their own, before any of the other tests is run. " + esc(R.candidates_evaluated) + " candidate tests were evaluated.");
+    html += sec("What the planner is protecting", table(["Operating point", "Direction", { v: "Weight", c: "num" }, { v: "P(sustained) now", c: "num" }, { v: "Variance now", c: "num" }], (R.targets || []).map(function (t) {
+      return [esc(t.name), esc(dirName(t.dir)), N(fx(t.weight, 1)), N(fx(t.p_mean_now)), N(fx(t.variance_now, 4))];
+    })), "Weights come from the operating envelope settings; change them in Settings and rerun the method.");
+    if ((d.plan || {}).method) html += '<p class="muted small">' + esc(d.plan.method) + "</p>";
+    return html;
+  }
+
+  function renderFm2(d, st, ctx) {
+    var F = d.fm2 || {}, V = d.verify || {}, pub = ((d.checklist || {}).fm2_sha256) || ((d.summary || {}).fm2_predictions_sha256) || "", m = (st.fm2 && st.fm2.msg) || null;
+    if (!F.predictions) return sec("FM2 predictions", "<p>No frozen predictions in this build.</p>");
+    var html = sec("Predictions published before the FM2 results", kv([["Frozen at", esc(when(F.frozen_at_utc))], ["Published SHA-256", '<span class="hash">' + esc(pub) + "</span>"], ["File now hashes to", '<span class="hash">' + esc(V.sha256) + "</span> " + badge(V.sha256 === pub ? "matches" : "does not match", V.sha256 === pub ? "ok" : "bad")],
+      ["Status", esc(F.status)], ["Conditions from", esc(F.fm2_conditions_source)], ["Lunar gravity used", fx(F.gravity_used_g, 4) + " g"]]) +
+      '<div class="gfoot"><button type="button" class="b primary" data-action="fm2-verify">Check the published file now</button><span class="muted small">' + (ctx.live ? "asks the local server to hash the files" : "hashes predictions/fm2_predictions.json in this browser") + "</span></div>" +
+      (m ? '<div class="' + (m.ok === true ? "okbox" : m.ok === false ? "badbox" : "note") + '">' + esc(m.text) + "</div>" : ""),
+      "The four FM2 burns were predicted and the file was hashed before any FM2 result exists, so anyone can check later that the predictions were not changed.");
+    html += sec("The four burns", table(["Burn", "Fuel", "Direction", "Atmosphere", "Decision", { v: "P(sustained)", c: "num" }, { v: "90% interval", c: "num" }, "Nearest evidence", "Without assumed-pressure tests"], F.predictions.map(function (p) {
+      var M = p.model || {}, S = p.strict_model || {};
+      return [esc(p.burn), esc(p.fuel), esc(p.direction), fx(p.o2_pct, 0) + "% O2, " + fx(p.p_psia, 1) + " psia", badge(M.decision) + ((M.reasons || []).length ? '<div class="small muted">' + esc(M.reasons.join("; ")) + "</div>" : ""), N(fx(M.p_mean)), N(fx(M.p_lo90) + " to " + fx(M.p_hi90)),
+        esc(M.nearest_label) + ' <span class="muted small">(' + esc(M.nearest_outcome) + ", distance " + fx(M.support_distance) + ")</span>", S.decision ? badge(S.decision) + " " + fx(S.p_mean) : "–"];
+    })));
+    var sr = F.scoring_rule || {};
+    html += sec("How the predictions will be scored", kv([["Sustained means", esc(sr.sustained_definition)], ["Scoring", esc(sr.scoring)], ["Decision rule", esc(F.decision_rule)]]));
+    html += sec("Frozen inputs", table(["Input file", "Status"], (V.inputs || []).map(function (i) { return ["<code>" + esc(i.file) + "</code>", badge(i.unchanged ? "unchanged" : "changed since the freeze")]; })) +
+      (V.all_inputs_unchanged ? "" : '<div class="warnbox">An input changed after the freeze. The predictions file is still the frozen one; only results computed after the change differ.</div>'),
+      "These files fed the frozen predictions. Editing the boundary model settings changes one of them; the published predictions stay frozen.");
+    return html;
+  }
+
+  var LEDGER_PAGE = 25;
+  function ledgerRows(d, f) {
+    var q = String(f.q || "").toLowerCase().trim();
+    return (d.ledger || []).filter(function (r) {
+      if (f.family && r.family !== f.family) return false;
+      if (f.g && r.g_class !== f.g) return false;
+      if (f.origin && r.origin !== f.origin) return false;
+      if (f.outcome && r.outcome !== f.outcome) return false;
+      if (f.use === "model" && !/^boundary model/.test(r.model_use || "")) return false;
+      if (f.use === "not" && /^boundary model/.test(r.model_use || "")) return false;
+      if (q) { var hay = [r.tp_id, r.label, r.materials, r.sources, r.locators, r.outcome_text, r.note, r.row_ids].join(" ").toLowerCase(); if (hay.indexOf(q) < 0) return false; }
+      return true;
+    });
+  }
+  function distinct(d, k) { var s = {}; (d.ledger || []).forEach(function (r) { if (r[k]) s[r[k]] = 1; }); return Object.keys(s).sort(); }
+  function renderLedgerOut(d, st) {
+    var f = st.lg, rows = ledgerRows(d, f), pages = Math.max(1, Math.ceil(rows.length / LEDGER_PAGE)), pg = Math.min(f.page || 0, pages - 1), slice = rows.slice(pg * LEDGER_PAGE, pg * LEDGER_PAGE + LEDGER_PAGE);
+    var html = '<p class="muted small">Showing ' + (rows.length ? pg * LEDGER_PAGE + 1 : 0) + " to " + (pg * LEDGER_PAGE + slice.length) + " of " + rows.length + " matching test points (" + (d.ledger || []).length + " in the ledger). Select a row for its sources.</p>";
+    html += '<div class="tw"><table><thead><tr><th scope="col">Test point</th><th scope="col">Label</th><th scope="col">Family</th><th scope="col">Direction</th><th scope="col" class="num">O\u2082 %</th><th scope="col" class="num">psia</th><th scope="col">Gravity</th><th scope="col">Outcome</th><th scope="col">Origin</th></tr></thead><tbody>';
+    slice.forEach(function (r) {
+      var open = f.open === r.tp_id;
+      html += '<tr class="clk' + (open ? " open" : "") + '" data-action="lg-row" data-id="' + esc(r.tp_id) + '" tabindex="0" role="button" aria-expanded="' + open + '"><td class="mono">' + esc(r.tp_id) + "</td><td>" + esc(r.label) + "</td><td>" + esc(famName(r.family)) + "</td><td>" + esc((r.direction_class || "").replace(/_/g, " ")) + '</td><td class="num">' + (r.o2_pct ? fx(r.o2_pct, 1) : "–") + '</td><td class="num">' + (r.p_psia ? fx(r.p_psia, 1) : "–") + "</td><td>" + esc(gName(r.g_class)) + "</td><td>" + badge((r.outcome || "").replace(/_/g, " "), r.outcome === "sustained" ? "ok" : r.outcome === "not_reported" ? "neutral" : "warn") + "</td><td>" + esc(r.origin) + "</td></tr>";
+      if (open) {
+        var urls = String(r.source_urls || "").split(";").map(function (u) { return u.trim(); }).filter(function (u) { return /^https:\/\//.test(u); });
+        html += '<tr class="open"><td colspan="9">' + kv([["Materials", esc(r.materials)], ["Oxygen range", r.o2_lo_pct || r.o2_hi_pct ? fx(r.o2_lo_pct, 2) + " to " + fx(r.o2_hi_pct, 2) + "%" : "not stated"], ["Pressure", r.p_kpa ? fx(r.p_kpa, 1) + " kPa (" + fx(r.p_lo_kpa, 1) + " to " + fx(r.p_hi_kpa, 1) + ")" : "not stated"], ["Gravity", r.g ? fx(r.g, 3) + " g" : "not stated"], ["Flow", r.flow_cm_s ? fx(r.flow_cm_s, 1) + " cm/s" : "not stated"],
+          ["Outcome text", esc(r.outcome_text || "–")], ["Evidence", esc(r.outcome_evidence || "–")], ["Evidence tier", esc(r.evidence_tier)], ["Sources", esc(r.sources)], ["Locators", esc(r.locators)], ["Ledger rows", esc(r.row_ids || "–")], ["Model use", esc(r.model_use)], ["Note", esc(r.note || "–")],
+          ["Links", urls.length ? urls.map(function (u) { return '<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(u) + "</a>"; }).join("<br>") : "–"]]) + "</td></tr>";
+      }
+    });
+    html += "</tbody></table></div>";
+    html += '<div class="pager"><button type="button" class="b" data-action="lg-page" data-p="' + (pg - 1) + '"' + (pg <= 0 ? " disabled" : "") + '>Previous</button><span class="small">Page ' + (pg + 1) + " of " + pages + '</span><button type="button" class="b" data-action="lg-page" data-p="' + (pg + 1) + '"' + (pg >= pages - 1 ? " disabled" : "") + '>Next</button><button type="button" class="b" data-action="lg-csv">Download these rows (CSV)</button></div>';
+    return html;
+  }
+  function renderLedger(d, st, ctx) {
+    var f = st.lg;
+    function sel(name, label, opts, nameFn) {
+      return "<label>" + esc(label) + ' <select data-input="lg-f" data-k="' + name + '"><option value="">All</option>' + opts.map(function (o) { return '<option value="' + esc(o) + '"' + (f[name] === o ? " selected" : "") + ">" + esc(nameFn ? nameFn(o) : o) + "</option>"; }).join("") + "</select></label>";
+    }
+    var s1 = d.step1 || {};
+    return sec("Evidence ledger: every test condition with its source",
+      '<div class="ctl"><label>Search <input type="search" data-input="lg-q" value="' + esc(f.q || "") + '" placeholder="material, source, test point" aria-label="Search the ledger"></label>' +
+      sel("family", "Family", distinct(d, "family"), famName) + sel("g", "Gravity", distinct(d, "g_class"), gName) + sel("origin", "Origin", distinct(d, "origin")) + sel("outcome", "Outcome", distinct(d, "outcome"), function (o) { return o.replace(/_/g, " "); }) +
+      '<label>Model use <select data-input="lg-f" data-k="use"><option value="">All</option><option value="model"' + (f.use === "model" ? " selected" : "") + '>Used by the boundary model</option><option value="not"' + (f.use === "not" ? " selected" : "") + ">Not used</option></select></label></div>" +
+      '<div id="lg-out">' + renderLedgerOut(d, st) + "</div>",
+      esc(s1.test_points) + " test points: " + Object.keys(s1.by_origin || {}).map(function (k) { return esc(s1.by_origin[k]) + " " + esc(k); }).join(", ") + ". " + esc(s1.outcome_quotes_checked) + " outcome quotes were checked against their sources; " + esc((s1.outcome_quotes_not_found || []).length) + " were not found.");
+  }
+  function ledgerCsv(rows) {
+    if (!rows.length) return "";
+    var cols = Object.keys(rows[0]);
+    function q(v) { v = v === null || v === undefined ? "" : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
+    return cols.join(",") + "\n" + rows.map(function (r) { return cols.map(function (c) { return q(r[c]); }).join(","); }).join("\n") + "\n";
+  }
+
+  function expDetail(d, id) {
+    var E = d.exp || {}, x;
+    if (id === 1) {
+      x = (E.exp1 || {}).reported || {}; var fz = x.final || {}, raw = x.raw || {}, no = x.numbers_only || {}, pr = x.provenance || {}, strict = ((E.exp1 || {}).strict || {}).final || {};
+      return kv([["Fields correct", esc(fz.fields_ok) + " of " + esc(fz.fields_checked) + " (" + pc(fz.field_accuracy) + ", 95% interval " + pc((fz.field_ci95 || [])[0]) + " to " + pc((fz.field_ci95 || [])[1]) + ")"], ["Strict count", esc(strict.fields_ok) + " of " + esc(strict.fields_checked) + " (" + pc(strict.field_accuracy) + ")"],
+        ["Before adjudication", esc(raw.fields_ok) + " of " + esc(raw.fields_checked)], ["Rows fully correct", esc(fz.rows_all_ok) + " of " + esc(fz.rows_checked)], ["Numbers only", esc(no.ok) + " of " + esc(no.checks) + " (" + esc((no.fields || []).join(", ")) + ")"], ["Rows with source, locator and quote", esc(pr.rows_with_quote_in_source) + " of " + esc(pr.rows)], ["Pass mark", "98% of fields, set before the audit"]]) +
+        (fz.by_field ? "<details><summary>By field</summary>" + table(["Field", { v: "Correct", c: "num" }, { v: "Checked", c: "num" }], Object.keys(fz.by_field).map(function (k) { return [esc(k), N(esc(fz.by_field[k].ok)), N(esc(fz.by_field[k].n))]; })) + "</details>" : "");
+    }
+    if (id === 2) { x = E.exp2 || {}; return table(["Check", "Status", { v: "Checked", c: "num" }, { v: "Failures", c: "num" }], (x.checks || []).map(function (c) { return [esc(c.name), badge(c.status), N(esc(c.n_checked)), N(esc(c.failures))]; })) + (x.fault_injection ? '<p class="small">Planted faults caught: ' + esc(x.fault_injection.detected) + " of " + esc(x.fault_injection.total) + "</p>" : ""); }
+    if (id === 3) { x = E.exp3 || {}; var hl = x.headline || {}; return "<p class=\"small\">" + esc(hl.claim) + ": " + (hl.holds_in_all_runs ? "holds in all " : "does not hold in all ") + esc((x.runs || []).length) + " tolerance runs.</p>" + table(["Habitat", { v: "Cells", c: "num" }, { v: "Tested (min to max)", c: "num" }], Object.keys(x.per_habitat || {}).map(function (k) { var h = x.per_habitat[k]; return [esc(h.name), N(esc(h.cells)), N(esc(h.tested_min) + " to " + esc(h.tested_max))]; })) + table([{ v: "O\u2082 tolerance", c: "num" }, { v: "Pressure tolerance", c: "num" }, { v: "Tested", c: "num" }, { v: "Bounded", c: "num" }, { v: "Untested", c: "num" }], (x.runs || []).map(function (r) { return [N(esc(r.tol_o2_pts) + " pts"), N(pc(r.tol_p_frac, 0)), N(esc(r.counts.tested)), N(esc(r.counts.bounded)), N(esc(r.counts.untested))]; })); }
+    if (id === 4) { x = E.exp4 || {}; return table(["Observation", { v: "Measured ratio", c: "num" }, { v: "Square-root rule", c: "num" }, { v: "Error", c: "num" }], (x.observations || []).map(function (o) { var r = (o.rules || {}).sqrt || {}; return [esc(o.label), N(fx(o.measured, 3)), N(fx(r.predicted, 3)), N((num(r.error_pct) > 0 ? "+" : "") + fx(r.error_pct, 1) + "%")]; })) + '<p class="small">Hits per rule: ' + Object.keys(x.hits_per_rule || {}).map(function (k) { return esc(k.replace("_", " ")) + " " + esc(x.hits_per_rule[k]); }).join(", ") + "</p>"; }
+    if (id === 5) { x = E.exp5 || {}; var se = x.sensitivity || {}, nb = x.null_baseline || {}; return kv([["LUCI-like test in the top five", pc(se.luci_like_in_top5_share) + " of " + esc(se.draws) + " weight draws, against " + pc(nb.probability_random_five_include_luci_like) + " for five random picks"], ["Lunar test in the top five", pc(se.lunar_in_top5_share) + " (random: " + pc(nb.probability_random_five_include_lunar) + ")"], ["Rank agreement, median Kendall tau", fx(se.kendall_tau_median)]]) + table(["#", "Habitat", "Family", "Atmosphere", "Facility"], (x.plan_today || []).map(function (p, k) { return [k + 1, esc(p.habitat_name), esc(famName(p.family)), fx(p.o2_pct, 0) + "% O2, " + fx(p.p_psia, 1) + " psia, " + esc(gName(p.g_class)), esc(p.facility_name)]; })); }
+    if (id === 6) { x = E.exp6 || {}; var tv = (x.variants || {}).two_variable || {}; return '<p class="small"><strong>Simulation, not NASA data.</strong> ' + esc(tv.n_boundaries) + " simulated boundaries, budget " + esc(x.budget_tests) + " tests.</p>" + table(["Strategy", { v: "Success rate", c: "num" }, { v: "Median tests", c: "num" }, { v: "80th percentile", c: "num" }], (tv.strategies || []).map(function (s) { return [esc(s.label), N(pc(s.success_rate, 0)), N(fx(s.median_tests, 1)), N(s.p80_tests === null ? "not reached" : fx(s.p80_tests, 0))]; })) + ((x.caveats || []).length ? '<p class="muted small">' + esc(x.caveats.join(" ")) + "</p>" : ""); }
+    if (id === 7) { x = E.exp7 || {}; var dt = x.deterministic || {}, lm = x.llm || {}, ih = x.independent_heldout_check || {}; return table(["Criterion", "Rule-based answerer", "Language model"], (dt.criteria || []).map(function (c, k) { var l = (lm.criteria || [])[k] || {}; return [esc(c.name), badge(c.pass ? "pass" : "fail") + " " + esc(c.value), l.name ? badge(l.pass ? "pass" : "fail") + " " + esc(l.value) : "–"]; })) + '<p class="small">Independent held-out set: ' + esc(ih.correct) + " of " + esc(ih.n) + " correct on its first run, " + esc(ih.grounded) + " of " + esc(ih.n) + " grounded.</p>"; }
+    return "";
+  }
+  function renderExperiments(d, st, ctx) {
+    var ex = ((d.summary || {}).experiments) || [], labels = (d.summary || {}).labels || {}, rf = d.results_files || {};
+    return '<div class="exps">' + ex.map(function (e) {
+      var key = "exp" + e.id, src = ctx.img ? ctx.img(key) : "", res = rf[key] || (e.results && e.results.indexOf("..") !== 0 ? e.results : null);
+      return '<section class="card exp"><div class="hd"><h2>Experiment ' + esc(e.id) + ": " + esc(e.title) + "</h2>" + badge(e.status) + "</div>" + (labels[e.id] ? '<p class="small muted">' + esc(labels[e.id]) + "</p>" : "") + "<p>" + esc(e.headline) + "</p>" +
+        "<details" + (e.id === 1 ? " open" : "") + "><summary>Details</summary>" + expDetail(d, e.id) + "</details>" +
+        (src ? '<img src="' + esc(src) + '" alt="Chart for Experiment ' + esc(e.id) + ": " + esc(e.title) + '" loading="lazy">' : "") +
+        '<p class="small">' + (res ? "Full results: " + fileLink(ctx, res) : e.id === 1 ? "Full results are in the Experiment 1 audit package." : "") + "</p></section>";
+    }).join("") + "</div>";
+  }
+
+  function fieldRow(d, st, g, f) {
+    var key = g.file + "|" + f.path, cur = d.settings.values[key], has = Object.prototype.hasOwnProperty.call(st.set.edits, key), raw = has ? st.set.edits[key] : cur;
+    var chk = has ? coerce(f, raw) : { ok: true, value: cur }, changed = has && chk.ok && !sameVal(chk.value, cur);
+    var input = f.type === "bool" ? '<input type="checkbox" data-input="set-field" data-key="' + esc(key) + '"' + (raw === true || raw === "true" ? " checked" : "") + ' aria-label="' + esc(f.label) + '">' :
+      '<input type="number" data-input="set-field" data-key="' + esc(key) + '" value="' + esc(raw) + '"' + (f.min !== undefined ? ' min="' + f.min + '"' : "") + (f.max !== undefined ? ' max="' + f.max + '"' : "") + (f.step !== undefined ? ' step="' + f.step + '"' : ' step="any"') + ' aria-label="' + esc(f.label) + '">';
+    return '<tr class="' + (changed ? "chg" : "") + (chk.ok ? "" : " err") + '"><th scope="row">' + esc(f.label) + (f.help ? '<div class="help">' + esc(f.help) + "</div>" : "") + "</th><td>" + input + '<div class="emsg">' + (chk.ok ? "" : esc(chk.msg)) + '</div></td><td class="num">' + esc(cur === true ? "yes" : cur === false ? "no" : cur) + '</td><td class="muted small">' + (f.type === "bool" ? "yes or no" : esc(f.min) + " to " + esc(f.max)) + "</td></tr>";
+  }
+  function renderGroupFooter(d, st, ctx, g) {
+    var c = fileChanges(d, st.set.edits, g.file), m = st.set.msg[g.file], html = '<span class="small">' + (c.changes.length || c.errors.length ? plural(c.changes.length, "change") + " pending in <code>" + esc(g.file) + "</code>" + (c.errors.length ? ", " + plural(c.errors.length, "value") + " to fix" : "") : "No changes") + "</span>";
+    var dis = !c.changes.length || c.errors.length ? " disabled" : "";
+    if (ctx.live) html += '<button type="button" class="b primary" data-action="set-save" data-file="' + esc(g.file) + '"' + dis + ">Save to the project</button>";
+    else html += '<button type="button" class="b primary" data-action="set-download" data-file="' + esc(g.file) + '"' + dis + '>Download updated file</button><button type="button" class="b" data-action="set-request" data-file="' + esc(g.file) + '"' + dis + '>Download change request</button><button type="button" class="b" data-action="set-issue" data-file="' + esc(g.file) + '"' + (dis || (ctx.repo ? "" : " disabled")) + ">Propose on GitHub</button>";
+    html += '<button type="button" class="b" data-action="set-discard" data-file="' + esc(g.file) + '"' + (Object.keys(st.set.edits).some(function (k) { return k.indexOf(g.file + "|") === 0; }) ? "" : " disabled") + ">Discard</button>";
+    if (m) {
+      html += '<div class="msg ' + (m.ok ? "okbox" : "badbox") + '">' + esc(m.text) + (m.runs && m.runs.length ? " Rerun now: " + m.runs.map(function (r) { return '<button type="button" class="b" data-action="run" data-target="' + esc(r) + '">' + esc(r) + "</button>"; }).join(" ") : "") + "</div>";
+    }
+    return html;
+  }
+  function renderSettings(d, st, ctx) {
+    var sch = (d.settings || {}).schema || { groups: [] };
+    var html = sec("Settings", ctx.live ?
+      "<p>Connected to the local server. <strong>Save to the project</strong> validates each value, keeps a backup of the old file and records the change; then rerun the affected scripts from the button that appears or from Runs.</p>" :
+      "<p>This page is a snapshot, so changes cannot run here. Edit values, then either <strong>download the updated file</strong> and replace it in your copy of the project, or <strong>propose the change on GitHub</strong> as an issue that the maintainers apply with <code>python console/apply_settings.py</code>. To change and rerun in one place, start the live console (see Runs).</p>" +
+      '<div class="ctl"><label>GitHub repository for proposals <input type="url" data-input="repo" value="' + esc(ctx.repo || "") + '" placeholder="https://github.com/your-team/nextburn" size="44"></label><button type="button" class="b" data-action="repo-save">Save</button><span class="small muted">' + (ctx.repo ? "Using " + esc(ctx.repo) : "Not set") + "</span></div>",
+      "Every value has a range check. Values outside the range are refused here and again by the scripts.");
+    sch.groups.forEach(function (g) {
+      html += '<section class="card setgrp"><h2>' + esc(g.title) + '</h2><p class="muted small">File <code>' + esc(g.file) + "</code>; affects " + esc((g.affects || []).join(", ")) + "</p>" + (g.frozen_input ? '<div class="warnbox">' + esc(g.note) + "</div>" : "<p class=\"small\">" + esc(g.note) + "</p>") +
+        table(["Setting", "New value", { v: "Now", c: "num" }, "Allowed"], []).replace("<tbody></tbody>", "<tbody>" + g.fields.map(function (f) { return fieldRow(d, st, g, f); }).join("") + "</tbody>") +
+        '<div class="gfoot" data-gfoot="' + esc(g.id) + '">' + renderGroupFooter(d, st, ctx, g) + "</div></section>";
+    });
+    return html;
+  }
+
+  function renderRuns(d, st, ctx) {
+    var T = (d.settings && d.settings.schema && d.settings.schema.run_targets) || [], log = d.run_log || {}, html = "";
+    if (ctx.live) {
+      var job = st.runs.job;
+      html += sec("Run the scripts", table(["Action", "Command", { v: "Typical time", c: "num" }, ""], T.map(function (t) {
+        var cmd = "python " + t.command.join(" ") + (t.then || []).map(function (c) { return " && python " + c.join(" "); }).join("");
+        return [esc(t.label) + (t.warning ? '<div class="small muted">' + esc(t.warning) + "</div>" : ""), "<code>" + esc(cmd) + "</code>", N(t.minutes < 1 ? "under a minute" : "about " + t.minutes + " min"),
+          (t.confirm ? '<input type="text" data-input="run-confirm" data-target="' + esc(t.id) + '" placeholder="type ' + esc(t.confirm) + '" aria-label="Type ' + esc(t.confirm) + ' to confirm" size="11"> ' : "") + '<button type="button" class="b' + (t.id === "fast" ? " primary" : "") + '" data-action="run" data-target="' + esc(t.id) + '"' + (job && job.status === "running" ? " disabled" : "") + ">Run</button>"];
+      })), "One job runs at a time. When a job finishes, the console reloads the results and rebuilds index.html.");
+      if (job) html += sec("Current job", kv([["Action", esc(job.label)], ["Status", badge(job.status === "running" ? "running" : job.status === "ok" ? "done" : "failed", job.status === "running" ? "warn" : job.status === "ok" ? "ok" : "bad")], ["Started", esc(when(job.started_utc))], ["Finished", esc(when(job.finished_utc))]]) + "<pre>" + esc(job.log_tail || "") + "</pre>");
+      if (st.runs.msg) html += '<div class="note">' + esc(st.runs.msg) + "</div>";
+      var H = st.runs.history;
+      if (H) {
+        html += sec("Recent setting changes", (H.changes || []).length ? table(["When", "File", "Changes", "Backup"], H.changes.slice().reverse().map(function (c) {
+          return [esc(when(c.time_utc)), "<code>" + esc(c.file) + "</code>", esc((c.changes || []).map(function (x) { return x.path + ": " + x.old + " to " + x["new"]; }).join("; ")), c.backup ? '<button type="button" class="b" data-action="restore" data-backup="' + esc(c.backup) + '">Restore the file as it was</button>' : "–"];
+        })) : '<p class="muted">No changes yet.</p>');
+        html += sec("Recent runs", (H.runs || []).length ? table(["When", "Action", "Status", { v: "Seconds", c: "num" }], H.runs.slice().reverse().map(function (r) { return [esc(when(r.started_utc)), esc(r.label), badge(r.status === "ok" ? "done" : "failed", r.status === "ok" ? "ok" : "bad"), N(fx(r.seconds, 1))]; })) : '<p class="muted">No runs yet.</p>');
+      }
+      return html;
+    }
+    html += sec("Run the console live on your computer",
+      "<p>The snapshot cannot run scripts. To change settings and rerun the experiments from this page, " + (ctx.repo ? "clone the repository" : "download this repository") + " and start the local server:</p><pre>" + (ctx.repo ? "git clone " + esc(ctx.repo) + "\ncd " + esc(ctx.repo.split("/").pop()) + "\n" : "") + "pip install -r requirements.txt\npython console/console_server.py</pre><p>Then open <code>http://127.0.0.1:8770</code>. The server listens on this computer only, runs only the actions listed below and keeps a backup of every settings file it changes.</p>");
+    html += sec("Actions the live console can run", table(["Action", "Command", { v: "Typical time", c: "num" }], T.map(function (t) {
+      return [esc(t.label) + (t.warning ? '<div class="small muted">' + esc(t.warning) + "</div>" : ""), "<code>python " + esc(t.command.join(" ")) + (t.then || []).map(function (c) { return " && python " + esc(c.join(" ")); }).join("") + "</code>", N(t.minutes < 1 ? "under a minute" : "about " + esc(t.minutes) + " min")];
+    })));
+    html += sec("Last full run in this snapshot", "<p>Regression gate: " + badge(log.gate || "unknown") + " at " + esc(when(log.generated_at)) + "</p>" + table(["Step", { v: "Exit code", c: "num" }, { v: "Seconds", c: "num" }], (log.steps || []).map(function (s) { return ["<code>" + esc(s.step) + "</code>", N(esc(s.exit)), N(fx(s.seconds, 1))]; })));
+    return html;
+  }
+
+  function renderAbout(d, st, ctx) {
+    var m = d.meta || {};
+    return sec("About NextBurn", "<p>" + esc(m.tagline) + ". NextBurn is a NASA Space Apps Challenge 2026 entry for the Flame in Freefall challenge. It treats spacecraft fire-safety testing the way chip designers treat verification: list what has been tested, measure coverage against the conditions that matter, and pick the next tests that close the biggest holes.</p>") +
+      sec("Data and licences", "<ul><li>NASA Physical Sciences Informatics (psi.nasa.gov) experiment tables for PSI-25, PSI-26, PSI-98, PSI-99 and PSI-100. The tables have no documented API, so they were downloaded and parsed; their provenance files are in data/psi_raw.</li><li>NASA Technical Reports Server (ntrs.nasa.gov) reports, cited row by row in the evidence ledger with a locator for every value.</li><li>The 37% oxygen condition from NESC Technical Bulletin 26-05.</li><li>MAPTIS is restricted and is not used.</li></ul><p>Every row in the ledger names its source, so each number on this page can be traced.</p>") +
+      sec("Use of AI", "<p>AI tools helped the team with research, code and writing, and AI checkers were used in the Experiment 1 audit (a human re-check of 19 disputed fields is still pending). The numbers on this page are computed by the scripts in this repository from the cited sources. Space Apps rules ask teams to disclose AI use; the README gives the details.</p>") +
+      sec("Not affiliated with NASA", "<p>NextBurn is an independent entry. It is not produced, reviewed or endorsed by NASA, and it uses no NASA logos. NASA data are used under their public terms.</p>") +
+      sec("This page", kv([["Built", esc(when(m.generated_at))], ["Mode", ctx.live ? "live, connected to the local server" : "snapshot: results embedded when the page was built"], ["Rebuild", "<code>python console/build_console.py</code>"]]));
+  }
+
+  var RENDER = { overview: renderOverview, coverage: renderCoverage, boundary: renderBoundary, plan: renderPlan, fm2: renderFm2, ledger: renderLedger, experiments: renderExperiments, settings: renderSettings, runs: renderRuns, about: renderAbout };
+  function renderTab(tab, d, st, ctx) { return (RENDER[tab] || renderOverview)(d, st, ctx); }
+  function initialState(d) {
+    return { tab: "overview", cov: { family: null, bin: null }, bd: { panel: Math.min(1, ((d.grid || {}).panels || [1]).length - 1), thr: defaultThr(d), hide: true, cell: null }, lg: { q: "", page: 0, open: null }, set: { edits: {}, msg: {} }, runs: { job: null, history: null, msg: "" }, fm2: { msg: null } };
+  }
+  return { esc: esc, renderTab: renderTab, renderBoundaryOut: renderBoundaryOut, renderLedgerOut: renderLedgerOut, renderGroupFooter: renderGroupFooter, fieldRow: fieldRow, initialState: initialState, defaultThr: defaultThr, panelShares: panelShares,
+    ledgerRows: ledgerRows, ledgerCsv: ledgerCsv, fileChanges: fileChanges, updatedFile: updatedFile, changeRequest: changeRequest, issueBody: issueBody, coerce: coerce, getPath: getPath, setPath: setPath, TABS: Object.keys(RENDER) };
+})();
+
+if (typeof document !== "undefined" && document.getElementById("nb-view")) (function () {
+  var D, IM = {};
+  try { D = JSON.parse(document.getElementById("nb-data").textContent); } catch (e) { document.getElementById("nb-view").innerHTML = '<p class="badbox">The results data in this page could not be read. Rebuild it with python console/build_console.py.</p>'; return; }
+  try { IM = JSON.parse(document.getElementById("nb-images").textContent) || {}; } catch (e) { IM = {}; }
+  var S = NBR.initialState(D), view = document.getElementById("nb-view"), stamp = Date.now();
+  S.live = false; S.token = "";
+  function detectRepo() { try { var m = /^([\w-]+)\.github\.io$/i.exec(location.hostname); if (!m) return ""; var seg = location.pathname.split("/").filter(Boolean)[0] || ""; if (/\.html?$/i.test(seg)) seg = ""; return "https://github.com/" + m[1] + "/" + (seg || m[1] + ".github.io"); } catch (e) { return ""; } }
+  try { S.repo = localStorage.getItem("nb-repo") || detectRepo(); } catch (e) { S.repo = detectRepo(); }
+  try { var h = (location.hash || "").replace("#", ""); if (NBR.TABS.indexOf(h) >= 0) S.tab = h; } catch (e) { }
+
+  function ctx() {
+    return { live: S.live, repo: S.repo, img: function (k) { var p = (D.image_paths || {})[k]; return S.live ? (p ? p + "?v=" + stamp : "") : (IM[k] || ""); },
+      link: function (p) { if (!p || p.indexOf("..") === 0) return null; return S.repo ? S.repo.replace(/\/+$/, "") + "/blob/main/" + p : p; } };
+  }
+  function setMode() {
+    var m = document.getElementById("nb-mode"), when = String((D.meta || {}).generated_at || "").replace("T", " ").replace("+00:00", " UTC");
+    m.className = "mode" + (S.live ? " live" : "");
+    m.textContent = S.live ? "Live: connected to the local server; settings and runs are enabled" : "Snapshot built " + when + "; start the local server to change settings and rerun";
+    var t = document.getElementById("nb-tagline"); if (t && D.meta && D.meta.tagline) t.textContent = D.meta.tagline;
+  }
+  function render() {
+    Array.prototype.forEach.call(document.querySelectorAll("#nb-tabs [data-tab]"), function (b) { var on = b.getAttribute("data-tab") === S.tab; b.setAttribute("aria-selected", on ? "true" : "false"); b.tabIndex = on ? 0 : -1; });
+    try { view.innerHTML = NBR.renderTab(S.tab, D, S, ctx()); } catch (e) { view.innerHTML = '<div class="badbox">This section could not be drawn: ' + NBR.esc(e.message) + "</div>"; }
+  }
+  function part(id, html) { var el = document.getElementById(id); if (el) el.innerHTML = html; }
+  function api(method, path, body) {
+    var hd = { "Accept": "application/json" };
+    if (body !== undefined) hd["Content-Type"] = "application/json";
+    if (S.token) hd["X-NextBurn-Token"] = S.token;
+    return fetch(path, { method: method, headers: hd, cache: "no-store", body: body === undefined ? undefined : JSON.stringify(body) }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (j) { if (!r.ok) { var er = new Error(j.error || ("the server answered " + r.status)); er.status = r.status; throw er; } return j; });
+    });
+  }
+  function needToken(e) {
+    if (e && e.status === 401) { var t = window.prompt("This server needs its access token (set when it was started)."); if (t) { S.token = t; return true; } }
+    return false;
+  }
+  function refresh() { return api("GET", "api/bundle").then(function (b) { D = b; stamp = Date.now(); render(); }); }
+  function loadHistory() { return api("GET", "api/history").then(function (h) { S.runs.history = h; if (S.tab === "runs") render(); }).catch(function () { }); }
+  function download(name, text, type) {
+    var blob = new Blob([text], { type: type || "application/json" }), url = URL.createObjectURL(blob), a = document.createElement("a");
+    a.href = url; a.download = name; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(url); a.remove(); }, 500);
+  }
+  function groupsOf(file) { return D.settings.schema.groups.filter(function (g) { return g.file === file; }); }
+  function refreshFooters(file) {
+    Array.prototype.forEach.call(document.querySelectorAll("[data-gfoot]"), function (el) {
+      var g = D.settings.schema.groups.filter(function (x) { return x.id === el.getAttribute("data-gfoot"); })[0];
+      if (g && (!file || g.file === file)) el.innerHTML = NBR.renderGroupFooter(D, S, ctx(), g);
+    });
+  }
+  function poll(id) {
+    api("GET", "api/jobs/" + encodeURIComponent(id)).then(function (j) {
+      S.runs.job = j; if (S.tab === "runs") render();
+      if (j.status === "running") setTimeout(function () { poll(id); }, 2000);
+      else { S.runs.msg = j.status === "ok" ? "Finished. Results reloaded." : "The job failed; see the log above. Results were not rebuilt."; refresh().then(loadHistory); }
+    }).catch(function (e) { S.runs.msg = "Lost contact with the server: " + e.message; render(); });
+  }
+  function runTarget(target) {
+    var conf = document.querySelector('[data-input="run-confirm"][data-target="' + target + '"]');
+    api("POST", "api/run", { target: target, confirm: conf ? conf.value : undefined }).then(function (j) { S.runs.job = j; S.runs.msg = ""; S.tab = "runs"; location.hash = "runs"; render(); poll(j.id); })
+      .catch(function (e) { if (needToken(e)) return runTarget(target); S.runs.msg = "Could not start: " + e.message; S.tab = "runs"; render(); });
+  }
+
+  var actions = {
+    "cov-bin": function (t) { S.cov.bin = t.getAttribute("data-key"); render(); },
+    "ledger-find": function (t) { var q = t.getAttribute("data-q"); S.lg = { q: q, page: 0, open: q }; S.tab = "ledger"; location.hash = "ledger"; render(); window.scrollTo(0, 0); },
+    "bd-cell": function (t) { S.bd.cell = [+t.getAttribute("data-j"), +t.getAttribute("data-i")]; part("bd-out", NBR.renderBoundaryOut(D, S)); },
+    "bd-reset": function () { S.bd.thr = NBR.defaultThr(D); render(); },
+    "lg-page": function (t) { S.lg.page = Math.max(0, +t.getAttribute("data-p")); part("lg-out", NBR.renderLedgerOut(D, S)); },
+    "lg-row": function (t) { var id = t.getAttribute("data-id"); S.lg.open = S.lg.open === id ? null : id; part("lg-out", NBR.renderLedgerOut(D, S)); },
+    "lg-csv": function () { download("nextburn_ledger_filtered.csv", NBR.ledgerCsv(NBR.ledgerRows(D, S.lg)), "text/csv"); },
+    "fm2-verify": function () {
+      var pub = (D.checklist || {}).fm2_sha256 || (D.summary || {}).fm2_predictions_sha256 || "";
+      if (S.live) { api("GET", "api/verify").then(function (v) { D.verify = v; S.fm2.msg = { ok: v.sha256 === pub && v.all_inputs_unchanged, text: "Server check: the predictions file " + (v.sha256 === pub ? "matches" : "does not match") + " the published hash; frozen inputs " + (v.all_inputs_unchanged ? "unchanged." : "changed since the freeze.") }; render(); }).catch(function (e) { S.fm2.msg = { ok: false, text: e.message }; render(); }); return; }
+      if (location.protocol === "file:" || !window.crypto || !window.crypto.subtle) { S.fm2.msg = { ok: null, text: "The browser can only hash the file when this page is served from a web server, such as GitHub Pages. On your computer run: sha256sum predictions/fm2_predictions.json" }; render(); return; }
+      fetch("predictions/fm2_predictions.json", { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("the file could not be fetched (" + r.status + ")"); return r.arrayBuffer(); })
+        .then(function (buf) { return window.crypto.subtle.digest("SHA-256", buf); })
+        .then(function (h) { var hex = Array.prototype.map.call(new Uint8Array(h), function (b) { return ("0" + b.toString(16)).slice(-2); }).join(""); S.fm2.msg = { ok: hex === pub, text: "The published file hashes to " + hex + (hex === pub ? ": it matches the frozen hash." : ": it does NOT match the frozen hash " + pub + ".") }; render(); })
+        .catch(function (e) { S.fm2.msg = { ok: false, text: "Check failed: " + e.message }; render(); });
+    },
+    "set-discard": function (t) { var f = t.getAttribute("data-file"); Object.keys(S.set.edits).forEach(function (k) { if (k.indexOf(f + "|") === 0) delete S.set.edits[k]; }); delete S.set.msg[f]; render(); },
+    "set-download": function (t) { var f = t.getAttribute("data-file"), c = NBR.fileChanges(D, S.set.edits, f); download(f.split("/").pop(), JSON.stringify(NBR.updatedFile(D, f, c.changes), null, 2) + "\n"); S.set.msg[f] = { ok: true, text: "Downloaded. Replace " + f + " in your copy of the project, then run the affected scripts." }; refreshFooters(f); },
+    "set-request": function (t) { var f = t.getAttribute("data-file"), c = NBR.fileChanges(D, S.set.edits, f); download("nextburn_change_" + f.split("/").pop(), JSON.stringify(NBR.changeRequest(D, f, c.changes, new Date().toISOString()), null, 2) + "\n"); S.set.msg[f] = { ok: true, text: "Change request downloaded. Apply it with: python console/apply_settings.py <file>" }; refreshFooters(f); },
+    "set-issue": function (t) {
+      var f = t.getAttribute("data-file"), c = NBR.fileChanges(D, S.set.edits, f);
+      if (!S.repo) return;
+      var url = S.repo.replace(/\/+$/, "") + "/issues/new?title=" + encodeURIComponent("Settings change: " + f) + "&body=" + encodeURIComponent(NBR.issueBody(NBR.changeRequest(D, f, c.changes, new Date().toISOString())));
+      window.open(url, "_blank", "noopener");
+    },
+    "set-save": function (t) {
+      var f = t.getAttribute("data-file"), c = NBR.fileChanges(D, S.set.edits, f);
+      if (c.errors.length || !c.changes.length) return;
+      api("POST", "api/settings", { file: f, changes: c.changes.map(function (x) { return { path: x.path, value: x.value }; }) }).then(function (r) {
+        Object.keys(S.set.edits).forEach(function (k) { if (k.indexOf(f + "|") === 0) delete S.set.edits[k]; });
+        S.set.msg[f] = { ok: true, text: "Saved " + r.changed.length + " change" + (r.changed.length === 1 ? "" : "s") + " to " + f + "; the old file is backed up." + (r.frozen_input ? " This file is an input of the frozen FM2 predictions: the integrity check will now show it as changed." : ""), runs: r.suggested_runs || [] };
+        return refresh();
+      }).catch(function (e) { if (needToken(e)) return actions["set-save"](t); S.set.msg[f] = { ok: false, text: "Not saved: " + e.message }; refreshFooters(f); });
+    },
+    "repo-save": function () {
+      var el = document.querySelector('[data-input="repo"]'), v = el ? el.value.trim().replace(/\/+$/, "") : "";
+      if (v && !/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/.test(v)) { window.alert("Enter a repository address like https://github.com/your-team/nextburn"); return; }
+      S.repo = v; try { localStorage.setItem("nb-repo", v); } catch (e) { } render();
+    },
+    "run": function (t) { runTarget(t.getAttribute("data-target")); },
+    "restore": function (t) {
+      var b = t.getAttribute("data-backup");
+      if (!window.confirm("Put the settings file back as it was before this change? The current version is backed up first.")) return;
+      api("POST", "api/restore", { backup: b }).then(function (r) { S.runs.msg = "Restored " + r.file + ". Rerun the affected scripts to update the results."; return refresh().then(loadHistory); }).catch(function (e) { if (needToken(e)) return actions.restore(t); S.runs.msg = "Not restored: " + e.message; render(); });
+    }
+  };
+  var inputs = {
+    "cov-family": function (t) { S.cov.family = t.value; S.cov.bin = null; render(); },
+    "bd-panel": function (t) { S.bd.panel = +t.value; S.bd.cell = null; part("bd-out", NBR.renderBoundaryOut(D, S)); },
+    "bd-hide": function (t) { S.bd.hide = t.checked; part("bd-out", NBR.renderBoundaryOut(D, S)); },
+    "bd-thr": function (t) { var k = t.getAttribute("data-k"); S.bd.thr[k] = +t.value; var o = document.getElementById("bd-v-" + k); if (o) o.textContent = (+t.value).toFixed(2); part("bd-out", NBR.renderBoundaryOut(D, S)); },
+    "lg-q": function (t) { S.lg.q = t.value; S.lg.page = 0; part("lg-out", NBR.renderLedgerOut(D, S)); },
+    "lg-f": function (t) { S.lg[t.getAttribute("data-k")] = t.value; S.lg.page = 0; part("lg-out", NBR.renderLedgerOut(D, S)); },
+    "set-field": function (t) {
+      var key = t.getAttribute("data-key"), val = t.type === "checkbox" ? (t.checked ? "true" : "false") : t.value, cur = D.settings.values[key];
+      if ((t.type === "checkbox" && (val === "true") === cur) || (t.type !== "checkbox" && val !== "" && Number(val) === Number(cur))) delete S.set.edits[key]; else S.set.edits[key] = val;
+      var file = key.split("|")[0], g = D.settings.schema.groups.filter(function (x) { return x.file === file && x.fields.some(function (f) { return x.file + "|" + f.path === key; }); })[0];
+      var f = g && g.fields.filter(function (x) { return g.file + "|" + x.path === key; })[0], tr = t.closest("tr");
+      if (f && tr) { var tmp = document.createElement("tbody"); tmp.innerHTML = NBR.fieldRow(D, S, g, f); var nr = tmp.firstChild; tr.className = nr.className; var em = tr.querySelector(".emsg"), nm = nr.querySelector(".emsg"); if (em && nm) em.innerHTML = nm.innerHTML; }
+      delete S.set.msg[file]; refreshFooters(file);
+    },
+    "repo": function () { }, "run-confirm": function () { }
+  };
+
+  document.addEventListener("click", function (ev) {
+    var t = ev.target.closest ? ev.target.closest("[data-tab],[data-action]") : null;
+    if (!t) return;
+    if (t.hasAttribute("data-tab")) { S.tab = t.getAttribute("data-tab"); try { history.replaceState(null, "", "#" + S.tab); } catch (e) { } render(); if (S.tab === "runs" && S.live) loadHistory(); return; }
+    var a = actions[t.getAttribute("data-action")];
+    if (a && !t.disabled) { ev.preventDefault(); a(t, ev); }
+  });
+  function onInput(ev) { var t = ev.target, k = t.getAttribute && t.getAttribute("data-input"); if (!k || !inputs[k]) return; var isChange = t.tagName === "SELECT" || t.type === "checkbox"; if ((ev.type === "change") === isChange) inputs[k](t, ev); }
+  document.addEventListener("input", onInput);
+  document.addEventListener("change", onInput);
+  document.addEventListener("keydown", function (ev) {
+    var t = ev.target;
+    if ((ev.key === "Enter" || ev.key === " ") && t.getAttribute && t.getAttribute("role") === "button" && t.hasAttribute("data-action")) { ev.preventDefault(); actions[t.getAttribute("data-action")] && actions[t.getAttribute("data-action")](t, ev); return; }
+    if (t.getAttribute && t.getAttribute("role") === "tab" && (ev.key === "ArrowRight" || ev.key === "ArrowLeft")) {
+      var tabs = Array.prototype.slice.call(document.querySelectorAll("#nb-tabs [data-tab]")), i = tabs.indexOf(t), n = tabs[(i + (ev.key === "ArrowRight" ? 1 : tabs.length - 1)) % tabs.length];
+      n.focus(); n.click();
+    }
+  });
+  window.addEventListener("hashchange", function () { var h = location.hash.replace("#", ""); if (NBR.TABS.indexOf(h) >= 0 && h !== S.tab) { S.tab = h; render(); } });
+
+  setMode(); render();
+  if (location.protocol !== "file:") {
+    api("GET", "api/health").then(function (h) {
+      if (h && h.app === "nextburn-console") { S.live = true; setMode(); return refresh().then(loadHistory); }
+    }).catch(function () { });
+  }
+})();
+</script>
+</body>
+</html>
