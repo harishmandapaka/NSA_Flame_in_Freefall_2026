@@ -26,7 +26,7 @@ Each experiment also runs on its own, for example `python experiments/exp3_cover
 | `experiments/` | One script per experiment; each writes `results/expN/results.json`, `results.md` and one `chart.png` |
 | `tests/` | Experiment 2 regression tests (`test_checks.py`) and a runner that needs no pytest |
 | `results/` | Outputs of every experiment, including the first-run records of Experiment 2 |
-| `dashboard_data/` | Compact JSON files for the dashboard (listed below) |
+| `dashboard_data/` | Compact JSON files for the dashboard (listed below), including `method_steps.json`, `method_boundary_grid.json` and `method_checklist.json` |
 | `run_all.py` | One command that rebuilds everything |
 
 ## The experiments
@@ -48,6 +48,21 @@ Notes that matter when you present the results:
 - Experiment 6 is a simulation on synthetic boundaries anchored to published SoFIE-GEL ranges. Label it as a simulation everywhere. Its fixed-matrix result depends on the matrix layout (`runs_fixed_matrix_sensitivity.csv`); quote the qualified claim in `results/exp6/results.json`.
 - Experiment 7 has three layers: the frozen 35-question bank, an independent 10-question held-out set (`config/si_heldout_questions.json`, run by `experiments/exp7_heldout_check.py`) and a language-model run under the guard prompt (`results/exp7/llm_results.json`, `heldout_llm_results.json`). The held-out file records which two items were used to fix the SI and so no longer count as held out.
 
+## Six-step method (Steps 1 to 6)
+
+`python experiments/method_six_steps.py` runs the method end to end; `CHECKLIST.md` states, from the results files, what each step delivers and what is still missing.
+
+| Step | What it does | Output |
+|---|---|---|
+| 1 Test-point ledger | One row per test with material, oxygen, pressure, gravity, flow and outcome; each outcome cites ledger rows or a source quote, checked by code | `results/method/step1_test_point_ledger.csv` |
+| 2 Envelope | ISS cabin air; 34% oxygen at 8.2 psia; 37% oxygen at 8.2 psia (NESC TB 26-05); Moon 0.16 g and Mars 0.38 g | `config/envelope.json` |
+| 3 Coverage | Oxygen x pressure bins per gravity level: tested, nearby only, or none | `results/method/coverage_*.png`, `step3_coverage_bins.csv` |
+| 4 Boundary model | Bayesian logistic model of P(sustained flame); declines far from tests, when too uncertain, or when it would contradict a nearby test | `results/method/boundary_thin_fabric_SIBAL.png`, `step4_boundary.json` |
+| 5 Next tests | Ten tests chosen one at a time by expected uncertainty reduction at the weighted operating points | `results/method/next_tests.png`, `step5_test_plan.csv` |
+| 6 FM2 predictions | Probabilities and answers for the four FM2 burns, frozen with SHA-256 before FM2 flies | `predictions/fm2_predictions.json`, `predictions/SHA256SUMS.txt` |
+
+Model settings are frozen in `config/boundary_model.json` (version 1.1; the changes made after run 1 are listed inside it, and run 1 outputs are kept in `results/method/history`). `run_all.py` reruns the method without re-freezing the predictions; use `--refreeze-predictions` only on purpose, and post the new hash. Do not edit the files whose hashes are recorded in `predictions/fm2_predictions.json`.
+
 ## Dashboard data files
 
 | File | Use on the dashboard |
@@ -63,7 +78,11 @@ Notes that matter when you present the results:
 
 Every number in these files comes from a script; headline strings are composed from the numbers, not typed by hand.
 
-## Adding data (for example PSI tables)
+## PSI tables
+
+`data/psi/psi_tests.csv` holds 263 test rows read from the experiment tables of PSI-25 (BASS-II), PSI-26 (BASS), PSI-98, PSI-99 and PSI-100 (Saffire I to III) on psi.nasa.gov (CC0). Raw copies, provenance files and an access report are in `data/psi_raw/`. The rows enter the Step 1 test-point ledger and the Step 3 coverage report (listed as not placed, because no PSI table states pressure). They do not enter the boundary model, for the same reason. One PSI-25 column (final CO) was not read and one PSI-25 row (B2) is partly unresolved; see `data/psi_raw/ACCESS_REPORT.md`.
+
+## Adding data (for example more PSI tables)
 
 Drop CSV files into `data/extra_tests/` with these columns, then run `python run_all.py --skip-sim`:
 
