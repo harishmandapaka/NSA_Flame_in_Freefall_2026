@@ -22,13 +22,16 @@ sys.path.insert(0, ROOT)
 
 def run(cmd, log):
     t0 = time.time()
-    p = subprocess.run([sys.executable] + cmd, cwd=ROOT, capture_output=True, text=True)
+    env = dict(os.environ, PYTHONUTF8="1", MPLBACKEND=os.environ.get("MPLBACKEND", "Agg"))
+    p = subprocess.run([sys.executable] + cmd, cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace", env=env)
     log.append({"step": " ".join(cmd), "exit": p.returncode, "seconds": round(time.time() - t0, 1), "tail": (p.stdout + p.stderr)[-600:]})
     print("%-60s exit %d  %.1f s" % (" ".join(cmd)[:60], p.returncode, time.time() - t0))
     return p.returncode
 
 
 def main():
+    if os.name == "nt" and not sys.flags.utf8_mode:  # Windows: read and write every text file as UTF-8
+        return subprocess.call([sys.executable, "-X", "utf8", os.path.abspath(__file__)] + sys.argv[1:])
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--skip-sim", action="store_true")
     ap.add_argument("--quick-sim", action="store_true")

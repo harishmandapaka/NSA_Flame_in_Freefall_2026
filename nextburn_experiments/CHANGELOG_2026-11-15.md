@@ -257,3 +257,37 @@ Changed files (17):
 
 Files no longer present (0):
 - none
+
+
+## Late update, 15 November 2026: human re-check complete, new README and one-step setup
+
+- The team completed the human re-check of the 19 disputed Experiment 1 fields. Statements that it was pending were removed from the console (Overview, Experiments, About), the dashboard summary, `experiment1/results.md` and the note in `data/exp1_reported_score.json`. Scores are unchanged.
+- New `README.md`: results at a glance, quick start, how to make a change and see its effect, console tabs, manual commands, the method, the experiments, data sources, FM2 hash check, layout, limits, AI use and troubleshooting.
+- New one-step setup: `setup_nextburn.py` (any platform), `setup.sh` (macOS, Linux) and `setup.cmd` (Windows). It makes `.venv`, installs `requirements.txt`, runs the regression tests, reruns the experiments, rebuilds `index.html`, checks the FM2 hash and opens the dashboard. `--serve` starts the live console and `--pull` updates first.
+- Works the same on every platform: `run_all.py` and the console read and write text as UTF-8 and draw charts without a window; `.gitattributes` keeps file bytes unchanged so the FM2 and manifest hashes match everywhere; `.gitignore` excludes `.venv`.
+- Console: the Runs tab points to the setup script; envelope pressure settings stop at 15.5 psia, the top of the coverage bins; the page check also fails if any text says the human re-check is pending.
+
+FM2 predictions file unchanged (SHA-256 `05e2f02efcd6487f758b40a543ac24e26a01ad81b58e34bb538c8054a5978248`); frozen inputs unchanged: yes. Checks: page sections 47 passed, 0 failed; live server 27 passed, 0 failed; regression tests: 6 passed, 0 failed.
+
+New since the previous save (4):
+- `.gitattributes`
+- `setup.cmd`
+- `setup.sh`
+- `setup_nextburn.py`
+
+Changed since the previous save (15):
+- `.gitignore`
+- `README.md`
+- `RESULTS_SUMMARY.md`
+- `console/console_lib.py`
+- `console/console_server.py`
+- `console/console_template.html`
+- `console/settings_schema.json`
+- `console/test_render.js`
+- `dashboard_data/summary.json`
+- `data/exp1_reported_score.json`
+- `experiment1/results.md`
+- `index.html`
+- `nextburn/dashboard.py`
+- `nextburn/report.py`
+- `run_all.py`

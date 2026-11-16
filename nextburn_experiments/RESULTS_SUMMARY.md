@@ -1,6 +1,6 @@
 # NextBurn experiment results
 
-Generated 2026-11-16T02:41:04+00:00 from the results files. Ledger: 98 rows from 8 NASA sources, 40 test points.
+Generated 2026-11-16T03:32:01+00:00 from the results files. Ledger: 98 rows from 8 NASA sources, 40 test points.
 
 | # | Experiment | Status | Headline |
 |---|---|---|---|
