@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-11-16T01:40:31+00:00",
+  "steps": [
+    {
+      "step": "1",
+      "requirement": "Test-point ledger",
+      "status": "Done, with gaps",
+      "evidence": "313 test points from 14 sources, 67 with an outcome; every row has a source and locator; 51 outcome quotes checked, 0 not found; data checks PASS",
+      "gap": "PSI tables: 263 rows from 5 investigations read from psi.nasa.gov; none states pressure, 234 report no outcome, and one PSI-25 column (final CO) was not read. Feier and Sacksteder figure data are not digitized; MAPTIS is not used."
+    },
+    {
+      "step": "2",
+      "requirement": "Operating envelope",
+      "status": "Done",
+      "evidence": "ISS cabin air: 21% O2, 14.7 psia, microgravity; Exploration atmosphere, Moon: 34% O2, 8.2 psia, 0.16 g; NESC TB 26-05 condition, Moon: 37% O2, 8.2 psia, 0.16 g; Exploration atmosphere, Mars: 34% O2, 8.2 psia, 0.38 g; NESC TB 26-05 condition, Mars: 37% O2, 8.2 psia, 0.38 g",
+      "gap": "Flow is not an envelope axis (habitat presets set no flow)."
+    },
+    {
+      "step": "3",
+      "requirement": "Binned coverage",
+      "status": "Done",
+      "evidence": "Thin fabrics, envelope bins tested / nearby / none: microgravity 3/11/10, Moon 1/3/20, Mars 0/0/24. Operating points: ISS cabin air tested; Exploration atmosphere, Moon none; NESC TB 26-05 condition, Moon none; Exploration atmosphere, Mars none; NESC TB 26-05 condition, Mars none",
+      "gap": "Tests with unstated or one-sided pressure are listed but not placed."
+    },
+    {
+      "step": "4",
+      "requirement": "Boundary model with decline",
+      "status": "Done, with a stated weakness",
+      "evidence": "23 observations (3 did not burn); R-hat 1.02; declines on 96% of the map; answers at 2 of 10 operating-point checks (ISS cabin air)",
+      "gap": "Leave-one-out Brier 0.153 is worse than always predicting the base rate (0.113): with 3 no-burn tests the model cannot predict an extinction it has not seen. Run 1 contradicted a test; fixed in version 1.1."
+    },
+    {
+      "step": "5",
+      "requirement": "Next tests ranked by uncertainty reduction",
+      "status": "Done",
+      "evidence": "Plan of 10 tests chosen one at a time; first: Mars gravity, 37% O2 at 8.2 psia (45%); after 4 tests 73%; after 10 tests 83%",
+      "gap": "Reductions are model-based; rig oxygen and pressure limits for drop towers and parabolic flights are assumptions."
+    },
+    {
+      "step": "6",
+      "requirement": "Falsifiable FM2 predictions",
+      "status": "Done",
+      "evidence": "Frozen 2026-11-16T00:10:42+00:00; SHA-256 of fm2_predictions.json 05e2f02efcd6487f758b40a543ac24e26a01ad81b58e34bb538c8054a5978248. Burn 1 declined, burn 2 sustains (P 0.89, 90% 0.61 to 1.00), burn 3 declined, burn 4 declined",
+      "gap": "Declined burns are still scored by their published probabilities (Brier score). Post the hash on the project page."
+    }
+  ],
+  "fm2_sha256": "05e2f02efcd6487f758b40a543ac24e26a01ad81b58e34bb538c8054a5978248",
+  "fm2_frozen_at_utc": "2026-11-16T00:10:42+00:00"
+}

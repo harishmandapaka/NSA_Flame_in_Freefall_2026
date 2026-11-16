@@ -149,6 +149,25 @@
       },
       "available": false,
       "note": "Four samples already allocated; not a candidate"
+    },
+    {
+      "id": "ground_1g",
+      "name": "Ground chamber at 1 g (for example a NASA-STD-6001B Test 1 chamber)",
+      "gravity_levels": [
+        1.0
+      ],
+      "test_time_s": 600.0,
+      "cost_tier": 1,
+      "thick_ok": true,
+      "atmosphere": {
+        "o2_max_pct": 100,
+        "p_min_kpa": 10,
+        "p_max_kpa": 110,
+        "status": "assumed: ground chambers set oxygen and pressure freely (NESC TB 26-05 tests ran at 37% and 8.2 psia)"
+      },
+      "available": true,
+      "scope": "method step 5 only",
+      "scope_note": "Added for the six-step method; Experiment 5 keeps its original catalogue so its frozen random draws are unchanged."
     }
   ],
   "measurands": {

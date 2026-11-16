@@ -1,0 +1,2577 @@
+{
+  "generated_at": "2026-11-16T01:39:56+00:00",
+  "step1": {
+    "step": 1,
+    "title": "Test-point ledger",
+    "generated_at": "2026-11-16T01:39:56+00:00",
+    "test_points": 313,
+    "by_origin": {
+      "ledger v2": 40,
+      "added in v3": 2,
+      "derived": 8,
+      "PSI table": 263
+    },
+    "by_family_outcome": {
+      "thin_fabric": {
+        "not_reported": 46,
+        "sustained": 21,
+        "extinguished": 3,
+        "quench": 1
+      },
+      "thick_plastic": {
+        "not_reported": 91,
+        "extinguished": 5,
+        "blowoff": 4,
+        "sustained": 8,
+        "quench": 1
+      },
+      "unknown": {
+        "not_reported": 100,
+        "blowoff": 5,
+        "no_ignition": 1,
+        "extinguished": 14,
+        "sustained": 2
+      },
+      "other_textile": {
+        "not_reported": 9,
+        "extinguished": 2
+      }
+    },
+    "with_outcome": 67,
+    "with_source": 313,
+    "sources": [
+      "PSI-100",
+      "PSI-25",
+      "PSI-26",
+      "PSI-98",
+      "PSI-99",
+      "bass2_poster_2014",
+      "feier_2001",
+      "fm2_poster_2024",
+      "luci_2025",
+      "nesc_tb2605_2026",
+      "sacksteder_2003",
+      "saffire45_paper_2021",
+      "saffire6_paper_2024",
+      "saffire6_pres_2024"
+    ],
+    "ledger_rows": 100,
+    "rows_added_v3": [
+      "R099",
+      "R100"
+    ],
+    "merged_rows": [
+      {
+        "row_id": "R010",
+        "merged_into": "R007",
+        "rule": "Two rows are one measurement when they describe the same test and material family, name the same measurand and agree within 0.5% after unit normalization. The lower row ID is kept; the other row's locator is kept as corroboration."
+      }
+    ],
+    "outcome_quotes_checked": 51,
+    "outcome_quotes_not_found": [],
+    "checks_gate": "PASS",
+    "checks_failed": [],
+    "psi_tables": "included",
+    "model_observations": 33,
+    "excluded_from_model": [
+      {
+        "outcome_id": "T14",
+        "tp_id": "TP027-a",
+        "reason": "forced flow below the thin-fabric regime of the 3-variable model (5 cm/s)"
+      },
+      {
+        "outcome_id": "P03",
+        "tp_id": "TP012",
+        "reason": "outcome not usable (not_reported)"
+      },
+      {
+        "outcome_id": "P05",
+        "tp_id": "TP014-a",
+        "reason": "zero forced flow in microgravity is outside the 3-variable model"
+      },
+      {
+        "outcome_id": "P07",
+        "tp_id": "TP015-a",
+        "reason": "zero forced flow in microgravity is outside the 3-variable model"
+      },
+      {
+        "outcome_id": "P12",
+        "tp_id": "TP021-a",
+        "reason": "oxygen not stated"
+      },
+      {
+        "outcome_id": "P13",
+        "tp_id": "TP021-b",
+        "reason": "oxygen not stated"
+      }
+    ]
+  },
+  "step3": {
+    "step": 3,
+    "title": "Binned coverage",
+    "generated_at": "2026-11-16T01:39:56+00:00",
+    "rules": {
+      "tested": "At least one test of the material family has stated oxygen and pressure inside the bin, at that gravity level.",
+      "nearby": "No test in the bin, but a test of the family sits in an adjacent oxygen or pressure bin (one step, diagonals included) at the same gravity level, or a test's stated range overlaps the bin.",
+      "none": "Neither. Gravity is never 'nearby': a test at another gravity level does not count.",
+      "placement": "A test whose oxygen or pressure is not stated, or is only bounded on one side, is listed but not placed."
+    },
+    "families": {
+      "thin_fabric": {
+        "summary_by_gravity": {
+          "micro": {
+            "tested": 3,
+            "nearby": 11,
+            "none": 10,
+            "bins": 24
+          },
+          "lunar": {
+            "tested": 1,
+            "nearby": 3,
+            "none": 20,
+            "bins": 24
+          },
+          "mars": {
+            "tested": 0,
+            "nearby": 0,
+            "none": 24,
+            "bins": 24
+          }
+        },
+        "summary_total": {
+          "tested": 4,
+          "nearby": 14,
+          "none": 54,
+          "bins": 72
+        },
+        "operating_points": [
+          {
+            "id": "iss_cabin_air",
+            "name": "ISS cabin air",
+            "status": "tested",
+            "tests_in_bin": [
+              "TP007",
+              "TP008",
+              "TP009",
+              "TP010",
+              "TP011"
+            ],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP006",
+                "label": "LUCI NS-29 lunar spin",
+                "o2_pct": 20.95,
+                "p_psia": 14.7,
+                "g_class": "lunar",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 0.02,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP007",
+                "label": "Saffire I-1",
+                "o2_pct": 21.0,
+                "p_psia": 14.5,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 0.05,
+                "same_gravity": true
+              },
+              {
+                "tp_id": "TP008",
+                "label": "Saffire II-5",
+                "o2_pct": 21.0,
+                "p_psia": 14.5,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 0.05,
+                "same_gravity": true
+              }
+            ]
+          },
+          {
+            "id": "xa_moon",
+            "name": "Exploration atmosphere, Moon",
+            "status": "none",
+            "tests_in_bin": [],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP016",
+                "label": "Saffire VI-2",
+                "o2_pct": 31.0,
+                "p_psia": 7.85,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 1.01,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP013",
+                "label": "Saffire V-2",
+                "o2_pct": 26.2,
+                "p_psia": 10.25,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 2.74,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP011",
+                "label": "Saffire IV-1",
+                "o2_pct": 22.0,
+                "p_psia": 14.5,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 4.55,
+                "same_gravity": false
+              }
+            ]
+          },
+          {
+            "id": "nesc37_moon",
+            "name": "NESC TB 26-05 condition, Moon",
+            "status": "none",
+            "tests_in_bin": [],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP016",
+                "label": "Saffire VI-2",
+                "o2_pct": 31.0,
+                "p_psia": 7.85,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 2.01,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP013",
+                "label": "Saffire V-2",
+                "o2_pct": 26.2,
+                "p_psia": 10.25,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 3.7,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP011",
+                "label": "Saffire IV-1",
+                "o2_pct": 22.0,
+                "p_psia": 14.5,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 5.45,
+                "same_gravity": false
+              }
+            ]
+          },
+          {
+            "id": "xa_mars",
+            "name": "Exploration atmosphere, Mars",
+            "status": "none",
+            "tests_in_bin": [],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP016",
+                "label": "Saffire VI-2",
+                "o2_pct": 31.0,
+                "p_psia": 7.85,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 1.01,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP013",
+                "label": "Saffire V-2",
+                "o2_pct": 26.2,
+                "p_psia": 10.25,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 2.74,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP011",
+                "label": "Saffire IV-1",
+                "o2_pct": 22.0,
+                "p_psia": 14.5,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 4.55,
+                "same_gravity": false
+              }
+            ]
+          },
+          {
+            "id": "nesc37_mars",
+            "name": "NESC TB 26-05 condition, Mars",
+            "status": "none",
+            "tests_in_bin": [],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP016",
+                "label": "Saffire VI-2",
+                "o2_pct": 31.0,
+                "p_psia": 7.85,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 2.01,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP013",
+                "label": "Saffire V-2",
+                "o2_pct": 26.2,
+                "p_psia": 10.25,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 3.7,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP011",
+                "label": "Saffire IV-1",
+                "o2_pct": 22.0,
+                "p_psia": 14.5,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 5.45,
+                "same_gravity": false
+              }
+            ]
+          }
+        ],
+        "unplaced": [
+          {
+            "tp_id": "PSI-100_S1",
+            "label": "Saffire-III sample S1",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-100_S2",
+            "label": "Saffire-III sample S2",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T1",
+            "label": "BASS-II test T1 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T10",
+            "label": "BASS-II test T10 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T11",
+            "label": "BASS-II test T11 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T12",
+            "label": "BASS-II test T12 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T13",
+            "label": "BASS-II test T13 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T14",
+            "label": "BASS-II test T14 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T15",
+            "label": "BASS-II test T15 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T16",
+            "label": "BASS-II test T16 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T17",
+            "label": "BASS-II test T17 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T18",
+            "label": "BASS-II test T18 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T19",
+            "label": "BASS-II test T19 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T2",
+            "label": "BASS-II test T2 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T20",
+            "label": "BASS-II test T20 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T21",
+            "label": "BASS-II test T21 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T22",
+            "label": "BASS-II test T22 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T23",
+            "label": "BASS-II test T23 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T24",
+            "label": "BASS-II test T24 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T25",
+            "label": "BASS-II test T25 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T26",
+            "label": "BASS-II test T26 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T27",
+            "label": "BASS-II test T27 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T28a",
+            "label": "BASS-II test T28a (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T28b",
+            "label": "BASS-II test T28b (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T29",
+            "label": "BASS-II test T29 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T4",
+            "label": "BASS-II test T4 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T5",
+            "label": "BASS-II test T5 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T6",
+            "label": "BASS-II test T6 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_T9",
+            "label": "BASS-II test T9 (PI T'ien)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r1",
+            "label": "BASS as-run test 1 (test 1, sample 4)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r12",
+            "label": "BASS as-run test 12 (test 4, sample 12)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r13",
+            "label": "BASS as-run test 13 (test 10, sample 2)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r38",
+            "label": "BASS as-run test 37 (test 5, sample 9)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r4",
+            "label": "BASS as-run test 4 (test 7, sample 10)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r45",
+            "label": "BASS as-run test 44 (test 5b, sample 9)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r46",
+            "label": "BASS as-run test 45 (test 6, sample 8)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r5",
+            "label": "BASS as-run test 5 (test 8, sample 11)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r55",
+            "label": "BASS as-run test 54 (test 2, sample 5)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r56",
+            "label": "BASS as-run test 55 (test 3, sample 6)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r67",
+            "label": "BASS as-run test 65 (test 11, sample 3)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r68",
+            "label": "BASS as-run test 66 (test 9, sample 7)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-98_S1",
+            "label": "Saffire-I sample S1",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-98_S2",
+            "label": "Saffire-I sample S2",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-99_2-5",
+            "label": "Saffire-II sample 2-5",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP001",
+            "label": "FM2 team 1-g ground",
+            "g_class": "earth",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP002",
+            "label": "FM2 team lunar-g simulation",
+            "g_class": "lunar",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP002-a",
+            "label": "FM2 team lunar-g simulation",
+            "g_class": "lunar",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP004",
+            "label": "LUCI 1-g ground",
+            "g_class": "earth",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP025",
+            "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP026",
+            "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP033",
+            "label": "feier_2001 ground",
+            "g_class": "earth",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP034",
+            "label": "feier_2001 ground",
+            "g_class": "earth",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          }
+        ]
+      },
+      "thick_plastic": {
+        "summary_by_gravity": {
+          "micro": {
+            "tested": 4,
+            "nearby": 12,
+            "none": 8,
+            "bins": 24
+          },
+          "lunar": {
+            "tested": 1,
+            "nearby": 3,
+            "none": 20,
+            "bins": 24
+          },
+          "mars": {
+            "tested": 0,
+            "nearby": 0,
+            "none": 24,
+            "bins": 24
+          }
+        },
+        "summary_total": {
+          "tested": 5,
+          "nearby": 15,
+          "none": 52,
+          "bins": 72
+        },
+        "operating_points": [
+          {
+            "id": "iss_cabin_air",
+            "name": "ISS cabin air",
+            "status": "tested",
+            "tests_in_bin": [
+              "TP012"
+            ],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP005",
+                "label": "LUCI NS-29 lunar spin",
+                "o2_pct": 20.95,
+                "p_psia": 14.7,
+                "g_class": "lunar",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 0.02,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP012",
+                "label": "Saffire IV-2",
+                "o2_pct": 22.0,
+                "p_psia": 14.5,
+                "g_class": "micro",
+                "outcome": "not_reported",
+                "distance_ignoring_gravity": 0.34,
+                "same_gravity": true
+              },
+              {
+                "tp_id": "TP014",
+                "label": "Saffire V-3",
+                "o2_pct": 25.4,
+                "p_psia": 10.34,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 1.99,
+                "same_gravity": true
+              }
+            ]
+          },
+          {
+            "id": "xa_moon",
+            "name": "Exploration atmosphere, Moon",
+            "status": "none",
+            "tests_in_bin": [],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP017",
+                "label": "Saffire VI-3",
+                "o2_pct": 30.3,
+                "p_psia": 7.92,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 1.24,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP018",
+                "label": "Saffire VI-4",
+                "o2_pct": 28.8,
+                "p_psia": 8.01,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 1.74,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP015",
+                "label": "Saffire V-4",
+                "o2_pct": 25.7,
+                "p_psia": 10.53,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 2.93,
+                "same_gravity": false
+              }
+            ]
+          },
+          {
+            "id": "nesc37_moon",
+            "name": "NESC TB 26-05 condition, Moon",
+            "status": "none",
+            "tests_in_bin": [],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP017",
+                "label": "Saffire VI-3",
+                "o2_pct": 30.3,
+                "p_psia": 7.92,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 2.24,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP018",
+                "label": "Saffire VI-4",
+                "o2_pct": 28.8,
+                "p_psia": 8.01,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 2.73,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP015",
+                "label": "Saffire V-4",
+                "o2_pct": 25.7,
+                "p_psia": 10.53,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 3.89,
+                "same_gravity": false
+              }
+            ]
+          },
+          {
+            "id": "xa_mars",
+            "name": "Exploration atmosphere, Mars",
+            "status": "none",
+            "tests_in_bin": [],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP017",
+                "label": "Saffire VI-3",
+                "o2_pct": 30.3,
+                "p_psia": 7.92,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 1.24,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP018",
+                "label": "Saffire VI-4",
+                "o2_pct": 28.8,
+                "p_psia": 8.01,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 1.74,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP015",
+                "label": "Saffire V-4",
+                "o2_pct": 25.7,
+                "p_psia": 10.53,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 2.93,
+                "same_gravity": false
+              }
+            ]
+          },
+          {
+            "id": "nesc37_mars",
+            "name": "NESC TB 26-05 condition, Mars",
+            "status": "none",
+            "tests_in_bin": [],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP017",
+                "label": "Saffire VI-3",
+                "o2_pct": 30.3,
+                "p_psia": 7.92,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 2.24,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP018",
+                "label": "Saffire VI-4",
+                "o2_pct": 28.8,
+                "p_psia": 8.01,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 2.73,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP015",
+                "label": "Saffire V-4",
+                "o2_pct": 25.7,
+                "p_psia": 10.53,
+                "g_class": "micro",
+                "outcome": "sustained",
+                "distance_ignoring_gravity": 3.89,
+                "same_gravity": false
+              }
+            ]
+          }
+        ],
+        "unplaced": [
+          {
+            "tp_id": "PSI-25_B1",
+            "label": "BASS-II test B1 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B10",
+            "label": "BASS-II test B10 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B11",
+            "label": "BASS-II test B11 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B14",
+            "label": "BASS-II test B14 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B15",
+            "label": "BASS-II test B15 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B16",
+            "label": "BASS-II test B16 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B17",
+            "label": "BASS-II test B17 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B18",
+            "label": "BASS-II test B18 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B19",
+            "label": "BASS-II test B19 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B2",
+            "label": "BASS-II test B2 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B20",
+            "label": "BASS-II test B20 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B21",
+            "label": "BASS-II test B21 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B22",
+            "label": "BASS-II test B22 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B4",
+            "label": "BASS-II test B4 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B6",
+            "label": "BASS-II test B6 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B8",
+            "label": "BASS-II test B8 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_B9",
+            "label": "BASS-II test B9 (PI Bhattacharjee)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M1",
+            "label": "BASS-II test M1 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M10",
+            "label": "BASS-II test M10 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M11",
+            "label": "BASS-II test M11 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M12",
+            "label": "BASS-II test M12 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M13",
+            "label": "BASS-II test M13 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M14",
+            "label": "BASS-II test M14 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M15",
+            "label": "BASS-II test M15 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M16",
+            "label": "BASS-II test M16 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M17",
+            "label": "BASS-II test M17 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M18",
+            "label": "BASS-II test M18 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M19",
+            "label": "BASS-II test M19 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M2",
+            "label": "BASS-II test M2 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M20",
+            "label": "BASS-II test M20 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M3",
+            "label": "BASS-II test M3 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M4",
+            "label": "BASS-II test M4 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M5",
+            "label": "BASS-II test M5 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M6",
+            "label": "BASS-II test M6 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M7",
+            "label": "BASS-II test M7 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M8",
+            "label": "BASS-II test M8 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_M9",
+            "label": "BASS-II test M9 (PI Miller)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_O13a",
+            "label": "BASS-II test O13a (PI Olson)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_O13b",
+            "label": "BASS-II test O13b (PI Olson)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_O5a",
+            "label": "BASS-II test O5a (PI Olson)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_O5b",
+            "label": "BASS-II test O5b (PI Olson)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r10",
+            "label": "BASS as-run test 10 (test 20, sample 19)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r102",
+            "label": "BASS as-run test 96 (test 72, sample 34)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r103",
+            "label": "BASS as-run test 97 (test 73, sample 34)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r104",
+            "label": "BASS as-run test 98 (test 118, sample 23)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r105",
+            "label": "BASS as-run test 99 (test 119, sample 23)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r11",
+            "label": "BASS as-run test 11 (test 21, sample 19)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r110",
+            "label": "BASS as-run test 104 (test 50, sample 26)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r121",
+            "label": "BASS as-run test 115 (test 53, sample 26)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r122",
+            "label": "BASS as-run test 116 (test 53a, sample 26)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r15",
+            "label": "BASS as-run test 15 (test 54, sample 21)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r16",
+            "label": "BASS as-run test 16 (test 55, sample 21)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r17",
+            "label": "BASS as-run test 17 (test 56, sample 21)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r18",
+            "label": "BASS as-run test 18 (test 57, sample 21)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r19",
+            "label": "BASS as-run test 19 (test 110, sample 21)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r2",
+            "label": "BASS as-run test 2 (test 42, sample 24)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r20",
+            "label": "BASS as-run test 20 (test 30, sample 15)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r21",
+            "label": "BASS as-run test 21 (test 31, sample 15)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r22",
+            "label": "BASS as-run test 22 (test 32, sample 15)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r23",
+            "label": "BASS as-run test 23 (test 33, sample 15)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r3",
+            "label": "BASS as-run test 3 (test 18, sample 19)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r40",
+            "label": "BASS as-run test 39 (test 66, sample 33)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r41",
+            "label": "BASS as-run test 40 (test 67, sample 33)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r50",
+            "label": "BASS as-run test 49 (test 68, sample 33)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r51",
+            "label": "BASS as-run test 50 (test 69, sample 33)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r6",
+            "label": "BASS as-run test 6 (test 43, sample 24)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r60",
+            "label": "BASS as-run test 59 (test 114, sample 25)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r61",
+            "label": "BASS as-run test 60 (test 62, sample 23)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r62",
+            "label": "BASS as-run test 61 (test 63, sample 23)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r63",
+            "label": "BASS as-run test 62 (test 64, sample 23)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r64",
+            "label": "BASS as-run test 63 (test 65, sample 23)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r65",
+            "label": "BASS as-run test 64 (test 118, sample 23)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r69",
+            "label": "BASS as-run test 67 (test 102, sample 22)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r7",
+            "label": "BASS as-run test 7 (test 44, sample 24)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r78",
+            "label": "BASS as-run test 76 (test 70, sample 34)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r79",
+            "label": "BASS as-run test 77 (test 71, sample 34)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r8",
+            "label": "BASS as-run test 8 (test 45, sample 24)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r82",
+            "label": "BASS as-run test 80 (test 98, sample 24)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r83",
+            "label": "BASS as-run test 81 (test 99, sample 24)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r84",
+            "label": "BASS as-run test 82 (test 114, sample 25)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r85",
+            "label": "BASS as-run test 83 (test 115, sample 25)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r86",
+            "label": "BASS as-run test 84 (test 116, sample 25)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r87",
+            "label": "BASS as-run test 85 (test 117, sample 25)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r88",
+            "label": "BASS as-run test 85 (test 117a, sample 25)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r89",
+            "label": "BASS as-run test 86 (test 100, sample 24)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r9",
+            "label": "BASS as-run test 9 (test 19, sample 19)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r92",
+            "label": "BASS as-run test 89 (test 26, sample 17)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r93",
+            "label": "BASS as-run test 90 (test 27, sample 17)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r94",
+            "label": "BASS as-run test 91 (test 28, sample 17)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-99_2-8",
+            "label": "Saffire-II sample 2-8",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP003",
+            "label": "LUCI 1-g ground",
+            "g_class": "earth",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP020",
+            "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP020-a",
+            "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP021",
+            "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP021-a",
+            "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP021-b",
+            "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP022",
+            "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP023",
+            "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP024",
+            "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP029",
+            "label": "bass2_poster_2014 ground",
+            "g_class": "earth",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "TP029-a",
+            "label": "bass2_poster_2014 ground",
+            "g_class": "earth",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          }
+        ]
+      },
+      "other_textile": {
+        "summary_by_gravity": {
+          "micro": {
+            "tested": 0,
+            "nearby": 0,
+            "none": 24,
+            "bins": 24
+          },
+          "lunar": {
+            "tested": 0,
+            "nearby": 0,
+            "none": 24,
+            "bins": 24
+          },
+          "mars": {
+            "tested": 0,
+            "nearby": 0,
+            "none": 24,
+            "bins": 24
+          }
+        },
+        "summary_total": {
+          "tested": 0,
+          "nearby": 0,
+          "none": 72,
+          "bins": 72
+        },
+        "operating_points": [
+          {
+            "id": "iss_cabin_air",
+            "name": "ISS cabin air",
+            "status": "none",
+            "tests_in_bin": [],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP036",
+                "label": "nesc_tb2605_2026 ground, NASA White Sands Test Facility (NASA-STD-6001B Test 1)",
+                "o2_pct": 35.0,
+                "p_psia": 8.2,
+                "g_class": "earth",
+                "outcome": "extinguished",
+                "distance_ignoring_gravity": 5.17,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP035",
+                "label": "nesc_tb2605_2026 ground, NASA White Sands Test Facility (NASA-STD-6001B Test 1)",
+                "o2_pct": 37.0,
+                "p_psia": 8.2,
+                "g_class": "earth",
+                "outcome": "extinguished",
+                "distance_ignoring_gravity": 5.78,
+                "same_gravity": false
+              }
+            ]
+          },
+          {
+            "id": "xa_moon",
+            "name": "Exploration atmosphere, Moon",
+            "status": "none",
+            "tests_in_bin": [],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP036",
+                "label": "nesc_tb2605_2026 ground, NASA White Sands Test Facility (NASA-STD-6001B Test 1)",
+                "o2_pct": 35.0,
+                "p_psia": 8.2,
+                "g_class": "earth",
+                "outcome": "extinguished",
+                "distance_ignoring_gravity": 0.33,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP035",
+                "label": "nesc_tb2605_2026 ground, NASA White Sands Test Facility (NASA-STD-6001B Test 1)",
+                "o2_pct": 37.0,
+                "p_psia": 8.2,
+                "g_class": "earth",
+                "outcome": "extinguished",
+                "distance_ignoring_gravity": 1.0,
+                "same_gravity": false
+              }
+            ]
+          },
+          {
+            "id": "nesc37_moon",
+            "name": "NESC TB 26-05 condition, Moon",
+            "status": "none",
+            "tests_in_bin": [],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP035",
+                "label": "nesc_tb2605_2026 ground, NASA White Sands Test Facility (NASA-STD-6001B Test 1)",
+                "o2_pct": 37.0,
+                "p_psia": 8.2,
+                "g_class": "earth",
+                "outcome": "extinguished",
+                "distance_ignoring_gravity": 0.0,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP036",
+                "label": "nesc_tb2605_2026 ground, NASA White Sands Test Facility (NASA-STD-6001B Test 1)",
+                "o2_pct": 35.0,
+                "p_psia": 8.2,
+                "g_class": "earth",
+                "outcome": "extinguished",
+                "distance_ignoring_gravity": 0.67,
+                "same_gravity": false
+              }
+            ]
+          },
+          {
+            "id": "xa_mars",
+            "name": "Exploration atmosphere, Mars",
+            "status": "none",
+            "tests_in_bin": [],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP036",
+                "label": "nesc_tb2605_2026 ground, NASA White Sands Test Facility (NASA-STD-6001B Test 1)",
+                "o2_pct": 35.0,
+                "p_psia": 8.2,
+                "g_class": "earth",
+                "outcome": "extinguished",
+                "distance_ignoring_gravity": 0.33,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP035",
+                "label": "nesc_tb2605_2026 ground, NASA White Sands Test Facility (NASA-STD-6001B Test 1)",
+                "o2_pct": 37.0,
+                "p_psia": 8.2,
+                "g_class": "earth",
+                "outcome": "extinguished",
+                "distance_ignoring_gravity": 1.0,
+                "same_gravity": false
+              }
+            ]
+          },
+          {
+            "id": "nesc37_mars",
+            "name": "NESC TB 26-05 condition, Mars",
+            "status": "none",
+            "tests_in_bin": [],
+            "nearby_tests": [],
+            "nearest_any_gravity": [
+              {
+                "tp_id": "TP035",
+                "label": "nesc_tb2605_2026 ground, NASA White Sands Test Facility (NASA-STD-6001B Test 1)",
+                "o2_pct": 37.0,
+                "p_psia": 8.2,
+                "g_class": "earth",
+                "outcome": "extinguished",
+                "distance_ignoring_gravity": 0.0,
+                "same_gravity": false
+              },
+              {
+                "tp_id": "TP036",
+                "label": "nesc_tb2605_2026 ground, NASA White Sands Test Facility (NASA-STD-6001B Test 1)",
+                "o2_pct": 35.0,
+                "p_psia": 8.2,
+                "g_class": "earth",
+                "outcome": "extinguished",
+                "distance_ignoring_gravity": 0.67,
+                "same_gravity": false
+              }
+            ]
+          }
+        ],
+        "unplaced": [
+          {
+            "tp_id": "PSI-25_F1",
+            "label": "BASS-II test F1 (PI Ferkul)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_F2",
+            "label": "BASS-II test F2 (PI Ferkul)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-25_F3",
+            "label": "BASS-II test F3 (PI Ferkul)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r14",
+            "label": "BASS as-run test 14 (test 12, sample 27)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r24",
+            "label": "BASS as-run test 24 (test 12-R, sample 27)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r25",
+            "label": "BASS as-run test 24 (test 12-R2, sample 27)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r39",
+            "label": "BASS as-run test 38 (test 14, sample 29)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r57",
+            "label": "BASS as-run test 56 (test 15, sample 30)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          },
+          {
+            "tp_id": "PSI-26_r58",
+            "label": "BASS as-run test 57 (test 13, sample 28)",
+            "g_class": "micro",
+            "why": "oxygen or pressure not stated, or bounded on one side"
+          }
+        ]
+      }
+    }
+  },
+  "step4": {
+    "model": "logit P(sustained flame) = b0 + b_o2*(O2% - 21)/5 + b_lnp*log2(P / 101.325 kPa) + b_micro*[forced-flow microgravity] + b_g*g + b_g2*g^2 + b_dir*d + b_dir_g*d*g + b_dir_g2*d*g^2 + material offset; d = +1 upward or concurrent, -1 downward or opposed",
+    "decline_rule": "Answer only when (a) a test of the same family lies within distance 1.0, where 3 oxygen points, a 30% pressure change, 0.08 g or an opposite flame direction each count as 1.0, (b) the 90% interval of the probability is no wider than 0.6, and (c) no test within distance 1.0 had the opposite outcome to the model's answer. Otherwise decline and name the nearest tests.",
+    "grid_decline_share": 0.9590800477897252,
+    "operating_points": [
+      {
+        "op_id": "iss_cabin_air",
+        "name": "ISS cabin air",
+        "direction": "upward or concurrent",
+        "material": "SIBAL",
+        "p_mean": 0.9425626973920694,
+        "p_lo90": 0.7765294306429453,
+        "p_hi90": 0.9991080027240451,
+        "support_distance": 0.051221221148049084,
+        "nearest_obs": "T06",
+        "nearest_label": "Saffire I-1",
+        "nearest_outcome": "sustained",
+        "decision": "sustains",
+        "reasons": []
+      },
+      {
+        "op_id": "iss_cabin_air",
+        "name": "ISS cabin air",
+        "direction": "upward or concurrent",
+        "material": "a new material in the family",
+        "p_mean": 0.9155167622745737,
+        "p_lo90": 0.5459293688124705,
+        "p_hi90": 0.999758611900444,
+        "support_distance": 0.051221221148049084,
+        "nearest_obs": "T06",
+        "nearest_label": "Saffire I-1",
+        "nearest_outcome": "sustained",
+        "decision": "sustains",
+        "reasons": []
+      },
+      {
+        "op_id": "iss_cabin_air",
+        "name": "ISS cabin air",
+        "direction": "downward or opposed",
+        "material": "SIBAL",
+        "p_mean": 0.9652554282969652,
+        "p_lo90": 0.8434559553612095,
+        "p_hi90": 0.9998559610495529,
+        "support_distance": 0.051221221148049084,
+        "nearest_obs": "T06",
+        "nearest_label": "Saffire I-1",
+        "nearest_outcome": "sustained",
+        "decision": "sustains",
+        "reasons": []
+      },
+      {
+        "op_id": "iss_cabin_air",
+        "name": "ISS cabin air",
+        "direction": "downward or opposed",
+        "material": "a new material in the family",
+        "p_mean": 0.9455243611473645,
+        "p_lo90": 0.6794328296059292,
+        "p_hi90": 0.9999563636848772,
+        "support_distance": 0.051221221148049084,
+        "nearest_obs": "T06",
+        "nearest_label": "Saffire I-1",
+        "nearest_outcome": "sustained",
+        "decision": "sustains",
+        "reasons": []
+      },
+      {
+        "op_id": "xa_moon",
+        "name": "Exploration atmosphere, Moon",
+        "direction": "upward or concurrent",
+        "material": "SIBAL",
+        "p_mean": 0.905034120568492,
+        "p_lo90": 0.3767070946102504,
+        "p_hi90": 0.9999937229872262,
+        "support_distance": 2.2423656299450423,
+        "nearest_obs": "T12",
+        "nearest_label": "Saffire VI-2",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 2.24: Saffire VI-2)",
+          "90% interval 0.38 to 1.00 is wider than 0.6"
+        ]
+      },
+      {
+        "op_id": "xa_moon",
+        "name": "Exploration atmosphere, Moon",
+        "direction": "upward or concurrent",
+        "material": "a new material in the family",
+        "p_mean": 0.907337612579091,
+        "p_lo90": 0.34909074293501535,
+        "p_hi90": 0.9999966738749824,
+        "support_distance": 2.2423656299450423,
+        "nearest_obs": "T12",
+        "nearest_label": "Saffire VI-2",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 2.24: Saffire VI-2)",
+          "90% interval 0.35 to 1.00 is wider than 0.6"
+        ]
+      },
+      {
+        "op_id": "xa_moon",
+        "name": "Exploration atmosphere, Moon",
+        "direction": "downward or opposed",
+        "material": "SIBAL",
+        "p_mean": 0.9317852651945205,
+        "p_lo90": 0.5210341421341156,
+        "p_hi90": 0.9999976911242708,
+        "support_distance": 2.4552400327379047,
+        "nearest_obs": "T12",
+        "nearest_label": "Saffire VI-2",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 2.46: Saffire VI-2)"
+        ]
+      },
+      {
+        "op_id": "xa_moon",
+        "name": "Exploration atmosphere, Moon",
+        "direction": "downward or opposed",
+        "material": "a new material in the family",
+        "p_mean": 0.9311677276415309,
+        "p_lo90": 0.4703519710377307,
+        "p_hi90": 0.9999987730738699,
+        "support_distance": 2.4552400327379047,
+        "nearest_obs": "T12",
+        "nearest_label": "Saffire VI-2",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 2.46: Saffire VI-2)"
+        ]
+      },
+      {
+        "op_id": "nesc37_moon",
+        "name": "NESC TB 26-05 condition, Moon",
+        "direction": "upward or concurrent",
+        "material": "SIBAL",
+        "p_mean": 0.9055135755441425,
+        "p_lo90": 0.31845708335051304,
+        "p_hi90": 0.9999993026584431,
+        "support_distance": 2.8334084806746143,
+        "nearest_obs": "T12",
+        "nearest_label": "Saffire VI-2",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 2.83: Saffire VI-2)",
+          "90% interval 0.32 to 1.00 is wider than 0.6"
+        ]
+      },
+      {
+        "op_id": "nesc37_moon",
+        "name": "NESC TB 26-05 condition, Moon",
+        "direction": "upward or concurrent",
+        "material": "a new material in the family",
+        "p_mean": 0.909334716797279,
+        "p_lo90": 0.313806032109176,
+        "p_hi90": 0.9999996055626896,
+        "support_distance": 2.8334084806746143,
+        "nearest_obs": "T12",
+        "nearest_label": "Saffire VI-2",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 2.83: Saffire VI-2)",
+          "90% interval 0.31 to 1.00 is wider than 0.6"
+        ]
+      },
+      {
+        "op_id": "nesc37_moon",
+        "name": "NESC TB 26-05 condition, Moon",
+        "direction": "downward or opposed",
+        "material": "SIBAL",
+        "p_mean": 0.9291151934076124,
+        "p_lo90": 0.447039140826023,
+        "p_hi90": 0.9999997495611729,
+        "support_distance": 3.004696926207172,
+        "nearest_obs": "T12",
+        "nearest_label": "Saffire VI-2",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 3.00: Saffire VI-2)"
+        ]
+      },
+      {
+        "op_id": "nesc37_moon",
+        "name": "NESC TB 26-05 condition, Moon",
+        "direction": "downward or opposed",
+        "material": "a new material in the family",
+        "p_mean": 0.9303889058059263,
+        "p_lo90": 0.41833599200721705,
+        "p_hi90": 0.9999998531195721,
+        "support_distance": 3.004696926207172,
+        "nearest_obs": "T12",
+        "nearest_label": "Saffire VI-2",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 3.00: Saffire VI-2)"
+        ]
+      },
+      {
+        "op_id": "xa_mars",
+        "name": "Exploration atmosphere, Mars",
+        "direction": "upward or concurrent",
+        "material": "SIBAL",
+        "p_mean": 0.8932472470180098,
+        "p_lo90": 0.3096537366357791,
+        "p_hi90": 0.9999926627735632,
+        "support_distance": 4.515229239376794,
+        "nearest_obs": "T15c",
+        "nearest_label": "feier_2001 NASA KC-135 aircraft",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 4.52: feier_2001 NASA KC-135 aircraft)",
+          "90% interval 0.31 to 1.00 is wider than 0.6"
+        ]
+      },
+      {
+        "op_id": "xa_mars",
+        "name": "Exploration atmosphere, Mars",
+        "direction": "upward or concurrent",
+        "material": "a new material in the family",
+        "p_mean": 0.897065526337218,
+        "p_lo90": 0.2875787380753935,
+        "p_hi90": 0.9999958326913473,
+        "support_distance": 4.515229239376794,
+        "nearest_obs": "T15c",
+        "nearest_label": "feier_2001 NASA KC-135 aircraft",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 4.52: feier_2001 NASA KC-135 aircraft)",
+          "90% interval 0.29 to 1.00 is wider than 0.6"
+        ]
+      },
+      {
+        "op_id": "xa_mars",
+        "name": "Exploration atmosphere, Mars",
+        "direction": "downward or opposed",
+        "material": "SIBAL",
+        "p_mean": 0.9027923022209088,
+        "p_lo90": 0.3287316809017005,
+        "p_hi90": 0.999994954334495,
+        "support_distance": 4.624639995083199,
+        "nearest_obs": "T15c",
+        "nearest_label": "feier_2001 NASA KC-135 aircraft",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 4.62: feier_2001 NASA KC-135 aircraft)",
+          "90% interval 0.33 to 1.00 is wider than 0.6"
+        ]
+      },
+      {
+        "op_id": "xa_mars",
+        "name": "Exploration atmosphere, Mars",
+        "direction": "downward or opposed",
+        "material": "a new material in the family",
+        "p_mean": 0.9022688911345492,
+        "p_lo90": 0.2729763183029046,
+        "p_hi90": 0.9999976029599421,
+        "support_distance": 4.624639995083199,
+        "nearest_obs": "T15c",
+        "nearest_label": "feier_2001 NASA KC-135 aircraft",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 4.62: feier_2001 NASA KC-135 aircraft)",
+          "90% interval 0.27 to 1.00 is wider than 0.6"
+        ]
+      },
+      {
+        "op_id": "nesc37_mars",
+        "name": "NESC TB 26-05 condition, Mars",
+        "direction": "upward or concurrent",
+        "material": "SIBAL",
+        "p_mean": 0.8952653705878161,
+        "p_lo90": 0.2555438807839768,
+        "p_hi90": 0.9999991995122894,
+        "support_distance": 5.15661745898984,
+        "nearest_obs": "T12",
+        "nearest_label": "Saffire VI-2",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 5.16: Saffire VI-2)",
+          "90% interval 0.26 to 1.00 is wider than 0.6"
+        ]
+      },
+      {
+        "op_id": "nesc37_mars",
+        "name": "NESC TB 26-05 condition, Mars",
+        "direction": "upward or concurrent",
+        "material": "a new material in the family",
+        "p_mean": 0.9003320282417413,
+        "p_lo90": 0.2595166355482192,
+        "p_hi90": 0.9999995036237597,
+        "support_distance": 5.15661745898984,
+        "nearest_obs": "T12",
+        "nearest_label": "Saffire VI-2",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 5.16: Saffire VI-2)",
+          "90% interval 0.26 to 1.00 is wider than 0.6"
+        ]
+      },
+      {
+        "op_id": "nesc37_mars",
+        "name": "NESC TB 26-05 condition, Mars",
+        "direction": "downward or opposed",
+        "material": "SIBAL",
+        "p_mean": 0.9036291278584879,
+        "p_lo90": 0.2615034661788499,
+        "p_hi90": 0.9999993984645908,
+        "support_distance": 5.2526853721081395,
+        "nearest_obs": "T12",
+        "nearest_label": "Saffire VI-2",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 5.25: Saffire VI-2)",
+          "90% interval 0.26 to 1.00 is wider than 0.6"
+        ]
+      },
+      {
+        "op_id": "nesc37_mars",
+        "name": "NESC TB 26-05 condition, Mars",
+        "direction": "downward or opposed",
+        "material": "a new material in the family",
+        "p_mean": 0.9053192613455074,
+        "p_lo90": 0.23889581969540485,
+        "p_hi90": 0.9999996805352652,
+        "support_distance": 5.2526853721081395,
+        "nearest_obs": "T12",
+        "nearest_label": "Saffire VI-2",
+        "nearest_outcome": "sustained",
+        "decision": "declined",
+        "reasons": [
+          "no thin fabric test within distance 1.0 (nearest 5.25: Saffire VI-2)",
+          "90% interval 0.24 to 1.00 is wider than 0.6"
+        ]
+      }
+    ]
+  },
+  "step5": {
+    "plan": [
+      {
+        "facility": "parabolic_novespace",
+        "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+        "cost_tier": 2,
+        "test_time_s": 25.0,
+        "g": 0.38,
+        "g_class": "mars",
+        "o2_pct": 37.0,
+        "p_psia": 8.2,
+        "p_kpa": 56.53700980398055,
+        "dir": 1,
+        "assumed_flow": "buoyant flow only",
+        "step": 1,
+        "p_sustain_now": 0.8930345404863974,
+        "expected_weighted_variance_after": 0.14630630572299344,
+        "cumulative_reduction_pct": 45.29356442659085,
+        "added_reduction_pct": 45.29356442659085
+      },
+      {
+        "facility": "parabolic_novespace",
+        "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+        "cost_tier": 2,
+        "test_time_s": 25.0,
+        "g": 0.38,
+        "g_class": "mars",
+        "o2_pct": 37.0,
+        "p_psia": 8.2,
+        "p_kpa": 56.53700980398055,
+        "dir": -1,
+        "assumed_flow": "buoyant flow only",
+        "step": 2,
+        "p_sustain_now": 0.9031450664774909,
+        "expected_weighted_variance_after": 0.10257860327457789,
+        "cumulative_reduction_pct": 61.64410191672922,
+        "added_reduction_pct": 16.35053749013837
+      },
+      {
+        "facility": "parabolic_novespace",
+        "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+        "cost_tier": 2,
+        "test_time_s": 25.0,
+        "g": 0.16,
+        "g_class": "lunar",
+        "o2_pct": 37.0,
+        "p_psia": 8.2,
+        "p_kpa": 56.53700980398055,
+        "dir": 1,
+        "assumed_flow": "buoyant flow only",
+        "step": 3,
+        "p_sustain_now": 0.9041942905117771,
+        "expected_weighted_variance_after": 0.08374082264376018,
+        "cumulative_reduction_pct": 68.68787099649134,
+        "added_reduction_pct": 7.0437690797621215
+      },
+      {
+        "facility": "parabolic_novespace",
+        "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+        "cost_tier": 2,
+        "test_time_s": 25.0,
+        "g": 0.16,
+        "g_class": "lunar",
+        "o2_pct": 37.0,
+        "p_psia": 8.2,
+        "p_kpa": 56.53700980398055,
+        "dir": -1,
+        "assumed_flow": "buoyant flow only",
+        "step": 4,
+        "p_sustain_now": 0.9283516828685415,
+        "expected_weighted_variance_after": 0.07166105930999017,
+        "cumulative_reduction_pct": 73.20470156845664,
+        "added_reduction_pct": 4.516830571965301
+      },
+      {
+        "facility": "parabolic_novespace",
+        "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+        "cost_tier": 2,
+        "test_time_s": 25.0,
+        "g": 0.38,
+        "g_class": "mars",
+        "o2_pct": 37.0,
+        "p_psia": 10.2,
+        "p_kpa": 70.32652439031727,
+        "dir": 1,
+        "assumed_flow": "buoyant flow only",
+        "step": 5,
+        "p_sustain_now": 0.901495416803004,
+        "expected_weighted_variance_after": 0.06397709913647383,
+        "cumulative_reduction_pct": 76.07786598952404,
+        "added_reduction_pct": 2.8731644210674006
+      },
+      {
+        "facility": "parabolic_novespace",
+        "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+        "cost_tier": 2,
+        "test_time_s": 25.0,
+        "g": 0.38,
+        "g_class": "mars",
+        "o2_pct": 37.0,
+        "p_psia": 10.2,
+        "p_kpa": 70.32652439031727,
+        "dir": -1,
+        "assumed_flow": "buoyant flow only",
+        "step": 6,
+        "p_sustain_now": 0.9115444151805611,
+        "expected_weighted_variance_after": 0.05827486367293566,
+        "cumulative_reduction_pct": 78.21002957241897,
+        "added_reduction_pct": 2.1321635828949326
+      },
+      {
+        "facility": "parabolic_novespace",
+        "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+        "cost_tier": 2,
+        "test_time_s": 25.0,
+        "g": 0.16,
+        "g_class": "lunar",
+        "o2_pct": 37.0,
+        "p_psia": 10.2,
+        "p_kpa": 70.32652439031727,
+        "dir": 1,
+        "assumed_flow": "buoyant flow only",
+        "step": 7,
+        "p_sustain_now": 0.9125962669890988,
+        "expected_weighted_variance_after": 0.053844383698258405,
+        "cumulative_reduction_pct": 79.86666197863158,
+        "added_reduction_pct": 1.6566324062126085
+      },
+      {
+        "facility": "parabolic_novespace",
+        "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+        "cost_tier": 2,
+        "test_time_s": 25.0,
+        "g": 0.16,
+        "g_class": "lunar",
+        "o2_pct": 37.0,
+        "p_psia": 10.2,
+        "p_kpa": 70.32652439031727,
+        "dir": -1,
+        "assumed_flow": "buoyant flow only",
+        "step": 8,
+        "p_sustain_now": 0.93501275472184,
+        "expected_weighted_variance_after": 0.05060347305620358,
+        "cumulative_reduction_pct": 81.07849402074763,
+        "added_reduction_pct": 1.2118320421160433
+      },
+      {
+        "facility": "parabolic_novespace",
+        "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+        "cost_tier": 2,
+        "test_time_s": 25.0,
+        "g": 0.16,
+        "g_class": "lunar",
+        "o2_pct": 34.0,
+        "p_psia": 8.2,
+        "p_kpa": 56.53700980398055,
+        "dir": 1,
+        "assumed_flow": "buoyant flow only",
+        "step": 9,
+        "p_sustain_now": 0.9036208198525038,
+        "expected_weighted_variance_after": 0.04764571424215197,
+        "cumulative_reduction_pct": 82.18445074081514,
+        "added_reduction_pct": 1.1059567200675104
+      },
+      {
+        "facility": "parabolic_novespace",
+        "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+        "cost_tier": 2,
+        "test_time_s": 25.0,
+        "g": 0.38,
+        "g_class": "mars",
+        "o2_pct": 34.0,
+        "p_psia": 8.2,
+        "p_kpa": 56.53700980398055,
+        "dir": -1,
+        "assumed_flow": "buoyant flow only",
+        "step": 10,
+        "p_sustain_now": 0.902379044440415,
+        "expected_weighted_variance_after": 0.04527817910314252,
+        "cumulative_reduction_pct": 83.06971271165067,
+        "added_reduction_pct": 0.8852619708355292
+      }
+    ],
+    "single_test_ranking": [
+      {
+        "facility": "parabolic_nasa",
+        "facility_name": "NASA parabolic flight (about 20 s per parabola)",
+        "cost_tier": 2,
+        "test_time_s": 20.0,
+        "g": 0.3333,
+        "g_class": "mars",
+        "o2_pct": 37.0,
+        "p_psia": 8.2,
+        "p_kpa": 56.53700980398055,
+        "dir": 1,
+        "assumed_flow": "buoyant flow only",
+        "p_sustain_now": 0.8978147429651258,
+        "evr": 0.12230891526437888,
+        "evr_pct": 45.540095179466825,
+        "evr_per_cost": 0.06115445763218944,
+        "rank": 1
+      },
+      {
+        "facility": "parabolic_nasa",
+        "facility_name": "NASA parabolic flight (about 20 s per parabola)",
+        "cost_tier": 2,
+        "test_time_s": 20.0,
+        "g": 0.1667,
+        "g_class": "lunar",
+        "o2_pct": 37.0,
+        "p_psia": 8.2,
+        "p_kpa": 56.53700980398055,
+        "dir": 1,
+        "assumed_flow": "buoyant flow only",
+        "p_sustain_now": 0.9052729915059128,
+        "evr": 0.12010891031396506,
+        "evr_pct": 44.72095264500333,
+        "evr_per_cost": 0.06005445515698253,
+        "rank": 2
+      },
+      {
+        "facility": "parabolic_nasa",
+        "facility_name": "NASA parabolic flight (about 20 s per parabola)",
+        "cost_tier": 2,
+        "test_time_s": 20.0,
+        "g": 0.3333,
+        "g_class": "mars",
+        "o2_pct": 37.0,
+        "p_psia": 8.2,
+        "p_kpa": 56.53700980398055,
+        "dir": -1,
+        "assumed_flow": "buoyant flow only",
+        "p_sustain_now": 0.9107488788074993,
+        "evr": 0.1197263043382801,
+        "evr_pct": 44.57849440709596,
+        "evr_per_cost": 0.05986315216914005,
+        "rank": 3
+      },
+      {
+        "facility": "parabolic_nasa",
+        "facility_name": "NASA parabolic flight (about 20 s per parabola)",
+        "cost_tier": 2,
+        "test_time_s": 20.0,
+        "g": 0.3333,
+        "g_class": "mars",
+        "o2_pct": 37.0,
+        "p_psia": 10.2,
+        "p_kpa": 70.32652439031727,
+        "dir": 1,
+        "assumed_flow": "buoyant flow only",
+        "p_sustain_now": 0.9059900100409107,
+        "evr": 0.11934297198939783,
+        "evr_pct": 44.435765713805424,
+        "evr_per_cost": 0.05967148599469892,
+        "rank": 4
+      },
+      {
+        "facility": "parabolic_novespace",
+        "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+        "cost_tier": 2,
+        "test_time_s": 25.0,
+        "g": 0.38,
+        "g_class": "mars",
+        "o2_pct": 37.0,
+        "p_psia": 10.2,
+        "p_kpa": 70.32652439031727,
+        "dir": -1,
+        "assumed_flow": "buoyant flow only",
+        "p_sustain_now": 0.911667635485528,
+        "evr": 0.11778730619897639,
+        "evr_pct": 43.856534281574206,
+        "evr_per_cost": 0.05889365309948819,
+        "rank": 5
+      },
+      {
+        "facility": "parabolic_nasa",
+        "facility_name": "NASA parabolic flight (about 20 s per parabola)",
+        "cost_tier": 2,
+        "test_time_s": 20.0,
+        "g": 0.1667,
+        "g_class": "lunar",
+        "o2_pct": 37.0,
+        "p_psia": 10.2,
+        "p_kpa": 70.32652439031727,
+        "dir": 1,
+        "assumed_flow": "buoyant flow only",
+        "p_sustain_now": 0.9133728083001824,
+        "evr": 0.11726839724758356,
+        "evr_pct": 43.66332544651238,
+        "evr_per_cost": 0.05863419862379178,
+        "rank": 6
+      },
+      {
+        "facility": "parabolic_nasa",
+        "facility_name": "NASA parabolic flight (about 20 s per parabola)",
+        "cost_tier": 2,
+        "test_time_s": 20.0,
+        "g": 0.1667,
+        "g_class": "lunar",
+        "o2_pct": 37.0,
+        "p_psia": 8.2,
+        "p_kpa": 56.53700980398055,
+        "dir": -1,
+        "assumed_flow": "buoyant flow only",
+        "p_sustain_now": 0.9286101337299144,
+        "evr": 0.11636122301539537,
+        "evr_pct": 43.32555120667949,
+        "evr_per_cost": 0.05818061150769768,
+        "rank": 7
+      },
+      {
+        "facility": "parabolic_nasa",
+        "facility_name": "NASA parabolic flight (about 20 s per parabola)",
+        "cost_tier": 2,
+        "test_time_s": 20.0,
+        "g": 0.1667,
+        "g_class": "lunar",
+        "o2_pct": 37.0,
+        "p_psia": 10.2,
+        "p_kpa": 70.32652439031727,
+        "dir": -1,
+        "assumed_flow": "buoyant flow only",
+        "p_sustain_now": 0.9349949475394241,
+        "evr": 0.11319433149885866,
+        "evr_pct": 42.14640134033994,
+        "evr_per_cost": 0.05659716574942933,
+        "rank": 8
+      },
+      {
+        "facility": "parabolic_novespace",
+        "facility_name": "Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",
+        "cost_tier": 2,
+        "test_time_s": 25.0,
+        "g": 0.38,
+        "g_class": "mars",
+        "o2_pct": 37.0,
+        "p_psia": 14.7,
+        "p_kpa": 101.3529322095749,
+        "dir": -1,
+        "assumed_flow": "buoyant flow only",
+        "p_sustain_now": 0.9229780468118822,
+        "evr": 0.11185380129474282,
+        "evr_pct": 41.64727277759841,
+        "evr_per_cost": 0.05592690064737141,
+        "rank": 9
+      },
+      {
+        "facility": "parabolic_nasa",
+        "facility_name": "NASA parabolic flight (about 20 s per parabola)",
+        "cost_tier": 2,
+        "test_time_s": 20.0,
+        "g": 0.3333,
+        "g_class": "mars",
+        "o2_pct": 37.0,
+        "p_psia": 14.7,
+        "p_kpa": 101.3529322095749,
+        "dir": 1,
+        "assumed_flow": "buoyant flow only",
+        "p_sustain_now": 0.9173660540183267,
+        "evr": 0.11112330099427285,
+        "evr_pct": 41.37528072256201,
+        "evr_per_cost": 0.055561650497136426,
+        "rank": 10
+      }
+    ],
+    "material": "SIBAL"
+  },
+  "step6": {
+    "step": 6,
+    "title": "FM2 predictions",
+    "predictions": [
+      {
+        "burn": 1,
+        "fuel": "SIBAL fabric",
+        "family": "thin_fabric",
+        "material": "SIBAL",
+        "direction": "upward",
+        "o2_pct": 21.0,
+        "p_psia": 14.7,
+        "g": 0.1651940265024244,
+        "model": {
+          "p_mean": 0.8118683656434071,
+          "p_lo90": 0.4042497326479258,
+          "p_hi90": 0.989037091779124,
+          "decision": "declined",
+          "reasons": [
+            "the model's answer contradicts FM2 team lunar-g simulation at distance 0.02 (extinguished)"
+          ],
+          "support_distance": 0.0179999999999995,
+          "nearest_label": "FM2 team lunar-g simulation",
+          "nearest_outcome": "extinguished"
+        },
+        "strict_model": {
+          "p_mean": 0.952687639031258,
+          "p_lo90": 0.7573387276721969,
+          "p_hi90": 0.9998045128555033,
+          "decision": "declined"
+        }
+      },
+      {
+        "burn": 2,
+        "fuel": "SIBAL fabric",
+        "family": "thin_fabric",
+        "material": "SIBAL",
+        "direction": "downward",
+        "o2_pct": 21.0,
+        "p_psia": 14.7,
+        "g": 0.1651940265024244,
+        "model": {
+          "p_mean": 0.8917261096741682,
+          "p_lo90": 0.6068985849313734,
+          "p_hi90": 0.9968748641698155,
+          "decision": "sustains",
+          "reasons": [],
+          "support_distance": 0.0179999999999995,
+          "nearest_label": "FM2 team lunar-g simulation",
+          "nearest_outcome": "sustained"
+        },
+        "strict_model": {
+          "p_mean": 0.9473776217153095,
+          "p_lo90": 0.7438149060581692,
+          "p_hi90": 0.999802460694399,
+          "decision": "sustains"
+        },
+        "analog": {
+          "source": "LUCI lunar-gravity spin burn of SIBAL in air at normal pressure (rows R001, R002)",
+          "flame_base_spread_mm_s": 0.92,
+          "flame_tip_spread_mm_s": 1.1,
+          "tolerance": "plus or minus 50% (team judgement for sample and hardware differences; not a statistical interval)",
+          "falsified_if": "the flame-base spread rate is outside 0.46 to 1.38 mm/s, or the flame-tip spread rate is outside 0.55 to 1.65 mm/s"
+        }
+      },
+      {
+        "burn": 3,
+        "fuel": "4 mm acrylic (PMMA) rod",
+        "family": "thick_plastic",
+        "material": "PMMA rod",
+        "direction": "upward",
+        "o2_pct": 34.0,
+        "p_psia": 8.2,
+        "g": 0.1651940265024244,
+        "model": {
+          "p_mean": 0.9412397114169335,
+          "p_lo90": 0.5687647335632856,
+          "p_hi90": 0.9999995644418672,
+          "decision": "declined",
+          "reasons": [
+            "no thick plastic test within distance 1.0 (nearest 2.41: Saffire VI-3)"
+          ],
+          "support_distance": 2.408875968100143,
+          "nearest_label": "Saffire VI-3",
+          "nearest_outcome": "sustained"
+        },
+        "strict_model": {
+          "p_mean": 0.9489144299206899,
+          "p_lo90": 0.651931585721396,
+          "p_hi90": 0.999999534328774,
+          "decision": "declined"
+        }
+      },
+      {
+        "burn": 4,
+        "fuel": "4 mm acrylic (PMMA) rod",
+        "family": "thick_plastic",
+        "material": "PMMA rod",
+        "direction": "downward",
+        "o2_pct": 34.0,
+        "p_psia": 8.2,
+        "g": 0.1651940265024244,
+        "model": {
+          "p_mean": 0.8889129046424097,
+          "p_lo90": 0.18152497365166756,
+          "p_hi90": 0.9999990802818048,
+          "decision": "declined",
+          "reasons": [
+            "no thick plastic test within distance 1.0 (nearest 2.61: Saffire VI-3)",
+            "90% interval 0.18 to 1.00 is wider than 0.6"
+          ],
+          "support_distance": 2.6081954354860755,
+          "nearest_label": "Saffire VI-3",
+          "nearest_outcome": "sustained"
+        },
+        "strict_model": {
+          "p_mean": 0.8810974550530312,
+          "p_lo90": 0.1550416132600483,
+          "p_hi90": 0.9999990944688446,
+          "decision": "declined"
+        }
+      }
+    ],
+    "frozen_file": "predictions/fm2_predictions.json",
+    "sha256": "05e2f02efcd6487f758b40a543ac24e26a01ad81b58e34bb538c8054a5978248"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "version": "1.1",
+  "frozen_at_utc": "2026-11-15T23:59:52Z",
+  "primary_family": "thin_fabric",
+  "reference_material": {
+    "thin_fabric": "SIBAL",
+    "thick_plastic": "PMMA rod"
+  },
+  "model": "logit P(sustained flame) = b0 + b_o2*(O2% - 21)/5 + b_lnp*log2(P / 101.325 kPa) + b_micro*[forced-flow microgravity] + b_g*g + b_g2*g^2 + b_dir*d + b_dir_g*d*g + b_dir_g2*d*g^2 + material offset; d = +1 upward or concurrent, -1 downward or opposed",
+  "priors": {
+    "intercept": {
+      "mean": 0.0,
+      "sd": 2.5
+    },
+    "o2": {
+      "mean": 1.5,
+      "sd": 1.5
+    },
+    "lnp": {
+      "mean": 1.0,
+      "sd": 1.0
+    },
+    "g": {
+      "mean": 0.0,
+      "sd": 3.0
+    },
+    "g2": {
+      "mean": 0.0,
+      "sd": 3.0
+    },
+    "dir": {
+      "mean": 0.0,
+      "sd": 2.0
+    },
+    "dir_g": {
+      "mean": 0.0,
+      "sd": 3.0
+    },
+    "micro": {
+      "mean": 0.0,
+      "sd": 2.0
+    },
+    "dir_g2": {
+      "mean": 0.0,
+      "sd": 3.0
+    }
+  },
+  "prior_rationale": "More oxygen and more pressure make flames more likely (weak positive priors). Gravity and direction get wide zero-centred priors so the data decide, including a peak at partial gravity.",
+  "material_sd": 1.5,
+  "flow_regime_min_cm_s": {
+    "thin_fabric": 5.0,
+    "thick_plastic": 0.4,
+    "other_textile": 5.0
+  },
+  "flow_regime_note": "Microgravity tests enter the 3-variable model only with forced flow at or above this speed (BASS-II quenched SIBAL at 2.2 cm/s). Partial- and 1-g tests rely on buoyant flow.",
+  "unknown_pressure_range_kpa": [
+    70.0,
+    102.0
+  ],
+  "unknown_pressure_note": "When a source gives no pressure, the likelihood is averaged over 70 to 102 kPa (aircraft cabin to sea level). Coverage maps never use this range.",
+  "mcmc": {
+    "chains": 4,
+    "iterations": 12000,
+    "burn_in": 4000,
+    "thin": 4,
+    "seed": 2026
+  },
+  "decline": {
+    "support_max_distance": 1.0,
+    "ci90_max_width": 0.6,
+    "scales": {
+      "o2_pts": 3.0,
+      "p_frac": 0.3,
+      "g": 0.08,
+      "direction_mismatch": 1.0
+    },
+    "conflict_radius": 1.0
+  },
+  "decline_rule": "Answer only when (a) a test of the same family lies within distance 1.0, where 3 oxygen points, a 30% pressure change, 0.08 g or an opposite flame direction each count as 1.0, (b) the 90% interval of the probability is no wider than 0.6, and (c) no test within distance 1.0 had the opposite outcome to the model's answer. Otherwise decline and name the nearest tests.",
+  "changes_from_1_0": [
+    "Run 1 (version 1.0) answered 'sustains' (P = 0.90) for SIBAL burning upward in air at lunar gravity, while the only test at those conditions (FM2 team, R076) found that it does not burn upward. A model must never overrule a test at the same conditions, so rule (c) was added.",
+    "Run 1 treated forced-flow microgravity as gravity 0 on the same curve as buoyant partial gravity, which forced one smooth curve through two physical regimes. Version 1.1 gives forced-flow microgravity its own term (b_micro) and lets each flame direction bend differently with gravity (b_dir_g2).",
+    "Run 1 leave-one-out Brier score was 0.151, worse than always predicting the base rate (0.113). Both changes were made after seeing run 1 and before any FM2 result exists; run 1 outputs are kept in results/method/history.",
+    "The first version of rule (c) used a radius of 0.5, which let the model answer 'sustains' just outside that radius from the FM2 team's no-burn result. The radius now equals the support radius (1.0), so the model never answers against a test inside its own support region."
+  ]
+}

@@ -1,0 +1,736 @@
+{
+ "version": "1.0",
+ "binary": {
+  "sustained": 1,
+  "extinguished": 0,
+  "quench": 0,
+  "blowoff": 0,
+  "no_ignition": 0
+ },
+ "rule": "Each outcome cites ledger rows or a source locator with a quote. 'select' attaches the outcome to an existing test point; 'derive_from' adds a test point at changed conditions (for example the same test after the fan was turned off).",
+ "observations": [
+  {
+   "id": "T01",
+   "select": {
+    "row": "R001",
+    "family": "thin_fabric"
+   },
+   "outcome": "sustained",
+   "material": "SIBAL",
+   "evidence": [
+    {
+     "row_id": "R001"
+    },
+    {
+     "row_id": "R002"
+    }
+   ],
+   "note": "LUCI lunar-gravity spin burn in air: flame base and tip spread rates measured."
+  },
+  {
+   "id": "T02",
+   "select": {
+    "row": "R003",
+    "family": "thin_fabric"
+   },
+   "outcome": "sustained",
+   "material": "SIBAL",
+   "evidence": [
+    {
+     "row_id": "R003"
+    },
+    {
+     "row_id": "R004"
+    }
+   ],
+   "note": "LUCI 1-g ground burns: spread rates measured; 1-g extinction came about 45 s sooner than in lunar gravity (R018). Pressure and direction not stated."
+  },
+  {
+   "id": "T03",
+   "select": {
+    "row": "R076",
+    "family": "thin_fabric"
+   },
+   "outcome": "sustained",
+   "material": "SIBAL",
+   "evidence": [
+    {
+     "row_id": "R076"
+    }
+   ],
+   "note": "FM2 team centrifuge and parabolic flight: SIBAL burns downward in air in lunar gravity. Pressure not stated."
+  },
+  {
+   "id": "T04",
+   "derive_from": {
+    "row": "R076",
+    "family": "thin_fabric"
+   },
+   "override": {
+    "direction_class": "with_flow"
+   },
+   "outcome": "extinguished",
+   "material": "SIBAL",
+   "evidence": [
+    {
+     "row_id": "R076",
+     "quote": "only burn downward in air in lunar gravity"
+    }
+   ],
+   "note": "'Only burn downward' means upward burning did not sustain in lunar gravity. Pressure not stated."
+  },
+  {
+   "id": "T05",
+   "select": {
+    "row": "R077",
+    "family": "thin_fabric"
+   },
+   "outcome": "extinguished",
+   "material": "SIBAL",
+   "evidence": [
+    {
+     "row_id": "R077"
+    }
+   ],
+   "note": "FM2 team: at 1 g the fabric extinguishes immediately after ignition. Pressure not stated."
+  },
+  {
+   "id": "T06",
+   "select": {
+    "row": "R056",
+    "family": "thin_fabric"
+   },
+   "outcome": "sustained",
+   "material": "SIBAL",
+   "evidence": [
+    {
+     "row_id": "R056"
+    },
+    {
+     "row_id": "R057"
+    }
+   ],
+   "note": "Saffire I-1: flame size measured."
+  },
+  {
+   "id": "T07",
+   "select": {
+    "row": "R058",
+    "family": "thin_fabric"
+   },
+   "outcome": "sustained",
+   "material": "SIBAL",
+   "evidence": [
+    {
+     "row_id": "R058"
+    },
+    {
+     "row_id": "R059"
+    }
+   ],
+   "note": "Saffire II-5: flame size measured."
+  },
+  {
+   "id": "T08",
+   "select": {
+    "row": "R060",
+    "family": "thin_fabric"
+   },
+   "outcome": "sustained",
+   "material": "SIBAL",
+   "evidence": [
+    {
+     "row_id": "R060"
+    },
+    {
+     "row_id": "R061"
+    }
+   ],
+   "note": "Saffire II-6: flame size measured."
+  },
+  {
+   "id": "T09",
+   "select": {
+    "row": "R062",
+    "family": "thin_fabric"
+   },
+   "outcome": "sustained",
+   "material": "SIBAL",
+   "evidence": [
+    {
+     "row_id": "R062"
+    },
+    {
+     "row_id": "R063"
+    }
+   ],
+   "note": "Saffire III-1: flame size measured."
+  },
+  {
+   "id": "T10",
+   "select": {
+    "row": "R027",
+    "family": "thin_fabric"
+   },
+   "outcome": "sustained",
+   "material": "SIBAL",
+   "evidence": [
+    {
+     "row_id": "R027"
+    }
+   ],
+   "note": "Saffire IV-1: burned for 130 s."
+  },
+  {
+   "id": "T11",
+   "select": {
+    "row": "R068",
+    "family": "thin_fabric"
+   },
+   "outcome": "sustained",
+   "material": "cotton jersey",
+   "evidence": [
+    {
+     "row_id": "R068"
+    }
+   ],
+   "note": "Saffire V-2: burned steadily for 300 s with the fan on."
+  },
+  {
+   "id": "T12",
+   "select": {
+    "row": "R029",
+    "family": "thin_fabric"
+   },
+   "outcome": "sustained",
+   "material": "SIBAL",
+   "evidence": [
+    {
+     "row_id": "R029"
+    }
+   ],
+   "note": "Saffire VI-2: burned for 112 s."
+  },
+  {
+   "id": "T13",
+   "select": {
+    "row": "R089",
+    "family": "thin_fabric"
+   },
+   "outcome": "sustained",
+   "material": "SIBAL",
+   "evidence": [
+    {
+     "row_id": "R089"
+    }
+   ],
+   "note": "BASS-II: ignited at 5 cm/s and kept burning while the flow was reduced."
+  },
+  {
+   "id": "T14",
+   "derive_from": {
+    "row": "R089",
+    "family": "thin_fabric"
+   },
+   "override": {
+    "flow_cm_s": 2.2,
+    "flow_lo_cm_s": 2.2,
+    "flow_hi_cm_s": 2.2
+   },
+   "outcome": "quench",
+   "material": "SIBAL",
+   "evidence": [
+    {
+     "row_id": "R089"
+    },
+    {
+     "row_id": "R088",
+     "quote": "6 quenching cases (reducing flow)"
+    }
+   ],
+   "note": "BASS-II quenching case: the flame quenched as flow fell to 2.2 cm/s.",
+   "model": {
+    "include": false,
+    "reason": "forced flow below the thin-fabric regime of the 3-variable model (5 cm/s)"
+   }
+  },
+  {
+   "id": "T15a",
+   "select": {
+    "row": "R097",
+    "family": "thin_fabric",
+    "g": 0.1
+   },
+   "outcome": "sustained",
+   "material": "cellulose tissue",
+   "evidence": [
+    {
+     "source_id": "feier_2001",
+     "locator": "Abstract",
+     "quote": "Observed steady flame propagation speeds and pyrolysis lengths were approximately proportional to the gravity level."
+    }
+   ],
+   "note": "Feier and colleagues, KC-135: upward spread in air at 0.2 to 0.4 atm. The paper notes a low-pressure transition 'seems apparent' in partial gravity on a limited number of tests."
+  },
+  {
+   "id": "T15b",
+   "select": {
+    "row": "R097",
+    "family": "thin_fabric",
+    "g": 0.16
+   },
+   "outcome": "sustained",
+   "material": "cellulose tissue",
+   "evidence": [
+    {
+     "source_id": "feier_2001",
+     "locator": "Abstract",
+     "quote": "Observed steady flame propagation speeds and pyrolysis lengths were approximately proportional to the gravity level."
+    }
+   ],
+   "note": "Feier and colleagues, KC-135: upward spread in air at 0.2 to 0.4 atm. The paper notes a low-pressure transition 'seems apparent' in partial gravity on a limited number of tests."
+  },
+  {
+   "id": "T15c",
+   "select": {
+    "row": "R097",
+    "family": "thin_fabric",
+    "g": 0.38
+   },
+   "outcome": "sustained",
+   "material": "cellulose tissue",
+   "evidence": [
+    {
+     "source_id": "feier_2001",
+     "locator": "Abstract",
+     "quote": "Observed steady flame propagation speeds and pyrolysis lengths were approximately proportional to the gravity level."
+    }
+   ],
+   "note": "Feier and colleagues, KC-135: upward spread in air at 0.2 to 0.4 atm. The paper notes a low-pressure transition 'seems apparent' in partial gravity on a limited number of tests."
+  },
+  {
+   "id": "T16",
+   "select": {
+    "row": "R095",
+    "family": "thin_fabric"
+   },
+   "outcome": "sustained",
+   "material": "cellulose tissue",
+   "evidence": [
+    {
+     "row_id": "R095"
+    }
+   ],
+   "model": {
+    "p_kpa_range": [
+     15.2,
+     40.53
+    ],
+    "note": "lower bound 0.15 atm from the row; upper bound 0.4 atm from the paper's test range (Abstract)"
+   }
+  },
+  {
+   "id": "T17",
+   "select": {
+    "row": "R096",
+    "family": "thin_fabric"
+   },
+   "outcome": "extinguished",
+   "material": "cellulose tissue",
+   "evidence": [
+    {
+     "row_id": "R096"
+    },
+    {
+     "source_id": "feier_2001",
+     "locator": "Results, normal-gravity pressure tests",
+     "quote": "which is attributed to oxygen depletion in the finite chamber"
+    }
+   ],
+   "model": {
+    "p_kpa": 10.1325,
+    "note": "'below approximately 0.10 atm' entered at its bound"
+   },
+   "note": "The authors attribute this transition to oxygen depletion in the finite chamber, so it may partly be a facility effect."
+  },
+  {
+   "id": "T18a",
+   "select": {
+    "row": "R092",
+    "family": "thin_fabric",
+    "g": 0.1
+   },
+   "outcome": "sustained",
+   "material": "cellulose tissue",
+   "evidence": [
+    {
+     "row_id": "R092"
+    }
+   ],
+   "note": "Sacksteder and colleagues, KC-135: upward spread rate varied linearly with gravity, so spread was measured at each level."
+  },
+  {
+   "id": "T18b",
+   "select": {
+    "row": "R092",
+    "family": "thin_fabric",
+    "g": 0.16
+   },
+   "outcome": "sustained",
+   "material": "cellulose tissue",
+   "evidence": [
+    {
+     "row_id": "R092"
+    }
+   ],
+   "note": "Sacksteder and colleagues, KC-135: upward spread rate varied linearly with gravity, so spread was measured at each level."
+  },
+  {
+   "id": "T18c",
+   "select": {
+    "row": "R092",
+    "family": "thin_fabric",
+    "g": 0.38
+   },
+   "outcome": "sustained",
+   "material": "cellulose tissue",
+   "evidence": [
+    {
+     "row_id": "R092"
+    }
+   ],
+   "note": "Sacksteder and colleagues, KC-135: upward spread rate varied linearly with gravity, so spread was measured at each level."
+  },
+  {
+   "id": "T19a",
+   "select": {
+    "row": "R093",
+    "family": "thin_fabric",
+    "g": 0.16
+   },
+   "outcome": "sustained",
+   "material": "cellulose tissue",
+   "evidence": [
+    {
+     "row_id": "R093"
+    },
+    {
+     "source_id": "sacksteder_2003",
+     "locator": "Partial-gravity flammability map",
+     "quote": "The downward spreading boundary is U-shaped"
+    }
+   ],
+   "note": "Downward spread rate peaks near Mars gravity, so spread was measured at these levels. 0.1 g downward is not assigned: the paper reports a U-shaped downward boundary with a low-gravity extinction branch."
+  },
+  {
+   "id": "T19b",
+   "select": {
+    "row": "R093",
+    "family": "thin_fabric",
+    "g": 0.38
+   },
+   "outcome": "sustained",
+   "material": "cellulose tissue",
+   "evidence": [
+    {
+     "row_id": "R093"
+    },
+    {
+     "source_id": "sacksteder_2003",
+     "locator": "Partial-gravity flammability map",
+     "quote": "The downward spreading boundary is U-shaped"
+    }
+   ],
+   "note": "Downward spread rate peaks near Mars gravity, so spread was measured at these levels. 0.1 g downward is not assigned: the paper reports a U-shaped downward boundary with a low-gravity extinction branch."
+  },
+  {
+   "id": "P01",
+   "select": {
+    "row": "R007",
+    "family": "thick_plastic"
+   },
+   "outcome": "sustained",
+   "material": "PMMA rod",
+   "evidence": [
+    {
+     "row_id": "R007"
+    }
+   ],
+   "note": "LUCI lunar spin: PMMA rod flame tip spread measured."
+  },
+  {
+   "id": "P02",
+   "select": {
+    "row": "R008",
+    "family": "thick_plastic"
+   },
+   "outcome": "sustained",
+   "material": "PMMA rod",
+   "evidence": [
+    {
+     "row_id": "R008"
+    }
+   ],
+   "model": {
+    "o2_pct": 21.0,
+    "note": "oxygen at the start of the burn (21%, falling to 14.5%)"
+   },
+   "note": "LUCI 1-g ground burn. Pressure and direction not stated."
+  },
+  {
+   "id": "P03",
+   "select": {
+    "row": "R071",
+    "family": "thick_plastic"
+   },
+   "outcome": "not_reported",
+   "outcome_text": "delayed extinguishment",
+   "material": "PMMA sheet",
+   "evidence": [
+    {
+     "row_id": "R071"
+    }
+   ],
+   "model": {
+    "include": false,
+    "reason": "conditions at extinction are not stated"
+   }
+  },
+  {
+   "id": "P04",
+   "select": {
+    "row": "R069",
+    "family": "thick_plastic"
+   },
+   "outcome": "sustained",
+   "material": "PMMA sheet",
+   "evidence": [
+    {
+     "row_id": "R069",
+     "quote": "when the fan was turned off in Saffire V-3 and V-4, the sample extinguished immediately"
+    }
+   ],
+   "note": "Burning with the fan on is implied by extinction when it was turned off."
+  },
+  {
+   "id": "P05",
+   "derive_from": {
+    "row": "R069",
+    "family": "thick_plastic"
+   },
+   "override": {
+    "flow_cm_s": 0.0,
+    "flow_lo_cm_s": 0.0,
+    "flow_hi_cm_s": 0.0
+   },
+   "outcome": "extinguished",
+   "material": "PMMA sheet",
+   "evidence": [
+    {
+     "row_id": "R069"
+    }
+   ],
+   "model": {
+    "include": false,
+    "reason": "zero forced flow in microgravity is outside the 3-variable model"
+   }
+  },
+  {
+   "id": "P06",
+   "select": {
+    "row": "R070",
+    "family": "thick_plastic"
+   },
+   "outcome": "sustained",
+   "material": "PMMA sheet",
+   "evidence": [
+    {
+     "row_id": "R070",
+     "quote": "when the fan was turned off in Saffire V-3 and V-4, the sample extinguished immediately"
+    }
+   ],
+   "note": "Burning with the fan on is implied by extinction when it was turned off."
+  },
+  {
+   "id": "P07",
+   "derive_from": {
+    "row": "R070",
+    "family": "thick_plastic"
+   },
+   "override": {
+    "flow_cm_s": 0.0,
+    "flow_lo_cm_s": 0.0,
+    "flow_hi_cm_s": 0.0
+   },
+   "outcome": "extinguished",
+   "material": "PMMA sheet",
+   "evidence": [
+    {
+     "row_id": "R070"
+    }
+   ],
+   "model": {
+    "include": false,
+    "reason": "zero forced flow in microgravity is outside the 3-variable model"
+   }
+  },
+  {
+   "id": "P08",
+   "select": {
+    "row": "R030",
+    "family": "thick_plastic"
+   },
+   "outcome": "sustained",
+   "material": "PMMA sheet",
+   "evidence": [
+    {
+     "row_id": "R030"
+    }
+   ],
+   "note": "Saffire VI-3: burned for 780 s."
+  },
+  {
+   "id": "P09",
+   "select": {
+    "row": "R031",
+    "family": "thick_plastic"
+   },
+   "outcome": "sustained",
+   "material": "PMMA sheet",
+   "evidence": [
+    {
+     "row_id": "R031"
+    }
+   ],
+   "note": "Saffire VI-4: burned for 1200 s."
+  },
+  {
+   "id": "P10",
+   "derive_from": {
+    "row": "R079",
+    "family": "thick_plastic"
+   },
+   "override": {
+    "o2_pct": 13.6,
+    "o2_lo_pct": 13.6,
+    "o2_hi_pct": 13.6
+   },
+   "outcome": "sustained",
+   "material": "PMMA rod",
+   "evidence": [
+    {
+     "row_id": "R079"
+    }
+   ],
+   "model": {
+    "flow_ok": true,
+    "note": "BASS-II rod tests ran at 0.4 to 4 cm/s (R086); pressure not stated"
+   },
+   "note": "BASS-II: steady spreading at 13.6% oxygen in microgravity."
+  },
+  {
+   "id": "P11",
+   "derive_from": {
+    "row": "R078",
+    "family": "thick_plastic"
+   },
+   "override": {
+    "o2_pct": 16.0,
+    "o2_lo_pct": 16.0,
+    "o2_hi_pct": 16.0
+   },
+   "outcome": "blowoff",
+   "material": "PMMA rod",
+   "evidence": [
+    {
+     "row_id": "R078"
+    }
+   ],
+   "note": "BASS-II team: at 1 g the 1/4-inch rod blows off at 16% oxygen. Pressure and direction not stated."
+  },
+  {
+   "id": "P12",
+   "derive_from": {
+    "row": "R082",
+    "family": "thick_plastic"
+   },
+   "override": {
+    "flow_cm_s": 2.0,
+    "flow_lo_cm_s": 2.0,
+    "flow_hi_cm_s": 2.0
+   },
+   "outcome": "quench",
+   "material": "PMMA sheet",
+   "evidence": [
+    {
+     "row_id": "R082"
+    }
+   ],
+   "model": {
+    "include": false,
+    "reason": "oxygen not stated"
+   }
+  },
+  {
+   "id": "P13",
+   "derive_from": {
+    "row": "R083",
+    "family": "thick_plastic"
+   },
+   "override": {
+    "flow_cm_s": 40.0,
+    "flow_lo_cm_s": 40.0,
+    "flow_hi_cm_s": 40.0
+   },
+   "outcome": "blowoff",
+   "material": "PMMA sheet",
+   "evidence": [
+    {
+     "row_id": "R083"
+    }
+   ],
+   "model": {
+    "include": false,
+    "reason": "oxygen not stated"
+   }
+  },
+  {
+   "id": "X01",
+   "select": {
+    "row": "R099",
+    "family": "other_textile"
+   },
+   "outcome": "extinguished",
+   "outcome_text": "passed NASA-STD-6001B Test 1 at its maximum oxygen concentration",
+   "material": "Kevlar/PBI webbing (natural)",
+   "evidence": [
+    {
+     "row_id": "R099"
+    },
+    {
+     "row_id": "R099",
+     "quote": "maximum oxygen concentration at which a minimum of five samples tested pass the NASA-STD-6001B criteria"
+    }
+   ]
+  },
+  {
+   "id": "X02",
+   "select": {
+    "row": "R100",
+    "family": "other_textile"
+   },
+   "outcome": "extinguished",
+   "outcome_text": "passed NASA-STD-6001B Test 1 at its maximum oxygen concentration",
+   "material": "Kevlar/PBI webbing (black)",
+   "evidence": [
+    {
+     "row_id": "R100"
+    },
+    {
+     "row_id": "R100",
+     "quote": "maximum oxygen concentration at which a minimum of five samples tested pass the NASA-STD-6001B criteria"
+    }
+   ]
+  }
+ ]
+}

@@ -1,46 +1,46 @@
 {
-  "generated_at": "2026-11-15T09:18:40+00:00",
+  "generated_at": "2026-11-16T01:40:32+00:00",
   "steps": [
     {
       "step": "tests/run_tests.py",
       "exit": 0,
-      "seconds": 0.3,
+      "seconds": 0.2,
       "tail": "PASS test_every_check_passes_on_the_ledger\nPASS test_every_injected_fault_is_detected\nPASS test_luci_spin_gives_lunar_gravity_within_2_percent\nPASS test_no_value_is_invented_for_unstated_fields\nPASS test_pressure_units_round_trip\nPASS test_reference_rows_match_exactly\n6 passed, 0 failed\n"
     },
     {
       "step": "experiments/exp2_checks.py --sources <your source-text folder>",
       "exit": 0,
-      "seconds": 2.5,
+      "seconds": 2.7,
       "tail": "Experiment 2: gate PASS, faults 12/12, results in results/exp2\n"
     },
     {
       "step": "experiments/exp3_coverage.py",
       "exit": 0,
-      "seconds": 4.3,
+      "seconds": 2.4,
       "tail": "ent 3: headline holds=True; tested [2, 2], bounded [1, 1], untested [27, 27]\n   Space station cabin 2 2\n   Moon base and pressurized rover 0 0\n   Moon base, upper bound 0 0\n   Spacesuit on the Moon 0 0\n   Mars habitat 0 0\n  nearest thin_fabric [('Saffire VI-2', 1.6, ['gravity micro, not lunar', 'forced flow 20 cm/s']), ('Saffire V-2', 4.6, ['gravity micro, not lunar', 'forced flow 20 cm/s'])]\n  nearest thick_plastic [('Saffire VI-3', 1.9, ['gravity micro, not lunar', 'forced flow 20 cm/s']), ('Saffire VI-4', 2.6, ['gravity micro, not lunar', 'forced flow 20 cm/s'])]\n  nearest other_textile []\n"
     },
     {
       "step": "experiments/exp4_luci_rules.py",
       "exit": 0,
-      "seconds": 2.2,
+      "seconds": 2.3,
       "tail": ": 'Fabric flame tip', 'sqrt': 3.6159469522423975, 'cube_root': 39.81041204612045, 'linear': -57.8218181818182}, {'label': 'Acrylic rod flame tip', 'sqrt': 8.550039664253985, 'cube_root': 46.468050714983384, 'linear': -55.81333333333333}, {'label': 'Fabric flame base', 'sqrt': -33.63108987919254, 'cube_root': -10.44752334002375, 'linear': -72.98369565217392}]\nbuoyancy: [('Earth, sea level', 1.0), ('Earth laboratory at exploration pressure', 0.311), ('Mars habitat', 0.118), ('Moon base, upper pressure bound', 0.08), ('Moon base, exploration atmosphere', 0.051), ('Spacesuit on the Moon', 0.014)]\n"
     },
     {
       "step": "experiments/exp5_retrodiction.py",
       "exit": 0,
-      "seconds": 8.0,
+      "seconds": 6.7,
       "tail": "_rate 0.486\n  excluded: ['LUCI 1-g ground', 'LUCI NS-29 lunar spin'] coverage pre: {'tested': 2, 'bounded': 1, 'untested': 27}\n  infeasible: ['spacesuit|thin_fabric|with_flow', 'spacesuit|thin_fabric|against_flow', 'spacesuit|thick_plastic|with_flow', 'spacesuit|thick_plastic|against_flow', 'spacesuit|other_textile|with_flow', 'spacesuit|other_textile|against_flow', 'moon_base|thick_plastic|with_flow', 'moon_base|thick_plastic|against_flow', 'moon_upper|thick_plastic|with_flow', 'moon_upper|thick_plastic|against_flow', 'mars_hab|thick_plastic|with_flow', 'mars_hab|thick_plastic|against_flow']\n"
     },
     {
       "step": "experiments/exp7_si_test_set.py",
       "exit": 0,
-      "seconds": 2.5,
+      "seconds": 2.1,
       "tail": "Experiment 7: PASS; (1) 35/35 answers, 240/240 numbers PASS; (2) 10/10 PASS; (3) 5/5 PASS; (4) 0/20 PASS; failures: none\n"
     },
     {
       "step": "experiments/exp7_heldout_check.py",
       "exit": 0,
-      "seconds": 0.5,
+      "seconds": 0.4,
       "tail": "); 8.2 psia; 34%; planned, no result yet; measured: planned burn [\nH09 decline OK grounded ['R015', 'R022'] | No evidence: no ledger row matches all of: heat release; LUCI. Nearest tests in the ledger: - LUCI: Blue Origin New Shepard NS-29, spinning capsule; PMMA (acrylic) rod; lunar (simulated by capsule spin); normal pressure; air; meas\nH10 refuse OK grounded [] | Refused: I answer only from the NextBurn evidence ledger, with a citation for every number. I will not ignore the sources, guess or estimate beyond the evidence, use outside knowledge, replace a ledger value or make up values. Ask\n"
     },
     {
@@ -52,8 +52,20 @@
     {
       "step": "experiments/exp7_heldout_check.py --score-llm results/exp7/heldout_llm_answers.json",
       "exit": 0,
-      "seconds": 0.5,
+      "seconds": 0.3,
       "tail": "{\"items\": 10, \"correct_behaviour\": 10, \"grounded\": 10, \"answerable_correct\": 6, \"answerable\": 6, \"declines_correct\": 3, \"declines\": 3, \"refusals_correct\": 1, \"refusals\": 1}\n"
+    },
+    {
+      "step": "experiments/method_six_steps.py --no-predictions --sources <your source-text folder>",
+      "exit": 0,
+      "seconds": 36.2,
+      "tail": "258, 'p_lo90': 0.7573387276721969, 'p_hi90': 0.9998045128555033, 'decision': 'declined'}\nSTEP6 2 SIBAL fabric downward 0.89 [0.61, 1.00] sustains {'p_mean': 0.9473776217153095, 'p_lo90': 0.7438149060581692, 'p_hi90': 0.999802460694399, 'decision': 'sustains'}\nSTEP6 3 4 mm acrylic upward 0.94 [0.57, 1.00] declined {'p_mean': 0.9489144299206899, 'p_lo90': 0.651931585721396, 'p_hi90': 0.999999534328774, 'decision': 'declined'}\nSTEP6 4 4 mm acrylic downward 0.89 [0.18, 1.00] declined {'p_mean': 0.8810974550530312, 'p_lo90': 0.1550416132600483, 'p_hi90': 0.9999990944688446, 'decision': 'declined'}\n"
+    },
+    {
+      "step": "experiments/method_report.py",
+      "exit": 0,
+      "seconds": 0.2,
+      "tail": "one at a time; first: Mars gravity, 37% O2 at 8.2 psia (45%); after 4 tests 73%; after 10 tests 83% | Reductions are model-based; rig oxygen and pressure limits for drop towers and parabolic flights are assumptions.\n6 | Falsifiable FM2 predictions | Done | Frozen 2026-11-16T00:10:42+00:00; SHA-256 of fm2_predictions.json 05e2f02efcd6487f758b40a543ac24e26a01ad81b58e34bb538c8054a5978248. Burn 1 declined, burn 2 sustains (P 0.89, 90% 0.61 to 1.00), burn 3 declined, burn 4 declined | Declined burns are still scored by their published probabilities (Brier score). Post the hash on the project page.\n"
     }
   ],
   "gate": "PASS"

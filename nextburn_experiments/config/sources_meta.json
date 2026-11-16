@@ -33,5 +33,10 @@
     "year": 2001,
     "tier": "partial_gravity"
   },
-  "_note": "Only the publication year is recorded. The retrodiction cut-off (1 January 2025) keeps sources from 2024 or earlier."
+  "_note": "Only the publication year is recorded. The retrodiction cut-off (1 January 2025) keeps sources from 2024 or earlier.",
+  "nesc_tb2605_2026": {
+    "year": 2026,
+    "tier": "ground",
+    "note": "NESC Technical Bulletin 26-05 (NTRS 20260006043); tests at WSTF per NASA-STD-6001B Test 1"
+  }
 }
