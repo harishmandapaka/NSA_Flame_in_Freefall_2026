@@ -1,12 +1,52 @@
 # NextBurn experiments 2 to 7
 
-NextBurn turns NASA microgravity combustion results into a fire-safety coverage map and a test plan for Moon and Mars habitats (NASA Space Apps 2026, Flame in Freefall). This folder holds the code, settings, data and results for Experiments 2 to 7. Experiment 1 (ledger accuracy audit) lives in the sibling folders `experiment1` and `audit_tool`.
+NextBurn turns NASA microgravity combustion results into a fire-safety coverage map and a test plan for Moon and Mars habitats (NASA Space Apps 2026, Flame in Freefall). This repository holds the code, settings, data and results for Experiments 1 to 7 and the six-step method. Experiment 1 (the ledger accuracy audit) is in `experiment1/` (results, scores and scripts) and `audit_tool/` (the repeatable audit script and its hash-chained records). The full source texts the audit read are not redistributed here; every ledger row names its source and location instead.
 
 Results, in one table, are in `RESULTS_SUMMARY.md`. The dashboard reads the files in `dashboard_data/`.
 
+## NextBurn Coverage Console: start here
+
+`index.html` is the project's front page. It holds a snapshot of every result, chart and setting, so it needs no server and no install.
+
+- **Online:** publish this repository with GitHub Pages (Settings, Pages, Deploy from a branch, `main`, `/ (root)`). The empty `.nojekyll` file makes GitHub serve the files exactly as they are.
+- **Offline:** open `index.html` in any modern browser.
+
+| Tab | What it shows |
+|---|---|
+| Overview | Headline numbers, the six-step checklist with known gaps, Experiments 1 to 7, figures that changed when the scripts recomputed them |
+| Coverage | Oxygen by pressure bins for each gravity level: tested, only nearby tests, or none; select a bin to see its tests |
+| Boundary model | Probability that the reference fabric keeps burning, with sliders that show how strict the decline rule is; fit quality, including where the model is weak |
+| Next tests | The ranked test sequence and how much uncertainty each test removes |
+| FM2 predictions | The four frozen predictions, their hash, and a button that hashes the published file in the browser (works when the page is served from a website) |
+| Evidence ledger | All 313 test points with search, filters, source links and CSV download |
+| Experiments | Experiments 1 to 7 with their charts and details |
+| Settings | The 115 editable settings, each with a range check |
+| Runs | The actions the live console can run, and the last full run |
+
+**Proposing a change from the snapshot.** In Settings, edit values, then download the updated file or open a GitHub issue with a change request. A maintainer applies a request with `python console/apply_settings.py change.json`; it checks every value, keeps a backup of the old file, logs the change, and names the scripts to rerun.
+
+**Changing and rerunning from the page.** Run the live console on your computer: `pip install -r requirements.txt`, then `python console/console_server.py`, and open http://127.0.0.1:8770. It listens on this computer only, runs only the actions listed in `console/settings_schema.json` (one at a time), and rebuilds `index.html` after each run. `python console/build_console.py` rebuilds the snapshot at any time; `run_all.py` does it at the end of every run.
+
+| Console file | Purpose |
+|---|---|
+| `console/settings_schema.json` | The editable settings (file, path, range) and the allowed run actions |
+| `console/console_template.html` | The page; `build_console.py` embeds the results into it to make `index.html` |
+| `console/console_lib.py` | Shared code: data bundle, setting paths, validation, backups and change log |
+| `console/console_server.py` | Optional local server for live mode (standard library only) |
+| `console/apply_settings.py` | Applies a change request from the snapshot or a GitHub issue |
+| `console/test_render.js`, `console/selftest_server.py` | Checks of the page sections and of the live server (`node console/test_render.js`, `python console/selftest_server.py --with-jobs`) |
+
+**Frozen FM2 predictions.** `predictions/fm2_predictions.json` was frozen on 2026-11-16 at 00:10:42 UTC, before any FM2 result exists. SHA-256: `05e2f02efcd6487f758b40a543ac24e26a01ad81b58e34bb538c8054a5978248`. Do not edit the files listed in its `inputs_sha256` until the FM2 results are out; the console shows any change to them.
+
+**NASA data used.** NASA Physical Sciences Informatics experiment tables for PSI-25, PSI-26, PSI-98, PSI-99 and PSI-100 (downloaded and parsed; provenance in `data/psi_raw/`); NASA Technical Reports Server reports, cited row by row in the ledger; NESC Technical Bulletin 26-05 for the 37% oxygen condition. MAPTIS is restricted and is not used.
+
+**Use of AI.** AI tools (Microsoft Copilot) helped with research, code and writing, and AI checkers were used in the Experiment 1 audit; a human re-check of 19 disputed fields is pending. Every number in this repository is computed by its scripts from the cited sources.
+
+NextBurn is an independent NASA Space Apps Challenge 2026 entry. It is not produced, reviewed or endorsed by NASA and uses no NASA logos.
+
 ## Quick start
 
-Python 3.9 or later with numpy, pandas, scipy, scikit-learn and matplotlib. Nothing else is needed (pytest is optional).
+Python 3.9 or later with numpy, scipy and matplotlib (`pip install -r requirements.txt`). Nothing else is needed (pytest is optional).
 
 ```
 python run_all.py --skip-sim     # rebuild data, run checks and Experiments 2-5 and 7, refresh dashboard files (about a minute)
@@ -28,6 +68,10 @@ Each experiment also runs on its own, for example `python experiments/exp3_cover
 | `results/` | Outputs of every experiment, including the first-run records of Experiment 2 |
 | `dashboard_data/` | Compact JSON files for the dashboard (listed below), including `method_steps.json`, `method_boundary_grid.json` and `method_checklist.json` |
 | `run_all.py` | One command that rebuilds everything |
+| `index.html`, `console/` | The NextBurn Coverage Console (see the start of this file) |
+| `experiment1/`, `audit_tool/` | Experiment 1: audit sample, checker verdicts, adjudication, fixes and score; the repeatable audit script with its records |
+| `predictions/` | The frozen FM2 predictions and their SHA-256 |
+| `requirements.txt` | Python packages |
 
 ## The experiments
 

@@ -58,7 +58,8 @@ def main():
     run(["experiments/method_report.py"], log)
     s = dashboard.build()
     report.dashboard("run_log.json", {"generated_at": report.now_iso(), "steps": log, "gate": "FAIL" if gate else "PASS"})
-    print("\nGate: %s. Summary: dashboard_data/summary.json and RESULTS_SUMMARY.md" % ("FAIL" if gate else "PASS"))
+    run(["console/build_console.py"], [])
+    print("\nGate: %s. Summary: dashboard_data/summary.json, RESULTS_SUMMARY.md and the console page index.html" % ("FAIL" if gate else "PASS"))
     for e in s["experiments"]:
         print("  Exp %d %-36s %s" % (e["id"], e["title"][:36], e["status"]))
     return 1 if gate else 0

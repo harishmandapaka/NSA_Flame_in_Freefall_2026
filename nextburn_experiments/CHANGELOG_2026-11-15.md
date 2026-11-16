@@ -155,3 +155,105 @@ Generated 2026-11-16T01:40:57+00:00. Compared with the package saved earlier the
 - `results/exp7/review_log.json`
 - `tests/run_tests.py`
 - `tests/test_checks.py`
+
+
+## Evening update, 15 November 2026: NextBurn Coverage Console
+
+Added `index.html`, the NextBurn Coverage Console: one page with every result, chart and setting embedded, for GitHub Pages or offline use. Added `console/` (page template, builder, optional local server, settings schema, change-request tool and checks), `requirements.txt`, `.gitignore` and `.nojekyll`. Experiment 1 files (`experiment1/`, `audit_tool/`) are now inside this repository.
+
+Changed: README (console section, NASA data, AI use, corrected package list); `run_all.py` rebuilds the console at the end; Experiment 3 reads its tolerances from `config/coverage.json` (same results); the boundary-grid export carries the distances the console's what-if sliders use; the dashboard summary links Experiment 1 inside the repository; local folder names removed from the Experiment 1 sampling script.
+
+FM2 predictions: file unchanged (SHA-256 `05e2f02efcd6487f758b40a543ac24e26a01ad81b58e34bb538c8054a5978248`); frozen inputs unchanged: yes.
+
+Checks on this copy: page sections 45 passed, 0 failed; live server 27 passed, 0 failed; regression tests: 6 passed, 0 failed.
+
+New files (67):
+- `.gitignore`
+- `.nojekyll`
+- `audit_tool/Experiment1_explained_STE.md`
+- `audit_tool/README.md`
+- `audit_tool/audit_records/audit_log.jsonl`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/inputs/ledger.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/level1.csv`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/manifest.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/packets/checker_1.csv`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/packets/checker_1.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/packets/checker_2.csv`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/packets/checker_2.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/packets/checker_3.csv`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/packets/checker_3.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/packets/instructions.md`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/sample.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/scoring/001/audit_sheet.csv`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/scoring/001/findings.csv`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/scoring/001/inputs/review.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/scoring/001/inputs/verdicts/01_checker_verdicts.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/scoring/001/report.md`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/scoring/001/score.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/scoring/002/audit_sheet.csv`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/scoring/002/findings.csv`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/scoring/002/inputs/review.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/scoring/002/inputs/verdicts/01_checker_verdicts.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/scoring/002/report.md`
+- `audit_tool/audit_records/runs/AUD-20261115-055827-3cc2/scoring/002/score.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055829-c64f/inputs/ledger.csv`
+- `audit_tool/audit_records/runs/AUD-20261115-055829-c64f/level1.csv`
+- `audit_tool/audit_records/runs/AUD-20261115-055829-c64f/manifest.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055829-c64f/packets/checker_1.csv`
+- `audit_tool/audit_records/runs/AUD-20261115-055829-c64f/packets/checker_1.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055829-c64f/packets/checker_2.csv`
+- `audit_tool/audit_records/runs/AUD-20261115-055829-c64f/packets/checker_2.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055829-c64f/packets/checker_3.csv`
+- `audit_tool/audit_records/runs/AUD-20261115-055829-c64f/packets/checker_3.json`
+- `audit_tool/audit_records/runs/AUD-20261115-055829-c64f/packets/instructions.md`
+- `audit_tool/audit_records/runs/AUD-20261115-055829-c64f/sample.json`
+- `audit_tool/nextburn_audit.py`
+- `config/coverage.json`
+- `console/apply_settings.py`
+- `console/build_console.py`
+- `console/console_lib.py`
+- `console/console_server.py`
+- `console/console_template.html`
+- `console/selftest_server.py`
+- `console/settings_schema.json`
+- `console/test_render.js`
+- `experiment1/adjudication.json`
+- `experiment1/audit_sheet.csv`
+- `experiment1/checker_verdicts.json`
+- `experiment1/fixes.csv`
+- `experiment1/ledger_v1.csv`
+- `experiment1/ledger_v1.json`
+- `experiment1/ledger_v2.csv`
+- `experiment1/results.md`
+- `experiment1/sample_ids.json`
+- `experiment1/score.json`
+- `experiment1/scripts/audit_score.py`
+- `experiment1/scripts/build_ledger.py`
+- `experiment1/scripts/checker_instructions.md`
+- `experiment1/scripts/fix_ledger.py`
+- `experiment1/scripts/sample_rows.py`
+- `experiment1/sources.csv`
+- `index.html`
+- `requirements.txt`
+
+Changed files (17):
+- `README.md`
+- `RESULTS_SUMMARY.md`
+- `dashboard_data/exp3_coverage.json`
+- `dashboard_data/method_boundary_grid.json`
+- `dashboard_data/method_steps.json`
+- `dashboard_data/summary.json`
+- `experiments/exp3_coverage.py`
+- `experiments/method_six_steps.py`
+- `nextburn/dashboard.py`
+- `results/exp3/results.json`
+- `results/exp3/results.md`
+- `results/method/step1_summary.json`
+- `results/method/step2_envelope.json`
+- `results/method/step3_coverage.json`
+- `results/method/step4_boundary.json`
+- `results/method/step5_next_tests.json`
+- `run_all.py`
+
+Files no longer present (0):
+- none
