@@ -1,0 +1,44 @@
+{
+  "source_id": "PSI-25",
+  "urls": [
+    "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25"
+  ],
+  "title": "Burning and Suppression of Solids - II (BASS-II)",
+  "version": "Version 4",
+  "doi": "10.60555/4qc4-de67",
+  "license": "CC0-1.0",
+  "accessed_utc_start": "2026-11-15T23:46:52Z",
+  "accessed_utc_end": "2026-11-15T23:59:57Z",
+  "source_file_shown_on_page": "PSI-25_Experimental table_BASS-II.csv (16.2 KB, added Thu Feb 06 2025; Investigation Metadata Files > Experimental table)",
+  "original_column_names": [
+    "PI",
+    "Test #",
+    "Date",
+    "GMT",
+    "Sample #",
+    "Fuel Sample Material",
+    "Flow restrictor",
+    "Fan display",
+    "Air display",
+    "Radiometer gain   (1000   250   50   10)",
+    "Total Frames Shot",
+    "Calibrated  initial O2 % by vol",
+    "Calibrated final O2 % by vol",
+    "Initial CO2 % by vol",
+    "Final CO2 % by vol",
+    "Initial CO (ppm)",
+    "Final CO (ppm)"
+  ],
+  "columns_in_csv": 16,
+  "row_count": 129,
+  "paginator_total": 130,
+  "notes": [
+    "Column 'Final CO (ppm)' is NOT in the CSV: time box reached before it was read for all rows. Values read for rows B1,B3-B11: B1=6, B3=19, B4=10, B5=12, B6=0.3, B7=17, B8=131, B9=10, B10=23, B11=46.",
+    "Row B2: page shows only 'none' frames, 22.2 initial O2 and then the values 1.6, 0.44, 6 across the final O2 / CO2 / CO columns with blank cells; positions could not be resolved from page text, so B2's final O2, initial/final CO2 and initial CO cells are left empty in the CSV.",
+    "Paginator says 130 rows; 129 rows render text (the 130th shows no text, probably a blank line).",
+    "Units: O2 and CO2 in % by volume, CO in ppm (from headers). Fan display and Air display have no units in the header; cells mix numbers, pot settings and notes (e.g. 'ext', 'blowoff', 'no ign at any flow', '5 cm/s').",
+    "No pressure, flow-direction or outcome column. Dates as shown (e.g. T9 and T18 show 6/24/2018).",
+    "Flight platform: ISS (Microgravity Science Glovebox per BASS hardware); investigation 01-01-2010 to 12-31-2022 per page."
+  ],
+  "capture_method": "Read directly from the rendered 'Experimental Table' panel of the PSI investigation page with the local browser (DOM text, viewport by viewport; table set to 100 rows/page; horizontal scrolling for wide tables). No file was downloaded; no login or registration was required. Cell text kept as displayed (runs of spaces, typos, quotes such as '\"1/4\"\" black rod\"' are the page's own text). Rows with no rendered text (paginator count minus rows saved) were not written."
+}

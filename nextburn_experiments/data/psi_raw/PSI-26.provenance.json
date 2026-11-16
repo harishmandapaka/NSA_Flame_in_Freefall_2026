@@ -1,0 +1,30 @@
+{
+  "source_id": "PSI-26",
+  "urls": [
+    "https://psi.nasa.gov/physci/repo/data/investigations/PSI-26"
+  ],
+  "title": "Burning and Suppression of Solids (BASS)",
+  "version": "Version 4",
+  "doi": "10.60555/58h4-dy80",
+  "license": "CC0-1.0",
+  "accessed_utc_start": "2026-11-16T00:00:32Z",
+  "accessed_utc_end": "2026-11-16T00:03:23Z",
+  "original_column_names": [
+    "Date",
+    "GMT",
+    "As Run Test #",
+    "Test #",
+    "Sample #",
+    "Fuel Sample Material"
+  ],
+  "columns_in_csv": 6,
+  "row_count": 122,
+  "paginator_total": 123,
+  "notes": [
+    "Table has only these 6 columns: no O2, pressure, flow speed or outcome.",
+    "Row 66 (8/3/2012, GMT 216) shows only 'SOOT Cleaning'; it is stored in 'As Run Test #' (column position not verifiable from page text) and is not a burn test.",
+    "Paginator says 123 rows; 122 render text.",
+    "Dates as shown, including '6/29/`12' and '5/15/2103'. Read Me: 'No associated Read me file'. Hardware: Microgravity Science Glovebox (ISS)."
+  ],
+  "capture_method": "Read directly from the rendered 'Experimental Table' panel of the PSI investigation page with the local browser (DOM text, viewport by viewport; table set to 100 rows/page; horizontal scrolling for wide tables). No file was downloaded; no login or registration was required. Cell text kept as displayed (runs of spaces, typos, quotes such as '\"1/4\"\" black rod\"' are the page's own text). Rows with no rendered text (paginator count minus rows saved) were not written."
+}

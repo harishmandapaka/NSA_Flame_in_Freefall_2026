@@ -1,0 +1,31 @@
+{
+  "source_id": "PSI-100",
+  "urls": [
+    "https://psi.nasa.gov/physci/repo/data/investigations/PSI-100"
+  ],
+  "title": "Spacecraft Fire Experiment-III (SAFFIRE-III)",
+  "version": "Version 4",
+  "doi": "10.60555/040q-4h36",
+  "license": "CC0-1.0",
+  "accessed_utc_start": "2026-11-16T00:05:31Z",
+  "accessed_utc_end": "2026-11-16T00:05:49Z",
+  "original_column_names": [
+    "Sample Number",
+    "Material",
+    "Sample Thickness",
+    "Sample Length",
+    "Sample Width",
+    "Air Flow",
+    "Direction",
+    "Camera 1",
+    "Camera 2"
+  ],
+  "columns_in_csv": 9,
+  "row_count": 2,
+  "paginator_total": 3,
+  "notes": [
+    "No O2, pressure or outcome column.",
+    "Page metadata lists flight platform ISS, start 04-18-2017 (as shown). Read Me: none."
+  ],
+  "capture_method": "Read directly from the rendered 'Experimental Table' panel of the PSI investigation page with the local browser (DOM text, viewport by viewport; table set to 100 rows/page; horizontal scrolling for wide tables). No file was downloaded; no login or registration was required. Cell text kept as displayed (runs of spaces, typos, quotes such as '\"1/4\"\" black rod\"' are the page's own text). Rows with no rendered text (paginator count minus rows saved) were not written."
+}

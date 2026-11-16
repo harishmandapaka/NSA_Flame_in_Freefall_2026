@@ -34,6 +34,7 @@ def main(argv=None):
     out = report.exp_dir(5)
     wpath, fpath = os.path.join(ROOT, "config", "weights.json"), os.path.join(ROOT, "config", "facilities.json")
     w, fcfg = json.load(open(wpath)), json.load(open(fpath))
+    fcfg["facilities"] = [x for x in fcfg["facilities"] if x.get("scope") != "method step 5 only"]  # keep Experiment 5's original catalogue
     rows, norm, pts, meta = ingest.build()
     planned = ingest.test_points(norm, include_roles=("planned",))
     cl = coverage.cells()

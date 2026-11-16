@@ -1,6 +1,6 @@
 {
   "title": "Stored SI answers for the demo (fallback when the live SI service fails)",
-  "generated_at": "2026-11-15T09:18:36+00:00",
+  "generated_at": "2026-11-16T01:39:52+00:00",
   "si_version": "1.7",
   "question_bank_sha256": "38c15b5656045a7d47709f99a560ce1dbf8c8ecf255e346ca4b48d13e1b36992",
   "source": "deterministic guarded answerer, nextburn/si.py",

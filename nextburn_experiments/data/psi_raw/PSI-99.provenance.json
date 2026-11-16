@@ -1,0 +1,41 @@
+{
+  "source_id": "PSI-99",
+  "urls": [
+    "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99"
+  ],
+  "title": "Spacecraft Fire Experiment-II (SAFFIRE-II)",
+  "version": "Version 5",
+  "doi": "10.60555/2chp-m469",
+  "license": "CC0-1.0",
+  "accessed_utc_start": "2026-11-16T00:04:12Z",
+  "accessed_utc_end": "2026-11-16T00:05:20Z",
+  "original_column_names": [
+    "Sample Number",
+    "Material",
+    "Samle Thickness",
+    "Sample Length",
+    "Sample Width (cm)",
+    "Air Flow (cm/s)",
+    "Percent O2 (Note 1)",
+    "Ignition Power (W)",
+    "Ignition Time (s)",
+    "Burn Time (s)",
+    "Flow Direction",
+    "?-g Burn Length",
+    "?-g Spread Length",
+    "1-g Burn Length",
+    "1-g Spread Rate",
+    "Camera 1",
+    "Camera 2"
+  ],
+  "columns_in_csv": 17,
+  "row_count": 15,
+  "paginator_total": 16,
+  "notes": [
+    "'?-g' is how the page renders the header (probably a micro sign).",
+    "Rows 2-6 and 2-9 have an empty Material cell; 2-3 shows one camera value 'S3C2', stored under Camera 2 (Camera 1 empty) - inferred from the label.",
+    "Rows 10-15 are flow-visualisation rows and Notes 1-4 (Note text stored in the first column).",
+    "Units are inside the cells (mm, cm, cm/s, W, s). Flight platform per page: Cygnus Spacecraft, 09-30-2016 to 04-01-2017."
+  ],
+  "capture_method": "Read directly from the rendered 'Experimental Table' panel of the PSI investigation page with the local browser (DOM text, viewport by viewport; table set to 100 rows/page; horizontal scrolling for wide tables). No file was downloaded; no login or registration was required. Cell text kept as displayed (runs of spaces, typos, quotes such as '\"1/4\"\" black rod\"' are the page's own text). Rows with no rendered text (paginator count minus rows saved) were not written."
+}

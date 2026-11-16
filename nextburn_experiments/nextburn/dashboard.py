@@ -170,7 +170,9 @@ def build():
         e["title"] = re.sub(r"^Experiment \d+:\s*", "", e["title"])
     rows = ingest.load_ledger()
     tp = json.load(open(os.path.join(ROOT, "data", "test_points.json")))
+    mc = _load("dashboard_data/method_checklist.json")
     summary = {"generated_at": report.now_iso(), "project": "NextBurn: from evidence gap to test plan",
+               "method_steps": (mc or {}).get("steps", []), "fm2_predictions_sha256": (mc or {}).get("fm2_sha256"),
                "ledger": {"file": "data/ledger_v2.json", "rows": len(rows), "sources": len({r["source_id"] for r in rows}),
                           "test_points": len(tp["test_points"]), "sha256": report.sha256_file(ingest.DEFAULT_LEDGER)},
                "experiments": exps, "corrections_to_plan": corrections(),
@@ -179,6 +181,8 @@ def build():
     md = ["# NextBurn experiment results", "", "Generated %s from the results files. Ledger: %d rows from %d NASA sources, %d test points." % (
         summary["generated_at"], summary["ledger"]["rows"], summary["ledger"]["sources"], summary["ledger"]["test_points"]), "",
         report.md_table(["#", "Experiment", "Status", "Headline"], [[e["id"], e["title"], e["status"], e["headline"]] for e in exps]), "",
+        "## Six-step method (ledger, envelope, coverage, boundary model, test plan, FM2 predictions)", "",
+        report.md_table(["#", "Requirement", "Status", "Evidence"], [[x["step"], x["requirement"], x["status"], x["evidence"]] for x in summary["method_steps"]]) if summary["method_steps"] else "Not run yet.", "",
         "## Figures in the plan that changed when re-computed", "",
         report.md_table(["Item", "Plan said", "Experiments give", "Why"], [[c["item"], c["plan"], c["now"], c["why"]] for c in summary["corrections_to_plan"]]), ""]
     report.write_text(os.path.join(ROOT, "RESULTS_SUMMARY.md"), "\n".join(md))
