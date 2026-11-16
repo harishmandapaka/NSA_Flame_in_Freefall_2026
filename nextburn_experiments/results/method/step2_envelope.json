@@ -1,0 +1,134 @@
+{
+  "step": 2,
+  "title": "Operating envelope",
+  "generated_at": "2026-11-16T01:39:56+00:00",
+  "envelope_sha256": "127cc33f1a435a3710bfd7117bfcc2aae1c735e4575cae5b306ebfacc935ee27",
+  "version": "1.0",
+  "frozen_at_utc": "2026-11-15T23:53:57Z",
+  "operating_points": [
+    {
+      "id": "iss_cabin_air",
+      "name": "ISS cabin air",
+      "o2_pct": 21.0,
+      "p_psia": 14.7,
+      "g": 0.0,
+      "g_class": "micro",
+      "weight": 1.0,
+      "source": "Plan presets: space station cabin at 21% oxygen and 14.7 psia"
+    },
+    {
+      "id": "xa_moon",
+      "name": "Exploration atmosphere, Moon",
+      "o2_pct": 34.0,
+      "p_psia": 8.2,
+      "g": 0.16,
+      "g_class": "lunar",
+      "weight": 1.0,
+      "source": "FM2 poster, NTRS 20240015307: 34% oxygen at 8.2 psia for the Human Landing System and Lunar Rover"
+    },
+    {
+      "id": "nesc37_moon",
+      "name": "NESC TB 26-05 condition, Moon",
+      "o2_pct": 37.0,
+      "p_psia": 8.2,
+      "g": 0.16,
+      "g_class": "lunar",
+      "weight": 1.0,
+      "source": "NESC TB 26-05, NTRS 20260006043: materials evaluated for use at 37% oxygen and 8.2 psia"
+    },
+    {
+      "id": "xa_mars",
+      "name": "Exploration atmosphere, Mars",
+      "o2_pct": 34.0,
+      "p_psia": 8.2,
+      "g": 0.38,
+      "g_class": "mars",
+      "weight": 0.5,
+      "source": "Same atmosphere assumed for a Mars habitat"
+    },
+    {
+      "id": "nesc37_mars",
+      "name": "NESC TB 26-05 condition, Mars",
+      "o2_pct": 37.0,
+      "p_psia": 8.2,
+      "g": 0.38,
+      "g_class": "mars",
+      "weight": 0.5,
+      "source": "NESC TB 26-05: elevated oxygen planned for future Moon and Mars missions"
+    }
+  ],
+  "gravity_nominal": {
+    "micro": 0.0,
+    "lunar": 0.16,
+    "mars": 0.38,
+    "earth": 1.0
+  },
+  "region": {
+    "o2_pct": [
+      19.5,
+      37.5
+    ],
+    "p_psia": [
+      7.5,
+      15.5
+    ],
+    "g_classes": [
+      "micro",
+      "lunar",
+      "mars"
+    ]
+  },
+  "bins": {
+    "o2_edges": [
+      13.5,
+      16.5,
+      19.5,
+      22.5,
+      25.5,
+      28.5,
+      31.5,
+      34.5,
+      37.5,
+      40.5
+    ],
+    "p_psia_edges": [
+      1.5,
+      3.5,
+      5.5,
+      7.5,
+      9.5,
+      11.5,
+      13.5,
+      15.5
+    ]
+  },
+  "panels": [
+    {
+      "g_class": "micro",
+      "label": "Microgravity (ISS)",
+      "g": 0.0
+    },
+    {
+      "g_class": "lunar",
+      "label": "Moon (0.16 g)",
+      "g": 0.16
+    },
+    {
+      "g_class": "mars",
+      "label": "Mars (0.38 g)",
+      "g": 0.38
+    },
+    {
+      "g_class": "earth",
+      "label": "1 g (reference, not in the envelope)",
+      "g": 1.0
+    }
+  ],
+  "rules": {
+    "tested": "At least one test of the material family has stated oxygen and pressure inside the bin, at that gravity level.",
+    "nearby": "No test in the bin, but a test of the family sits in an adjacent oxygen or pressure bin (one step, diagonals included) at the same gravity level, or a test's stated range overlaps the bin.",
+    "none": "Neither. Gravity is never 'nearby': a test at another gravity level does not count.",
+    "placement": "A test whose oxygen or pressure is not stated, or is only bounded on one side, is listed but not placed."
+  },
+  "weights_note": "Step 5 weights: ISS cabin air and the two Moon conditions count fully; the Mars conditions count half."
+}

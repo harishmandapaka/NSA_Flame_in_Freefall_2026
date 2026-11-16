@@ -1,7 +1,7 @@
 {
   "title": "Held-out check, guarded SI",
   "si_version": "1.7",
-  "generated_at": "2026-11-15T09:18:38+00:00",
+  "generated_at": "2026-11-16T01:39:54+00:00",
   "questions_sha256": "bfc5ced64951a4c670ced7c6978917142bfac9d6532b112ea689482f78634090",
   "note": "Held-out SI questions written by the orchestrator after the question bank was frozen; never shown to the answerer's author.",
   "history": "First run on SI 1.6: 8 of 10 correct, 10 of 10 grounded; H05 (comparator 'below 60 kPa') and H10 (estimate request worded as an aside) failed. Their failure patterns were described in general terms to the SI's author and fixed in SI 1.7, so they no longer count as held out. The other 8 items were never shown to the SI's author.",

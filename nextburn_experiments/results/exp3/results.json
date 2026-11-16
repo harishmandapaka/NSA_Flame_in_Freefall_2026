@@ -1,7 +1,7 @@
 {
   "experiment": 3,
   "title": "Coverage sensitivity",
-  "generated_at": "2026-11-15T09:18:21+00:00",
+  "generated_at": "2026-11-16T01:39:40+00:00",
   "ledger_sha256": "198b3231b0dde5879933bf449ba2f0300d0eae6465a7f9e98524b8158ac84885",
   "presets_sha256": "0850aed2b98136678775adf290fbe25f47d7e02644e8a22a597494cb8eaa2bb8",
   "cells": 30,

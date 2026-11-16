@@ -1,0 +1,11 @@
+step,facility,gravity_class,g,o2_pct,p_psia,direction,assumed_flow,p_sustain_now,added_reduction_pct,cumulative_reduction_pct,cost_tier
+1,"Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",mars,0.38,37.0,8.2,upward or concurrent,buoyant flow only,0.893,45.29,45.29,2
+2,"Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",mars,0.38,37.0,8.2,downward or opposed,buoyant flow only,0.903,16.35,61.64,2
+3,"Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",lunar,0.16,37.0,8.2,upward or concurrent,buoyant flow only,0.904,7.04,68.69,2
+4,"Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",lunar,0.16,37.0,8.2,downward or opposed,buoyant flow only,0.928,4.52,73.2,2
+5,"Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",mars,0.38,37.0,10.2,upward or concurrent,buoyant flow only,0.901,2.87,76.08,2
+6,"Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",mars,0.38,37.0,10.2,downward or opposed,buoyant flow only,0.912,2.13,78.21,2
+7,"Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",lunar,0.16,37.0,10.2,upward or concurrent,buoyant flow only,0.913,1.66,79.87,2
+8,"Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",lunar,0.16,37.0,10.2,downward or opposed,buoyant flow only,0.935,1.21,81.08,2
+9,"Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",lunar,0.16,34.0,8.2,upward or concurrent,buoyant flow only,0.904,1.11,82.18,2
+10,"Novespace parabolic flight (0.16 g up to 25 s, 0.38 g up to 30 s)",mars,0.38,34.0,8.2,downward or opposed,buoyant flow only,0.902,0.89,83.07,2

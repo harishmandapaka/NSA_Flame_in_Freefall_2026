@@ -1,7 +1,7 @@
 {
   "experiment": 7,
   "title": "SI test set: cite the ledger or decline (language model)",
-  "generated_at": "2026-11-15T09:18:39+00:00",
+  "generated_at": "2026-11-16T01:39:55+00:00",
   "model": null,
   "answers_file": "llm_answers.json",
   "answers_sha256": "51a768dd6f7d1dc49efe078a5139029d2019644cefda34a0ebebfef2f5a0dff2",

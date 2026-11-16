@@ -1,6 +1,6 @@
 # Experiment 3: Coverage sensitivity
 
-Generated 2026-11-15T09:18:21+00:00. 30 cells (5 habitats x 3 material families x 2 flame directions), 40 NASA test points, 4 planned FM2 points (never counted as evidence).
+Generated 2026-11-16T01:39:40+00:00. 30 cells (5 habitats x 3 material families x 2 flame directions), 40 NASA test points, 4 planned FM2 points (never counted as evidence).
 
 **Headline:** The Moon-base atmosphere (34% oxygen at 8.2 psia) has no direct test in lunar gravity. Holds in all six runs: **True**. Normalized-distance cross-check: True. MicroFire oxygen-bin cross-check: True.
 

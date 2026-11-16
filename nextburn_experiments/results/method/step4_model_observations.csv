@@ -1,0 +1,34 @@
+obs_id,tp_id,family,material,label,o2_pct,p_kpa,pressure_assumed_range,g,direction,outcome,y
+T01,TP006,thin_fabric,SIBAL,LUCI NS-29 lunar spin,20.946,101.325,False,0.1651,downward or opposed,sustained,1
+T02,TP004,thin_fabric,SIBAL,LUCI 1-g ground,20.0,"[70.0, 102.0]",True,1.0,not stated,sustained,1
+T03,TP002,thin_fabric,SIBAL,FM2 team lunar-g simulation,20.946,"[70.0, 102.0]",True,0.1652,downward or opposed,sustained,1
+T04,TP002-a,thin_fabric,SIBAL,FM2 team lunar-g simulation,20.946,"[70.0, 102.0]",True,0.1652,upward or concurrent,extinguished,0
+T05,TP001,thin_fabric,SIBAL,FM2 team 1-g ground,20.946,"[70.0, 102.0]",True,1.0,downward or opposed,extinguished,0
+T06,TP007,thin_fabric,SIBAL,Saffire I-1,21.0,100.0,False,0.0,not stated,sustained,1
+T07,TP008,thin_fabric,SIBAL,Saffire II-5,21.0,100.0,False,0.0,not stated,sustained,1
+T08,TP009,thin_fabric,SIBAL,Saffire II-6,21.0,100.0,False,0.0,not stated,sustained,1
+T09,TP010,thin_fabric,SIBAL,Saffire III-1,21.0,100.0,False,0.0,not stated,sustained,1
+T10,TP011,thin_fabric,SIBAL,Saffire IV-1,22.0,100.0,False,0.0,upward or concurrent,sustained,1
+T11,TP013,thin_fabric,cotton jersey,Saffire V-2,26.2,70.7,False,0.0,upward or concurrent,sustained,1
+T12,TP016,thin_fabric,SIBAL,Saffire VI-2,31.0,54.1,False,0.0,upward or concurrent,sustained,1
+T13,TP027,thin_fabric,SIBAL,bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II),18.7,101.325,False,0.0,upward or concurrent,sustained,1
+T15a,TP030,thin_fabric,cellulose tissue,feier_2001 NASA KC-135 aircraft,21.0,"[20.265, 40.53]",False,0.1,upward or concurrent,sustained,1
+T15b,TP031,thin_fabric,cellulose tissue,feier_2001 NASA KC-135 aircraft,21.0,"[20.265, 40.53]",False,0.16,upward or concurrent,sustained,1
+T15c,TP032,thin_fabric,cellulose tissue,feier_2001 NASA KC-135 aircraft,21.0,"[20.265, 40.53]",False,0.38,upward or concurrent,sustained,1
+T16,TP033,thin_fabric,cellulose tissue,feier_2001 ground,20.946,"[15.2, 40.53]",False,1.0,upward or concurrent,sustained,1
+T17,TP034,thin_fabric,cellulose tissue,feier_2001 ground,20.946,10.1325,False,1.0,upward or concurrent,extinguished,0
+T18a,TP037,thin_fabric,cellulose tissue,sacksteder_2003 NASA KC-135 aircraft,20.946,27.6,False,0.1,upward or concurrent,sustained,1
+T18b,TP039,thin_fabric,cellulose tissue,sacksteder_2003 NASA KC-135 aircraft,20.946,27.6,False,0.16,upward or concurrent,sustained,1
+T18c,TP041,thin_fabric,cellulose tissue,sacksteder_2003 NASA KC-135 aircraft,20.946,27.6,False,0.38,upward or concurrent,sustained,1
+T19a,TP040,thin_fabric,cellulose tissue,sacksteder_2003 NASA KC-135 aircraft,20.946,27.6,False,0.16,downward or opposed,sustained,1
+T19b,TP042,thin_fabric,cellulose tissue,sacksteder_2003 NASA KC-135 aircraft,20.946,27.6,False,0.38,downward or opposed,sustained,1
+P01,TP005,thick_plastic,PMMA rod,LUCI NS-29 lunar spin,20.946,101.325,False,0.1651,upward or concurrent,sustained,1
+P02,TP003,thick_plastic,PMMA rod,LUCI 1-g ground,21.0,"[70.0, 102.0]",True,1.0,not stated,sustained,1
+P04,TP014,thick_plastic,PMMA sheet,Saffire V-3,25.4,71.3,False,0.0,upward or concurrent,sustained,1
+P06,TP015,thick_plastic,PMMA sheet,Saffire V-4,25.7,72.6,False,0.0,downward or opposed,sustained,1
+P08,TP017,thick_plastic,PMMA sheet,Saffire VI-3,30.3,54.6,False,0.0,upward or concurrent,sustained,1
+P09,TP018,thick_plastic,PMMA sheet,Saffire VI-4,28.8,55.2,False,0.0,upward or concurrent,sustained,1
+P10,TP020-a,thick_plastic,PMMA rod,bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II),13.6,"[70.0, 102.0]",True,0.0,not stated,sustained,1
+P11,TP029-a,thick_plastic,PMMA rod,bass2_poster_2014 ground,16.0,"[70.0, 102.0]",True,1.0,not stated,blowoff,0
+X01,TP035,other_textile,Kevlar/PBI webbing (natural),"nesc_tb2605_2026 ground, NASA White Sands Test Facility (NASA-STD-6001B Test 1)",37.0,56.53700980398055,False,1.0,not stated,extinguished,0
+X02,TP036,other_textile,Kevlar/PBI webbing (black),"nesc_tb2605_2026 ground, NASA White Sands Test Facility (NASA-STD-6001B Test 1)",35.0,56.53700980398055,False,1.0,not stated,extinguished,0

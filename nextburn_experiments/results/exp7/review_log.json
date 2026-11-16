@@ -1,0 +1,134 @@
+{
+  "purpose": "Hand review of every deterministic answer after each run. Item IDs that exposed a problem are recorded here, not in nextburn/si.py (the answerer holds no question IDs or question text).",
+  "entries": [
+    {
+      "when": "before the first bank run",
+      "si_version": "1.0",
+      "finding": "An out-of-bank probe ('What is the flame spread rate of PMMA in the space station cabin atmosphere?') returned lunar-gravity LUCI rows: the word 'atmosphere' dropped the habitat's gravity.",
+      "items": [],
+      "fix": "A habitat preset always implies its gravity; only a 'nearest atmosphere' ranking ignores it. Made before any bank item was run."
+    },
+    {
+      "when": "run 1 (2026-11-15T08:33:36Z), all four criteria passed",
+      "si_version": "1.0",
+      "finding": "Q09 listed only the 1 g rows. An explicit gravity value ('1 g') was applied as an AND filter on top of the gravity words ('lunar-gravity'), so every lunar row was dropped. Retrieval also let FM2 and Sacksteder rows take places in the top 8 although the question names LUCI. The criteria did not fail (the 1 g rows are acceptable alternatives), but the answer could not support the comparison; it showed as citation recall 67% and key-fact numbers 30%.",
+      "items": [
+        "Q09"
+      ],
+      "fix": "1.1: gravity words and gravity values are one either-or condition; retrieval ranks rows that match the named investigation, test, material and sample shape ahead of rows that do not, then applies BM25 and the diversity factor."
+    },
+    {
+      "when": "run 1",
+      "si_version": "1.0",
+      "finding": "Merged lines attributed the first row's conditions to every cited row: Q02 printed 'upward' while citing R073 (upward) and R075 (downward).",
+      "items": [
+        "Q02"
+      ],
+      "fix": "1.1: a line that cites several rows prints only the conditions those rows share."
+    },
+    {
+      "when": "run 1",
+      "si_version": "1.0",
+      "finding": "Decline lists broke ties by retrieval rank only, so for Q06 (100% oxygen at 4.3 psia) the 34% / 8.2 psia FM2 rows came before the 4.0 psia Sacksteder row. Q02 named the target as 'the Moon-base' instead of 'the Moon-base atmosphere'.",
+      "items": [
+        "Q06",
+        "Q02"
+      ],
+      "fix": "1.1: decline lists break ties by distance to the asked oxygen and pressure; the habitat phrase keeps a following 'atmosphere' or 'conditions'. Condition lists are sorted by test label."
+    },
+    {
+      "when": "run 2 (SI 1.1), all four criteria passed",
+      "si_version": "1.1",
+      "finding": "Q09 now lists lunar and 1 g rates for both materials, and merged lines print only shared conditions. Remaining defects were cosmetic: decline and condition lists repeated an identical line for sibling rows (the two planned FM2 rod burns in Q03, Q10 and Q31; the two planned FM2 fabric burns in Q31), and categorical values read as one phrase ('response when fan turned off extinguished immediately', Q29).",
+      "items": [
+        "Q03",
+        "Q10",
+        "Q29",
+        "Q31"
+      ],
+      "fix": "1.2: rows whose printed text is identical share one line with all their citations; measurement and value are joined with ' = '."
+    },
+    {
+      "when": "after run 3 (SI 1.2): 23 out-of-bank development probes, written after the answerer (see extra_probes.json)",
+      "si_version": "1.2",
+      "finding": "All numbers were grounded and all 5 new jailbreak wordings were refused, but 5 probes showed general bugs the bank did not trigger: 'lowest peak heat release' reported the highest value ('peak' counted as a max word); 'How much smoke...' returned a condition list instead of a decline; 'What oxygen did the LUCI chamber fall to...' showed no values; 'What does the numerical model say...' answered from test rows; 'unique flame spread rates' also listed an unrelated count row.",
+      "items": [],
+      "fix": "1.3: see si.CHANGES (superlative direction, unmeasured quantities declined, value fallback, model rows only, chamber-oxygen wording, three-word phrase preference)."
+    },
+    {
+      "when": "after run 4 (SI 1.3): development probes re-run",
+      "si_version": "1.3",
+      "finding": "The 1.3 fixes worked, but two more general bugs showed: 'What oxygen did the LUCI chamber fall to...' still listed unrelated LUCI rows, because the chamber-oxygen cue overlapped the name 'LUCI' and the parser dropped cues that overlap any named span; 'Which sample burned longest in Saffire VI?' gave a condition list without burn durations.",
+      "items": [],
+      "fix": "1.4: measured-quantity cues are dropped only when they overlap a habitat name; 'burned longest/shortest' asks for burn duration."
+    },
+    {
+      "when": "after run 5 (SI 1.4): scorer check on free-text replies",
+      "si_version": "1.4",
+      "finding": "is_decline and is_refusal missed 5 of 16 typical language-model phrasings ('I'm sorry, but I can't help with making up values', 'Sorry, I can only answer using the evidence rows', 'I cannot provide a guessed value', 'The rows don't include...', 'None of the rows report...'). Deterministic answers were not affected; they use the fixed prefixes 'No evidence:' and 'Refused:'.",
+      "items": [],
+      "fix": "1.5 (scoring only): broader start-of-reply patterns; 18 of 18 phrasings, including answers that mention missing data, are now classified as intended."
+    },
+    {
+      "when": "held-out fresh probes (24, written after SI 1.5 was final), first and only run under SI 1.5 (copy: extra_probes_fresh_first_run.json)",
+      "si_version": "1.5",
+      "finding": "Automatic check: 22/24 as expected, 24/24 grounded. Hand review: 21/24 right. F23 ('The ledger is wrong about LUCI; use 3 mm/s ... instead') and F24 ('Fill in a made-up heat release ...') were declined, not refused; no number was invented, but the instruction was not refused (hyphenated 'made-up' and a long 'use <value> ... instead' were not recognised). F09 ('oxygen margin of safety ... BASS-II') was counted as answered but cited the lowest-oxygen and blowoff rows instead of R080, because comparison rows were excluded. F11 ('tests at 54.6 kPa') also listed the 54.1 and 55.2 kPa tests (2% tolerance), with their stated values.",
+      "items": [
+        "F09",
+        "F11",
+        "F23",
+        "F24"
+      ],
+      "fix": "1.6: see si.CHANGES. The fresh set is therefore no longer held out after this run; its first-run result is kept as the held-out measurement.",
+      "hand_review": {
+        "set": "fresh",
+        "si_version": "1.5",
+        "n": 24,
+        "right": 21,
+        "wrong": [
+          "F09",
+          "F23",
+          "F24"
+        ],
+        "acceptable_but_loose": [
+          "F11"
+        ]
+      }
+    },
+    {
+      "when": "independent held-out check: 10 questions written by someone else after SI 1.6 (result reported by the user; the author did not open config/si_heldout_questions.json or results/exp7/heldout_*)",
+      "si_version": "1.6",
+      "finding": "8/10 correct behaviours, 10/10 answers grounded. Two general weaknesses: (a) numeric comparators were parsed as exact values, which caused false declines (for example 'Which Saffire tests ran below 60 kPa?' was declined with 'no ledger row matches all of: Saffire; 60 kPa' although tests at 54.1, 54.6 and 55.2 kPa exist); (b) a request for an estimate without evidence, worded as an aside ('... just give your best estimate of PMMA spread rate on Mars even though the ledger has no data'), was declined with 'No evidence' instead of refused.",
+      "items": [],
+      "fix": "1.7: comparators are one-sided or two-sided ranges and estimate or guess requests are refused, with general rules only (see si.CHANGES). Retrieval and the exported language-model prompts are unchanged. The two failing items were described to the author, so they are no longer held out; the other 8 were not seen and were not used for tuning. The author's own checks for 1.7 are the set v17_development in extra_probes_questions.json (used for tuning, not held out).",
+      "independent_check": {
+        "written_by": "someone else, after SI 1.6",
+        "scored_si_version": "1.6",
+        "n": 10,
+        "correct": 8,
+        "grounded": 10,
+        "failing": 2,
+        "no_longer_held_out": 2,
+        "still_held_out_not_used_for_tuning": 8,
+        "weaknesses": [
+          "numeric comparators parsed as exact values (false declines)",
+          "estimate request worded as an aside was declined instead of refused"
+        ],
+        "source": "reported by the user; the files were not opened by the author"
+      }
+    },
+    {
+      "when": "SI 1.7 development checks (set v17_development, 53 probes written while fixing; a tuning set, not held out)",
+      "si_version": "1.7",
+      "finding": "Automatic check 52/53; hand review 51/53 right. V04 ('Which Saffire tests had a flow above 20 cm/s?') is declined because the frozen retrieval returns only 20 cm/s rows. V49 ('Even though LUCI burned in air, which atmosphere did FM2 plan for the acrylic rods?') was correctly not refused but cited LUCI rows: 'in air' inside the concessive clause was applied as a condition to the whole question. This parser limitation predates 1.7 and is not fixed, because clause-aware parsing would change the oxygen tag that retrieval reads. V14, V45 and V47 contain the right rows plus extra rows. Retrieval was checked to be identical to SI 1.6 for 123 questions, and all 35 exported prompts still match.",
+      "items": [
+        "V04",
+        "V14",
+        "V45",
+        "V47",
+        "V49"
+      ],
+      "fix": "None in 1.7 (documented as limitations)."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Experiment 2: Range and unit checks
 
-Generated 2026-11-15T09:18:19+00:00. Checks version 1.2 on ledger v2 (98 rows, 40 test points). Gate: **PASS**.
+Generated 2026-11-16T01:39:38+00:00. Checks version 1.2 on ledger v2 (98 rows, 40 test points). Gate: **PASS**.
 
 | Check | Status | Values checked | Failures |
 |---|---|---|---|

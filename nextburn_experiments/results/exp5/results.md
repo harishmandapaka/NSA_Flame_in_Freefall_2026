@@ -1,6 +1,6 @@
 # Experiment 5: Planner retrodiction
 
-Generated 2026-11-15T09:18:33+00:00. Weights frozen 2026-11-15T07:56:00Z (sha256 885493537d60...). Weights were frozen before this run, but by a team that already knew LUCI flew; the null baseline and the 1,000-draw sensitivity show how much the result depends on that choice.
+Generated 2026-11-16T01:39:50+00:00. Weights frozen 2026-11-15T07:56:00Z (sha256 885493537d60...). Weights were frozen before this run, but by a team that already knew LUCI flew; the null baseline and the 1,000-draw sensitivity show how much the result depends on that choice.
 
 Evidence before 1 January 2025: 36 of 40 test points (excluded: LUCI 1-g ground, LUCI NS-29 lunar spin).
 

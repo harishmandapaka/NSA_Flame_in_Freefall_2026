@@ -1,0 +1,126 @@
+{
+  "step": 6,
+  "title": "FM2 predictions",
+  "predictions": [
+    {
+      "burn": 1,
+      "fuel": "SIBAL fabric",
+      "family": "thin_fabric",
+      "material": "SIBAL",
+      "direction": "upward",
+      "o2_pct": 21.0,
+      "p_psia": 14.7,
+      "g": 0.1651940265024244,
+      "model": {
+        "p_mean": 0.8118683656434071,
+        "p_lo90": 0.4042497326479258,
+        "p_hi90": 0.989037091779124,
+        "decision": "declined",
+        "reasons": [
+          "the model's answer contradicts FM2 team lunar-g simulation at distance 0.02 (extinguished)"
+        ],
+        "support_distance": 0.0179999999999995,
+        "nearest_label": "FM2 team lunar-g simulation",
+        "nearest_outcome": "extinguished"
+      },
+      "strict_model": {
+        "p_mean": 0.952687639031258,
+        "p_lo90": 0.7573387276721969,
+        "p_hi90": 0.9998045128555033,
+        "decision": "declined"
+      }
+    },
+    {
+      "burn": 2,
+      "fuel": "SIBAL fabric",
+      "family": "thin_fabric",
+      "material": "SIBAL",
+      "direction": "downward",
+      "o2_pct": 21.0,
+      "p_psia": 14.7,
+      "g": 0.1651940265024244,
+      "model": {
+        "p_mean": 0.8917261096741682,
+        "p_lo90": 0.6068985849313734,
+        "p_hi90": 0.9968748641698155,
+        "decision": "sustains",
+        "reasons": [],
+        "support_distance": 0.0179999999999995,
+        "nearest_label": "FM2 team lunar-g simulation",
+        "nearest_outcome": "sustained"
+      },
+      "strict_model": {
+        "p_mean": 0.9473776217153095,
+        "p_lo90": 0.7438149060581692,
+        "p_hi90": 0.999802460694399,
+        "decision": "sustains"
+      },
+      "analog": {
+        "source": "LUCI lunar-gravity spin burn of SIBAL in air at normal pressure (rows R001, R002)",
+        "flame_base_spread_mm_s": 0.92,
+        "flame_tip_spread_mm_s": 1.1,
+        "tolerance": "plus or minus 50% (team judgement for sample and hardware differences; not a statistical interval)",
+        "falsified_if": "the flame-base spread rate is outside 0.46 to 1.38 mm/s, or the flame-tip spread rate is outside 0.55 to 1.65 mm/s"
+      }
+    },
+    {
+      "burn": 3,
+      "fuel": "4 mm acrylic (PMMA) rod",
+      "family": "thick_plastic",
+      "material": "PMMA rod",
+      "direction": "upward",
+      "o2_pct": 34.0,
+      "p_psia": 8.2,
+      "g": 0.1651940265024244,
+      "model": {
+        "p_mean": 0.9412397114169335,
+        "p_lo90": 0.5687647335632856,
+        "p_hi90": 0.9999995644418672,
+        "decision": "declined",
+        "reasons": [
+          "no thick plastic test within distance 1.0 (nearest 2.41: Saffire VI-3)"
+        ],
+        "support_distance": 2.408875968100143,
+        "nearest_label": "Saffire VI-3",
+        "nearest_outcome": "sustained"
+      },
+      "strict_model": {
+        "p_mean": 0.9489144299206899,
+        "p_lo90": 0.651931585721396,
+        "p_hi90": 0.999999534328774,
+        "decision": "declined"
+      }
+    },
+    {
+      "burn": 4,
+      "fuel": "4 mm acrylic (PMMA) rod",
+      "family": "thick_plastic",
+      "material": "PMMA rod",
+      "direction": "downward",
+      "o2_pct": 34.0,
+      "p_psia": 8.2,
+      "g": 0.1651940265024244,
+      "model": {
+        "p_mean": 0.8889129046424097,
+        "p_lo90": 0.18152497365166756,
+        "p_hi90": 0.9999990802818048,
+        "decision": "declined",
+        "reasons": [
+          "no thick plastic test within distance 1.0 (nearest 2.61: Saffire VI-3)",
+          "90% interval 0.18 to 1.00 is wider than 0.6"
+        ],
+        "support_distance": 2.6081954354860755,
+        "nearest_label": "Saffire VI-3",
+        "nearest_outcome": "sustained"
+      },
+      "strict_model": {
+        "p_mean": 0.8810974550530312,
+        "p_lo90": 0.1550416132600483,
+        "p_hi90": 0.9999990944688446,
+        "decision": "declined"
+      }
+    }
+  ],
+  "frozen_file": "predictions/fm2_predictions.json",
+  "sha256": "05e2f02efcd6487f758b40a543ac24e26a01ad81b58e34bb538c8054a5978248"
+}

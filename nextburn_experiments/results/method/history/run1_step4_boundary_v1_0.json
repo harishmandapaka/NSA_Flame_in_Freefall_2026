@@ -1,0 +1,1113 @@
+{
+  "step": 4,
+  "title": "Flammability boundary with uncertainty and a decline rule",
+  "generated_at": "2026-11-15T23:57:05+00:00",
+  "settings_sha256": "cf7af14906355d8cef4da1c964ccffd809d4f2156d73c8f0f7d8c9d543c1cdae",
+  "settings_frozen_at_utc": "2026-11-15T23:53:57Z",
+  "model": "logit P(sustained flame) = b0 + b_o2*(O2% - 21)/5 + b_lnp*log2(P / 101.325 kPa) + b_g*g + b_g2*g^2 + b_dir*d + b_dir_g*d*g + material offset; d = +1 upward or concurrent, -1 downward or opposed",
+  "decline_rule": "Answer only when (a) a test of the same family lies within distance 1.0, where 3 oxygen points, a 30% pressure change, 0.08 g or an opposite flame direction each count as 1.0, and (b) the 90% interval of the probability is no wider than 0.6. Otherwise decline and name the nearest tests.",
+  "primary_family": "thin_fabric",
+  "reference_material": "SIBAL",
+  "fits": {
+    "thin_fabric": {
+      "family": "thin_fabric",
+      "observations": 23,
+      "sustained": 20,
+      "not_sustained": 3,
+      "materials": [
+        "SIBAL",
+        "cellulose tissue",
+        "cotton jersey"
+      ],
+      "samples": 8000,
+      "acceptance": [
+        0.328,
+        0.329,
+        0.326,
+        0.322
+      ],
+      "max_rhat": 1.0097025453403468,
+      "coefficients": [
+        {
+          "name": "intercept",
+          "q05": 1.1491686281155473,
+          "median": 3.4074118940107176,
+          "q95": 5.656968537955565,
+          "prior_mean": 0.0,
+          "prior_sd": 2.5,
+          "rhat": 1.0097025453403468
+        },
+        {
+          "name": "o2",
+          "q05": -0.46659554977903517,
+          "median": 1.509408228542224,
+          "q95": 3.6139936765169267,
+          "prior_mean": 1.5,
+          "prior_sd": 1.5,
+          "rhat": 1.0081202065441544
+        },
+        {
+          "name": "lnp",
+          "q05": -0.5347380901986731,
+          "median": 0.7192892907562745,
+          "q95": 2.011402545841496,
+          "prior_mean": 1.0,
+          "prior_sd": 1.0,
+          "rhat": 1.0028719033745863
+        },
+        {
+          "name": "g",
+          "q05": -5.068453915714942,
+          "median": -1.3161273734571084,
+          "q95": 2.4399868083738188,
+          "prior_mean": 0.0,
+          "prior_sd": 3.0,
+          "rhat": 1.0009428983342086
+        },
+        {
+          "name": "g2",
+          "q05": -5.142806095902783,
+          "median": -1.593702556594918,
+          "q95": 1.9974271674972537,
+          "prior_mean": 0.0,
+          "prior_sd": 3.0,
+          "rhat": 1.0001677088331227
+        },
+        {
+          "name": "dir",
+          "q05": -1.9692109186371354,
+          "median": -0.3309219968040099,
+          "q95": 1.2146937057276257,
+          "prior_mean": 0.0,
+          "prior_sd": 2.0,
+          "rhat": 1.0029732897628652
+        },
+        {
+          "name": "dir_g",
+          "q05": -2.0384067948892195,
+          "median": 1.0340782078801094,
+          "q95": 4.309018862832073,
+          "prior_mean": 0.0,
+          "prior_sd": 3.0,
+          "rhat": 1.0014139453512763
+        },
+        {
+          "name": "material:SIBAL",
+          "q05": -2.1881078913762835,
+          "median": -0.24515260034205433,
+          "q95": 1.7303057513351325,
+          "prior_mean": 0.0,
+          "prior_sd": 1.5,
+          "rhat": 1.0058113456700006
+        },
+        {
+          "name": "material:cellulose tissue",
+          "q05": -0.7944017754076497,
+          "median": 1.3338042274174866,
+          "q95": 3.545888640600438,
+          "prior_mean": 0.0,
+          "prior_sd": 1.5,
+          "rhat": 1.0013070005696425
+        },
+        {
+          "name": "material:cotton jersey",
+          "q05": -2.211050382021923,
+          "median": 0.1385015558068508,
+          "q95": 2.550509308919341,
+          "prior_mean": 0.0,
+          "prior_sd": 1.5,
+          "rhat": 1.005038249528122
+        }
+      ],
+      "loo": {
+        "brier_loo": 0.1514518876386383,
+        "accuracy_loo": 0.782608695652174,
+        "brier_in_sample": 0.07729053232554764,
+        "base_rate": 0.8695652173913043,
+        "rows": [
+          {
+            "obs_id": "T01",
+            "label": "LUCI NS-29 lunar spin",
+            "material": "SIBAL",
+            "y": 1,
+            "p_in_sample": 0.9091805363025529,
+            "p_leave_one_out": 0.8906473380658491,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T02",
+            "label": "LUCI 1-g ground",
+            "material": "SIBAL",
+            "y": 1,
+            "p_in_sample": 0.4797814777966065,
+            "p_leave_one_out": 0.31995131609263666,
+            "correct_loo": false
+          },
+          {
+            "obs_id": "T03",
+            "label": "FM2 team lunar-g simulation",
+            "material": "SIBAL",
+            "y": 1,
+            "p_in_sample": 0.8944828114919148,
+            "p_leave_one_out": 0.8710230854082034,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T04",
+            "label": "FM2 team lunar-g simulation",
+            "material": "SIBAL",
+            "y": 0,
+            "p_in_sample": 0.881893523573702,
+            "p_leave_one_out": 0.9688633962180041,
+            "correct_loo": false
+          },
+          {
+            "obs_id": "T05",
+            "label": "FM2 team 1-g ground",
+            "material": "SIBAL",
+            "y": 0,
+            "p_in_sample": 0.4250669519131583,
+            "p_leave_one_out": 0.8360334478303635,
+            "correct_loo": false
+          },
+          {
+            "obs_id": "T06",
+            "label": "Saffire I-1",
+            "material": "SIBAL",
+            "y": 1,
+            "p_in_sample": 0.9151273507033393,
+            "p_leave_one_out": 0.9076664410369135,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T07",
+            "label": "Saffire II-5",
+            "material": "SIBAL",
+            "y": 1,
+            "p_in_sample": 0.9151273507033393,
+            "p_leave_one_out": 0.9076664410369135,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T08",
+            "label": "Saffire II-6",
+            "material": "SIBAL",
+            "y": 1,
+            "p_in_sample": 0.9151273507033393,
+            "p_leave_one_out": 0.9076664410369135,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T09",
+            "label": "Saffire III-1",
+            "material": "SIBAL",
+            "y": 1,
+            "p_in_sample": 0.9151273507033393,
+            "p_leave_one_out": 0.9076664410369135,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T10",
+            "label": "Saffire IV-1",
+            "material": "SIBAL",
+            "y": 1,
+            "p_in_sample": 0.923784904404663,
+            "p_leave_one_out": 0.9129785896212447,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T11",
+            "label": "Saffire V-2",
+            "material": "cotton jersey",
+            "y": 1,
+            "p_in_sample": 0.9429922354844581,
+            "p_leave_one_out": 0.913502105256542,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T12",
+            "label": "Saffire VI-2",
+            "material": "SIBAL",
+            "y": 1,
+            "p_in_sample": 0.9500223246356763,
+            "p_leave_one_out": 0.91573459178672,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T13",
+            "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+            "material": "SIBAL",
+            "y": 1,
+            "p_in_sample": 0.826540580240451,
+            "p_leave_one_out": 0.7683379483769305,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T15a",
+            "label": "feier_2001 NASA KC-135 aircraft",
+            "material": "cellulose tissue",
+            "y": 1,
+            "p_in_sample": 0.9162696491731336,
+            "p_leave_one_out": 0.904895296452938,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T15b",
+            "label": "feier_2001 NASA KC-135 aircraft",
+            "material": "cellulose tissue",
+            "y": 1,
+            "p_in_sample": 0.9170380248265261,
+            "p_leave_one_out": 0.9073470001591959,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T15c",
+            "label": "feier_2001 NASA KC-135 aircraft",
+            "material": "cellulose tissue",
+            "y": 1,
+            "p_in_sample": 0.9066315743286282,
+            "p_leave_one_out": 0.8970018506404811,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T16",
+            "label": "feier_2001 ground",
+            "material": "cellulose tissue",
+            "y": 1,
+            "p_in_sample": 0.674049719299429,
+            "p_leave_one_out": 0.46357577537412564,
+            "correct_loo": false
+          },
+          {
+            "obs_id": "T17",
+            "label": "feier_2001 ground",
+            "material": "cellulose tissue",
+            "y": 0,
+            "p_in_sample": 0.5263532463979741,
+            "p_leave_one_out": 0.9153971946612445,
+            "correct_loo": false
+          },
+          {
+            "obs_id": "T18a",
+            "label": "sacksteder_2003 NASA KC-135 aircraft",
+            "material": "cellulose tissue",
+            "y": 1,
+            "p_in_sample": 0.9153087028818501,
+            "p_leave_one_out": 0.9029938014083608,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T18b",
+            "label": "sacksteder_2003 NASA KC-135 aircraft",
+            "material": "cellulose tissue",
+            "y": 1,
+            "p_in_sample": 0.9161735231929848,
+            "p_leave_one_out": 0.9057763403800794,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T18c",
+            "label": "sacksteder_2003 NASA KC-135 aircraft",
+            "material": "cellulose tissue",
+            "y": 1,
+            "p_in_sample": 0.9057209127486545,
+            "p_leave_one_out": 0.8954711413889337,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T19a",
+            "label": "sacksteder_2003 NASA KC-135 aircraft",
+            "material": "cellulose tissue",
+            "y": 1,
+            "p_in_sample": 0.9116030875395834,
+            "p_leave_one_out": 0.8841407756945244,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "T19b",
+            "label": "sacksteder_2003 NASA KC-135 aircraft",
+            "material": "cellulose tissue",
+            "y": 1,
+            "p_in_sample": 0.8517021729867527,
+            "p_leave_one_out": 0.7804950819615328,
+            "correct_loo": true
+          }
+        ]
+      }
+    },
+    "thick_plastic": {
+      "family": "thick_plastic",
+      "observations": 8,
+      "sustained": 7,
+      "not_sustained": 1,
+      "materials": [
+        "PMMA rod",
+        "PMMA sheet"
+      ],
+      "samples": 8000,
+      "acceptance": [
+        0.34,
+        0.341,
+        0.34,
+        0.344
+      ],
+      "max_rhat": 1.0108954623619708,
+      "coefficients": [
+        {
+          "name": "intercept",
+          "q05": 0.20405920808731065,
+          "median": 2.876497148811835,
+          "q95": 5.812401126757839,
+          "prior_mean": 0.0,
+          "prior_sd": 2.5,
+          "rhat": 1.0041489848814344
+        },
+        {
+          "name": "o2",
+          "q05": -0.21130457728632202,
+          "median": 1.6547576605296754,
+          "q95": 3.6551381947750348,
+          "prior_mean": 1.5,
+          "prior_sd": 1.5,
+          "rhat": 1.0040812176038485
+        },
+        {
+          "name": "lnp",
+          "q05": -0.7862321532450008,
+          "median": 0.8115391308956074,
+          "q95": 2.4539008079196933,
+          "prior_mean": 1.0,
+          "prior_sd": 1.0,
+          "rhat": 1.0012166979239228
+        },
+        {
+          "name": "g",
+          "q05": -4.695866754006487,
+          "median": -0.4960208683144456,
+          "q95": 3.7499598820952107,
+          "prior_mean": 0.0,
+          "prior_sd": 3.0,
+          "rhat": 1.0071912177315043
+        },
+        {
+          "name": "g2",
+          "q05": -5.15267723279491,
+          "median": -0.8011285702361282,
+          "q95": 3.5071659807246744,
+          "prior_mean": 0.0,
+          "prior_sd": 3.0,
+          "rhat": 1.0059444256577148
+        },
+        {
+          "name": "dir",
+          "q05": -2.1460314598929267,
+          "median": 0.633635027609723,
+          "q95": 3.455998825365348,
+          "prior_mean": 0.0,
+          "prior_sd": 2.0,
+          "rhat": 1.008609030650605
+        },
+        {
+          "name": "dir_g",
+          "q05": -4.893773073290014,
+          "median": 0.3842602575926516,
+          "q95": 5.533641391227539,
+          "prior_mean": 0.0,
+          "prior_sd": 3.0,
+          "rhat": 1.0108954623619708
+        },
+        {
+          "name": "material:PMMA rod",
+          "q05": -1.6353698159330727,
+          "median": 0.6346382189859725,
+          "q95": 2.9089886045748465,
+          "prior_mean": 0.0,
+          "prior_sd": 1.5,
+          "rhat": 1.0005773962173499
+        },
+        {
+          "name": "material:PMMA sheet",
+          "q05": -1.8039787903899458,
+          "median": 0.5166926226423596,
+          "q95": 2.825161749249016,
+          "prior_mean": 0.0,
+          "prior_sd": 1.5,
+          "rhat": 1.0024544536480302
+        }
+      ],
+      "loo": {
+        "brier_loo": 0.17723708496946075,
+        "accuracy_loo": 0.625,
+        "brier_in_sample": 0.0676304754552085,
+        "base_rate": 0.875,
+        "rows": [
+          {
+            "obs_id": "P01",
+            "label": "LUCI NS-29 lunar spin",
+            "material": "PMMA rod",
+            "y": 1,
+            "p_in_sample": 0.9244341254296284,
+            "p_leave_one_out": 0.8414104551373289,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "P02",
+            "label": "LUCI 1-g ground",
+            "material": "PMMA rod",
+            "y": 1,
+            "p_in_sample": 0.6530411714838508,
+            "p_leave_one_out": 0.4596622792536093,
+            "correct_loo": false
+          },
+          {
+            "obs_id": "P04",
+            "label": "Saffire V-3",
+            "material": "PMMA sheet",
+            "y": 1,
+            "p_in_sample": 0.9570767582392259,
+            "p_leave_one_out": 0.9430464430615842,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "P06",
+            "label": "Saffire V-4",
+            "material": "PMMA sheet",
+            "y": 1,
+            "p_in_sample": 0.8923774054725633,
+            "p_leave_one_out": 0.7542492359119859,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "P08",
+            "label": "Saffire VI-3",
+            "material": "PMMA sheet",
+            "y": 1,
+            "p_in_sample": 0.972574400647446,
+            "p_leave_one_out": 0.9625815976864354,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "P09",
+            "label": "Saffire VI-4",
+            "material": "PMMA sheet",
+            "y": 1,
+            "p_in_sample": 0.9679231101347581,
+            "p_leave_one_out": 0.9575451806052755,
+            "correct_loo": true
+          },
+          {
+            "obs_id": "P10",
+            "label": "bass2_poster_2014 ISS Microgravity Science Glovebox (BASS-II)",
+            "material": "PMMA rod",
+            "y": 1,
+            "p_in_sample": 0.6085598184070534,
+            "p_leave_one_out": 0.3390579356300322,
+            "correct_loo": false
+          },
+          {
+            "obs_id": "P11",
+            "label": "bass2_poster_2014 ground",
+            "material": "PMMA rod",
+            "y": 0,
+            "p_in_sample": 0.4965094559944639,
+            "p_leave_one_out": 0.772720568434398,
+            "correct_loo": false
+          }
+        ]
+      }
+    }
+  },
+  "strict_fits_without_assumed_pressure": {
+    "thin_fabric": {
+      "family": "thin_fabric",
+      "observations": 19,
+      "sustained": 18,
+      "not_sustained": 1,
+      "materials": [
+        "SIBAL",
+        "cellulose tissue",
+        "cotton jersey"
+      ],
+      "samples": 8000,
+      "acceptance": [
+        0.334,
+        0.331,
+        0.335,
+        0.336
+      ],
+      "max_rhat": 1.0085873135995043,
+      "coefficients": [
+        {
+          "name": "intercept",
+          "q05": 1.9308604112136272,
+          "median": 4.423355973621696,
+          "q95": 7.0975436944116685,
+          "prior_mean": 0.0,
+          "prior_sd": 2.5,
+          "rhat": 1.0067759554743394
+        },
+        {
+          "name": "o2",
+          "q05": -0.6125462896402144,
+          "median": 1.5880653593419747,
+          "q95": 3.999742111542211,
+          "prior_mean": 1.5,
+          "prior_sd": 1.5,
+          "rhat": 1.006904211499631
+        },
+        {
+          "name": "lnp",
+          "q05": -0.5132127775566793,
+          "median": 0.8185583984317505,
+          "q95": 2.1674920497202623,
+          "prior_mean": 1.0,
+          "prior_sd": 1.0,
+          "rhat": 1.0027669993050237
+        },
+        {
+          "name": "g",
+          "q05": -4.590656437877001,
+          "median": -0.3000043663242906,
+          "q95": 4.033192867978624,
+          "prior_mean": 0.0,
+          "prior_sd": 3.0,
+          "rhat": 1.0015925489077384
+        },
+        {
+          "name": "g2",
+          "q05": -5.461970655751685,
+          "median": -1.1994274286351847,
+          "q95": 2.767832172574964,
+          "prior_mean": 0.0,
+          "prior_sd": 3.0,
+          "rhat": 1.000700160666216
+        },
+        {
+          "name": "dir",
+          "q05": -1.839044493022211,
+          "median": 0.2923975959938996,
+          "q95": 2.3612241313774014,
+          "prior_mean": 0.0,
+          "prior_sd": 2.0,
+          "rhat": 1.0047567613128938
+        },
+        {
+          "name": "dir_g",
+          "q05": -5.400508717215494,
+          "median": -1.3155383005871493,
+          "q95": 2.8315727963837487,
+          "prior_mean": 0.0,
+          "prior_sd": 3.0,
+          "rhat": 1.0009846955706105
+        },
+        {
+          "name": "material:SIBAL",
+          "q05": -1.5645602397375156,
+          "median": 0.5997011912965564,
+          "q95": 2.8537449031894955,
+          "prior_mean": 0.0,
+          "prior_sd": 1.5,
+          "rhat": 1.0085873135995043
+        },
+        {
+          "name": "material:cellulose tissue",
+          "q05": -1.302540426127775,
+          "median": 0.890064108513536,
+          "q95": 3.0934437515787567,
+          "prior_mean": 0.0,
+          "prior_sd": 1.5,
+          "rhat": 1.0024508509676235
+        },
+        {
+          "name": "material:cotton jersey",
+          "q05": -2.3497677557420045,
+          "median": -0.061128414523006686,
+          "q95": 2.38258164580388,
+          "prior_mean": 0.0,
+          "prior_sd": 1.5,
+          "rhat": 1.0027366183551978
+        }
+      ]
+    },
+    "thick_plastic": {
+      "family": "thick_plastic",
+      "observations": 5,
+      "sustained": 5,
+      "not_sustained": 0,
+      "materials": [
+        "PMMA rod",
+        "PMMA sheet"
+      ],
+      "samples": 8000,
+      "acceptance": [
+        0.362,
+        0.371,
+        0.368,
+        0.372
+      ],
+      "max_rhat": 1.0263792465283876,
+      "coefficients": [
+        {
+          "name": "intercept",
+          "q05": -0.817886166438535,
+          "median": 2.2000440407123927,
+          "q95": 5.6042037949168995,
+          "prior_mean": 0.0,
+          "prior_sd": 2.5,
+          "rhat": 1.0027620227207423
+        },
+        {
+          "name": "o2",
+          "q05": -0.182450926362082,
+          "median": 2.0466177035407567,
+          "q95": 4.315821881877865,
+          "prior_mean": 1.5,
+          "prior_sd": 1.5,
+          "rhat": 1.0070000292839913
+        },
+        {
+          "name": "lnp",
+          "q05": -0.7572758702559877,
+          "median": 0.8661730578971285,
+          "q95": 2.528159267534774,
+          "prior_mean": 1.0,
+          "prior_sd": 1.0,
+          "rhat": 1.0037701192121031
+        },
+        {
+          "name": "g",
+          "q05": -4.612437345955079,
+          "median": 0.4218137265767932,
+          "q95": 5.341251919682378,
+          "prior_mean": 0.0,
+          "prior_sd": 3.0,
+          "rhat": 1.0062924690741255
+        },
+        {
+          "name": "g2",
+          "q05": -4.825516560377605,
+          "median": -0.09558282784055658,
+          "q95": 5.018960637850753,
+          "prior_mean": 0.0,
+          "prior_sd": 3.0,
+          "rhat": 1.0263792465283876
+        },
+        {
+          "name": "dir",
+          "q05": -2.0342899774678407,
+          "median": 0.5636378782867948,
+          "q95": 3.181207531531509,
+          "prior_mean": 0.0,
+          "prior_sd": 2.0,
+          "rhat": 1.0020194706092953
+        },
+        {
+          "name": "dir_g",
+          "q05": -4.666708393565555,
+          "median": 0.2918807984982634,
+          "q95": 5.029412105675801,
+          "prior_mean": 0.0,
+          "prior_sd": 3.0,
+          "rhat": 1.0064343047664481
+        },
+        {
+          "name": "material:PMMA rod",
+          "q05": -1.9598391113789462,
+          "median": 0.37720454925413105,
+          "q95": 2.8122673377735854,
+          "prior_mean": 0.0,
+          "prior_sd": 1.5,
+          "rhat": 0.9998528159678951
+        },
+        {
+          "name": "material:PMMA sheet",
+          "q05": -1.8084251659127737,
+          "median": 0.5123858337260614,
+          "q95": 2.7610033401817358,
+          "prior_mean": 0.0,
+          "prior_sd": 1.5,
+          "rhat": 1.0035387580397341
+        }
+      ]
+    }
+  },
+  "grid_decline_share": 0.9378991060025543,
+  "grid_decline_share_by_panel": [
+    {
+      "g_class": "micro",
+      "dir": "upward or concurrent",
+      "declined_share": 0.80970625798212
+    },
+    {
+      "g_class": "lunar",
+      "dir": "upward or concurrent",
+      "declined_share": 0.8748403575989783
+    },
+    {
+      "g_class": "mars",
+      "dir": "upward or concurrent",
+      "declined_share": 0.9846743295019157
+    },
+    {
+      "g_class": "earth",
+      "dir": "upward or concurrent",
+      "declined_share": 1.0
+    },
+    {
+      "g_class": "micro",
+      "dir": "downward or opposed",
+      "declined_share": 0.9386973180076629
+    },
+    {
+      "g_class": "lunar",
+      "dir": "downward or opposed",
+      "declined_share": 0.8952745849297573
+    },
+    {
+      "g_class": "mars",
+      "dir": "downward or opposed",
+      "declined_share": 1.0
+    },
+    {
+      "g_class": "earth",
+      "dir": "downward or opposed",
+      "declined_share": 1.0
+    }
+  ],
+  "operating_points": [
+    {
+      "op_id": "iss_cabin_air",
+      "name": "ISS cabin air",
+      "direction": "upward or concurrent",
+      "material": "SIBAL",
+      "p_mean": 0.9040897153503394,
+      "p_lo90": 0.7012709967399071,
+      "p_hi90": 0.9942064568713599,
+      "support_distance": 0.051221221148049084,
+      "nearest_obs": "T06",
+      "nearest_label": "Saffire I-1",
+      "nearest_outcome": "sustained",
+      "decision": "sustains",
+      "reasons": []
+    },
+    {
+      "op_id": "iss_cabin_air",
+      "name": "ISS cabin air",
+      "direction": "upward or concurrent",
+      "material": "a new material in the family",
+      "p_mean": 0.8645793014531771,
+      "p_lo90": 0.4007482736741368,
+      "p_hi90": 0.9986680670921009,
+      "support_distance": 0.051221221148049084,
+      "nearest_obs": "T06",
+      "nearest_label": "Saffire I-1",
+      "nearest_outcome": "sustained",
+      "decision": "sustains",
+      "reasons": []
+    },
+    {
+      "op_id": "iss_cabin_air",
+      "name": "ISS cabin air",
+      "direction": "downward or opposed",
+      "material": "SIBAL",
+      "p_mean": 0.92781163332898,
+      "p_lo90": 0.7256672537401199,
+      "p_hi90": 0.9985390032887026,
+      "support_distance": 0.051221221148049084,
+      "nearest_obs": "T06",
+      "nearest_label": "Saffire I-1",
+      "nearest_outcome": "sustained",
+      "decision": "sustains",
+      "reasons": []
+    },
+    {
+      "op_id": "iss_cabin_air",
+      "name": "ISS cabin air",
+      "direction": "downward or opposed",
+      "material": "a new material in the family",
+      "p_mean": 0.8976159405812753,
+      "p_lo90": 0.47908846513849235,
+      "p_hi90": 0.9994987808099153,
+      "support_distance": 0.051221221148049084,
+      "nearest_obs": "T06",
+      "nearest_label": "Saffire I-1",
+      "nearest_outcome": "sustained",
+      "decision": "sustains",
+      "reasons": []
+    },
+    {
+      "op_id": "xa_moon",
+      "name": "Exploration atmosphere, Moon",
+      "direction": "upward or concurrent",
+      "material": "SIBAL",
+      "p_mean": 0.9487876252730165,
+      "p_lo90": 0.6685496374012212,
+      "p_hi90": 0.999994319301263,
+      "support_distance": 2.2423656299450423,
+      "nearest_obs": "T12",
+      "nearest_label": "Saffire VI-2",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 2.24: Saffire VI-2)"
+      ]
+    },
+    {
+      "op_id": "xa_moon",
+      "name": "Exploration atmosphere, Moon",
+      "direction": "upward or concurrent",
+      "material": "a new material in the family",
+      "p_mean": 0.9399366257188698,
+      "p_lo90": 0.6010304399742235,
+      "p_hi90": 0.9999967865852721,
+      "support_distance": 2.2423656299450423,
+      "nearest_obs": "T12",
+      "nearest_label": "Saffire VI-2",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 2.24: Saffire VI-2)"
+      ]
+    },
+    {
+      "op_id": "xa_moon",
+      "name": "Exploration atmosphere, Moon",
+      "direction": "downward or opposed",
+      "material": "SIBAL",
+      "p_mean": 0.9476041361474248,
+      "p_lo90": 0.65511457612283,
+      "p_hi90": 0.9999965403094123,
+      "support_distance": 2.4552400327379047,
+      "nearest_obs": "T12",
+      "nearest_label": "Saffire VI-2",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 2.46: Saffire VI-2)"
+      ]
+    },
+    {
+      "op_id": "xa_moon",
+      "name": "Exploration atmosphere, Moon",
+      "direction": "downward or opposed",
+      "material": "a new material in the family",
+      "p_mean": 0.9406729390452587,
+      "p_lo90": 0.5643526886149492,
+      "p_hi90": 0.999998004466429,
+      "support_distance": 2.4552400327379047,
+      "nearest_obs": "T12",
+      "nearest_label": "Saffire VI-2",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 2.46: Saffire VI-2)"
+      ]
+    },
+    {
+      "op_id": "nesc37_moon",
+      "name": "NESC TB 26-05 condition, Moon",
+      "direction": "upward or concurrent",
+      "material": "SIBAL",
+      "p_mean": 0.9465399108973898,
+      "p_lo90": 0.6265476993251123,
+      "p_hi90": 0.999999239081794,
+      "support_distance": 2.8334084806746143,
+      "nearest_obs": "T12",
+      "nearest_label": "Saffire VI-2",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 2.83: Saffire VI-2)"
+      ]
+    },
+    {
+      "op_id": "nesc37_moon",
+      "name": "NESC TB 26-05 condition, Moon",
+      "direction": "upward or concurrent",
+      "material": "a new material in the family",
+      "p_mean": 0.9410442647976592,
+      "p_lo90": 0.5933397121468045,
+      "p_hi90": 0.9999995723264489,
+      "support_distance": 2.8334084806746143,
+      "nearest_obs": "T12",
+      "nearest_label": "Saffire VI-2",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 2.83: Saffire VI-2)"
+      ]
+    },
+    {
+      "op_id": "nesc37_moon",
+      "name": "NESC TB 26-05 condition, Moon",
+      "direction": "downward or opposed",
+      "material": "SIBAL",
+      "p_mean": 0.9460564053494331,
+      "p_lo90": 0.6223293149472567,
+      "p_hi90": 0.9999995721961302,
+      "support_distance": 3.004696926207172,
+      "nearest_obs": "T12",
+      "nearest_label": "Saffire VI-2",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 3.00: Saffire VI-2)"
+      ]
+    },
+    {
+      "op_id": "nesc37_moon",
+      "name": "NESC TB 26-05 condition, Moon",
+      "direction": "downward or opposed",
+      "material": "a new material in the family",
+      "p_mean": 0.9416073215881591,
+      "p_lo90": 0.5489074572801277,
+      "p_hi90": 0.9999997321123681,
+      "support_distance": 3.004696926207172,
+      "nearest_obs": "T12",
+      "nearest_label": "Saffire VI-2",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 3.00: Saffire VI-2)"
+      ]
+    },
+    {
+      "op_id": "xa_mars",
+      "name": "Exploration atmosphere, Mars",
+      "direction": "upward or concurrent",
+      "material": "SIBAL",
+      "p_mean": 0.9374208947703523,
+      "p_lo90": 0.5745654156330421,
+      "p_hi90": 0.9999924845015228,
+      "support_distance": 4.515229239376794,
+      "nearest_obs": "T15c",
+      "nearest_label": "feier_2001 NASA KC-135 aircraft",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 4.52: feier_2001 NASA KC-135 aircraft)"
+      ]
+    },
+    {
+      "op_id": "xa_mars",
+      "name": "Exploration atmosphere, Mars",
+      "direction": "upward or concurrent",
+      "material": "a new material in the family",
+      "p_mean": 0.9295197195522266,
+      "p_lo90": 0.5202014151827404,
+      "p_hi90": 0.9999963193423693,
+      "support_distance": 4.515229239376794,
+      "nearest_obs": "T15c",
+      "nearest_label": "feier_2001 NASA KC-135 aircraft",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 4.52: feier_2001 NASA KC-135 aircraft)"
+      ]
+    },
+    {
+      "op_id": "xa_mars",
+      "name": "Exploration atmosphere, Mars",
+      "direction": "downward or opposed",
+      "material": "SIBAL",
+      "p_mean": 0.9254302274201454,
+      "p_lo90": 0.5053984682643836,
+      "p_hi90": 0.9999915799899954,
+      "support_distance": 4.624639995083199,
+      "nearest_obs": "T15c",
+      "nearest_label": "feier_2001 NASA KC-135 aircraft",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 4.62: feier_2001 NASA KC-135 aircraft)"
+      ]
+    },
+    {
+      "op_id": "xa_mars",
+      "name": "Exploration atmosphere, Mars",
+      "direction": "downward or opposed",
+      "material": "a new material in the family",
+      "p_mean": 0.9175414804027164,
+      "p_lo90": 0.39538139661737026,
+      "p_hi90": 0.9999957534192286,
+      "support_distance": 4.624639995083199,
+      "nearest_obs": "T15c",
+      "nearest_label": "feier_2001 NASA KC-135 aircraft",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 4.62: feier_2001 NASA KC-135 aircraft)",
+        "90% interval 0.40 to 1.00 is wider than 0.6"
+      ]
+    },
+    {
+      "op_id": "nesc37_mars",
+      "name": "NESC TB 26-05 condition, Mars",
+      "direction": "upward or concurrent",
+      "material": "SIBAL",
+      "p_mean": 0.9364135049120951,
+      "p_lo90": 0.5226334078513952,
+      "p_hi90": 0.9999990598300481,
+      "support_distance": 5.15661745898984,
+      "nearest_obs": "T12",
+      "nearest_label": "Saffire VI-2",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 5.16: Saffire VI-2)"
+      ]
+    },
+    {
+      "op_id": "nesc37_mars",
+      "name": "NESC TB 26-05 condition, Mars",
+      "direction": "upward or concurrent",
+      "material": "a new material in the family",
+      "p_mean": 0.9317789513832458,
+      "p_lo90": 0.4936770885110235,
+      "p_hi90": 0.9999995006286917,
+      "support_distance": 5.15661745898984,
+      "nearest_obs": "T12",
+      "nearest_label": "Saffire VI-2",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 5.16: Saffire VI-2)"
+      ]
+    },
+    {
+      "op_id": "nesc37_mars",
+      "name": "NESC TB 26-05 condition, Mars",
+      "direction": "downward or opposed",
+      "material": "SIBAL",
+      "p_mean": 0.9264187465621823,
+      "p_lo90": 0.44765158297018254,
+      "p_hi90": 0.999998991370075,
+      "support_distance": 5.2526853721081395,
+      "nearest_obs": "T12",
+      "nearest_label": "Saffire VI-2",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 5.25: Saffire VI-2)"
+      ]
+    },
+    {
+      "op_id": "nesc37_mars",
+      "name": "NESC TB 26-05 condition, Mars",
+      "direction": "downward or opposed",
+      "material": "a new material in the family",
+      "p_mean": 0.9215658013563586,
+      "p_lo90": 0.3710776726214872,
+      "p_hi90": 0.9999993989102305,
+      "support_distance": 5.2526853721081395,
+      "nearest_obs": "T12",
+      "nearest_label": "Saffire VI-2",
+      "nearest_outcome": "sustained",
+      "decision": "declined",
+      "reasons": [
+        "no thin fabric test within distance 1.0 (nearest 5.25: Saffire VI-2)",
+        "90% interval 0.37 to 1.00 is wider than 0.6"
+      ]
+    }
+  ]
+}

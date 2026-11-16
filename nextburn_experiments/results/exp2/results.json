@@ -1,7 +1,7 @@
 {
   "experiment": 2,
   "title": "Range and unit checks",
-  "generated_at": "2026-11-15T09:18:19+00:00",
+  "generated_at": "2026-11-16T01:39:38+00:00",
   "checks_version": "1.2",
   "ledger": "ledger_v2.json",
   "ledger_sha256": "198b3231b0dde5879933bf449ba2f0300d0eae6465a7f9e98524b8158ac84885",

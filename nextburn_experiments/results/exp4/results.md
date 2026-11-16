@@ -1,6 +1,6 @@
 # Experiment 4: LUCI holdout and gravity-rule comparison
 
-Generated 2026-11-15T09:18:26+00:00. Rules file frozen 2026-11-15T07:56:00Z (sha256 f152b6f46ca9...). The team had seen the LUCI presentation before this file was frozen, so this is a check of rules that were not fitted to LUCI, not a blind prediction.
+Generated 2026-11-16T01:39:43+00:00. Rules file frozen 2026-11-15T07:56:00Z (sha256 f152b6f46ca9...). The team had seen the LUCI presentation before this file was frozen, so this is a check of rules that were not fitted to LUCI, not a blind prediction.
 
 LUCI gravity from the ledger's own spin rows: 0.1651 g. Hit = within 10%.
 
