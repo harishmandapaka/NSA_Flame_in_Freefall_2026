@@ -1,0 +1,134 @@
+
+NextBurn project, NASA Space Apps Challenge 2026, challenge "Flame in Freefall". Date: 17 November 2026.
+
+This text obeys the rules of ASD-STE100, Issue 9: short sentences, simple verb tenses, the active voice and no "-ing" verb forms. Technical names (for example ledger, PSI and FM2) do not change. We did not compare each word with the STE dictionary.
+
+1. Terms
+
+Term	Description
+Ledger	The NextBurn table of flame tests. Each row is one test point and shows its source.
+Operating point	One set of habitat conditions: an oxygen level, a pressure and a gravity level.
+Envelope	All the operating points that NextBurn examines.
+Bin	One area of the coverage map: a range of oxygen and a range of pressure at one gravity level.
+Boundary model	The statistical model that calculates the probability that a flame continues to burn.
+Planner	The NextBurn script that puts possible tests in a sequence.
+FM2	Flammability of Materials on the Moon. This NASA experiment will burn four samples on the Moon.
+SHA-256 hash	A number that a computer calculates from a file. If the file changes, the hash changes.
+2. Purpose
+NextBurn shows which fire-safety tests are necessary for habitats on the Moon and Mars. The tagline of the project is "From evidence gap to test plan".
+
+We examined the 2026 challenges and the projects that received awards in earlier years. Then we selected the challenge "Flame in Freefall".
+
+3. The problem
+Habitats on the Moon and Mars will have gravity. The exploration atmosphere for these habitats has 34% oxygen at 8.2 psia. The 37% oxygen condition comes from Technical Bulletin 26-05 of the NASA Engineering and Safety Center (NESC). These conditions are different from the air on the International Space Station (ISS).
+
+The flame test results are in NASA Physical Sciences Informatics (PSI) tables and NASA Technical Reports Server (NTRS) reports. These documents use different formats and units. Some documents do not give the pressure or the oxygen level. For this reason, it is difficult to know which habitat conditions have a flame test.
+
+4. The method
+NextBurn uses a procedure from chip design verification. In chip design verification, a coverage report shows the conditions that no test examined. Then the verification engineers write tests for these conditions. NextBurn uses the same procedure for fire-safety tests. The procedure has six steps:
+
+Ledger. We put each flame test from public NASA sources in one table. Each row shows its source and its location in the source.
+Envelope. We selected five operating points. These are ISS cabin air and four habitat conditions. The habitat conditions have 34% or 37% oxygen at 8.2 psia, at Moon gravity (0.16 g) or Mars gravity (0.38 g).
+Coverage. We divided the envelope into bins. For each bin, the coverage map shows one of three labels: tested, near tests only, or no test.
+Boundary model. A Bayesian model calculates the probability that a flame continues to burn. The model gives an answer only near tests (see Section 5).
+Next tests. The planner selects the tests one at a time. Each time, it selects the test that decreases the uncertainty most.
+FM2 values. We recorded the model values for the four FM2 burns before the FM2 results are available.
+5. The rule for an answer
+The boundary model gives an answer only if all of these items are true:
+
+A test of the same material family is at a distance of 1.0 or less.
+The 90% interval of the probability is not wider than 0.6.
+No test at a distance of 1.0 or less has a result opposite to the model answer.
+A change of 3 percentage points of oxygen, 30% of the pressure or 0.08 g is a distance of 1.0. A change of the flame direction is also a distance of 1.0. If one item is not true, the model gives no answer. Then it shows the nearest tests.
+
+6. The data
+The ledger has 313 test points from 14 sources:
+
+
+Origin of the rows	Rows
+PSI tables for BASS, BASS-II and Saffire I to III	263
+NTRS reports (ledger v2)	40
+NESC Technical Bulletin 26-05	2
+Rows that come from other rows of the ledger	8
+Total	313
+PSI has no documented API. For this reason, we downloaded the PSI tables and parsed them. Only 67 test points tell if the sample continued to burn. A script compared 51 result quotes with their sources and found all 51 quotes. We did not use the MAPTIS database, because access to it is not available to us.
+
+7. Main results
+7.1 Coverage
+For thin fabrics, each gravity level has 24 bins in the envelope.
+
+
+Gravity level	Tested	Near tests only	No test
+Microgravity	3	11	10
+Moon (0.16 g)	1	3	20
+Mars (0.38 g)	0	0	24
+Of the five operating points, only ISS cabin air is in a tested bin. The Moon habitat atmosphere (34% oxygen at 8.2 psia) has no test at Moon gravity. Tests in orbit are near this atmosphere when NextBurn does not use gravity in the calculation. Thus, the problem is the gravity level, not the oxygen or the pressure.
+
+7.2 Boundary model
+The model gives no answer for 96% of the map. At ISS cabin air, the probability that the flame continues to burn is 0.94 for an upward flame and 0.97 for a downward flame.
+
+The model uses 23 test results. In only 3 of these tests, the sample did not continue to burn. The leave-one-out Brier score of the model is 0.153. A constant base-rate value gives 0.113, and a lower score is better. Thus, the model is weak for samples that do not continue to burn. The recommended tests give data for this weakness.
+
+7.3 Next tests
+The planner recommends parabolic flights at 37% oxygen and 8.2 psia, in this sequence:
+
+Mars gravity, upward flame
+Mars gravity, downward flame
+Moon gravity, upward flame
+Moon gravity, downward flame
+The first test decreases the weighted uncertainty by 45.3%. The first four tests decrease it by 73.2%. Ten tests decrease it by 83.1%.
+
+7.4 FM2 values
+FM2 will burn two SIBAL fabric samples in air and two 4 mm acrylic rods at 34% oxygen and 8.2 psia. For each material, one flame is upward and one flame is downward. We recorded the model values on 16 November 2026 at 00:10:42 UTC. At that time, no FM2 results were available. We put the SHA-256 hash of the file in the README, so that each person can make sure that the file did not change.
+
+
+Burn	Sample	Flame	Model value
+1	SIBAL fabric in air	Upward	No answer. At these conditions, a test from the FM2 project did not continue to burn.
+2	SIBAL fabric in air	Downward	The flame continues to burn. The probability is 0.89 (90% interval 0.61 to 1.00).
+3	Acrylic rod, 34% oxygen, 8.2 psia	Upward	No answer. No thick-plastic test is near.
+4	Acrylic rod, 34% oxygen, 8.2 psia	Downward	No answer. No thick-plastic test is near, and the interval is too wide.
+8. Experiments
+We did seven experiments to examine our own work. Each experiment has a pass rule in the README. Not all experiments passed.
+
+
+No.	Experiment	Status	Result
+1	Ledger accuracy audit	Did not pass	632 of 650 sampled fields are correct (97.2%). The limit is 98%. We changed 31 fields, and one of us examined the 19 marked fields again.
+2	Range and unit checks	Pass	7 of 7 checks pass. The checks found 12 of 12 faults that we put in the data.
+3	Coverage sensitivity	Pass	In all 6 tolerance runs and 2 cross-checks, the Moon habitat atmosphere has no test at Moon gravity.
+4	LUCI comparison	Reported	In 2025, LUCI burned samples on a rocket that turned to make Moon gravity. The square-root gravity rule agreed at the two flame tips (+3.4%, +8.3%), but not at the base of the fabric flame (-33.8%).
+5	Planner retrodiction	Pass	With only data from before 2025, the planner put a flame-spread test at Moon gravity in the top five. This occurred for 78.1% of 1,000 random weight sets (42.4% for random selection).
+6	Planner efficiency	Pass (simulation)	In 200 simulated boundaries, the planner found the boundary with a median of 11 tests. A fixed 6 x 6 test matrix used a median of 24 tests. The planner found the boundary in 100% of the cases, and the matrix in 86%.
+7	Assistant test set	Pass	The NextBurn assistant answered 20 of 20 questions that have data. All 240 numbers in its 35 answers come from the ledger. It gave no answer to 10 of 10 questions without data. It did not obey 5 of 5 instructions to use other values.
+9. Items that we made
+The NextBurn Coverage Console (
+
+index.html
+). This is one web page with 10 tabs. It shows all results, charts and ledger rows. It is not necessary to install software to see the page.
+The live mode of the console. In live mode, a user can change 115 settings and run the scripts again from the browser.
+A one-step setup (
+
+setup_nextburn.py
+, 
+
+setup.sh
+ and setup.cmd). One command installs the packages, runs the tests and the experiments, checks the FM2 hash and makes the console again.
+Regression tests (6 of 6 pass) and page checks (47 of 47 pass).
+A README with instructions to copy, run and change the project.
+A slide presentation with 7 slides, and a PDF copy of it.
+The text for the Space Apps form: the project summary, the project details and the list of NASA data.
+Two documents for internal use: a problem analysis and a submission plan.
+10. Limits
+NOTE: The quantity of test data is small. For this reason, the uncertainty is large. The tool shows where the uncertainty is large, and this is its purpose.
+
+No PSI table gives the pressure. For this reason, the 263 PSI rows are not in the boundary model.
+We examined one material family (thin fabrics) and three variables: oxygen, pressure and gravity.
+We knew the LUCI results before we set the gravity rules and the planner weights. For this reason, Experiments 4 and 5 are checks, not blind tests.
+It is necessary to do a new audit of ledger v2.
+11. Use of AI
+We used Microsoft Copilot to find information, to write code, to read data from documents and to write text.
+AI checkers did the first check of the ledger. Then one of us examined the 19 marked fields again.
+The cover image of the slide presentation is from an AI tool.
+The scripts calculated all numbers from the sources in the ledger.
+NextBurn is not a NASA product. It uses no NASA logos.
+12. Next step
+When the FM2 results are available, we will compare them with the recorded values. We will also calculate the hash of the file again to show that the file did not change.
